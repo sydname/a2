@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-08T09:10:04Z",
+ "generatedAt": "2026-09-08T18:09:23Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -15,8 +15,8 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 903410,
-    "itemLevel": 6065,
+    "combatPower": 903563,
+    "itemLevel": 6068,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188620645",
     "titleName": ""
    },
@@ -260,9 +260,9 @@
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
-    "openNodeTotal": 1000,
+    "openNodeTotal": 1003,
     "nodeTotal": 1216,
-    "basic": 493,
+    "basic": 496,
     "yustiel": 152,
     "boards": [
      {
@@ -279,18 +279,18 @@
       "name": "지켈",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Mace.png",
       "open": 1,
-      "openNodeCount": 122,
+      "openNodeCount": 124,
       "totalNodeCount": 152,
-      "openPercent": 80
+      "openPercent": 82
      },
      {
       "id": 63,
       "name": "바이젤",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Sword_1H.png",
       "open": 1,
-      "openNodeCount": 123,
+      "openNodeCount": 124,
       "totalNodeCount": 152,
-      "openPercent": 81
+      "openPercent": 82
      },
      {
       "id": 64,
@@ -1015,10 +1015,28 @@
      "accessoryExceed": 45,
      "daevanionBasic": 493,
      "daevanionOpenNodes": 1000
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 903563,
+     "itemLevel": 6068,
+     "weaponExceed": 10,
+     "armorExceed": 12,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:09:36Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 153,
+    "itemLevel": 3,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 3
+   },
+   "updatedAt": "2026-09-08T18:08:56Z",
    "ok": true
   },
   {
@@ -1035,7 +1053,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 564942,
+    "combatPower": 564988,
     "itemLevel": 4965,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188716923",
     "titleName": "무스펠의 성배에 거주하는"
@@ -1859,7 +1877,7 @@
     }
    },
    "titles": {
-    "ownedCount": 296,
+    "ownedCount": 297,
     "totalCount": 427,
     "equipped": [
      {
@@ -1878,7 +1896,7 @@
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 70
+      "ownedPercent": 71
      }
     ]
    },
@@ -2035,10 +2053,28 @@
      "accessoryExceed": 19,
      "daevanionBasic": 0,
      "daevanionOpenNodes": 863
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 564988,
+     "itemLevel": 4965,
+     "weaponExceed": 5,
+     "armorExceed": 0,
+     "accessoryExceed": 19,
+     "daevanionBasic": 0,
+     "daevanionOpenNodes": 863
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:09:45Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 46,
+    "itemLevel": 0,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 0
+   },
+   "updatedAt": "2026-09-08T18:09:05Z",
    "ok": true
   },
   {
@@ -3055,10 +3091,28 @@
      "accessoryExceed": 8,
      "daevanionBasic": 0,
      "daevanionOpenNodes": 859
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 545628,
+     "itemLevel": 5005,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 8,
+     "daevanionBasic": 0,
+     "daevanionOpenNodes": 859
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:09:51Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 0,
+    "itemLevel": 0,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 0
+   },
+   "updatedAt": "2026-09-08T18:09:09Z",
    "ok": true
   },
   {
@@ -4075,10 +4129,28 @@
      "accessoryExceed": 28,
      "daevanionBasic": 0,
      "daevanionOpenNodes": 880
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 603322,
+     "itemLevel": 5025,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 28,
+     "daevanionBasic": 0,
+     "daevanionOpenNodes": 880
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:09:41Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 0,
+    "itemLevel": 0,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 0
+   },
+   "updatedAt": "2026-09-08T18:09:01Z",
    "ok": true
   },
   {
@@ -5095,10 +5167,28 @@
      "accessoryExceed": 28,
      "daevanionBasic": 0,
      "daevanionOpenNodes": 880
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 603322,
+     "itemLevel": 5025,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 28,
+     "daevanionBasic": 0,
+     "daevanionOpenNodes": 880
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:09:55Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 0,
+    "itemLevel": 0,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 0
+   },
+   "updatedAt": "2026-09-08T18:09:14Z",
    "ok": true
   },
   {
@@ -5115,7 +5205,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 436041,
+    "combatPower": 436047,
     "itemLevel": 4656,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188628440",
     "titleName": "무스펠의 성배에 다녀온"
@@ -5345,16 +5435,16 @@
      "id": 16250000
     },
     {
+     "name": "협공: 파멸의 공세",
+     "level": 10,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_EL_SKILL_024.png",
+     "id": 16240000
+    },
+    {
      "name": "흡인",
      "level": 10,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_EL_SKILL_006.png",
      "id": 16060000
-    },
-    {
-     "name": "명령: 대역",
-     "level": 10,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_EL_SKILL_017.png",
-     "id": 16170000
     }
    ],
    "daevanion": {
@@ -6115,10 +6205,28 @@
      "accessoryExceed": 4,
      "daevanionBasic": 0,
      "daevanionOpenNodes": 817
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 436047,
+     "itemLevel": 4656,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 0,
+     "daevanionOpenNodes": 817
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:10:00Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 6,
+    "itemLevel": 0,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 0
+   },
+   "updatedAt": "2026-09-08T18:09:19Z",
    "ok": true
   },
   {
@@ -7007,10 +7115,28 @@
      "accessoryExceed": 0,
      "daevanionBasic": 0,
      "daevanionOpenNodes": 646
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 319017,
+     "itemLevel": 3574,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 0,
+     "daevanionOpenNodes": 646
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:10:04Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 0,
+    "itemLevel": 0,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 0
+   },
+   "updatedAt": "2026-09-08T18:09:23Z",
    "ok": true
   }
  ]
