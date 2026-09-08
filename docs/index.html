@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>아이온 2 캐릭터 현황</title>
+  <meta name="description" content="아이온 2 관리 캐릭터 정보 자동 수집" />
+  <link rel="preconnect" href="https://assets.playnccdn.com" />
+  <link rel="preconnect" href="https://profileimg.plaync.com" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div>
+        <h1><span>AION 2</span> 캐릭터 현황</h1>
+        <div class="sub">공식 홈페이지에서 매일 자정(KST) 자동 수집</div>
+      </div>
+      <div class="spacer"></div>
+      <div class="toggle" id="viewToggle">
+        <button data-view="table" class="active">표</button>
+        <button data-view="card">카드</button>
+      </div>
+    </header>
+
+    <div class="meta-line" id="metaLine"></div>
+
+    <main id="app"><div class="empty">불러오는 중…</div></main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

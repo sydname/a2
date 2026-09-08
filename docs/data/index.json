@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-09-08T08:47:22Z",
+ "characters": [
+  {
+   "key": "2010-d7b11559c850",
+   "label": "감자밍",
+   "ok": true,
+   "updatedAt": "2026-09-08T08:47:20Z",
+   "officialUrl": "https://aion2.plaync.com/ko-kr/characters/2010/kQPtxLHatRRnx5LcYGTP6T7Jz5OLiPU61kSPtPvhq7I=",
+   "name": "감자밍",
+   "className": "마도성",
+   "combatPower": 903410,
+   "itemLevel": 6065,
+   "weaponExceed": 10,
+   "armorExceed": 12,
+   "accessoryExceed": 45,
+   "daevanionBasic": 493,
+   "daevanionYustiel": 152,
+   "daevanionOpened": 8,
+   "daevanionTotal": 8
+  }
+ ]
+}

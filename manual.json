@@ -1,0 +1,36 @@
+{
+  "_help": [
+    "수동 관리 값(자동 수집 불가) 파일. 캐릭터 이름(characters.json 의 label)으로 키를 잡습니다.",
+    "ode        : 오드 에너지 현황 (숫자). 사이트 '기본관리' 표에 표시.",
+    "potential  : 착용장비 잠재력 단계. 사이트 '카드' 뷰 착용장비에 표시.",
+    "             슬롯키 = MainHand SubHand Necklace Earring1 Earring2 Ring1 Ring2 Bracelet1 Bracelet2 Brooch1 Brooch2 Pendant",
+    "             값 = 0~4 숫자 또는 \"-\" (해당 없음) 또는 \"\" (미입력).",
+    "값을 바꾸면 커밋/푸시하면 사이트에 반영됩니다.",
+    "* 회랑/일회/각성, 루드라/침식/무스펠 체크박스는 '주간 체크리스트'라 이 파일이 아니라",
+    "  브라우저(localStorage)에 저장되고 매주 수요일 05:00(KST) 자동 초기화됩니다."
+  ],
+  "characters": {
+    "감자밍": {
+      "ode": 2220,
+      "potential": {
+        "MainHand": "-", "SubHand": "-",
+        "Necklace": 4, "Earring1": 4, "Earring2": 4,
+        "Ring1": "-", "Ring2": "-",
+        "Bracelet1": 4, "Bracelet2": 4,
+        "Brooch1": 4, "Brooch2": 4,
+        "Pendant": ""
+      }
+    },
+    "감자미": {
+      "ode": 1225,
+      "potential": {
+        "MainHand": 4, "SubHand": 4,
+        "Necklace": 3, "Earring1": 4, "Earring2": 4,
+        "Ring1": "-", "Ring2": "-",
+        "Bracelet1": 4, "Bracelet2": 4,
+        "Brooch1": 4, "Brooch2": 4,
+        "Pendant": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+ "generatedAt": "2026-09-08T08:47:22Z",
+ "count": 1,
+ "errors": [
+  {
+   "label": "감자미",
+   "error": "characters.json 의 예시 주소를 실제 캐릭터 주소로 바꿔주세요."
+  }
+ ]
+}
