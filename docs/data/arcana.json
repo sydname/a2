@@ -1,9 +1,9 @@
 {
- "generatedAt": "2026-09-08T09:08:24Z",
+ "generatedAt": "2026-09-08T23:44:11Z",
  "characters": {
   "2010-d7b11559c850": {
    "label": "감자밍",
-   "updatedAt": "2026-09-08T09:06:58Z",
+   "updatedAt": "2026-09-08T09:12:37Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -579,8 +579,8 @@
    ]
   },
   "2010-bebfe0bb0422": {
-   "label": "괌자",
-   "updatedAt": "2026-09-08T09:07:59Z",
+   "label": "감자미",
+   "updatedAt": "2026-09-08T09:12:55Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -1110,7 +1110,7 @@
       {
        "name": "추가 회피",
        "value": "10",
-       "extra": "0"
+       "extra": "50"
       },
       {
        "name": "상태이상 저항",
@@ -1157,7 +1157,7 @@
   },
   "2010-702b46e438dd": {
    "label": "잔열",
-   "updatedAt": "2026-09-08T09:07:30Z",
+   "updatedAt": "2026-09-08T23:43:13Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -1734,7 +1734,7 @@
   },
   "2010-2b8ebedc7efb": {
    "label": "넌강해졌다",
-   "updatedAt": "2026-09-08T09:07:46Z",
+   "updatedAt": "2026-09-08T23:43:30Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -2264,7 +2264,7 @@
       {
        "name": "추가 회피",
        "value": "10",
-       "extra": "50"
+       "extra": "0"
       },
       {
        "name": "육체계 저항",
@@ -2309,9 +2309,586 @@
     }
    ]
   },
+  "2010-f6a7e26712d4": {
+   "label": "괌자",
+   "updatedAt": "2026-09-08T23:43:45Z",
+   "arcana": [
+    {
+     "slot": "Arcana1",
+     "slotKo": "아르카나1",
+     "name": "수호의 성배",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_CureSet1.png",
+     "category": "성배",
+     "enchant": 5,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "시간[시엘]",
+       "value": "20",
+       "extra": "10"
+      }
+     ],
+     "subSkills": [
+      {
+       "name": "승천타",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_016.png"
+      },
+      {
+       "name": "거대한 분노",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_Passive_007.png"
+      },
+      {
+       "name": "위세",
+       "level": 4,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_Passive_004.png"
+      },
+      {
+       "name": "연격",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_001.png"
+      }
+     ],
+     "set": {
+      "name": "수호받는 영혼",
+      "equippedCount": 6,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "재생 5% 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "무기 피해 증폭 5% 증가, 생명력이 30% 이하일 때 5초 동안 10000만큼의 피해를 막아내는 보호막 생성 [재발동 제한 시간 2분]"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana2",
+     "slotKo": "아르카나2",
+     "name": "수호의 양피지",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_CureSet1.png",
+     "category": "양피지",
+     "enchant": 5,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "생명[유스티엘]",
+       "value": "20",
+       "extra": "10"
+      }
+     ],
+     "subSkills": [
+      {
+       "name": "폭주",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_013.png"
+      },
+      {
+       "name": "승천타",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_016.png"
+      },
+      {
+       "name": "연격",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_001.png"
+      },
+      {
+       "name": "폭렬권",
+       "level": 3,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_020.png"
+      }
+     ],
+     "set": {
+      "name": "수호받는 영혼",
+      "equippedCount": 6,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "재생 5% 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "무기 피해 증폭 5% 증가, 생명력이 30% 이하일 때 5초 동안 10000만큼의 피해를 막아내는 보호막 생성 [재발동 제한 시간 2분]"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana3",
+     "slotKo": "아르카나3",
+     "name": "징벌의 나침반",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
+     "category": "나침반",
+     "enchant": 3,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "죽음[트리니엘]",
+       "value": "20",
+       "extra": "6"
+      }
+     ],
+     "subSkills": [
+      {
+       "name": "비각",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_004.png"
+      },
+      {
+       "name": "태풍 연타",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_025.png"
+      },
+      {
+       "name": "충격 해제",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_CO_SKILL_002.png"
+      },
+      {
+       "name": "철산고",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_023.png"
+      }
+     ],
+     "set": {
+      "name": "징벌 서곡",
+      "equippedCount": 3,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "보스 피해 내성 5% 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "PVE 공격력 60 증가, 생명력이 70% 이상일 때 PVE 피해 증폭 10% 증가"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana4",
+     "slotKo": "아르카나4",
+     "name": "징벌의 종",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_PveSet1.png",
+     "category": "종",
+     "enchant": 4,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "파괴[지켈]",
+       "value": "20",
+       "extra": "8"
+      }
+     ],
+     "subSkills": [
+      {
+       "name": "폭주 증폭",
+       "level": 3,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_Passive_005.png"
+      },
+      {
+       "name": "정면 돌파",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_Passive_002.png"
+      },
+      {
+       "name": "정신 전환",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_Passive_003.png"
+      },
+      {
+       "name": "충격타",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_Passive_008.png"
+      }
+     ],
+     "set": {
+      "name": "징벌 서곡",
+      "equippedCount": 3,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "보스 피해 내성 5% 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "PVE 공격력 60 증가, 생명력이 70% 이상일 때 PVE 피해 증폭 10% 증가"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana5",
+     "slotKo": "아르카나5",
+     "name": "징벌의 거울",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_PveSet1.png",
+     "category": "거울",
+     "enchant": 5,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "지혜[루미엘]",
+       "value": "20",
+       "extra": "10"
+      }
+     ],
+     "subSkills": [
+      {
+       "name": "경량화",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_Passive_010.png"
+      },
+      {
+       "name": "거대한 분노",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_Passive_007.png"
+      },
+      {
+       "name": "위세",
+       "level": 3,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_Passive_004.png"
+      },
+      {
+       "name": "충격 적중",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_Passive_006.png"
+      }
+     ],
+     "set": {
+      "name": "징벌 서곡",
+      "equippedCount": 3,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "보스 피해 내성 5% 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "PVE 공격력 60 증가, 생명력이 70% 이상일 때 PVE 피해 증폭 10% 증가"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana6",
+     "slotKo": "아르카나6",
+     "name": "수호의 천칭",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_CureSet1.png",
+     "category": "천칭",
+     "enchant": 1,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "정의[네자칸]",
+       "value": "10",
+       "extra": "2"
+      },
+      {
+       "name": "생명[유스티엘]",
+       "value": "10",
+       "extra": "2"
+      }
+     ],
+     "subSkills": [
+      {
+       "name": "폭주",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_013.png"
+      },
+      {
+       "name": "전선 유지",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_Passive_001.png"
+      },
+      {
+       "name": "거대한 분노",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_Passive_007.png"
+      },
+      {
+       "name": "비각",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_004.png"
+      }
+     ],
+     "set": {
+      "name": "수호받는 영혼",
+      "equippedCount": 6,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "재생 5% 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "무기 피해 증폭 5% 증가, 생명력이 30% 이하일 때 5초 동안 10000만큼의 피해를 막아내는 보호막 생성 [재발동 제한 시간 2분]"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana7",
+     "slotKo": "아르카나7",
+     "name": "수호의 열쇠",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Key_u_CureSet1.png",
+     "category": "열쇠",
+     "enchant": 2,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "추가 공격력",
+       "value": "5",
+       "extra": "10"
+      },
+      {
+       "name": "정신력 자연 회복",
+       "value": "25",
+       "extra": "25"
+      },
+      {
+       "name": "비행력",
+       "value": "50",
+       "extra": "0"
+      },
+      {
+       "name": "치명타 피해 증폭",
+       "value": "0.6%",
+       "extra": "0%"
+      },
+      {
+       "name": "전방 피해 증폭",
+       "value": "0.6%",
+       "extra": "0.6%"
+      }
+     ],
+     "subSkills": [],
+     "set": {
+      "name": "수호받는 영혼",
+      "equippedCount": 6,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "재생 5% 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "무기 피해 증폭 5% 증가, 생명력이 30% 이하일 때 5초 동안 10000만큼의 피해를 막아내는 보호막 생성 [재발동 제한 시간 2분]"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana8",
+     "slotKo": "아르카나8",
+     "name": "수호의 모래시계",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Hourglass_u_CureSet1.png",
+     "category": "모래시계",
+     "enchant": 0,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "생명력",
+       "value": "100",
+       "extra": "0"
+      },
+      {
+       "name": "추가 방어력",
+       "value": "50",
+       "extra": "0"
+      },
+      {
+       "name": "생명력 자연 회복",
+       "value": "50",
+       "extra": "0"
+      },
+      {
+       "name": "받는 치유량",
+       "value": "1%",
+       "extra": "0%"
+      },
+      {
+       "name": "보스 방어력",
+       "value": "60",
+       "extra": "0"
+      }
+     ],
+     "subSkills": [],
+     "set": {
+      "name": "수호받는 영혼",
+      "equippedCount": 6,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "재생 5% 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "무기 피해 증폭 5% 증가, 생명력이 30% 이하일 때 5초 동안 10000만큼의 피해를 막아내는 보호막 생성 [재발동 제한 시간 2분]"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana9",
+     "slotKo": "아르카나9",
+     "name": "수호의 주사위",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Dice_u_CureSet1.png",
+     "category": "주사위",
+     "enchant": 0,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "치명타",
+       "value": "8",
+       "extra": "0"
+      },
+      {
+       "name": "추가 명중",
+       "value": "10",
+       "extra": "0"
+      },
+      {
+       "name": "다단 히트 적중",
+       "value": "0.6%",
+       "extra": "0%"
+      },
+      {
+       "name": "PVP 치명타",
+       "value": "10",
+       "extra": "0"
+      },
+      {
+       "name": "강타",
+       "value": "0.3%",
+       "extra": "0%"
+      }
+     ],
+     "subSkills": [],
+     "set": {
+      "name": "수호받는 영혼",
+      "equippedCount": 6,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "재생 5% 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "무기 피해 증폭 5% 증가, 생명력이 30% 이하일 때 5초 동안 10000만큼의 피해를 막아내는 보호막 생성 [재발동 제한 시간 2분]"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana10",
+     "slotKo": "아르카나10",
+     "name": "불굴의 등불",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_PvpSet1.png",
+     "category": "등불",
+     "enchant": 0,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "추가 회피",
+       "value": "10",
+       "extra": "0"
+      },
+      {
+       "name": "후방 치명타 저항",
+       "value": "10",
+       "extra": "0"
+      },
+      {
+       "name": "PVP 회피",
+       "value": "12",
+       "extra": "0"
+      },
+      {
+       "name": "막기",
+       "value": "15",
+       "extra": "0"
+      },
+      {
+       "name": "철벽",
+       "value": "0.3%",
+       "extra": "0%"
+      }
+     ],
+     "subSkills": [],
+     "set": {
+      "name": "불굴의 집념",
+      "equippedCount": 1,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "무기 피해 내성 5% 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "치명타 피해 내성 5% 증가, 기절, 넘어짐, 공중 속박, 잡기, 빙결, 공포 효과 피격 시 5초 동안 PVP 피해 내성 50% 증가 [재발동 제한 시간 2분 30초]"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
   "2010-e9271378bb8e": {
    "label": "고구미",
-   "updatedAt": "2026-09-08T09:08:14Z",
+   "updatedAt": "2026-09-08T23:44:01Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -2888,7 +3465,7 @@
   },
   "2010-844b10c56dfe": {
    "label": "크로매데",
-   "updatedAt": "2026-09-08T09:08:24Z",
+   "updatedAt": "2026-09-08T23:44:11Z",
    "arcana": [
     {
      "slot": "Arcana1",

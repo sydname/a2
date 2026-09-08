@@ -103,7 +103,7 @@ def parse_target(entry):
     m = URL_RE.search(url)
     if not m:
         raise ValueError("url 에서 serverId/characterId 를 찾지 못했습니다: %r" % url)
-    server_id, character_id = m.group(1), m.group(2)
+    server_id, character_id = m.group(1), urllib.parse.unquote(m.group(2))
     try:
         character_id.encode("ascii")
     except UnicodeEncodeError:

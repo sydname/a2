@@ -57,7 +57,7 @@ def parse_target(entry):
     m = URL_RE.search(entry.get("url", ""))
     if not m:
         raise ValueError("url 파싱 실패")
-    cid = m.group(2)
+    cid = urllib.parse.unquote(m.group(2))
     cid.encode("ascii")
     if "PASTE_" in cid:
         raise ValueError("예시 주소")
