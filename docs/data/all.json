@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-08T09:12:24Z",
+ "generatedAt": "2026-09-08T23:45:27Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -15,8 +15,8 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 903410,
-    "itemLevel": 6065,
+    "combatPower": 903563,
+    "itemLevel": 6068,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188620645",
     "titleName": ""
    },
@@ -219,50 +219,13 @@
     "pendantEnchant": 20,
     "amuletEnchant": 10
    },
-   "stigma": [
-    {
-     "name": "원소 강화",
-     "level": 25,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_SO_SKILL_040.png",
-     "id": 15400000
-    },
-    {
-     "name": "빙설의 갑주",
-     "level": 25,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_SO_SKILL_021.png",
-     "id": 15230000
-    },
-    {
-     "name": "불의 장벽",
-     "level": 25,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_SO_SKILL_039.png",
-     "id": 15390000
-    },
-    {
-     "name": "강철 보호막",
-     "level": 21,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_SO_SKILL_016.png",
-     "id": 15160000
-    },
-    {
-     "name": "냉기 폭풍",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_SO_SKILL_019.png",
-     "id": 15200000
-    },
-    {
-     "name": "지연 폭발",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_SO_SKILL_032.png",
-     "id": 15320000
-    }
-   ],
+   "stigma": [],
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
-    "openNodeTotal": 1000,
+    "openNodeTotal": 1003,
     "nodeTotal": 1216,
-    "basic": 493,
+    "basic": 496,
     "yustiel": 152,
     "boards": [
      {
@@ -279,18 +242,18 @@
       "name": "지켈",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Mace.png",
       "open": 1,
-      "openNodeCount": 122,
+      "openNodeCount": 124,
       "totalNodeCount": 152,
-      "openPercent": 80
+      "openPercent": 82
      },
      {
       "id": 63,
       "name": "바이젤",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Sword_1H.png",
       "open": 1,
-      "openNodeCount": 123,
+      "openNodeCount": 124,
       "totalNodeCount": 152,
-      "openPercent": 81
+      "openPercent": 82
      },
      {
       "id": 64,
@@ -1015,10 +978,28 @@
      "accessoryExceed": 45,
      "daevanionBasic": 493,
      "daevanionOpenNodes": 1000
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 903563,
+     "itemLevel": 6068,
+     "weaponExceed": 10,
+     "armorExceed": 12,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:12:01Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 153,
+    "itemLevel": 3,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 3
+   },
+   "updatedAt": "2026-09-08T23:44:59Z",
    "ok": true
   },
   {
@@ -1239,44 +1220,7 @@
     "pendantEnchant": 5,
     "amuletEnchant": 0
    },
-   "stigma": [
-    {
-     "name": "도발",
-     "level": 25,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_TE_SKILL_012.png",
-     "id": 12120000
-    },
-    {
-     "name": "전장의 깃발",
-     "level": 25,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_TE_SKILL_045.png",
-     "id": 12450000
-    },
-    {
-     "name": "주신의 징벌",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_TE_SKILL_029.png",
-     "id": 12310000
-    },
-    {
-     "name": "보호의 방패",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_TE_SKILL_011.png",
-     "id": 12110000
-    },
-    {
-     "name": "고결의 갑주",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_TE_SKILL_022.png",
-     "id": 12230000
-    },
-    {
-     "name": "네자칸의 방패",
-     "level": 18,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_TE_SKILL_030.png",
-     "id": 12320000
-    }
-   ],
+   "stigma": [],
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
@@ -2035,10 +1979,28 @@
      "accessoryExceed": 28,
      "daevanionBasic": 0,
      "daevanionOpenNodes": 880
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 603322,
+     "itemLevel": 5025,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 28,
+     "daevanionBasic": 0,
+     "daevanionOpenNodes": 880
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:12:06Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 0,
+    "itemLevel": 0,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 0
+   },
+   "updatedAt": "2026-09-08T23:45:05Z",
    "ok": true
   },
   {
@@ -2055,7 +2017,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 564942,
+    "combatPower": 564988,
     "itemLevel": 4965,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188716923",
     "titleName": "무스펠의 성배에 거주하는"
@@ -2259,44 +2221,7 @@
     "pendantEnchant": 3,
     "amuletEnchant": 0
    },
-   "stigma": [
-    {
-     "name": "돌격 자세",
-     "level": 25,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GL_SKILL_024.png",
-     "id": 11400000
-    },
-    {
-     "name": "지켈의 축복",
-     "level": 25,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GL_SKILL_040.png",
-     "id": 11250000
-    },
-    {
-     "name": "흡혈의 검",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GL_SKILL_034.png",
-     "id": 11340000
-    },
-    {
-     "name": "격노 폭발",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GL_SKILL_039.png",
-     "id": 11390000
-    },
-    {
-     "name": "파동의 갑주",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GL_SKILL_041.png",
-     "id": 11410000
-    },
-    {
-     "name": "집중 막기",
-     "level": 15,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GL_SKILL_011.png",
-     "id": 11110000
-    }
-   ],
+   "stigma": [],
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
@@ -2879,7 +2804,7 @@
     }
    },
    "titles": {
-    "ownedCount": 296,
+    "ownedCount": 297,
     "totalCount": 427,
     "equipped": [
      {
@@ -2898,7 +2823,7 @@
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 70
+      "ownedPercent": 71
      }
     ]
    },
@@ -3055,10 +2980,28 @@
      "accessoryExceed": 19,
      "daevanionBasic": 0,
      "daevanionOpenNodes": 863
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 564988,
+     "itemLevel": 4965,
+     "weaponExceed": 5,
+     "armorExceed": 0,
+     "accessoryExceed": 19,
+     "daevanionBasic": 0,
+     "daevanionOpenNodes": 863
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:12:09Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 46,
+    "itemLevel": 0,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 0
+   },
+   "updatedAt": "2026-09-08T23:45:08Z",
    "ok": true
   },
   {
@@ -3279,44 +3222,7 @@
     "pendantEnchant": 5,
     "amuletEnchant": 0
    },
-   "stigma": [
-    {
-     "name": "불패의 진언",
-     "level": 25,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_CH_SKILL_019.png",
-     "id": 18190000
-    },
-    {
-     "name": "질풍의 권능",
-     "level": 25,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_CH_SKILL_025.png",
-     "id": 18250000
-    },
-    {
-     "name": "질주의 진언",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_CH_SKILL_016.png",
-     "id": 18160000
-    },
-    {
-     "name": "쾌유의 손길",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_CH_SKILL_017.png",
-     "id": 18170000
-    },
-    {
-     "name": "수호의 축복",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_CH_SKILL_042.png",
-     "id": 18420000
-    },
-    {
-     "name": "마르쿠탄의 분노",
-     "level": 5,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_CH_SKILL_033.png",
-     "id": 18330000
-    }
-   ],
+   "stigma": [],
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
@@ -4075,10 +3981,28 @@
      "accessoryExceed": 8,
      "daevanionBasic": 0,
      "daevanionOpenNodes": 859
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 545628,
+     "itemLevel": 5005,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 8,
+     "daevanionBasic": 0,
+     "daevanionOpenNodes": 859
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:12:12Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 0,
+    "itemLevel": 0,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 0
+   },
+   "updatedAt": "2026-09-08T23:45:13Z",
    "ok": true
   },
   {
@@ -4299,44 +4223,7 @@
     "pendantEnchant": 5,
     "amuletEnchant": 0
    },
-   "stigma": [
-    {
-     "name": "격노",
-     "level": 25,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_028.png",
-     "id": 19280000
-    },
-    {
-     "name": "분신",
-     "level": 23,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_033.png",
-     "id": 19330000
-    },
-    {
-     "name": "집중 막기",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_035.png",
-     "id": 19350000
-    },
-    {
-     "name": "공파참",
-     "level": 15,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_029.png",
-     "id": 19290000
-    },
-    {
-     "name": "파쇄",
-     "level": 15,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_031.png",
-     "id": 19310000
-    },
-    {
-     "name": "순보",
-     "level": 5,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GT_SKILL_046.png",
-     "id": 19460000
-    }
-   ],
+   "stigma": [],
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
@@ -5095,10 +4982,28 @@
      "accessoryExceed": 20,
      "daevanionBasic": 0,
      "daevanionOpenNodes": 825
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 533531,
+     "itemLevel": 4874,
+     "weaponExceed": 6,
+     "armorExceed": 18,
+     "accessoryExceed": 20,
+     "daevanionBasic": 0,
+     "daevanionOpenNodes": 825
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:12:16Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 0,
+    "itemLevel": 0,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 0
+   },
+   "updatedAt": "2026-09-08T23:45:17Z",
    "ok": true
   },
   {
@@ -5115,7 +5020,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 436041,
+    "combatPower": 436047,
     "itemLevel": 4656,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188628440",
     "titleName": "무스펠의 성배에 다녀온"
@@ -5319,44 +5224,7 @@
     "pendantEnchant": 0,
     "amuletEnchant": 0
    },
-   "stigma": [
-    {
-     "name": "협공: 부식",
-     "level": 25,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_EL_SKILL_015.png",
-     "id": 16150000
-    },
-    {
-     "name": "강화: 정령의 가호",
-     "level": 24,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_EL_SKILL_019.png",
-     "id": 16190000
-    },
-    {
-     "name": "불길의 축복",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_EL_SKILL_037.png",
-     "id": 16370000
-    },
-    {
-     "name": "소환: 고대의 정령",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_EL_SKILL_025.png",
-     "id": 16250000
-    },
-    {
-     "name": "흡인",
-     "level": 10,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_EL_SKILL_006.png",
-     "id": 16060000
-    },
-    {
-     "name": "명령: 대역",
-     "level": 10,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_EL_SKILL_017.png",
-     "id": 16170000
-    }
-   ],
+   "stigma": [],
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
@@ -6115,10 +5983,28 @@
      "accessoryExceed": 4,
      "daevanionBasic": 0,
      "daevanionOpenNodes": 817
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 436047,
+     "itemLevel": 4656,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 0,
+     "daevanionOpenNodes": 817
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:12:21Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 6,
+    "itemLevel": 0,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 0
+   },
+   "updatedAt": "2026-09-08T23:45:22Z",
    "ok": true
   },
   {
@@ -6321,44 +6207,7 @@
     "pendantEnchant": 0,
     "amuletEnchant": 0
    },
-   "stigma": [
-    {
-     "name": "환영 분신",
-     "level": 25,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_029.png",
-     "id": 13310000
-    },
-    {
-     "name": "신속의 계약",
-     "level": 15,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_037.png",
-     "id": 13390000
-    },
-    {
-     "name": "맹수의 송곳니",
-     "level": 10,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_025.png",
-     "id": 13270000
-    },
-    {
-     "name": "암검 투척",
-     "level": 10,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_031.png",
-     "id": 13020000
-    },
-    {
-     "name": "트리니엘의 비수",
-     "level": 10,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_028.png",
-     "id": 13300000
-    },
-    {
-     "name": "회피 자세",
-     "level": 5,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_024.png",
-     "id": 13080000
-    }
-   ],
+   "stigma": [],
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
@@ -7007,10 +6856,28 @@
      "accessoryExceed": 0,
      "daevanionBasic": 0,
      "daevanionOpenNodes": 646
+    },
+    {
+     "date": "2026-09-09",
+     "combatPower": 319017,
+     "itemLevel": 3574,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 0,
+     "daevanionOpenNodes": 646
     }
    ],
-   "delta": null,
-   "updatedAt": "2026-09-08T09:12:24Z",
+   "delta": {
+    "sinceDate": "2026-09-08",
+    "combatPower": 0,
+    "itemLevel": 0,
+    "weaponExceed": 0,
+    "armorExceed": 0,
+    "accessoryExceed": 0,
+    "daevanionBasic": 0
+   },
+   "updatedAt": "2026-09-08T23:45:27Z",
    "ok": true
   }
  ]
