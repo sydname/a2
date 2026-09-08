@@ -5,6 +5,7 @@
 
   var DATA_URL = "./data/all.json";
   var MANUAL_URL = "./manual.json";
+  var ARCANA_URL = "./data/arcana.json";
   var app = document.getElementById("app");
   var metaLine = document.getElementById("metaLine");
   var toggle = document.getElementById("viewToggle");
@@ -12,6 +13,8 @@
   var STATE = {
     data: null,
     manual: {},
+    arcana: {},           // 아르카나 상세 (arcana.json)
+    arcanaGeneratedAt: null,
     view: lsGet("aion2.view") || "table",
     tab: lsGet("aion2.tab") || "basic",       // basic | enhance
     sel: lsGet("aion2.sel") || null,          // 카드뷰 선택 캐릭터 key
@@ -122,9 +125,12 @@
       if (!r.ok) throw new Error("all.json HTTP " + r.status); return r.json();
     }),
     fetch(MANUAL_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
+    fetch(ARCANA_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
   ]).then(function (res) {
     STATE.data = res[0];
     STATE.manual = (res[1] && res[1].characters) || {};
+    STATE.arcana = (res[2] && res[2].characters) || {};
+    STATE.arcanaGeneratedAt = res[2] && res[2].generatedAt || null;
     pruneOldChecks();
     if (!STATE.sel && STATE.data.characters[0]) STATE.sel = STATE.data.characters[0].key;
     render();
@@ -376,16 +382,21 @@
   function cardTemplate(c) {
     var p = c.profile || {}, ex = c.exceed || {}, d = c.daevanion || {}, dl = c.delta || {};
 
-    var kpis = [
+    function kpiCells(rows) {
+      return rows.map(function (r) {
+        return '<div class="kpi"><div class="k">' + esc(r[0]) + '</div><div class="v">' + r[1] + (r[2] || "") + "</div></div>";
+      }).join("");
+    }
+    var kpisTop = kpiCells([
       ["아이템 레벨", N(p.itemLevel), deltaHtml(dl.itemLevel)],
       ["전투력", N(p.combatPower) + ' <small>(' + K(p.combatPower) + "k)</small>", deltaHtml(dl.combatPower, { k: true })],
-      ["무기+가더 돌파", N(ex.weapon.total), deltaHtml(dl.weaponExceed)],
+      ["데바니온(기본)", N(d.basic) + ' <small>+유스 ' + N(d.yustiel) + "</small>", deltaHtml(dl.daevanionBasic)],
+    ]);
+    var kpisBt = kpiCells([
+      ["무기 + 가더 돌파", N(ex.weapon.total), deltaHtml(dl.weaponExceed)],
       ["방어구 돌파", N(ex.armor.total), deltaHtml(dl.armorExceed)],
       ["악세서리 돌파", N(ex.accessory.total), deltaHtml(dl.accessoryExceed)],
-      ["데바니온(기본)", N(d.basic) + ' <small>+유스 ' + N(d.yustiel) + "</small>", deltaHtml(dl.daevanionBasic)],
-    ].map(function (r) {
-      return '<div class="kpi"><div class="k">' + esc(r[0]) + '</div><div class="v">' + r[1] + (r[2] || "") + "</div></div>";
-    }).join("");
+    ]);
 
     var gearItems = (c.equipment || []).filter(function (e) { return !e.isArcana; });
     var gear = gearItems.map(function (e) {
@@ -406,13 +417,40 @@
 
     var arc = c.arcana || [];
     var arcEnchTotal = arc.reduce(function (s, a) { return s + (a.enchant || 0); }, 0);
+    var det = STATE.arcana[c.key];
+    var detBySlot = {};
+    ((det && det.arcana) || []).forEach(function (a) { detBySlot[a.slot] = a; });
+
     var arcHtml = arc.map(function (a) {
-      return '<div class="arc ' + gradeCls(a.grade) + '">' +
+      var dd = detBySlot[a.slot];
+      var head = '<div class="a-head">' +
         '<div class="a-ic">' + (a.icon ? '<img loading="lazy" alt="" src="' + esc(a.icon) + '">' : "") + "</div>" +
-        '<div class="a-name">' + esc(a.name || a.slotKo) + "</div>" +
-        '<div class="a-en">+' + (a.enchant || 0) + "</div>" +
+        '<div class="a-name">' + esc(a.name || a.slotKo) +
+          (dd && dd.category ? ' <span class="a-cat">' + esc(dd.category) + "</span>" : "") + "</div>" +
+        '<div class="a-en">+' + (a.enchant || 0) + (dd && dd.maxEnchant ? " <small>/ " + dd.maxEnchant + "</small>" : "") + "</div>" +
         "</div>";
+      var body = "";
+      if (dd) {
+        var ms = (dd.mainStats || []).map(function (s) {
+          return '<div class="a-stat">' + esc(s.name) + " <b>" + esc(s.value) + "</b>" +
+            (s.extra && s.extra !== "0" ? ' <span class="a-extra">(+' + esc(s.extra) + ")</span>" : "") + "</div>";
+        }).join("");
+        var sk = (dd.subSkills || []).map(function (s) {
+          return '<span class="a-skill">' + (s.icon ? '<img alt="" src="' + esc(s.icon) + '">' : "") +
+            esc(s.name) + ' <b>Lv.' + N(s.level) + "</b></span>";
+        }).join("");
+        body = '<div class="a-detail">' + ms +
+          (sk ? '<div class="a-skills">' + sk + "</div>" : "") + "</div>";
+      }
+      return '<div class="arc ' + gradeCls(a.grade) + (dd ? " has-detail" : "") + '">' + head + body + "</div>";
     }).join("");
+
+    var aUrl = actionsUrl("arcana.yml");
+    var refreshBtn = '<a class="refresh-btn" href="' + esc(aUrl) + '" target="_blank" rel="noopener" ' +
+      'title="GitHub Actions 에서 \'Run workflow\' 를 눌러 아르카나 상세를 다시 수집합니다">상세 갱신 ↗</a>';
+    var arcMeta = det && det.updatedAt
+      ? '<span class="arc-upd">상세 수집 ' + esc(fmtDateTime(det.updatedAt)) + " (" + esc(timeAgo(det.updatedAt)) + ")</span>"
+      : '<span class="arc-upd">상세 미수집 — [상세 갱신] 을 눌러 한 번 수집하세요</span>';
 
     var boards = (d.boards || []).map(function (b) {
       var pct = b.totalNodeCount ? Math.round((b.openNodeCount / b.totalNodeCount) * 100) : (b.openPercent || 0);
@@ -439,7 +477,9 @@
           "</div>" +
           '<a class="c-link" href="' + esc(c.officialUrl) + '" target="_blank" rel="noopener">공식 페이지 ↗</a>' +
         "</div>" +
-        '<div class="kpis">' + kpis + "</div>" +
+        '<div class="kpis">' + kpisTop + "</div>" +
+        '<div class="kpis-label">분야별 돌파</div>' +
+        '<div class="kpis bt">' + kpisBt + "</div>" +
         (dl && dl.sinceDate ? '<div class="since">▲▼ ' + esc(dl.sinceDate) + " 대비 증감</div>" : "") +
       "</section>" +
 
@@ -450,7 +490,11 @@
       "</section>" +
 
       '<section class="cbox">' +
-        "<h3>아르카나 <span class=\"cnt\">" + arc.length + "</span> <small>강화 합계 +" + arcEnchTotal + "</small></h3>" +
+        '<div class="arc-top">' +
+          "<h3>아르카나 <span class=\"cnt\">" + arc.length + "</span> <small>강화 합계 +" + arcEnchTotal + "</small></h3>" +
+          refreshBtn +
+        "</div>" +
+        '<div class="arc-meta">' + arcMeta + "</div>" +
         '<div class="arc-list">' + (arcHtml || '<p class="muted">착용한 아르카나가 없습니다.</p>') + "</div>" +
       "</section>" +
 
@@ -462,4 +506,17 @@
     );
   }
   function tag(t) { return t ? '<span class="tag">' + esc(t) + "</span>" : ""; }
+
+  // github.io 주소에서 저장소 Actions 워크플로 URL 을 추론
+  function actionsUrl(workflowFile) {
+    try {
+      var host = location.hostname; // sydname.github.io
+      if (/\.github\.io$/.test(host)) {
+        var owner = host.replace(/\.github\.io$/, "");
+        var repo = (location.pathname.split("/").filter(Boolean)[0]) || (owner + ".github.io");
+        return "https://github.com/" + owner + "/" + repo + "/actions/workflows/" + workflowFile;
+      }
+    } catch (e) {}
+    return "https://github.com";
+  }
 })();

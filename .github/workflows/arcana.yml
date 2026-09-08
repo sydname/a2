@@ -1,0 +1,38 @@
+name: 아르카나 상세 갱신 (수동)
+
+# 아르카나 상세 강화 내역은 자주 바뀌지 않으므로 수동 실행 전용입니다.
+# GitHub 저장소 → Actions 탭 → 이 워크플로 선택 → "Run workflow" 클릭.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  arcana:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 아르카나 상세 수집
+        run: python scripts/fetch_arcana.py --config characters.json --out docs/data
+
+      - name: 커밋
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/arcana.json
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "chore: 아르카나 상세 갱신 ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push
+          fi
