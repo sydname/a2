@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-09T08:47:58Z",
+ "generatedAt": "2026-09-09T18:03:19Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -866,10 +866,10 @@
    ],
    "petwing": {
     "pet": {
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_Lagur_01.png",
-     "id": 1269,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_SkateBoard_01.png",
+     "id": 1274,
      "level": 5,
-     "name": "라구르"
+     "name": "핑키 스핀 스케이트보드"
     },
     "wing": {
      "enchantLevel": 10,
@@ -1073,18 +1073,28 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-09-10",
+     "combatPower": 933662,
+     "itemLevel": 6326,
+     "weaponExceed": 10,
+     "armorExceed": 12,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-08",
-    "combatPower": 30252,
-    "itemLevel": 261,
+    "sinceDate": "2026-09-09",
+    "combatPower": 0,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
-    "daevanionBasic": 3
+    "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-09T08:47:30Z",
+   "updatedAt": "2026-09-09T18:02:51Z",
    "ok": true
   },
   {
@@ -2137,18 +2147,28 @@
      "accessoryExceed": 28,
      "daevanionBasic": 476,
      "daevanionOpenNodes": 880
+    },
+    {
+     "date": "2026-09-10",
+     "combatPower": 603322,
+     "itemLevel": 5025,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 28,
+     "daevanionBasic": 476,
+     "daevanionOpenNodes": 880
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-08",
+    "sinceDate": "2026-09-09",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
-    "daevanionBasic": 476
+    "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-09T08:47:35Z",
+   "updatedAt": "2026-09-09T18:02:55Z",
    "ok": true
   },
   {
@@ -3201,18 +3221,28 @@
      "accessoryExceed": 19,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 863
+    },
+    {
+     "date": "2026-09-10",
+     "combatPower": 564988,
+     "itemLevel": 4965,
+     "weaponExceed": 5,
+     "armorExceed": 0,
+     "accessoryExceed": 19,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 863
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-08",
-    "combatPower": 46,
+    "sinceDate": "2026-09-09",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
-    "daevanionBasic": 447
+    "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-09T08:47:40Z",
+   "updatedAt": "2026-09-09T18:03:00Z",
    "ok": true
   },
   {
@@ -4265,18 +4295,28 @@
      "accessoryExceed": 8,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 859
+    },
+    {
+     "date": "2026-09-10",
+     "combatPower": 545628,
+     "itemLevel": 5005,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 8,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 859
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-08",
+    "sinceDate": "2026-09-09",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
-    "daevanionBasic": 449
+    "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-09T08:47:44Z",
+   "updatedAt": "2026-09-09T18:03:05Z",
    "ok": true
   },
   {
@@ -5122,10 +5162,10 @@
    ],
    "petwing": {
     "pet": {
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_Frugon_01.png",
-     "id": 1264,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_SkateBoard_01.png",
+     "id": 1274,
      "level": 5,
-     "name": "설원 프루곤"
+     "name": "핑키 스핀 스케이트보드"
     },
     "wing": {
      "enchantLevel": 0,
@@ -5329,18 +5369,28 @@
      "accessoryExceed": 20,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 825
+    },
+    {
+     "date": "2026-09-10",
+     "combatPower": 533666,
+     "itemLevel": 4874,
+     "weaponExceed": 6,
+     "armorExceed": 18,
+     "accessoryExceed": 20,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 825
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-08",
-    "combatPower": 135,
+    "sinceDate": "2026-09-09",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
-    "daevanionBasic": 449
+    "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-09T08:47:48Z",
+   "updatedAt": "2026-09-09T18:03:10Z",
    "ok": true
   },
   {
@@ -6186,10 +6236,10 @@
    ],
    "petwing": {
     "pet": {
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_Pajama_01.png",
-     "id": 1242,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_SkateBoard_01.png",
+     "id": 1274,
      "level": 5,
-     "name": "달님"
+     "name": "핑키 스핀 스케이트보드"
     },
     "wing": {
      "enchantLevel": 3,
@@ -6393,18 +6443,28 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 817
+    },
+    {
+     "date": "2026-09-10",
+     "combatPower": 436047,
+     "itemLevel": 4656,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 817
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-08",
-    "combatPower": 6,
+    "sinceDate": "2026-09-09",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
-    "daevanionBasic": 446
+    "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-09T08:47:53Z",
+   "updatedAt": "2026-09-09T18:03:15Z",
    "ok": true
   },
   {
@@ -7122,10 +7182,10 @@
    ],
    "petwing": {
     "pet": {
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_AshGuard_01.png",
-     "id": 1058,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_SkateBoard_01.png",
+     "id": 1274,
      "level": 5,
-     "name": "검은연기 무르트"
+     "name": "핑키 스핀 스케이트보드"
     },
     "wing": {
      "enchantLevel": 0,
@@ -7329,18 +7389,28 @@
      "accessoryExceed": 0,
      "daevanionBasic": 383,
      "daevanionOpenNodes": 646
+    },
+    {
+     "date": "2026-09-10",
+     "combatPower": 319017,
+     "itemLevel": 3574,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 383,
+     "daevanionOpenNodes": 646
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-08",
+    "sinceDate": "2026-09-09",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
-    "daevanionBasic": 383
+    "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-09T08:47:58Z",
+   "updatedAt": "2026-09-09T18:03:19Z",
    "ok": true
   }
  ]
