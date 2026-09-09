@@ -2,13 +2,11 @@
   "_help": [
     "수동 관리 값. 키 = characters.json 의 label.",
     "ode              : 오드 에너지 (숫자). '기본' 탭.",
-    "potential        : 부위별 잠재력 단계 (엑셀 부캐영각 잠재력표). '잠재력' 탭.",
-    "                   슬롯키 = MainHand SubHand Necklace Earring1 Earring2 Ring1 Ring2 Bracelet1 Bracelet2 Brooch1 Brooch2. 값 = 0~4 / \"-\" / \"\".",
-    "                   칸 색은 사이트가 자동으로 그 부위 착용 아이템 등급색을 입힙니다.",
-    "potentialUnique  : 유일 잠재력 개수.  potentialEpic : 영웅 잠재력 개수.",
-    "tierName         : 세트/티어 표기 (예: \"영웅 5티어 · 용암\").",
-    "값을 바꾸면 커밋/푸시 시 사이트에 반영됩니다.",
-    "* 영혼각인은 이 파일이 아니라 '아르카나·영혼각인 상세 갱신' 워크플로가 방어구 subStats 를 수집합니다.",
+    "potential        : 부위별 잠재력 강화 단계 (0~4 / \"-\" / \"\"). 슬롯키 = MainHand SubHand Necklace Earring1 Earring2 Ring1 Ring2 Bracelet1 Bracelet2 Brooch1 Brooch2.",
+    "potentialTier    : 부위별 아이템 티어 코드. E3 영웅3 / E4 영웅4 / E5 영웅5 / U4 유일4 / U5 유일5 / U6 유일6 / \"\" 없음. 사이트가 이 코드로 칸 배경색을 칠합니다.",
+    "potentialUnique / potentialEpic : 유일 / 영웅 잠재력 개수. (Tier 는 그 칸 색코드)",
+    "tierName / tierCode : 대표 티어 표기와 색코드.",
+    "값/티어는 엑셀 부캐영각 B17:P23 · AB17:AF23 기준. 바꾸면 커밋/푸시 시 반영.",
     "* 회랑/일회/각성, 루드라/침식/무스펠 체크박스는 브라우저(localStorage)에 저장, 매주 수요일 05:00(KST) 자동 초기화."
   ],
   "characters": {
@@ -29,7 +27,23 @@
       },
       "potentialUnique": 6,
       "potentialEpic": "",
-      "tierName": "영웅 5티어 · 용암"
+      "tierName": "영웅 5티어 · 용암",
+      "potentialTier": {
+        "MainHand": "",
+        "SubHand": "",
+        "Necklace": "E4",
+        "Earring1": "E5",
+        "Earring2": "E4",
+        "Ring1": "",
+        "Ring2": "",
+        "Bracelet1": "E4",
+        "Bracelet2": "E3",
+        "Brooch1": "E5",
+        "Brooch2": "E5"
+      },
+      "potentialUniqueTier": "U6",
+      "potentialEpicTier": "",
+      "tierCode": "E5"
     },
     "감자미": {
       "ode": 1225,
@@ -48,7 +62,23 @@
       },
       "potentialUnique": 5,
       "potentialEpic": 5,
-      "tierName": "영웅 4티어 · 침식"
+      "tierName": "영웅 4티어 · 침식",
+      "potentialTier": {
+        "MainHand": "",
+        "SubHand": "E3",
+        "Necklace": "U5",
+        "Earring1": "U5",
+        "Earring2": "U5",
+        "Ring1": "",
+        "Ring2": "",
+        "Bracelet1": "E4",
+        "Bracelet2": "E3",
+        "Brooch1": "E5",
+        "Brooch2": "E5"
+      },
+      "potentialUniqueTier": "U5",
+      "potentialEpicTier": "E5",
+      "tierCode": "E4"
     },
     "잔열": {
       "ode": 360,
@@ -67,7 +97,23 @@
       },
       "potentialUnique": 4,
       "potentialEpic": 4,
-      "tierName": "영웅 3티어 · 고대정령 / 루드라"
+      "tierName": "영웅 3티어 · 고대정령 / 루드라",
+      "potentialTier": {
+        "MainHand": "E3",
+        "SubHand": "U4",
+        "Necklace": "U5",
+        "Earring1": "",
+        "Earring2": "",
+        "Ring1": "U5",
+        "Ring2": "U5",
+        "Bracelet1": "E4",
+        "Bracelet2": "E3",
+        "Brooch1": "E5",
+        "Brooch2": "E5"
+      },
+      "potentialUniqueTier": "U4",
+      "potentialEpicTier": "E4",
+      "tierCode": "E3"
     },
     "괌자": {
       "ode": 745,
@@ -86,7 +132,23 @@
       },
       "potentialUnique": 3,
       "potentialEpic": 3,
-      "tierName": "유일 6티어 · 바실루스 / 아티엘"
+      "tierName": "유일 6티어 · 바실루스 / 아티엘",
+      "potentialTier": {
+        "MainHand": "E3",
+        "SubHand": "E3",
+        "Necklace": "U5",
+        "Earring1": "U5",
+        "Earring2": "U5",
+        "Ring1": "U5",
+        "Ring2": "U5",
+        "Bracelet1": "",
+        "Bracelet2": "E4",
+        "Brooch1": "",
+        "Brooch2": ""
+      },
+      "potentialUniqueTier": "",
+      "potentialEpicTier": "E3",
+      "tierCode": "U6"
     },
     "넌강해졌다": {
       "ode": 940,
@@ -105,7 +167,23 @@
       },
       "potentialUnique": "",
       "potentialEpic": "",
-      "tierName": "유일 5티어 · 나트하라 / 알투라돈·광휘"
+      "tierName": "유일 5티어 · 나트하라 / 알투라돈/광휘",
+      "potentialTier": {
+        "MainHand": "E3",
+        "SubHand": "E3",
+        "Necklace": "U6",
+        "Earring1": "U5",
+        "Earring2": "E3",
+        "Ring1": "U5",
+        "Ring2": "U5",
+        "Bracelet1": "E3",
+        "Bracelet2": "E3",
+        "Brooch1": "E5",
+        "Brooch2": ""
+      },
+      "potentialUniqueTier": "",
+      "potentialEpicTier": "",
+      "tierCode": "U5"
     },
     "고구미": {
       "ode": 2375,
@@ -124,7 +202,23 @@
       },
       "potentialUnique": "",
       "potentialEpic": "",
-      "tierName": "유일 4티어 · 드라마타 / 바카르마"
+      "tierName": "유일 4티어 · 드라마타 / 바카르마",
+      "potentialTier": {
+        "MainHand": "U5",
+        "SubHand": "U4",
+        "Necklace": "E3",
+        "Earring1": "U5",
+        "Earring2": "U5",
+        "Ring1": "U4",
+        "Ring2": "U4",
+        "Bracelet1": "E3",
+        "Bracelet2": "E3",
+        "Brooch1": "",
+        "Brooch2": ""
+      },
+      "potentialUniqueTier": "",
+      "potentialEpicTier": "",
+      "tierCode": "U4"
     },
     "크로매데": {
       "ode": 1890,
@@ -143,7 +237,23 @@
       },
       "potentialUnique": "",
       "potentialEpic": "",
-      "tierName": ""
+      "tierName": "",
+      "potentialTier": {
+        "MainHand": "",
+        "SubHand": "",
+        "Necklace": "",
+        "Earring1": "",
+        "Earring2": "",
+        "Ring1": "",
+        "Ring2": "",
+        "Bracelet1": "",
+        "Bracelet2": "",
+        "Brooch1": "",
+        "Brooch2": ""
+      },
+      "potentialUniqueTier": "",
+      "potentialEpicTier": "",
+      "tierCode": ""
     }
   }
 }

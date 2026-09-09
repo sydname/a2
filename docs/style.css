@@ -124,14 +124,16 @@ td.ex-5 { color: #0c0f14; }
 .gcol-unique { color: #c99700; }
 .gcol-other { color: var(--muted-2); }
 
-/* 잠재력 색: 티어 숫자 기준 */
-.tc-6 { color: #2f6ef0; }
-.tc-5 { color: #c99700; }
-.tc-4 { color: #12915a; }
-.tc-3 { color: #d63a34; }
-.tc-x { color: var(--muted-2); }
-td .gv { font-weight: 800; font-variant-numeric: tabular-nums; }
-td .tier-txt { font-weight: 700; }
+/* 잠재력 티어 배경색 (엑셀 부캐영각 색상 그대로) */
+.pt-E3 { background: #e06666; }   /* 영웅 3티어 */
+.pt-E4 { background: #e69138; }   /* 영웅 4티어 */
+.pt-E5 { background: #f1c232; }   /* 영웅 5티어 */
+.pt-U4 { background: #a2c4c9; }   /* 유일 4티어 */
+.pt-U5 { background: #d9d2e9; }   /* 유일 5티어 */
+.pt-U6 { background: #f9cb9c; }   /* 유일 6티어 */
+table.grid td.pt { color: #17202b; }
+table.grid td.pt b { font-weight: 800; }
+.tier-txt { display: inline-block; font-weight: 700; color: #17202b; padding: 2px 8px; border-radius: 6px; }
 
 /* 영혼각인 O/· */
 .detail-bar { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
