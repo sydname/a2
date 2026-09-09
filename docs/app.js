@@ -305,15 +305,8 @@
     else if (tab === "bt")
       note.innerHTML = "돌파 단계는 공식 API 에서 매일 자동 갱신됩니다. 색: 0 회색 · 1 초록 · 2 파랑 · 3 주황 · 4 빨강 · 5 진한 검정.";
     else if (tab === "pot")
-      note.innerHTML = "왼쪽 = 부위별 잠재력 <b>단계</b>(0~4), 칸 색 = 티어 " +
-        "(<span style='background:#e06666;padding:0 4px;border-radius:3px'>영웅3</span> " +
-        "<span style='background:#e69138;padding:0 4px;border-radius:3px'>영웅4</span> " +
-        "<span style='background:#f1c232;padding:0 4px;border-radius:3px'>영웅5</span> " +
-        "<span style='background:#a2c4c9;padding:0 4px;border-radius:3px'>유일4</span> " +
-        "<span style='background:#d9d2e9;padding:0 4px;border-radius:3px'>유일5</span> " +
-        "<span style='background:#f9cb9c;padding:0 4px;border-radius:3px'>유일6</span>). " +
-        "오른쪽 = 4단계까지 <b>남은 재화</b>를 티어별로 합산 " +
-        "(단계 상승 비용 — 영웅 2·4·6·8, 유일 1·2·3·4).";
+      note.innerHTML = "왼쪽 = 부위별 잠재력 <b>단계</b>(0~4), 칸 색 = 티어 " + potLegendHtml() +
+        " 오른쪽 = 4단계까지 <b>남은 재화</b>를 티어별로 합산 (단계 상승 비용 — 영웅 2·4·6·8, 유일 1·2·3·4).";
     else if (tab === "soul")
       note.innerHTML = "영혼각인(방어구 subStats)은 <b>수동 갱신</b>입니다. [상세 갱신] → GitHub Actions 에서 Run workflow. " +
         "머리행 구분이 해당 부위에 각인돼 있으면 <b>O</b>. " +
@@ -698,8 +691,19 @@
       "</div>";
   }
 
+  function potLegendHtml() {
+    return '<span class="pot-legend">' + [["E3", "영웅3"], ["E4", "영웅4"], ["E5", "영웅5"],
+      ["U4", "유일4"], ["U5", "유일5"], ["U6", "유일6"]].map(function (x) {
+      return '<span class="pt pt-' + x[0] + '">' + x[1] + "</span>";
+    }).join("") + "</span>";
+  }
+
   function gearRowHtml(c, e) {
-    var pot = potentialOf(c, e.slot);
+    var pp = getPot(c, e.slot);
+    var potBadge = "";
+    if (pp.v !== "" && pp.v != null && pp.v !== "-") {
+      potBadge = '<span class="g-pot ' + ptClass(pp.t) + '" title="' + esc(ptLabel(pp.t)) + '">잠재 ' + esc(String(pp.v)) + "</span>";
+    }
     return '<div class="gear ' + gradeCls(e.grade) + '">' +
       '<div class="g-ic">' + (e.icon ? '<img loading="lazy" alt="" src="' + esc(e.icon) + '">' : "") + "</div>" +
       '<div class="g-main">' +
@@ -709,7 +713,7 @@
       '<div class="g-nums">' +
         '<span class="g-en">+' + (e.enchant || 0) + "</span>" +
         (e.exceed ? '<span class="g-ex">' + e.exceed + "돌파</span>" : "") +
-        (pot !== "" ? '<span class="g-pot">잠재 ' + esc(pot) + "</span>" : "") +
+        potBadge +
       "</div>" +
       "</div>";
   }
@@ -766,7 +770,6 @@
       '<section class="cbox">' +
         "<h3>무기 · 가더 · 악세서리 <span class=\"cnt\">" + wacc.length + "</span></h3>" +
         '<div class="gear-list">' + (waHtml || '<p class="muted">–</p>') + "</div>" +
-        (stigmaChips ? '<h4 class="mt">상위 스티그마</h4><div class="stig-list">' + stigmaChips + "</div>" : "") +
       "</section>" +
 
       '<section class="cbox">' +
@@ -778,6 +781,12 @@
         "<h3>데바니온 <span class=\"cnt\">" + d.openedBoards + " / " + d.totalBoards + "</span> " +
         "<small>개방 노드 " + N(d.openNodeTotal) + " / " + N(d.nodeTotal) + "</small></h3>" +
         '<div class="daev">' + boards + "</div>" +
+        (stigmaChips ? '<h4 class="mt">상위 스티그마</h4><div class="stig-list">' + stigmaChips + "</div>" : "") +
+      "</section>" +
+
+      '<section class="cbox">' +
+        "<h3>잠재력 <small>장비 칸의 [잠재] 배지 색 = 티어</small></h3>" +
+        potLegendHtml() +
       "</section>"
     );
   }
@@ -808,7 +817,7 @@
           return '<div class="a-skill">' + (s.icon ? '<img alt="" src="' + esc(s.icon) + '">' : "") +
             "<span>" + esc(s.name) + "</span> <b>Lv." + N(s.level) + "</b></div>";
         }).join("");
-        body = '<div class="a-detail">' + ms +
+        body = '<div class="a-detail"><div class="a-stats">' + ms + "</div>" +
           (sk ? '<div class="a-skills">' + sk + "</div>" : "") + "</div>";
       }
       return '<div class="arc ' + gradeCls(a.grade) + (dd ? " has-detail" : "") + '">' + head + body + "</div>";

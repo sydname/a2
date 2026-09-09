@@ -224,7 +224,12 @@ td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
 .g-nums { display: flex; align-items: center; gap: 5px; font-variant-numeric: tabular-nums; }
 .g-en { font-size: 12px; font-weight: 800; color: var(--muted); }
 .g-ex { font-size: 10.5px; font-weight: 800; color: #fff; background: var(--gc); border-radius: 5px; padding: 1px 5px; }
-.g-pot { font-size: 10.5px; font-weight: 800; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border)); background: var(--accent-soft); border-radius: 5px; padding: 1px 5px; }
+.g-pot { font-size: 10.5px; font-weight: 800; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border)); background: var(--accent-soft); border-radius: 5px; padding: 1px 5px; white-space: nowrap; }
+.g-pot.pt { color: #17202b; border-color: transparent; }   /* .pt-E4 등이 배경색 제공 */
+
+.pot-legend { display: inline-flex; flex-wrap: wrap; gap: 6px; vertical-align: middle; }
+.pot-legend span { font-size: 11px; font-weight: 700; color: #17202b; padding: 2px 8px; border-radius: 5px; }
+.cbox .pot-legend { display: flex; margin-top: 2px; }
 
 .stig-list { display: flex; flex-wrap: wrap; gap: 6px; }
 .stig { font-size: 11.5px; font-weight: 600; color: var(--muted); background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px; }
@@ -245,6 +250,7 @@ td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
 .arc-list.grid6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 @media (max-width: 1080px) { .arc-list.grid6 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (max-width: 760px)  { .arc-list.grid6 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.arc-list.grid6 .arc { display: flex; flex-direction: column; }
 .arc {
   border: 1px solid color-mix(in srgb, var(--gc) 35%, var(--border));
   background: var(--gb); border-radius: 9px; padding: 7px 9px;
@@ -256,12 +262,13 @@ td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
 .a-cat { font-weight: 500; color: var(--muted-2); font-size: 10.5px; }
 .a-en { font-size: 12px; font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; }
 .a-en small { color: var(--muted-2); font-weight: 600; }
-.a-detail { margin-top: 6px; padding-top: 6px; border-top: 1px dashed color-mix(in srgb, var(--gc) 30%, var(--border)); display: grid; gap: 5px; }
+.a-detail { margin-top: 6px; padding-top: 6px; border-top: 1px dashed color-mix(in srgb, var(--gc) 30%, var(--border)); display: flex; flex-direction: column; gap: 5px; flex: 1 1 auto; }
+.a-stats { display: grid; gap: 4px; }
 .a-stat { font-size: 11.5px; color: var(--muted); }
 .a-stat b { color: var(--text); }
 .a-extra { color: var(--pos); font-weight: 700; }
-/* 아르카나 강화(서브스킬) 내역 — 세로로 한 줄씩 */
-.a-skills { display: grid; gap: 3px; margin-top: 3px; }
+/* 아르카나 강화(서브스킬) 내역 — 세로 한 줄씩, 카드 하단 정렬 */
+.a-skills { display: grid; gap: 3px; margin-top: auto; padding-top: 5px; }
 .a-skill { display: flex; align-items: center; gap: 4px; font-size: 10.5px; font-weight: 600; color: var(--muted); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2px 6px; }
 .a-skill img { width: 13px; height: 13px; flex: none; }
 .a-skill span { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
