@@ -248,6 +248,8 @@ def build_record(entry, info, equip):
         "exceed": {"weapon": weapon, "armor": armor, "accessory": accessory},
         "breakthrough": breakthrough,
         "stigma": stigma,
+        "skills": {s.get("name"): s.get("skillLevel")
+                   for s in skill_list if s.get("name") and s.get("category") in ("Active", "Passive")},
         "daevanion": daev,
         "arcana": arcana,
         "equipment": equipment,

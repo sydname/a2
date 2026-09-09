@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-09T03:16:30Z",
+ "generatedAt": "2026-09-09T08:47:58Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -15,8 +15,8 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 903563,
-    "itemLevel": 6068,
+    "combatPower": 933662,
+    "itemLevel": 6326,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188620645",
     "titleName": ""
    },
@@ -257,6 +257,30 @@
      "id": 15320000
     }
    ],
+   "skills": {
+    "불꽃 화살": 16,
+    "얼음 사슬": 12,
+    "불꽃 작살": 20,
+    "혹한의 바람": 20,
+    "불꽃 폭발": 20,
+    "화염 난사": 12,
+    "빙결": 12,
+    "겨울의 속박": 19,
+    "빙결 폭발": 12,
+    "집중의 기원": 20,
+    "지옥의 화염": 21,
+    "충격 해제": 12,
+    "불의 표식": 16,
+    "대지의 로브": 18,
+    "냉기 소환": 17,
+    "불꽃의 로브": 34,
+    "정기 흡수": 11,
+    "저항의 은혜": 17,
+    "냉기의 로브": 16,
+    "강화의 은혜": 18,
+    "회생의 계약": 14,
+    "생기 증발": 15
+   },
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
@@ -708,6 +732,28 @@
      "isArcana": false
     },
     {
+     "slotPos": 25,
+     "slot": "Seal1",
+     "slotKo": "Seal1",
+     "name": "해방자의 인장",
+     "grade": "Legend",
+     "enchant": 13,
+     "exceed": 0,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Seal_l_001.png",
+     "isArcana": false
+    },
+    {
+     "slotPos": 26,
+     "slot": "Seal2",
+     "slotKo": "Seal2",
+     "name": "해방자의 인장",
+     "grade": "Legend",
+     "enchant": 13,
+     "exceed": 0,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Seal_l_001.png",
+     "isArcana": false
+    },
+    {
      "slotPos": 41,
      "slot": "Arcana1",
      "slotKo": "아르카나1",
@@ -1020,8 +1066,8 @@
     },
     {
      "date": "2026-09-09",
-     "combatPower": 903563,
-     "itemLevel": 6068,
+     "combatPower": 933662,
+     "itemLevel": 6326,
      "weaponExceed": 10,
      "armorExceed": 12,
      "accessoryExceed": 45,
@@ -1031,14 +1077,14 @@
    ],
    "delta": {
     "sinceDate": "2026-09-08",
-    "combatPower": 153,
-    "itemLevel": 3,
+    "combatPower": 30252,
+    "itemLevel": 261,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 3
    },
-   "updatedAt": "2026-09-09T03:16:04Z",
+   "updatedAt": "2026-09-09T08:47:30Z",
    "ok": true
   },
   {
@@ -1297,6 +1343,30 @@
      "id": 12320000
     }
    ],
+   "skills": {
+    "맹렬한 일격": 20,
+    "연속 난타": 20,
+    "포획": 12,
+    "방패 강타": 14,
+    "심판": 21,
+    "섬광 난무": 16,
+    "쇠약의 맹타": 12,
+    "비호의 일격": 16,
+    "방패 돌격": 12,
+    "섬멸": 8,
+    "징벌": 21,
+    "충격 해제": 12,
+    "체력 강화": 15,
+    "비호의 방패": 7,
+    "단죄의 가호": 15,
+    "철벽 방어": 16,
+    "수호의 인장": 5,
+    "충격 적중": 27,
+    "모욕의 포효": 20,
+    "격앙": 32,
+    "생존 의지": 12,
+    "고통 차단": 15
+   },
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
@@ -2078,7 +2148,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 476
    },
-   "updatedAt": "2026-09-09T03:16:08Z",
+   "updatedAt": "2026-09-09T08:47:35Z",
    "ok": true
   },
   {
@@ -2337,6 +2407,30 @@
      "id": 11110000
     }
    ],
+   "skills": {
+    "예리한 일격": 16,
+    "절단의 맹타": 20,
+    "도약 찍기": 15,
+    "유린의 검": 12,
+    "내려찍기": 20,
+    "검기 난무": 16,
+    "발목 베기": 12,
+    "분쇄 파동": 14,
+    "돌진 일격": 12,
+    "공중 결박": 11,
+    "파멸의 맹타": 20,
+    "충격 해제": 12,
+    "생존 자세": 16,
+    "보호의 갑옷": 11,
+    "피의 흡수": 16,
+    "약점 파악": 15,
+    "공격 준비": 25,
+    "충격 적중": 23,
+    "파괴 충동": 14,
+    "노련한 반격": 27,
+    "생존 의지": 16,
+    "살기 파열": 27
+   },
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
@@ -3118,7 +3212,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 447
    },
-   "updatedAt": "2026-09-09T03:16:13Z",
+   "updatedAt": "2026-09-09T08:47:40Z",
    "ok": true
   },
   {
@@ -3377,6 +3471,30 @@
      "id": 18330000
     }
    ],
+   "skills": {
+    "격파쇄": 20,
+    "백열격": 14,
+    "돌진 격파": 16,
+    "타격쇄": 12,
+    "암격쇄": 20,
+    "질풍 난무": 16,
+    "열파격": 12,
+    "쾌유의 주문": 20,
+    "진동쇄": 16,
+    "파동격": 12,
+    "회전격": 16,
+    "충격 해제": 12,
+    "생명의 축복": 19,
+    "십자 방어": 5,
+    "보호진": 15,
+    "고취의 주문": 16,
+    "공격 준비": 29,
+    "충격 적중": 28,
+    "격노의 주문": 10,
+    "대지의 약속": 15,
+    "생존 의지": 12,
+    "바람의 약속": 27
+   },
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
@@ -4158,7 +4276,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 449
    },
-   "updatedAt": "2026-09-09T03:16:17Z",
+   "updatedAt": "2026-09-09T08:47:44Z",
    "ok": true
   },
   {
@@ -4175,7 +4293,7 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 533663,
+    "combatPower": 533666,
     "itemLevel": 4874,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188785270",
     "titleName": "무스펠의 성배에 거주하는"
@@ -4417,6 +4535,30 @@
      "id": 19460000
     }
    ],
+   "skills": {
+    "연격": 18,
+    "비각": 18,
+    "폭주": 20,
+    "질풍격": 14,
+    "연환권": 15,
+    "태풍 연타": 16,
+    "회전각": 14,
+    "지면 강타": 14,
+    "철산고": 13,
+    "폭렬권": 17,
+    "승천타": 20,
+    "충격 해제": 12,
+    "정신 전환": 15,
+    "전선 유지": 14,
+    "정면 돌파": 16,
+    "위세": 25,
+    "폭주 증폭": 19,
+    "충격 적중": 18,
+    "충격타": 11,
+    "거대한 분노": 22,
+    "회생의 계약": 8,
+    "경량화": 7
+   },
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
@@ -5001,7 +5143,7 @@
     }
    },
    "titles": {
-    "ownedCount": 271,
+    "ownedCount": 272,
     "totalCount": 431,
     "equipped": [
      {
@@ -5180,7 +5322,7 @@
     },
     {
      "date": "2026-09-09",
-     "combatPower": 533663,
+     "combatPower": 533666,
      "itemLevel": 4874,
      "weaponExceed": 6,
      "armorExceed": 18,
@@ -5191,14 +5333,14 @@
    ],
    "delta": {
     "sinceDate": "2026-09-08",
-    "combatPower": 132,
+    "combatPower": 135,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 449
    },
-   "updatedAt": "2026-09-09T03:16:21Z",
+   "updatedAt": "2026-09-09T08:47:48Z",
    "ok": true
   },
   {
@@ -5457,6 +5599,30 @@
      "id": 16060000
     }
    ],
+   "skills": {
+    "냉기 충격": 16,
+    "화염 전소": 20,
+    "소환: 불의 정령": 18,
+    "소환: 물의 정령": 17,
+    "협공: 저주": 12,
+    "연속 난사": 15,
+    "소환: 땅의 정령": 18,
+    "공간 지배": 16,
+    "소환: 바람의 정령": 14,
+    "영혼의 절규": 16,
+    "원소 융합": 20,
+    "충격 해제": 12,
+    "정령 타격": 21,
+    "정령 보호": 15,
+    "정령 강림": 7,
+    "침식": 17,
+    "정령 회생": 16,
+    "정신 집중": 24,
+    "연속 역류": 14,
+    "정령 교감": 12,
+    "회생의 계약": 8,
+    "원소 결집": 18
+   },
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
@@ -6238,7 +6404,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 446
    },
-   "updatedAt": "2026-09-09T03:16:26Z",
+   "updatedAt": "2026-09-09T08:47:53Z",
    "ok": true
   },
   {
@@ -6479,6 +6645,30 @@
      "id": 13080000
     }
    ],
+   "skills": {
+    "빠른 베기": 16,
+    "맹수의 포효": 20,
+    "암습": 12,
+    "기습": 12,
+    "심장 찌르기": 21,
+    "폭풍 난무": 16,
+    "회오리 베기": 12,
+    "섬광 베기": 16,
+    "침투": 12,
+    "그림자 낙하": 8,
+    "문양 폭발": 16,
+    "충격 해제": 12,
+    "육감 극대화": 13,
+    "빈틈 노리기": 18,
+    "독 바르기": 5,
+    "배후 강타": 27,
+    "강습 자세": 21,
+    "충격 적중": 17,
+    "기습 자세": 16,
+    "방어 균열": 13,
+    "회생의 계약": 9,
+    "각오": 13
+   },
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
@@ -7150,7 +7340,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 383
    },
-   "updatedAt": "2026-09-09T03:16:30Z",
+   "updatedAt": "2026-09-09T08:47:58Z",
    "ok": true
   }
  ]

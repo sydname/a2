@@ -242,7 +242,9 @@ td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
 .skill-mat th:first-child, .skill-mat td:first-child { text-align: left; font-weight: 600; }
 .skill-mat thead th { font-size: 10px; color: var(--muted-2); font-weight: 800; letter-spacing: .02em; }
 .skill-mat td.z { color: var(--border-strong); }
-.skill-mat td.tot { font-weight: 800; color: var(--accent); }
+.skill-mat td.tot { font-weight: 700; color: var(--muted); }
+.skill-mat td.lvl { font-weight: 800; color: var(--text); }
+.skill-mat td.lvl.skill-hi { color: #2f6ef0; }
 .skill-mat tbody tr:hover { background: var(--accent-soft); }
 
 .stig-list { display: flex; flex-wrap: wrap; gap: 6px; }

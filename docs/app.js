@@ -843,13 +843,18 @@
         '<div class="arc-meta">' + arcMeta + "</div>" +
         '<div class="arc-list grid6">' + (arcHtml || '<p class="muted">착용한 아르카나가 없습니다.</p>') + "</div>" +
       "</section>" +
-      skillMatrixSection(det)
+      skillMatrixSection(det, c.skills || {})
     );
   }
 
   var SKILL_SRC = ["성배", "양피지", "나침반", "종", "거울", "천칭"];
-  function skillMatrixSection(det) {
+  // 스킬명 매칭용 정규화 (공백/구두점 차이 흡수)
+  function skKey(s) { return String(s || "").replace(/[\s:·]/g, ""); }
+  function skillMatrixSection(det, skillTotals) {
     if (!det || !(det.arcana || []).length) return "";
+    var totByKey = {};
+    Object.keys(skillTotals || {}).forEach(function (n) { totByKey[skKey(n)] = skillTotals[n]; });
+
     var bySrc = {};
     SKILL_SRC.forEach(function (s) { bySrc[s] = {}; });
     (det.arcana || []).forEach(function (a) {
@@ -862,22 +867,31 @@
     var rows = Object.keys(names).map(function (n) {
       var vals = SKILL_SRC.map(function (s) { return bySrc[s][n] || 0; });
       var eq = eqSk[n] || 0;
-      return { name: n, vals: vals, eq: eq, total: vals.reduce(function (a, b) { return a + b; }, 0) + eq };
-    }).sort(function (a, b) { return b.total - a.total || a.name.localeCompare(b.name, "ko"); });
+      var lvl = totByKey[skKey(n)];
+      var active = !!(bySrc["양피지"][n] || bySrc["나침반"][n]);
+      return {
+        name: n, vals: vals, eq: eq,
+        total: vals.reduce(function (a, b) { return a + b; }, 0) + eq,
+        lvl: (lvl == null ? null : lvl),
+        hi: active && lvl != null && lvl > 20,
+      };
+    }).sort(function (a, b) { return (b.lvl || 0) - (a.lvl || 0) || b.total - a.total || a.name.localeCompare(b.name, "ko"); });
     if (!rows.length) return "";
 
     var head = "<tr><th>스킬</th>" + SKILL_SRC.map(function (s) { return "<th>" + esc(s) + "</th>"; }).join("") +
-      "<th>장비</th><th>합계</th></tr>";
+      "<th>장비</th><th>합계</th><th>총 레벨</th></tr>";
     var body = rows.map(function (r) {
       var cells = r.vals.map(function (v) { return '<td class="' + (v ? "" : "z") + '">' + (v || "·") + "</td>"; }).join("");
       return "<tr><td>" + esc(r.name) + "</td>" + cells +
         '<td class="' + (r.eq ? "" : "z") + '">' + (r.eq || "·") + "</td>" +
-        '<td class="tot">' + r.total + "</td></tr>";
+        '<td class="tot">' + r.total + "</td>" +
+        '<td class="lvl' + (r.hi ? " skill-hi" : "") + '">' + (r.lvl == null ? "·" : r.lvl) + "</td></tr>";
     }).join("");
 
     return '<section class="cbox">' +
-      "<h3>아르카나 스킬 현황 <small>성배·양피지·나침반·종·거울·천칭 + 장비(장착장비 영혼각인 스킬 합계)</small></h3>" +
+      "<h3>아르카나 스킬 현황 <small>종·거울 포함 · 장비=장착장비 영혼각인 스킬 합계 · 총 레벨=공식 스킬 레벨</small></h3>" +
       '<div style="overflow-x:auto"><table class="skill-mat"><thead>' + head + "</thead><tbody>" + body + "</tbody></table></div>" +
+      '<p class="muted" style="margin:6px 0 0;font-size:11px">액티브(양피지·나침반) 스킬이 20 초과면 <b style="color:#2f6ef0">파란색</b>. 종·거울(패시브)은 검정색.</p>' +
       "</section>";
   }
 
