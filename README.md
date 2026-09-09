@@ -117,7 +117,7 @@ aion2-character-tracker/
 2. **빌드 → Realtime Database → 데이터베이스 만들기**
 3. Realtime Database **규칙** 탭에 붙여넣고 게시:
    ```json
-   { "rules": { "checks": { ".read": true, ".write": true }, "ode": { ".read": true, ".write": true } } }
+   { "rules": { "checks": {".read":true,".write":true}, "ode": {".read":true,".write":true}, "pot": {".read":true,".write":true} } }
    ```
 4. 프로젝트 설정(⚙) → 내 앱 → **</> 웹 앱 추가** → `firebaseConfig` 복사
 5. `docs/firebase-config.js` 의 `window.AION2_FIREBASE` 를 그 값으로 교체 → 커밋/푸시

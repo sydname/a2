@@ -18,6 +18,7 @@
     view: lsGet("aion2.view") || "table",
     tab: lsGet("aion2.tab") || "basic",       // basic | enhance | bt | pot | soul
     sel: lsGet("aion2.sel") || null,          // 카드뷰 선택 캐릭터 key
+    potEdit: false,                           // 잠재력 편집 모드
   };
 
   var CHECK_FIELDS = [
@@ -90,11 +91,12 @@
 
   // ---------- Firebase (선택) — 없으면 localStorage 로 폴백 ----------
   var FB_CFG = window.AION2_FIREBASE || null;
-  var fbdb = null, fbChecks = {}, fbOde = {};
+  var fbdb = null, fbChecks = {}, fbOde = {}, fbPot = {};
   function fbActive() { return !!fbdb; }
   function skipRerender() {
     var a = document.activeElement;
-    return a && a.classList && a.classList.contains("ode-inp");
+    return a && a.classList && (a.classList.contains("ode-inp") ||
+      a.classList.contains("pv") || a.classList.contains("pt-sel"));
   }
   function fbInit() {
     if (!FB_CFG || !window.firebase || !FB_CFG.databaseURL) return;
@@ -109,11 +111,36 @@
         fbOde = s.val() || {};
         if (STATE.data && !skipRerender()) render();
       });
+      fbdb.ref("pot").on("value", function (s) {
+        fbPot = s.val() || {};
+        if (STATE.data && !skipRerender()) render();
+      });
       // 지난 주 체크 데이터 정리 (best effort)
       fbdb.ref("checks").once("value", function (s) {
         s.forEach(function (ch) { if (ch.key !== WK) ch.ref.remove(); });
       });
     } catch (e) { console.warn("Firebase 연결 실패, localStorage 로 폴백:", e); }
+  }
+
+  // 잠재력(단계/티어) 수동 값: Firebase 우선, 없으면 manual.json
+  function potLsKey(charKey) { return "aion2.pot." + charKey; }
+  function fbPotChar(charKey) {
+    if (fbActive()) return fbPot[charKey] || {};
+    try { return JSON.parse(lsGet(potLsKey(charKey)) || "{}"); } catch (e) { return {}; }
+  }
+  function getPot(c, slot) {
+    var ov = fbPotChar(c.key)[slot];
+    if (ov && (ov.v != null || ov.t != null)) return { v: ov.v == null ? "" : ov.v, t: ov.t || "" };
+    var m = STATE.manual[c.label] || {};
+    var v = (m.potential || {})[slot];
+    return { v: (v == null ? "" : v), t: (m.potentialTier || {})[slot] || "" };
+  }
+  function setPot(charKey, slot, v, t) {
+    var payload = { v: (v === "" ? null : v), t: (t || null) };
+    if (fbActive()) { fbdb.ref("pot/" + charKey + "/" + slot).set(payload); return; }
+    var all = fbPotChar(charKey);
+    all[slot] = payload;
+    lsSet(potLsKey(charKey), JSON.stringify(all));
   }
 
   function checkKey(charKey, field) { return "aion2.chk." + WK + "." + charKey + "." + field; }
@@ -228,6 +255,19 @@
     box.appendChild(tabs);
 
     var tab = STATE.tab;
+
+    if (tab === "pot") {
+      var pbar = el("div", "detail-bar pot-bar");
+      var pbtn = el("button", "refresh-btn" + (STATE.potEdit ? " on" : ""),
+        STATE.potEdit ? "편집 종료" : "정보 수정");
+      pbtn.addEventListener("click", function () { STATE.potEdit = !STATE.potEdit; render(); });
+      pbar.appendChild(pbtn);
+      pbar.appendChild(el("span", "arc-upd", STATE.potEdit
+        ? ("칸의 단계·티어를 바꾸면 즉시 저장됩니다 (" + (fbActive() ? "Firebase 동기화" : "이 브라우저") + ")")
+        : "엑셀 기준값. 수정하려면 [정보 수정]"));
+      box.appendChild(pbar);
+    }
+
     var scroll = el("div", "table-scroll");
     scroll.appendChild(
       tab === "enhance" ? enhanceTable(chars) :
@@ -464,17 +504,33 @@
   }
   var NEED_TIERS = [3, 4, 5, 6];
 
+  var POT_V_OPTS = [["", "·"], ["-", "–"], ["0", "0"], ["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"]];
+  var POT_T_OPTS = [["", "–"], ["E3", "영웅3"], ["E4", "영웅4"], ["E5", "영웅5"],
+    ["U4", "유일4"], ["U5", "유일5"], ["U6", "유일6"]];
+  function mkSelect(cls, opts, cur, onChange) {
+    var s = el("select", cls);
+    opts.forEach(function (o) {
+      var op = el("option", null, o[1]);
+      op.value = o[0];
+      if (String(cur) === o[0]) op.selected = true;
+      s.appendChild(op);
+    });
+    s.addEventListener("change", function () { onChange(s.value); });
+    return s;
+  }
+
   function potentialTable(chars) {
+    var edit = STATE.potEdit;
     var cols = [{ label: "이름", cls: "l name" }, { label: "직업", cls: "l cls" }];
-    POT_SLOTS.forEach(function (s) { cols.push({ label: s[1], cls: "sm" }); });
+    POT_SLOTS.forEach(function (s) { cols.push({ label: s[1], cls: edit ? "med" : "sm" }); });
     NEED_TIERS.forEach(function (n) { cols.push({ label: n + "티어", cls: "sm" }); });
 
-    var t = el("table", "grid");
+    var t = el("table", "grid" + (edit ? " edit" : ""));
     t.appendChild(makeCols(cols));
     var thead = el("thead");
     thead.appendChild(groupRow([
       { span: 2 },
-      { span: 11, label: "부위별 잠재력 단계", grp: true },
+      { span: 11, label: "부위별 잠재력 단계" + (edit ? " (수정 중)" : ""), grp: true },
       { span: 4, label: "티어별 필요 재화", grp: true },
     ]));
     thead.appendChild(headerRow(cols));
@@ -482,19 +538,28 @@
 
     var tb = el("tbody");
     chars.forEach(function (c) {
-      var m = manualOf(c);
-      var p = m.potential || {};
-      var pt = m.potentialTier || {};
       var need = { 3: 0, 4: 0, 5: 0, 6: 0 };
       var tr = el("tr", c.ok === false ? "stale" : "");
       tr.appendChild(nameCell(c));
       tr.appendChild(classCell(c));
       POT_SLOTS.forEach(function (sl) {
-        var v = (sl[0] in p) ? p[sl[0]] : "";
-        var shown = (v === "" || v == null) ? "·" : (v === "-" ? "–" : String(v));
-        var code = pt[sl[0]] || "";
-        tr.appendChild(td("<b>" + esc(shown) + "</b>", "num sm " + ptClass(code), ptLabel(code)));
-        var r = needFor(code, v);
+        var slot = sl[0];
+        var cur = getPot(c, slot);
+        var code = cur.t || "";
+        if (edit) {
+          var cell = td("", "med pt-edit " + ptClass(code));
+          cell.appendChild(mkSelect("pv", POT_V_OPTS, cur.v == null ? "" : cur.v, function (val) {
+            setPot(c.key, slot, val, getPot(c, slot).t); render();
+          }));
+          cell.appendChild(mkSelect("pt-sel", POT_T_OPTS, code, function (val) {
+            setPot(c.key, slot, getPot(c, slot).v, val); render();
+          }));
+          tr.appendChild(cell);
+        } else {
+          var shown = (cur.v === "" || cur.v == null) ? "·" : (cur.v === "-" ? "–" : String(cur.v));
+          tr.appendChild(td("<b>" + esc(shown) + "</b>", "num sm " + ptClass(code), ptLabel(code)));
+        }
+        var r = needFor(code, cur.v);
         if (r.tier && need.hasOwnProperty(r.tier)) need[r.tier] += r.need;
       });
       NEED_TIERS.forEach(function (n) {
