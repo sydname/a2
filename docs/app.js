@@ -386,7 +386,6 @@
     POT_SLOTS.forEach(function (s) { cols.push({ label: s[1], cls: "sm" }); });
     cols.push({ label: "유일", cls: "sm" });
     cols.push({ label: "영웅", cls: "sm" });
-    cols.push({ label: "티어", cls: "l tier" });
 
     var t = el("table", "grid");
     var thead = el("thead");
@@ -394,7 +393,7 @@
     g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
     g.appendChild(el("th", "grp", "부위별 잠재력"));
     for (var w = 0; w < 10; w++) g.appendChild(el("th", "", ""));
-    g.appendChild(el("th", "grp", "티어 정보")); g.appendChild(el("th", "", "")); g.appendChild(el("th", "", ""));
+    g.appendChild(el("th", "grp", "개수")); g.appendChild(el("th", "", ""));
     thead.appendChild(g);
     thead.appendChild(headerRow(cols));
     t.appendChild(thead);
@@ -415,8 +414,6 @@
       });
       tr.appendChild(td("<b>" + fmtManual(m.potentialUnique) + "</b>", "num sm " + ptClass(m.potentialUniqueTier), ptLabel(m.potentialUniqueTier)));
       tr.appendChild(td("<b>" + fmtManual(m.potentialEpic) + "</b>", "num sm " + ptClass(m.potentialEpicTier), ptLabel(m.potentialEpicTier)));
-      tr.appendChild(td(m.tierName ? "<b>" + esc(m.tierName) + "</b>" : "–",
-        "l tier " + ptClass(m.tierCode)));
       tb.appendChild(tr);
     });
     t.appendChild(tb);
