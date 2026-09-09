@@ -170,10 +170,6 @@
     ["pot", "잠재력"], ["soul", "영혼각인"],
   ];
   var POT_SLOTS = BT_SLOTS; // 무기/가더/목/귀1/귀2/반1/반2/팔1/팔2/브1/브2
-  var ARMOR_COLS = [
-    ["Helmet", "투구"], ["Shoulder", "견갑"], ["Torso", "상의"], ["Pants", "하의"],
-    ["Gloves", "장갑"], ["Boots", "신발"], ["Cape", "망토"],
-  ];
 
   function renderTableView(chars) {
     var box = el("div");
@@ -208,13 +204,15 @@
 
     var note = el("p", "tbl-note");
     if (tab === "basic")
-      note.innerHTML = "체크박스는 이 브라우저에 저장되고 <b>매주 수요일 05:00(KST)</b> 자동 초기화됩니다. 오드 값은 칸을 눌러 바로 수정하고, 영구 반영은 <code>manual.json</code>.";
+      note.innerHTML = "체크박스는 이 브라우저에 저장되고 <b>매주 수요일 05:00(KST)</b> 자동 초기화됩니다. 오드 값은 칸을 눌러 바로 수정하고, 영구 반영은 <code>docs/manual.json</code>.";
     else if (tab === "bt")
       note.innerHTML = "돌파 단계는 공식 API 에서 매일 자동 갱신됩니다. 단계가 높을수록 색이 진해집니다 (5=금).";
     else if (tab === "pot")
-      note.innerHTML = "잠재력은 <code>manual.json</code> 의 수동 값(엑셀 기준)입니다. 각 칸 색은 그 부위에 착용한 아이템 등급색을 따릅니다.";
+      note.innerHTML = "잠재력은 <code>docs/manual.json</code> 의 수동 값(엑셀 기준)입니다. 각 칸 색은 그 부위에 착용한 아이템 등급색을 따릅니다.";
     else if (tab === "soul")
-      note.innerHTML = "영혼각인(방어구 subStats)은 <b>수동 갱신</b>입니다. [상세 갱신] → GitHub Actions 에서 Run workflow. 칸에 각인된 옵션이 나열되고, 마우스를 올리면 수치가 보입니다.";
+      note.innerHTML = "영혼각인(방어구 subStats)은 <b>수동 갱신</b>입니다. [상세 갱신] → GitHub Actions 에서 Run workflow. " +
+        "머리행 구분이 해당 부위에 각인돼 있으면 <b>O</b>. " +
+        "<b>공증</b>=공격력 증가 · <b>피증</b>=피해 증폭 · <b>치피증</b>=치명타 피해 증폭 · <b>피내</b>=피해 내성 · <b>전속</b>=전투 속도 · <b>이속</b>=이동 속도 · 강타 · 완벽";
     else
       note.innerHTML = "데바니온 · 스티그마는 공식 API 에서 매일 자동 갱신됩니다. 표에서는 증감을 표시하지 않습니다.";
     box.appendChild(note);
@@ -406,30 +404,57 @@
   }
 
   // ---- 영혼각인 (방어구 subStats, 수동 갱신 arcana.json) ----
+  // 부위별 추적 각인 구분 (7명 실제 데이터 기준 고정 라인)
+  var SOUL_GRID = [
+    { slot: "Helmet", ko: "투구", stats: ["공증", "강타"] },
+    { slot: "Shoulder", ko: "견갑", stats: ["치피증"] },
+    { slot: "Torso", ko: "상의", stats: ["피증"] },
+    { slot: "Pants", ko: "하의", stats: ["공증", "완벽", "피내"] },
+    { slot: "Gloves", ko: "장갑", stats: ["전속", "완벽"] },
+    { slot: "Boots", ko: "신발", stats: ["이속", "완벽"] },
+    { slot: "Cape", ko: "망토", stats: ["공증", "강타", "완벽"] },
+  ];
+  var SOUL_FULL = {
+    "공증": "공격력 증가", "강타": "강타", "피증": "피해 증폭",
+    "치피증": "치명타 피해 증폭", "피내": "피해 내성",
+    "전속": "전투 속도", "이속": "이동 속도", "완벽": "완벽",
+  };
+
   function soulTable(chars) {
+    var flat = [];
+    SOUL_GRID.forEach(function (g) { g.stats.forEach(function (ab) { flat.push([g.slot, g.ko, ab]); }); });
+
     var cols = [{ label: "이름", cls: "l" }, { label: "직업", cls: "l" }];
-    ARMOR_COLS.forEach(function (s) { cols.push({ label: s[1], cls: "soulc" }); });
+    flat.forEach(function (p) { cols.push({ label: p[2], cls: "chk", title: p[1] + " · " + (SOUL_FULL[p[2]] || p[2]) }); });
 
     var t = el("table", "grid");
-    var thead = el("thead"); thead.appendChild(headerRow(cols)); t.appendChild(thead);
+    var thead = el("thead");
+    var g = el("tr", "grouprow");
+    g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
+    SOUL_GRID.forEach(function (grp) {
+      grp.stats.forEach(function (_, i) {
+        g.appendChild(el("th", i === 0 ? "grp" : "", i === 0 ? esc(grp.ko) : ""));
+      });
+    });
+    thead.appendChild(g);
+    thead.appendChild(headerRow(cols));
+    t.appendChild(thead);
+
     var tb = el("tbody");
     chars.forEach(function (c) {
       var det = STATE.arcana[c.key];
       var bySlot = {};
-      ((det && det.soul) || []).forEach(function (s) { bySlot[s.slot] = s; });
+      ((det && det.soul) || []).forEach(function (s) {
+        bySlot[s.slot] = (s.subStats || []).map(function (x) { return x.name; });
+      });
       var tr = el("tr", c.ok === false ? "stale" : "");
       tr.appendChild(nameCell(c));
       tr.appendChild(classCell(c));
-      ARMOR_COLS.forEach(function (sl) {
-        var s = bySlot[sl[0]];
-        if (!s || !s.subStats || !s.subStats.length) {
-          tr.appendChild(td('<span class="soul-off">·</span>', "soulc"));
-          return;
-        }
-        var lines = s.subStats.map(function (x) { return '<span class="ss">' + esc(x.name) + "</span>"; }).join("");
-        var titleTxt = s.subStats.map(function (x) { return x.name + " " + x.value; }).join(" · ");
-        var cnt = s.subStatCount ? ' <span class="ss-n">' + s.subStats.length + "/" + s.subStatCount + "</span>" : "";
-        tr.appendChild(td('<div class="ss-box">' + lines + cnt + "</div>", "soulc", titleTxt));
+      flat.forEach(function (p) {
+        var names = bySlot[p[0]];
+        if (!names) { tr.appendChild(td('<span class="soul-off">·</span>', "chk soul")); return; }
+        var on = names.indexOf(SOUL_FULL[p[2]] || p[2]) >= 0;
+        tr.appendChild(td(on ? "O" : '<span class="soul-off">·</span>', "chk soul" + (on ? " on" : ""), p[1] + " · " + (SOUL_FULL[p[2]] || p[2])));
       });
       tb.appendChild(tr);
     });

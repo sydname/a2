@@ -110,27 +110,24 @@ td.ode { padding: 4px 8px; }
 .tbl-note { font-size: 12px; color: var(--muted-2); margin: 12px 2px 0; line-height: 1.6; }
 .tbl-note b { color: var(--muted); }
 
-/* 돌파 단계 색 (0~5) */
+/* 돌파 단계 색 (0=회색 1=초록 2=파랑 3=주황 4=빨강 5=진한검정) */
 td.ex { font-weight: 800; }
 td.ex-0 { color: var(--muted-2); font-weight: 600; }
-td.ex-1 { color: #6b7280; }
-td.ex-2 { color: var(--g-rare); }
-td.ex-3 { color: var(--g-legend); }
-td.ex-4 { color: var(--g-unique); }
-td.ex-5 { color: var(--g-epic); }
+td.ex-1 { color: #12915a; }
+td.ex-2 { color: #2f6ef0; }
+td.ex-3 { color: #e07d1a; }
+td.ex-4 { color: #d63a34; }
+td.ex-5 { color: #0c0f14; }
 
 /* 잠재력 값 = 그 부위 아이템 등급색 */
 td .gv { color: var(--gc); font-weight: 800; font-variant-numeric: tabular-nums; }
 
-/* 영혼각인 (방어구 subStats) */
+/* 영혼각인 O/· */
 .detail-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
 .detail-bar .arc-upd { font-size: 11px; color: var(--muted-2); }
-table.grid th.soulc, table.grid td.soulc { text-align: left; }
-td.soulc { vertical-align: top; padding: 7px 10px; min-width: 128px; }
-.ss-box { display: flex; flex-wrap: wrap; gap: 3px 7px; align-items: baseline; }
-.ss { font-size: 11px; color: var(--muted); white-space: nowrap; }
-.ss-n { font-size: 10px; font-weight: 700; color: var(--muted-2); font-variant-numeric: tabular-nums; }
-td.soulc .soul-off { color: var(--border-strong); }
+td.soul { text-align: center; font-weight: 800; color: var(--pos); }
+td.soul.on { background: color-mix(in srgb, var(--pos) 12%, var(--surface)); }
+td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
 
 /* =========================================================
    카드 뷰

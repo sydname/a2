@@ -327,7 +327,7 @@ def main():
             print("기존 all.json 을 읽지 못했습니다: %s" % e, file=sys.stderr)
 
     manual_labels = set()
-    mp = os.path.join(os.path.dirname(args.config) or ".", "manual.json")
+    mp = os.path.join(args.out, "..", "manual.json")  # docs/manual.json
     if os.path.exists(mp):
         try:
             with open(mp, encoding="utf-8") as f:
