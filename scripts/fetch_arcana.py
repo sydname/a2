@@ -133,12 +133,44 @@ def main():
                         } for b in (st.get("bonuses") or [])],
                     } if st else None,
                 })
+
+            # 방어구 7부위 영혼각인(subStats) 상세
+            ARMOR = [("Helmet", "투구"), ("Shoulder", "견갑"), ("Torso", "상의"),
+                     ("Pants", "하의"), ("Gloves", "장갑"), ("Boots", "신발"), ("Cape", "망토")]
+            eq_by_slot = {it.get("slotPosName"): it for it in eq_list}
+            soul = []
+            for slot_name, slot_ko in ARMOR:
+                it = eq_by_slot.get(slot_name)
+                if not it:
+                    soul.append({"slot": slot_name, "slotKo": slot_ko, "name": None,
+                                 "subStatCount": None, "subStats": []})
+                    continue
+                time.sleep(random.uniform(0.7, 1.5))
+                p = dict(base_params)
+                p.update({"id": it.get("id"), "enchantLevel": it.get("enchantLevel") or 0,
+                          "slotPos": it.get("slotPos")})
+                try:
+                    d = http_get_json("/api/character/equipment/item", p, referer)
+                except Exception as e:  # noqa: BLE001
+                    print("    [soul fail] %s %s : %s" % (label, slot_ko, e), file=sys.stderr)
+                    soul.append({"slot": slot_name, "slotKo": slot_ko, "name": it.get("name"),
+                                 "subStatCount": None, "subStats": []})
+                    continue
+                soul.append({
+                    "slot": slot_name, "slotKo": slot_ko,
+                    "name": d.get("name"), "grade": d.get("grade"),
+                    "subStatCount": d.get("subStatCount"),
+                    "subStats": [{"name": s.get("name"), "value": s.get("value")}
+                                 for s in (d.get("subStats") or [])],
+                })
+
             result[key_of(sid, cid)] = {
                 "label": label,
                 "updatedAt": dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
                 "arcana": details,
+                "soul": soul,
             }
-            print("  [OK]   %s  아르카나 %d개 상세 수집" % (label, len(details)))
+            print("  [OK]   %s  아르카나 %d개 + 방어구 영혼각인 %d부위" % (label, len(details), len(soul)))
         except Exception as e:  # noqa: BLE001
             print("  [FAIL] %s : %s" % (label, e), file=sys.stderr)
             errors.append({"label": label, "error": str(e)})

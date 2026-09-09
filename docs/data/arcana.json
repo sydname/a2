@@ -1,9 +1,9 @@
 {
- "generatedAt": "2026-09-08T23:44:11Z",
+ "generatedAt": "2026-09-09T02:15:58Z",
  "characters": {
   "2010-d7b11559c850": {
    "label": "감자밍",
-   "updatedAt": "2026-09-08T09:12:37Z",
+   "updatedAt": "2026-09-09T02:13:30Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -576,11 +576,184 @@
       ]
      }
     }
+   ],
+   "soul": [
+    {
+     "slot": "Helmet",
+     "slotKo": "투구",
+     "name": "용암 심장의 투구",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "받는 치유량",
+       "value": "25.9%"
+      },
+      {
+       "name": "강타",
+       "value": "2.4%"
+      },
+      {
+       "name": "공격력 증가",
+       "value": "2.4%"
+      },
+      {
+       "name": "공격력",
+       "value": "23"
+      }
+     ]
+    },
+    {
+     "slot": "Shoulder",
+     "slotKo": "견갑",
+     "name": "용암 심장의 견갑",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "치명타 피해 증폭",
+       "value": "18.8%"
+      },
+      {
+       "name": "공격력",
+       "value": "23"
+      },
+      {
+       "name": "치명타",
+       "value": "27"
+      },
+      {
+       "name": "의지",
+       "value": "37"
+      }
+     ]
+    },
+    {
+     "slot": "Torso",
+     "slotKo": "상의",
+     "name": "용암 심장의 흉갑",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "32"
+      },
+      {
+       "name": "피해 증폭",
+       "value": "15.9%"
+      },
+      {
+       "name": "치명타",
+       "value": "36"
+      }
+     ]
+    },
+    {
+     "slot": "Pants",
+     "slotKo": "하의",
+     "name": "용암 심장의 각반",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "피해 내성",
+       "value": "13.3%"
+      },
+      {
+       "name": "공격력 증가",
+       "value": "2.4%"
+      },
+      {
+       "name": "완벽",
+       "value": "5.8%"
+      },
+      {
+       "name": "공격력",
+       "value": "21"
+      }
+     ]
+    },
+    {
+     "slot": "Gloves",
+     "slotKo": "장갑",
+     "name": "용암 심장의 장갑",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "완벽",
+       "value": "5.8%"
+      },
+      {
+       "name": "치명타",
+       "value": "24"
+      },
+      {
+       "name": "전투 속도",
+       "value": "10.6%"
+      },
+      {
+       "name": "공격력",
+       "value": "22"
+      }
+     ]
+    },
+    {
+     "slot": "Boots",
+     "slotKo": "신발",
+     "name": "용암 심장의 장화",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "이동 속도",
+       "value": "26.8%"
+      },
+      {
+       "name": "공격력",
+       "value": "22"
+      },
+      {
+       "name": "완벽",
+       "value": "5.8%"
+      },
+      {
+       "name": "치명타",
+       "value": "24"
+      }
+     ]
+    },
+    {
+     "slot": "Cape",
+     "slotKo": "망토",
+     "name": "용암 심장의 망토",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "공격력 증가",
+       "value": "2.4%"
+      },
+      {
+       "name": "완벽",
+       "value": "5.8%"
+      },
+      {
+       "name": "공격력",
+       "value": "17"
+      },
+      {
+       "name": "강타",
+       "value": "2.4%"
+      }
+     ]
+    }
    ]
   },
   "2010-bebfe0bb0422": {
    "label": "감자미",
-   "updatedAt": "2026-09-08T09:12:55Z",
+   "updatedAt": "2026-09-09T02:13:55Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -1110,7 +1283,7 @@
       {
        "name": "추가 회피",
        "value": "10",
-       "extra": "50"
+       "extra": "0"
       },
       {
        "name": "상태이상 저항",
@@ -1153,11 +1326,144 @@
       ]
      }
     }
+   ],
+   "soul": [
+    {
+     "slot": "Helmet",
+     "slotKo": "투구",
+     "name": "두르바티의 투구",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력 증가",
+       "value": "1.6%"
+      },
+      {
+       "name": "강타",
+       "value": "1.6%"
+      }
+     ]
+    },
+    {
+     "slot": "Shoulder",
+     "slotKo": "견갑",
+     "name": "고대 정령의 견갑",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "21"
+      },
+      {
+       "name": "치명타 피해 증폭",
+       "value": "16%"
+      },
+      {
+       "name": "명중",
+       "value": "36"
+      }
+     ]
+    },
+    {
+     "slot": "Torso",
+     "slotKo": "상의",
+     "name": "고대 정령의 흉갑",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "피해 증폭",
+       "value": "13.5%"
+      },
+      {
+       "name": "치명타",
+       "value": "31"
+      },
+      {
+       "name": "명중",
+       "value": "52"
+      },
+      {
+       "name": "공격력",
+       "value": "28"
+      }
+     ]
+    },
+    {
+     "slot": "Pants",
+     "slotKo": "하의",
+     "name": "용암 심장의 각반",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "공격력 증가",
+       "value": "2.3%"
+      },
+      {
+       "name": "피해 내성",
+       "value": "13.2%"
+      }
+     ]
+    },
+    {
+     "slot": "Gloves",
+     "slotKo": "장갑",
+     "name": "나트하라의 장갑",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "17"
+      },
+      {
+       "name": "전투 속도",
+       "value": "7.9%"
+      }
+     ]
+    },
+    {
+     "slot": "Boots",
+     "slotKo": "신발",
+     "name": "나트하라의 장화",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "이동 속도",
+       "value": "19.9%"
+      },
+      {
+       "name": "공격력",
+       "value": "17"
+      }
+     ]
+    },
+    {
+     "slot": "Cape",
+     "slotKo": "망토",
+     "name": "깨어난 알투라돈의 망토",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력 증가",
+       "value": "1.7%"
+      },
+      {
+       "name": "강타",
+       "value": "1.7%"
+      }
+     ]
+    }
    ]
   },
   "2010-702b46e438dd": {
    "label": "잔열",
-   "updatedAt": "2026-09-08T23:43:13Z",
+   "updatedAt": "2026-09-09T02:14:20Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -1730,11 +2036,144 @@
       ]
      }
     }
+   ],
+   "soul": [
+    {
+     "slot": "Helmet",
+     "slotKo": "투구",
+     "name": "두르바티의 투구",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "강타",
+       "value": "1.6%"
+      },
+      {
+       "name": "공격력 증가",
+       "value": "1.6%"
+      }
+     ]
+    },
+    {
+     "slot": "Shoulder",
+     "slotKo": "견갑",
+     "name": "두르바티의 견갑",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "치명타 피해 증폭",
+       "value": "13.2%"
+      },
+      {
+       "name": "공격력",
+       "value": "19"
+      }
+     ]
+    },
+    {
+     "slot": "Torso",
+     "slotKo": "상의",
+     "name": "침식된 잔영의 흉갑",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "29"
+      },
+      {
+       "name": "피해 증폭",
+       "value": "14.3%"
+      }
+     ]
+    },
+    {
+     "slot": "Pants",
+     "slotKo": "하의",
+     "name": "침식된 잔영의 각반",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "공격력 증가",
+       "value": "2.1%"
+      },
+      {
+       "name": "공격력",
+       "value": "25"
+      },
+      {
+       "name": "피해 내성",
+       "value": "12%"
+      },
+      {
+       "name": "완벽",
+       "value": "5.3%"
+      }
+     ]
+    },
+    {
+     "slot": "Gloves",
+     "slotKo": "장갑",
+     "name": "나트하라의 장갑",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "전투 속도",
+       "value": "7.9%"
+      }
+     ]
+    },
+    {
+     "slot": "Boots",
+     "slotKo": "신발",
+     "name": "나트하라의 장화",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "완벽",
+       "value": "4.2%"
+      },
+      {
+       "name": "이동 속도",
+       "value": "19.9%"
+      }
+     ]
+    },
+    {
+     "slot": "Cape",
+     "slotKo": "망토",
+     "name": "두르바티의 망토",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "완벽",
+       "value": "4%"
+      },
+      {
+       "name": "공격력",
+       "value": "14"
+      },
+      {
+       "name": "공격력 증가",
+       "value": "1.6%"
+      },
+      {
+       "name": "강타",
+       "value": "1.6%"
+      }
+     ]
+    }
    ]
   },
   "2010-2b8ebedc7efb": {
    "label": "넌강해졌다",
-   "updatedAt": "2026-09-08T23:43:30Z",
+   "updatedAt": "2026-09-09T02:14:46Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -2307,11 +2746,152 @@
       ]
      }
     }
+   ],
+   "soul": [
+    {
+     "slot": "Helmet",
+     "slotKo": "투구",
+     "name": "바실루스의 투구",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력 증가",
+       "value": "1.8%"
+      },
+      {
+       "name": "강타",
+       "value": "1.8%"
+      }
+     ]
+    },
+    {
+     "slot": "Shoulder",
+     "slotKo": "견갑",
+     "name": "용암 심장의 견갑",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "23"
+      },
+      {
+       "name": "방어력 증가",
+       "value": "3.2%"
+      },
+      {
+       "name": "치명타 피해 증폭",
+       "value": "18.8%"
+      }
+     ]
+    },
+    {
+     "slot": "Torso",
+     "slotKo": "상의",
+     "name": "고대 정령의 흉갑",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "피해 증폭",
+       "value": "13.4%"
+      },
+      {
+       "name": "공격력",
+       "value": "19"
+      },
+      {
+       "name": "치명타 저항",
+       "value": "38"
+      }
+     ]
+    },
+    {
+     "slot": "Pants",
+     "slotKo": "하의",
+     "name": "바실루스의 각반",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "피해 내성",
+       "value": "10.1%"
+      },
+      {
+       "name": "완벽",
+       "value": "4.3%"
+      },
+      {
+       "name": "공격력 증가",
+       "value": "1.8%"
+      }
+     ]
+    },
+    {
+     "slot": "Gloves",
+     "slotKo": "장갑",
+     "name": "나트하라의 장갑",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "완벽",
+       "value": "4.2%"
+      },
+      {
+       "name": "전투 속도",
+       "value": "7.9%"
+      }
+     ]
+    },
+    {
+     "slot": "Boots",
+     "slotKo": "신발",
+     "name": "바실루스의 장화",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "이동 속도",
+       "value": "20.4%"
+      },
+      {
+       "name": "완벽",
+       "value": "4.3%"
+      }
+     ]
+    },
+    {
+     "slot": "Cape",
+     "slotKo": "망토",
+     "name": "용암 심장의 망토",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "강타",
+       "value": "2.4%"
+      },
+      {
+       "name": "공격력",
+       "value": "17"
+      },
+      {
+       "name": "완벽",
+       "value": "5.8%"
+      },
+      {
+       "name": "공격력 증가",
+       "value": "2.4%"
+      }
+     ]
+    }
    ]
   },
   "2010-f6a7e26712d4": {
    "label": "괌자",
-   "updatedAt": "2026-09-08T23:43:45Z",
+   "updatedAt": "2026-09-09T02:15:13Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -2884,11 +3464,160 @@
       ]
      }
     }
+   ],
+   "soul": [
+    {
+     "slot": "Helmet",
+     "slotKo": "투구",
+     "name": "비상하는 데바의 투구",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력 증가",
+       "value": "1.7%"
+      },
+      {
+       "name": "공격력",
+       "value": "20"
+      },
+      {
+       "name": "강타",
+       "value": "1.7%"
+      }
+     ]
+    },
+    {
+     "slot": "Shoulder",
+     "slotKo": "견갑",
+     "name": "비상하는 데바의 견갑",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "치명타 피해 증폭",
+       "value": "14%"
+      },
+      {
+       "name": "공격력",
+       "value": "20"
+      }
+     ]
+    },
+    {
+     "slot": "Torso",
+     "slotKo": "상의",
+     "name": "비상하는 데바의 흉갑",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "피해 증폭",
+       "value": "11.8%"
+      },
+      {
+       "name": "공격력",
+       "value": "25"
+      }
+     ]
+    },
+    {
+     "slot": "Pants",
+     "slotKo": "하의",
+     "name": "비상하는 데바의 각반",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력 증가",
+       "value": "1.7%"
+      },
+      {
+       "name": "피해 내성",
+       "value": "9.9%"
+      },
+      {
+       "name": "공격력",
+       "value": "23"
+      },
+      {
+       "name": "완벽",
+       "value": "4.2%"
+      }
+     ]
+    },
+    {
+     "slot": "Gloves",
+     "slotKo": "장갑",
+     "name": "침식된 잔영의 장갑",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "완벽",
+       "value": "5.3%"
+      },
+      {
+       "name": "전투 속도",
+       "value": "9.6%"
+      },
+      {
+       "name": "공격력",
+       "value": "20"
+      }
+     ]
+    },
+    {
+     "slot": "Boots",
+     "slotKo": "신발",
+     "name": "비상하는 데바의 장화",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "이동 속도",
+       "value": "19.2%"
+      },
+      {
+       "name": "방어력 증가",
+       "value": "2.6%"
+      },
+      {
+       "name": "공격력",
+       "value": "17"
+      },
+      {
+       "name": "완벽",
+       "value": "4.2%"
+      }
+     ]
+    },
+    {
+     "slot": "Cape",
+     "slotKo": "망토",
+     "name": "비상하는 데바의 망토",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력 증가",
+       "value": "1.7%"
+      },
+      {
+       "name": "강타",
+       "value": "1.7%"
+      },
+      {
+       "name": "완벽",
+       "value": "4.2%"
+      }
+     ]
+    }
    ]
   },
   "2010-e9271378bb8e": {
    "label": "고구미",
-   "updatedAt": "2026-09-08T23:44:01Z",
+   "updatedAt": "2026-09-09T02:15:38Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -3367,7 +4096,7 @@
       {
        "name": "추가 명중",
        "value": "10",
-       "extra": "50"
+       "extra": "0"
       },
       {
        "name": "육체계 적중",
@@ -3461,11 +4190,144 @@
       ]
      }
     }
+   ],
+   "soul": [
+    {
+     "slot": "Helmet",
+     "slotKo": "투구",
+     "name": "고대 정령의 투구",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "공격력 증가",
+       "value": "2%"
+      },
+      {
+       "name": "공격력",
+       "value": "16"
+      }
+     ]
+    },
+    {
+     "slot": "Shoulder",
+     "slotKo": "견갑",
+     "name": "깨어난 알투라돈의 견갑",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "치명타 피해 증폭",
+       "value": "14%"
+      },
+      {
+       "name": "공격력",
+       "value": "20"
+      }
+     ]
+    },
+    {
+     "slot": "Torso",
+     "slotKo": "상의",
+     "name": "나트하라의 흉갑",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "피해 증폭",
+       "value": "11.8%"
+      },
+      {
+       "name": "공격력",
+       "value": "25"
+      }
+     ]
+    },
+    {
+     "slot": "Pants",
+     "slotKo": "하의",
+     "name": "깨어난 알투라돈의 각반",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력 증가",
+       "value": "1.7%"
+      },
+      {
+       "name": "완벽",
+       "value": "4.2%"
+      },
+      {
+       "name": "피해 내성",
+       "value": "9.9%"
+      }
+     ]
+    },
+    {
+     "slot": "Gloves",
+     "slotKo": "장갑",
+     "name": "나트하라의 장갑",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "완벽",
+       "value": "4.2%"
+      },
+      {
+       "name": "전투 속도",
+       "value": "7.9%"
+      }
+     ]
+    },
+    {
+     "slot": "Boots",
+     "slotKo": "신발",
+     "name": "나트하라의 장화",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "17"
+      },
+      {
+       "name": "이동 속도",
+       "value": "19.9%"
+      },
+      {
+       "name": "완벽",
+       "value": "4.2%"
+      }
+     ]
+    },
+    {
+     "slot": "Cape",
+     "slotKo": "망토",
+     "name": "깨어난 알투라돈의 망토",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "강타",
+       "value": "1.7%"
+      },
+      {
+       "name": "완벽",
+       "value": "4.2%"
+      },
+      {
+       "name": "공격력 증가",
+       "value": "1.7%"
+      }
+     ]
+    }
    ]
   },
   "2010-844b10c56dfe": {
    "label": "크로매데",
-   "updatedAt": "2026-09-08T23:44:11Z",
+   "updatedAt": "2026-09-09T02:15:58Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -3813,6 +4675,151 @@
        }
       ]
      }
+    }
+   ],
+   "soul": [
+    {
+     "slot": "Helmet",
+     "slotKo": "투구",
+     "name": "두르바티의 투구",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "강타",
+       "value": "1.4%"
+      },
+      {
+       "name": "공격력",
+       "value": "13"
+      }
+     ]
+    },
+    {
+     "slot": "Shoulder",
+     "slotKo": "견갑",
+     "name": "깨어난 알투라돈의 견갑",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "20"
+      },
+      {
+       "name": "치명타 피해 증폭",
+       "value": "13.7%"
+      },
+      {
+       "name": "명중",
+       "value": "33"
+      }
+     ]
+    },
+    {
+     "slot": "Torso",
+     "slotKo": "상의",
+     "name": "두르바티의 흉갑",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "치명타",
+       "value": "28"
+      },
+      {
+       "name": "피해 증폭",
+       "value": "11.2%"
+      },
+      {
+       "name": "공격력",
+       "value": "24"
+      }
+     ]
+    },
+    {
+     "slot": "Pants",
+     "slotKo": "하의",
+     "name": "두르바티의 각반",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "피해 내성",
+       "value": "9%"
+      },
+      {
+       "name": "완벽",
+       "value": "3.8%"
+      }
+     ]
+    },
+    {
+     "slot": "Gloves",
+     "slotKo": "장갑",
+     "name": "고대 정령의 장갑",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "전투 속도",
+       "value": "8.9%"
+      },
+      {
+       "name": "방어력 증가",
+       "value": "3%"
+      }
+     ]
+    },
+    {
+     "slot": "Boots",
+     "slotKo": "신발",
+     "name": "침식된 잔영의 장화",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "이동 속도",
+       "value": "23.9%"
+      },
+      {
+       "name": "명중",
+       "value": "35"
+      },
+      {
+       "name": "치명타",
+       "value": "22"
+      },
+      {
+       "name": "공격력",
+       "value": "20"
+      }
+     ]
+    },
+    {
+     "slot": "Cape",
+     "slotKo": "망토",
+     "name": "깨어난 알투라돈의 망토",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력 증가",
+       "value": "1.7%"
+      },
+      {
+       "name": "강타",
+       "value": "1.7%"
+      },
+      {
+       "name": "치명타",
+       "value": "16"
+      },
+      {
+       "name": "공격력",
+       "value": "15"
+      }
+     ]
     }
    ]
   }

@@ -122,10 +122,15 @@ td.ex-5 { color: var(--g-epic); }
 /* 잠재력 값 = 그 부위 아이템 등급색 */
 td .gv { color: var(--gc); font-weight: 800; font-variant-numeric: tabular-nums; }
 
-/* 영혼각인 O/· */
-td.soul { text-align: center; font-weight: 800; color: var(--muted-2); }
-td.soul.on { color: var(--pos); background: color-mix(in srgb, var(--pos) 12%, var(--surface)); }
-td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
+/* 영혼각인 (방어구 subStats) */
+.detail-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+.detail-bar .arc-upd { font-size: 11px; color: var(--muted-2); }
+table.grid th.soulc, table.grid td.soulc { text-align: left; }
+td.soulc { vertical-align: top; padding: 7px 10px; min-width: 128px; }
+.ss-box { display: flex; flex-wrap: wrap; gap: 3px 7px; align-items: baseline; }
+.ss { font-size: 11px; color: var(--muted); white-space: nowrap; }
+.ss-n { font-size: 10px; font-weight: 700; color: var(--muted-2); font-variant-numeric: tabular-nums; }
+td.soulc .soul-off { color: var(--border-strong); }
 
 /* =========================================================
    카드 뷰

@@ -1,12 +1,14 @@
 {
   "_help": [
-    "수동 관리 값(자동 수집 불가). 키 = characters.json 의 label.",
+    "수동 관리 값. 키 = characters.json 의 label.",
     "ode              : 오드 에너지 (숫자). '기본' 탭.",
-    "potential        : 부위별 잠재력 단계. '잠재력' 탭. 슬롯키 = MainHand SubHand Necklace Earring1 Earring2 Ring1 Ring2 Bracelet1 Bracelet2 Brooch1 Brooch2. 값 = 0~4 / \"-\" / \"\".",
+    "potential        : 부위별 잠재력 단계 (엑셀 부캐영각 잠재력표). '잠재력' 탭.",
+    "                   슬롯키 = MainHand SubHand Necklace Earring1 Earring2 Ring1 Ring2 Bracelet1 Bracelet2 Brooch1 Brooch2. 값 = 0~4 / \"-\" / \"\".",
+    "                   칸 색은 사이트가 자동으로 그 부위 착용 아이템 등급색을 입힙니다.",
     "potentialUnique  : 유일 잠재력 개수.  potentialEpic : 영웅 잠재력 개수.",
-    "tierName         : 세트/티어 이름 (예: \"용암 / 용암\").",
-    "soulEngraving    : 영혼각인 14칸. 순서 = 투구[공증,강타] 상의[피증,치피증,피내] 견갑[공증,완벽] 하의[전속,완벽] 장갑[이속,완벽] 신발[공증,강타] 망토[완벽]. 1=각인됨, 0=안됨.",
+    "tierName         : 세트/티어 표기 (예: \"영웅 5티어 · 용암\").",
     "값을 바꾸면 커밋/푸시 시 사이트에 반영됩니다.",
+    "* 영혼각인은 이 파일이 아니라 '아르카나·영혼각인 상세 갱신' 워크플로가 방어구 subStats 를 수집합니다.",
     "* 회랑/일회/각성, 루드라/침식/무스펠 체크박스는 브라우저(localStorage)에 저장, 매주 수요일 05:00(KST) 자동 초기화."
   ],
   "characters": {
@@ -15,56 +17,49 @@
       "potential": { "MainHand": "-", "SubHand": "-", "Necklace": 4, "Earring1": 4, "Earring2": 4, "Ring1": "-", "Ring2": "-", "Bracelet1": 4, "Bracelet2": 4, "Brooch1": 4, "Brooch2": 4 },
       "potentialUnique": 6,
       "potentialEpic": "",
-      "tierName": "용암 / 용암",
-      "soulEngraving": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+      "tierName": "영웅 5티어 · 용암"
     },
     "감자미": {
       "ode": 1225,
       "potential": { "MainHand": 4, "SubHand": 4, "Necklace": 3, "Earring1": 4, "Earring2": 4, "Ring1": "-", "Ring2": "-", "Bracelet1": 4, "Bracelet2": 4, "Brooch1": 4, "Brooch2": 4 },
       "potentialUnique": 5,
       "potentialEpic": 5,
-      "tierName": "침식 / 침식",
-      "soulEngraving": [1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0]
+      "tierName": "영웅 4티어 · 침식"
     },
     "잔열": {
       "ode": 360,
       "potential": { "MainHand": 4, "SubHand": 0, "Necklace": 1, "Earring1": "-", "Earring2": "-", "Ring1": 0, "Ring2": 1, "Bracelet1": 4, "Bracelet2": 4, "Brooch1": 2, "Brooch2": 2 },
       "potentialUnique": 4,
       "potentialEpic": 4,
-      "tierName": "고대정령 / 루드라",
-      "soulEngraving": [1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1]
+      "tierName": "영웅 3티어 · 고대정령 / 루드라"
     },
     "괌자": {
       "ode": 745,
-      "potential": { "MainHand": 4, "SubHand": 4, "Necklace": 0, "Earring1": 0, "Earring2": 0, "Ring1": 0, "Ring2": 0, "Bracelet1": "-", "Bracelet2": 4, "Brooch1": "-", "Brooch2": "-" },
+      "potential": { "MainHand": 4, "SubHand": 4, "Necklace": 0, "Earring1": 0, "Earring2": 0, "Ring1": 0, "Ring2": 0, "Bracelet1": "", "Bracelet2": 4, "Brooch1": "", "Brooch2": "" },
       "potentialUnique": 3,
       "potentialEpic": 3,
-      "tierName": "바실루스 / 아티엘",
-      "soulEngraving": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+      "tierName": "유일 6티어 · 바실루스 / 아티엘"
     },
     "넌강해졌다": {
       "ode": 940,
-      "potential": { "MainHand": 4, "SubHand": 4, "Necklace": 0, "Earring1": 2, "Earring2": 0, "Ring1": 1, "Ring2": 1, "Bracelet1": 4, "Bracelet2": 4, "Brooch1": 4, "Brooch2": "-" },
+      "potential": { "MainHand": 4, "SubHand": 4, "Necklace": 0, "Earring1": 2, "Earring2": 0, "Ring1": 1, "Ring2": 1, "Bracelet1": 4, "Bracelet2": 4, "Brooch1": 4, "Brooch2": "" },
       "potentialUnique": "",
       "potentialEpic": "",
-      "tierName": "나트하라 / 알투라돈/광휘",
-      "soulEngraving": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1]
+      "tierName": "유일 5티어 · 나트하라 / 알투라돈·광휘"
     },
     "고구미": {
       "ode": 2375,
-      "potential": { "MainHand": 0, "SubHand": 0, "Necklace": 0, "Earring1": 0, "Earring2": 0, "Ring1": 0, "Ring2": 0, "Bracelet1": 4, "Bracelet2": 4, "Brooch1": "-", "Brooch2": "-" },
+      "potential": { "MainHand": 0, "SubHand": 0, "Necklace": 0, "Earring1": 0, "Earring2": 0, "Ring1": 0, "Ring2": 0, "Bracelet1": 4, "Bracelet2": 4, "Brooch1": "", "Brooch2": "" },
       "potentialUnique": "",
       "potentialEpic": "",
-      "tierName": "드라마타 / 바카르마",
-      "soulEngraving": [1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+      "tierName": "유일 4티어 · 드라마타 / 바카르마"
     },
     "크로매데": {
       "ode": 1890,
       "potential": { "MainHand": "", "SubHand": "", "Necklace": "", "Earring1": "", "Earring2": "", "Ring1": "", "Ring2": "", "Bracelet1": "", "Bracelet2": "", "Brooch1": "", "Brooch2": "" },
       "potentialUnique": "",
       "potentialEpic": "",
-      "tierName": "",
-      "soulEngraving": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      "tierName": ""
     }
   }
 }
