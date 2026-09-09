@@ -226,6 +226,7 @@ td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
 .g-ex { font-size: 10.5px; font-weight: 800; color: #fff; background: var(--gc); border-radius: 5px; padding: 1px 5px; }
 .g-pot { font-size: 10.5px; font-weight: 800; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border)); background: var(--accent-soft); border-radius: 5px; padding: 1px 5px; white-space: nowrap; }
 .g-pot.pt { color: #17202b; border-color: transparent; }
+.g-pot.g-pot-none { background: var(--surface-2); color: var(--muted-2); border-color: var(--border); }
 .g-pot.pt-E3 { background: #e06666; } .g-pot.pt-E4 { background: #e69138; } .g-pot.pt-E5 { background: #f1c232; }
 .g-pot.pt-U4 { background: #a2c4c9; } .g-pot.pt-U5 { background: #d9d2e9; } .g-pot.pt-U6 { background: #f9cb9c; }
 
