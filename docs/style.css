@@ -73,19 +73,21 @@ code { background: var(--surface-2); border: 1px solid var(--border); border-rad
 .subtabs button.active { background: var(--text); color: #fff; }
 
 .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); background: var(--surface); }
-/* 자연 너비 + 열 종류별 고정폭 → 모든 탭에서 열 크기 일정 */
-table.grid { border-collapse: collapse; width: auto; font-size: 13px; }
+/* table-layout:fixed + 열 종류별 고정폭 → 모든 탭에서 열 위치·크기 완전 동일 */
+table.grid { border-collapse: collapse; table-layout: fixed; width: auto; font-size: 13px; }
 table.grid th, table.grid td {
-  padding: 9px 10px; text-align: right; white-space: nowrap;
+  padding: 9px 10px; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   border-bottom: 1px solid var(--border); box-sizing: border-box;
 }
 table.grid th.l, table.grid td.l { text-align: left; }
-table.grid th.name, table.grid td.name { width: 132px; }
-table.grid th.cls,  table.grid td.cls  { width: 66px; }
-table.grid th.num,  table.grid td.num  { width: 90px; }
-table.grid th.sm,   table.grid td.sm   { width: 64px; padding-left: 6px; padding-right: 6px; }
-table.grid th.chk,  table.grid td.chk  { width: 46px; padding-left: 4px; padding-right: 4px; text-align: center; }
-table.grid th.tier, table.grid td.tier { width: 244px; }
+/* 열 너비는 colgroup 의 <col> 이 결정 (table-layout:fixed) */
+table.grid col.name { width: 132px; }
+table.grid col.cls  { width: 68px; }
+table.grid col.num  { width: 92px; }
+table.grid col.sm   { width: 66px; }
+table.grid col.chk  { width: 46px; }
+table.grid th.sm,  table.grid td.sm  { padding-left: 6px; padding-right: 6px; }
+table.grid th.chk, table.grid td.chk { padding-left: 4px; padding-right: 4px; text-align: center; }
 table.grid thead th {
   position: sticky; top: 0; background: var(--surface-2); z-index: 2;
   font-size: 10.5px; letter-spacing: .03em; color: var(--muted); text-transform: uppercase; user-select: none;

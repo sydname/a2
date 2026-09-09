@@ -225,6 +225,12 @@
     return box;
   }
 
+  // table-layout:fixed 용 colgroup — 열 너비의 단일 기준
+  function makeCols(cols) {
+    var cg = el("colgroup");
+    cols.forEach(function (c) { cg.appendChild(el("col", c.cls || "")); });
+    return cg;
+  }
   // 정렬 없는 단순 헤더
   function headerRow(cols) {
     var tr = el("tr");
@@ -275,6 +281,7 @@
     CHECK_FIELDS.forEach(function (f) { cols.push({ label: f.label, cls: "chk" }); });
 
     var t = el("table", "grid");
+    t.appendChild(makeCols(cols));
     var thead = el("thead"); thead.appendChild(headerRow(cols)); t.appendChild(thead);
     var tb = el("tbody");
     chars.forEach(function (c) {
@@ -319,6 +326,7 @@
     for (var i = 1; i <= 6; i++) cols.push({ label: "" + i, cls: "sm" });
 
     var t = el("table", "grid");
+    t.appendChild(makeCols(cols));
     var thead = el("thead");
     var g = el("tr", "grouprow");
     g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
@@ -353,6 +361,7 @@
     cols.push({ label: "팬던트", cls: "sm" });
 
     var t = el("table", "grid");
+    t.appendChild(makeCols(cols));
     var thead = el("thead");
     var g = el("tr", "grouprow");
     g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
@@ -388,6 +397,7 @@
     cols.push({ label: "영웅", cls: "sm" });
 
     var t = el("table", "grid");
+    t.appendChild(makeCols(cols));
     var thead = el("thead");
     var g = el("tr", "grouprow");
     g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
@@ -445,6 +455,7 @@
     flat.forEach(function (p) { cols.push({ label: p[2], cls: "chk", title: p[1] + " · " + (SOUL_FULL[p[2]] || p[2]) }); });
 
     var t = el("table", "grid");
+    t.appendChild(makeCols(cols));
     var thead = el("thead");
     var g = el("tr", "grouprow");
     g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
