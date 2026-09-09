@@ -18,16 +18,18 @@
     view: lsGet("aion2.view") || "table",
     tab: lsGet("aion2.tab") || "basic",       // basic | enhance | bt | pot | soul
     sel: lsGet("aion2.sel") || null,          // 카드뷰 선택 캐릭터 key
+    cardTab: lsGet("aion2.cardtab") || "gear", // gear | arcana
     potEdit: false,                           // 잠재력 편집 모드
   };
 
+  // dow: 0=일 … 3=수 … 6=토 / hour: 리셋 시각(KST). 그 시각을 지나면 초기화.
   var CHECK_FIELDS = [
-    { key: "hallway", label: "회랑" },
-    { key: "once", label: "일회" },
-    { key: "awaken", label: "각성" },
-    { key: "rudra", label: "루드라" },
-    { key: "erosion", label: "침식" },
-    { key: "muspel", label: "무스펠" },
+    { key: "hallway", label: "회랑", dow: 3, hour: 22 },
+    { key: "once", label: "일회", dow: 6, hour: 22 },
+    { key: "awaken", label: "각성", dow: 3, hour: 5 },
+    { key: "rudra", label: "루드라", dow: 3, hour: 5 },
+    { key: "erosion", label: "침식", dow: 3, hour: 5 },
+    { key: "muspel", label: "무스펠", dow: 3, hour: 5 },
   ];
   var BT_SLOTS = [
     ["MainHand", "무기"], ["SubHand", "가더"], ["Necklace", "목걸이"],
@@ -76,18 +78,21 @@
     return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()) + " " + p(d.getHours()) + ":" + p(d.getMinutes());
   }
 
-  // 매주 수요일 05:00 KST 기준 주간 키
-  function weekKey() {
+  // 지정 요일/시각(KST) 의 가장 최근 경계 → 기간 키. 그 경계를 지나면 값이 바뀌어 초기화됨.
+  function periodKey(dow, hour) {
     var now = new Date();
     var kst = new Date(now.getTime() + now.getTimezoneOffset() * 60000 + 9 * 3600000);
-    var diff = (kst.getDay() - 3 + 7) % 7;            // 3 = 수요일
-    if (diff === 0 && kst.getHours() < 5) diff = 7;
-    var anchor = new Date(kst);
-    anchor.setDate(kst.getDate() - diff);
-    anchor.setHours(5, 0, 0, 0);
-    return anchor.getFullYear() + "-" + (anchor.getMonth() + 1) + "-" + anchor.getDate();
+    var diff = (kst.getDay() - dow + 7) % 7;
+    if (diff === 0 && kst.getHours() < hour) diff = 7;
+    var a = new Date(kst);
+    a.setDate(kst.getDate() - diff);
+    a.setHours(hour, 0, 0, 0);
+    function pad(n) { return (n < 10 ? "0" : "") + n; }
+    return a.getFullYear() + pad(a.getMonth() + 1) + pad(a.getDate()) + "-" + hour;
   }
-  var WK = weekKey();
+  function fieldPk(f) { return periodKey(f.dow, f.hour); }
+  var CUR_PKS = {};
+  CHECK_FIELDS.forEach(function (f) { CUR_PKS[fieldPk(f)] = 1; });
 
   // ---------- Firebase (선택) — 없으면 localStorage 로 폴백 ----------
   var FB_CFG = window.AION2_FIREBASE || null;
@@ -103,7 +108,7 @@
     try {
       firebase.initializeApp(FB_CFG);
       fbdb = firebase.database();
-      fbdb.ref("checks/" + WK).on("value", function (s) {
+      fbdb.ref("checks").on("value", function (s) {
         fbChecks = s.val() || {};
         if (STATE.data && !skipRerender()) render();
       });
@@ -115,9 +120,9 @@
         fbPot = s.val() || {};
         if (STATE.data && !skipRerender()) render();
       });
-      // 지난 주 체크 데이터 정리 (best effort)
+      // 지난 기간 체크 데이터 정리 (best effort)
       fbdb.ref("checks").once("value", function (s) {
-        s.forEach(function (ch) { if (ch.key !== WK) ch.ref.remove(); });
+        s.forEach(function (ch) { if (!CUR_PKS[ch.key]) ch.ref.remove(); });
       });
     } catch (e) { console.warn("Firebase 연결 실패, localStorage 로 폴백:", e); }
   }
@@ -143,21 +148,26 @@
     lsSet(potLsKey(charKey), JSON.stringify(all));
   }
 
-  function checkKey(charKey, field) { return "aion2.chk." + WK + "." + charKey + "." + field; }
-  function getCheck(charKey, field) {
-    if (fbActive()) return !!(fbChecks[charKey] && fbChecks[charKey][field]);
-    return lsGet(checkKey(charKey, field)) === "1";
+  // field 는 CHECK_FIELDS 항목(객체). 항목마다 리셋 주기가 다름.
+  function checkKey(charKey, f) { return "aion2.chk." + fieldPk(f) + "." + charKey + "." + f.key; }
+  function getCheck(charKey, f) {
+    var pk = fieldPk(f);
+    if (fbActive()) return !!(fbChecks[pk] && fbChecks[pk][charKey] && fbChecks[pk][charKey][f.key]);
+    return lsGet(checkKey(charKey, f)) === "1";
   }
-  function setCheck(charKey, field, on) {
-    if (fbActive()) { fbdb.ref("checks/" + WK + "/" + charKey + "/" + field).set(!!on); return; }
-    lsSet(checkKey(charKey, field), on ? "1" : "0");
+  function setCheck(charKey, f, on) {
+    if (fbActive()) { fbdb.ref("checks/" + fieldPk(f) + "/" + charKey + "/" + f.key).set(!!on); return; }
+    lsSet(checkKey(charKey, f), on ? "1" : "0");
   }
   function pruneOldChecks() {
     try {
       var kill = [];
       for (var i = 0; i < localStorage.length; i++) {
         var k = localStorage.key(i);
-        if (k && k.indexOf("aion2.chk.") === 0 && k.indexOf("aion2.chk." + WK + ".") !== 0) kill.push(k);
+        if (k && k.indexOf("aion2.chk.") === 0) {
+          var pk = k.split(".")[2];
+          if (!CUR_PKS[pk]) kill.push(k);
+        }
       }
       kill.forEach(function (k) { localStorage.removeItem(k); });
     } catch (e) {}
@@ -290,7 +300,8 @@
 
     var note = el("p", "tbl-note");
     if (tab === "basic")
-      note.innerHTML = "체크박스는 이 브라우저에 저장되고 <b>매주 수요일 05:00(KST)</b> 자동 초기화됩니다. 오드 값은 칸을 눌러 바로 수정하고, 영구 반영은 <code>docs/manual.json</code>.";
+      note.innerHTML = "체크박스 자동 초기화(KST): <b>회랑</b> 수 22시 · <b>일회</b> 토 22시 · <b>각성·루드라·침식·무스펠</b> 수 05시. " +
+        "저장 위치는 상단 표시(Firebase 동기화 / 이 브라우저). 오드 값은 칸을 눌러 수정.";
     else if (tab === "bt")
       note.innerHTML = "돌파 단계는 공식 API 에서 매일 자동 갱신됩니다. 색: 0 회색 · 1 초록 · 2 파랑 · 3 주황 · 4 빨강 · 5 진한 검정.";
     else if (tab === "pot")
@@ -376,7 +387,10 @@
       { label: "이름", cls: "l name" }, { label: "직업", cls: "l cls" },
       { label: "아이템레벨", cls: "num" }, { label: "전투력", cls: "num" }, { label: "오드현황", cls: "num" },
     ];
-    CHECK_FIELDS.forEach(function (f) { cols.push({ label: f.label, cls: "chk" }); });
+    var DOW_KO = ["일", "월", "화", "수", "목", "금", "토"];
+    CHECK_FIELDS.forEach(function (f) {
+      cols.push({ label: f.label, cls: "chk", title: f.label + " · " + DOW_KO[f.dow] + " " + f.hour + "시(KST) 초기화" });
+    });
 
     var t = el("table", "grid");
     t.appendChild(makeCols(cols));
@@ -402,10 +416,10 @@
         var cell = td("", "chk");
         var cb = el("input");
         cb.type = "checkbox";
-        cb.checked = getCheck(c.key, f.key);
+        cb.checked = getCheck(c.key, f);
         if (cb.checked) cell.classList.add("on");
         cb.addEventListener("change", function () {
-          setCheck(c.key, f.key, cb.checked);
+          setCheck(c.key, f, cb.checked);
           cell.classList.toggle("on", cb.checked);
         });
         cell.appendChild(cb);
@@ -647,8 +661,17 @@
     box.appendChild(picker);
 
     var c = chars.filter(function (x) { return x.key === STATE.sel; })[0] || chars[0];
-    var body = el("div", "card-body");
-    body.innerHTML = cardTemplate(c);
+
+    var sub = el("div", "subtabs card-subtabs");
+    [["gear", "장비"], ["arcana", "아르카나"]].forEach(function (t) {
+      var b = el("button", STATE.cardTab === t[0] ? "active" : "", esc(t[1]));
+      b.addEventListener("click", function () { STATE.cardTab = t[0]; lsSet("aion2.cardtab", t[0]); render(); });
+      sub.appendChild(b);
+    });
+    box.appendChild(sub);
+
+    var body = el("div", "card-body" + (STATE.cardTab === "arcana" ? " arcana-mode" : ""));
+    body.innerHTML = STATE.cardTab === "arcana" ? cardArcanaTab(c) : cardGearTab(c);
     box.appendChild(body);
     requestAnimationFrame(function () {
       Array.prototype.forEach.call(body.querySelectorAll(".bar > i"), function (i) { i.style.width = i.getAttribute("data-w") + "%"; });
@@ -656,9 +679,40 @@
     return box;
   }
 
-  function cardTemplate(c) {
-    var p = c.profile || {}, ex = c.exceed || {}, d = c.daevanion || {}, dl = c.delta || {};
+  var CARD_ARMOR = { Helmet: 1, Shoulder: 1, Torso: 1, Pants: 1, Gloves: 1, Boots: 1, Cape: 1 };
 
+  function cheadHtml(c) {
+    var p = c.profile || {};
+    return '<div class="chead">' +
+      '<div class="c-name">' + esc(p.name || c.label) +
+        (c.label && c.label !== p.name ? ' <span class="lbl">' + esc(c.label) + "</span>" : "") + "</div>" +
+      '<div class="c-tags">' +
+        tag(p.className) + tag(p.raceName) + (p.guildName ? tag(p.guildName) : "") +
+        (c.ok === false ? '<span class="badge-fail">수집실패</span>' : "") +
+      "</div>" +
+      '<a class="c-link" href="' + esc(c.officialUrl) + '" target="_blank" rel="noopener">공식 페이지 ↗</a>' +
+      "</div>";
+  }
+
+  function gearRowHtml(c, e) {
+    var pot = potentialOf(c, e.slot);
+    return '<div class="gear ' + gradeCls(e.grade) + '">' +
+      '<div class="g-ic">' + (e.icon ? '<img loading="lazy" alt="" src="' + esc(e.icon) + '">' : "") + "</div>" +
+      '<div class="g-main">' +
+        '<div class="g-slot">' + esc(e.slotKo || e.slot) + "</div>" +
+        '<div class="g-name">' + esc(e.name || "–") + "</div>" +
+      "</div>" +
+      '<div class="g-nums">' +
+        '<span class="g-en">+' + (e.enchant || 0) + "</span>" +
+        (e.exceed ? '<span class="g-ex">' + e.exceed + "돌파</span>" : "") +
+        (pot !== "" ? '<span class="g-pot">잠재 ' + esc(pot) + "</span>" : "") +
+      "</div>" +
+      "</div>";
+  }
+
+  // ---- 카드: 장비 탭 ----
+  function cardGearTab(c) {
+    var p = c.profile || {}, ex = c.exceed || {}, d = c.daevanion || {}, dl = c.delta || {};
     function kpiCells(rows) {
       return rows.map(function (r) {
         return '<div class="kpi"><div class="k">' + esc(r[0]) + '</div><div class="v">' + r[1] + (r[2] || "") + "</div></div>";
@@ -675,23 +729,55 @@
       ["악세서리 돌파", N(ex.accessory.total), deltaHtml(dl.accessoryExceed)],
     ]);
 
-    var gearItems = (c.equipment || []).filter(function (e) { return !e.isArcana; });
-    var gear = gearItems.map(function (e) {
-      var pot = potentialOf(c, e.slot);
-      return '<div class="gear ' + gradeCls(e.grade) + '">' +
-        '<div class="g-ic">' + (e.icon ? '<img loading="lazy" alt="" src="' + esc(e.icon) + '">' : "") + "</div>" +
-        '<div class="g-main">' +
-          '<div class="g-slot">' + esc(e.slotKo || e.slot) + "</div>" +
-          '<div class="g-name">' + esc(e.name || "–") + "</div>" +
-        "</div>" +
-        '<div class="g-nums">' +
-          '<span class="g-en">+' + (e.enchant || 0) + "</span>" +
-          (e.exceed ? '<span class="g-ex">' + e.exceed + "돌파</span>" : "") +
-          (pot !== "" ? '<span class="g-pot">잠재 ' + esc(pot) + "</span>" : "") +
-        "</div>" +
+    var gearAll = (c.equipment || []).filter(function (e) { return !e.isArcana; });
+    var armor = gearAll.filter(function (e) { return CARD_ARMOR[e.slot]; });
+    var wacc = gearAll.filter(function (e) { return !CARD_ARMOR[e.slot]; });
+    var waHtml = wacc.map(function (e) { return gearRowHtml(c, e); }).join("");
+    var arHtml = armor.map(function (e) { return gearRowHtml(c, e); }).join("");
+
+    var stigmaChips = (c.stigma || []).map(function (s) {
+      return '<span class="stig">' + esc(s.name) + ' <b>' + N(s.level) + "</b></span>";
+    }).join("");
+
+    var boards = (d.boards || []).map(function (b) {
+      var pct = b.totalNodeCount ? Math.round((b.openNodeCount / b.totalNodeCount) * 100) : (b.openPercent || 0);
+      var basic = ["네자칸", "지켈", "바이젤", "트리니엘"].indexOf(b.name) >= 0;
+      return '<div class="drow' + (basic ? " basic" : "") + '">' +
+        '<span class="dn">' + esc(b.name) + (basic ? ' <em>기본</em>' : "") + "</span>" +
+        '<span class="bar"><i data-w="' + pct + '" style="width:0%"></i></span>' +
+        '<span class="dc">' + N(b.openNodeCount) + " / " + N(b.totalNodeCount) + "</span>" +
         "</div>";
     }).join("");
 
+    return (
+      '<section class="cbox">' + cheadHtml(c) +
+        '<div class="kpis">' + kpisTop + "</div>" +
+        '<div class="kpis-label">분야별 돌파</div>' +
+        '<div class="kpis bt">' + kpisBt + "</div>" +
+        (dl && dl.sinceDate ? '<div class="since">▲▼ ' + esc(dl.sinceDate) + " 대비 증감</div>" : "") +
+      "</section>" +
+
+      '<section class="cbox">' +
+        "<h3>무기 · 가더 · 악세서리 <span class=\"cnt\">" + wacc.length + "</span></h3>" +
+        '<div class="gear-list">' + (waHtml || '<p class="muted">–</p>') + "</div>" +
+        (stigmaChips ? '<h4 class="mt">상위 스티그마</h4><div class="stig-list">' + stigmaChips + "</div>" : "") +
+      "</section>" +
+
+      '<section class="cbox">' +
+        "<h3>방어구 <span class=\"cnt\">" + armor.length + "</span></h3>" +
+        '<div class="gear-list">' + (arHtml || '<p class="muted">–</p>') + "</div>" +
+      "</section>" +
+
+      '<section class="cbox">' +
+        "<h3>데바니온 <span class=\"cnt\">" + d.openedBoards + " / " + d.totalBoards + "</span> " +
+        "<small>개방 노드 " + N(d.openNodeTotal) + " / " + N(d.nodeTotal) + "</small></h3>" +
+        '<div class="daev">' + boards + "</div>" +
+      "</section>"
+    );
+  }
+
+  // ---- 카드: 아르카나 탭 ----
+  function cardArcanaTab(c) {
     var arc = c.arcana || [];
     var arcEnchTotal = arc.reduce(function (s, a) { return s + (a.enchant || 0); }, 0);
     var det = STATE.arcana[c.key];
@@ -713,8 +799,8 @@
             (s.extra && s.extra !== "0" ? ' <span class="a-extra">(+' + esc(s.extra) + ")</span>" : "") + "</div>";
         }).join("");
         var sk = (dd.subSkills || []).map(function (s) {
-          return '<span class="a-skill">' + (s.icon ? '<img alt="" src="' + esc(s.icon) + '">' : "") +
-            esc(s.name) + ' <b>Lv.' + N(s.level) + "</b></span>";
+          return '<div class="a-skill">' + (s.icon ? '<img alt="" src="' + esc(s.icon) + '">' : "") +
+            "<span>" + esc(s.name) + "</span> <b>Lv." + N(s.level) + "</b></div>";
         }).join("");
         body = '<div class="a-detail">' + ms +
           (sk ? '<div class="a-skills">' + sk + "</div>" : "") + "</div>";
@@ -722,66 +808,23 @@
       return '<div class="arc ' + gradeCls(a.grade) + (dd ? " has-detail" : "") + '">' + head + body + "</div>";
     }).join("");
 
-    var aUrl = actionsUrl("arcana.yml");
-    var refreshBtn = '<a class="refresh-btn" href="' + esc(aUrl) + '" target="_blank" rel="noopener" ' +
-      'title="GitHub Actions 에서 \'Run workflow\' 를 눌러 아르카나 상세를 다시 수집합니다">상세 갱신 ↗</a>';
     var arcMeta = det && det.updatedAt
       ? '<span class="arc-upd">상세 수집 ' + esc(fmtDateTime(det.updatedAt)) + " (" + esc(timeAgo(det.updatedAt)) + ")</span>"
       : '<span class="arc-upd">상세 미수집 — [상세 갱신] 을 눌러 한 번 수집하세요</span>';
 
-    var boards = (d.boards || []).map(function (b) {
-      var pct = b.totalNodeCount ? Math.round((b.openNodeCount / b.totalNodeCount) * 100) : (b.openPercent || 0);
-      var basic = ["네자칸", "지켈", "바이젤", "트리니엘"].indexOf(b.name) >= 0;
-      return '<div class="drow' + (basic ? " basic" : "") + '">' +
-        '<span class="dn">' + esc(b.name) + (basic ? ' <em>기본</em>' : "") + "</span>" +
-        '<span class="bar"><i data-w="' + pct + '" style="width:0%"></i></span>' +
-        '<span class="dc">' + N(b.openNodeCount) + " / " + N(b.totalNodeCount) + "</span>" +
-        "</div>";
-    }).join("");
-
-    var stigmaChips = (c.stigma || []).map(function (s) {
-      return '<span class="stig">' + esc(s.name) + ' <b>' + N(s.level) + "</b></span>";
-    }).join("");
-
     return (
-      '<section class="cbox">' +
-        '<div class="chead">' +
-          '<div class="c-name">' + esc(p.name || c.label) +
-            (c.label && c.label !== p.name ? ' <span class="lbl">' + esc(c.label) + "</span>" : "") + "</div>" +
-          '<div class="c-tags">' +
-            tag(p.className) + tag(p.raceName) + (p.guildName ? tag(p.guildName) : "") +
-            (c.ok === false ? '<span class="badge-fail">수집실패</span>' : "") +
-          "</div>" +
-          '<a class="c-link" href="' + esc(c.officialUrl) + '" target="_blank" rel="noopener">공식 페이지 ↗</a>' +
-        "</div>" +
-        '<div class="kpis">' + kpisTop + "</div>" +
-        '<div class="kpis-label">분야별 돌파</div>' +
-        '<div class="kpis bt">' + kpisBt + "</div>" +
-        (dl && dl.sinceDate ? '<div class="since">▲▼ ' + esc(dl.sinceDate) + " 대비 증감</div>" : "") +
-      "</section>" +
-
-      '<section class="cbox">' +
-        "<h3>착용 장비 <span class=\"cnt\">" + gearItems.length + "</span></h3>" +
-        '<div class="gear-list">' + gear + "</div>" +
-        (stigmaChips ? '<h4 class="mt">상위 스티그마</h4><div class="stig-list">' + stigmaChips + "</div>" : "") +
-      "</section>" +
-
+      '<section class="cbox">' + cheadHtml(c) + "</section>" +
       '<section class="cbox">' +
         '<div class="arc-top">' +
           "<h3>아르카나 <span class=\"cnt\">" + arc.length + "</span> <small>강화 합계 +" + arcEnchTotal + "</small></h3>" +
-          refreshBtn +
+          '<a class="refresh-btn" href="' + esc(actionsUrl("arcana.yml")) + '" target="_blank" rel="noopener">상세 갱신 ↗</a>' +
         "</div>" +
         '<div class="arc-meta">' + arcMeta + "</div>" +
-        '<div class="arc-list">' + (arcHtml || '<p class="muted">착용한 아르카나가 없습니다.</p>') + "</div>" +
-      "</section>" +
-
-      '<section class="cbox">' +
-        "<h3>데바니온 <span class=\"cnt\">" + d.openedBoards + " / " + d.totalBoards + "</span> " +
-        "<small>개방 노드 " + N(d.openNodeTotal) + " / " + N(d.nodeTotal) + "</small></h3>" +
-        '<div class="daev">' + boards + "</div>" +
+        '<div class="arc-list grid6">' + (arcHtml || '<p class="muted">착용한 아르카나가 없습니다.</p>') + "</div>" +
       "</section>"
     );
   }
+
   function tag(t) { return t ? '<span class="tag">' + esc(t) + "</span>" : ""; }
 
   // github.io 주소에서 저장소 Actions 워크플로 URL 을 추론
