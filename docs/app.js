@@ -29,9 +29,9 @@
     { key: "muspel", label: "무스펠" },
   ];
   var BT_SLOTS = [
-    ["MainHand", "무기"], ["SubHand", "가더"], ["Necklace", "목"],
-    ["Earring1", "귀1"], ["Earring2", "귀2"], ["Ring1", "반1"], ["Ring2", "반2"],
-    ["Bracelet1", "팔1"], ["Bracelet2", "팔2"], ["Brooch1", "브1"], ["Brooch2", "브2"],
+    ["MainHand", "무기"], ["SubHand", "가더"], ["Necklace", "목걸이"],
+    ["Earring1", "귀걸이1"], ["Earring2", "귀걸이2"], ["Ring1", "반지1"], ["Ring2", "반지2"],
+    ["Bracelet1", "팔찌1"], ["Bracelet2", "팔찌2"], ["Brooch1", "브로치1"], ["Brooch2", "브로치2"],
   ];
 
   // ---------- utils ----------
@@ -243,9 +243,9 @@
   function nameCell(c) {
     return td('<span class="cn">' + esc(c.profile.name || c.label) +
       (c.label && c.label !== c.profile.name ? ' <span class="lbl">' + esc(c.label) + "</span>" : "") +
-      (c.ok === false ? ' <span class="badge-fail">실패</span>' : "") + "</span>", "l");
+      (c.ok === false ? ' <span class="badge-fail">실패</span>' : "") + "</span>", "l name");
   }
-  function classCell(c) { return td(esc(c.profile.className || "–"), "l"); }
+  function classCell(c) { return td(esc(c.profile.className || "–"), "l cls"); }
   function gradeBySlot(c) {
     var m = {};
     (c.equipment || []).forEach(function (e) { m[e.slot] = e.grade; });
@@ -269,8 +269,8 @@
   // ---- 기본 ----
   function basicTable(chars) {
     var cols = [
-      { label: "이름", cls: "l" }, { label: "직업", cls: "l" },
-      { label: "아이템레벨" }, { label: "전투력" }, { label: "오드현황" },
+      { label: "이름", cls: "l name" }, { label: "직업", cls: "l cls" },
+      { label: "아이템레벨", cls: "num" }, { label: "전투력", cls: "num" }, { label: "오드현황", cls: "num" },
     ];
     CHECK_FIELDS.forEach(function (f) { cols.push({ label: f.label, cls: "chk" }); });
 
@@ -314,8 +314,8 @@
 
   // ---- 강화 (데바니온 + 스티그마) ----
   function enhanceTable(chars) {
-    var cols = [{ label: "이름", cls: "l" }, { label: "직업", cls: "l" },
-      { label: "기본데바니온" }, { label: "유스티엘" }];
+    var cols = [{ label: "이름", cls: "l name" }, { label: "직업", cls: "l cls" },
+      { label: "기본데바니온", cls: "num" }, { label: "유스티엘", cls: "num" }];
     for (var i = 1; i <= 6; i++) cols.push({ label: "" + i, cls: "sm" });
 
     var t = el("table", "grid");
@@ -348,7 +348,7 @@
 
   // ---- 돌파 (자동) ----
   function breakthroughTable(chars) {
-    var cols = [{ label: "이름", cls: "l" }, { label: "직업", cls: "l" }];
+    var cols = [{ label: "이름", cls: "l name" }, { label: "직업", cls: "l cls" }];
     BT_SLOTS.forEach(function (s) { cols.push({ label: s[1], cls: "sm" }); });
     cols.push({ label: "팬던트", cls: "sm" });
 
@@ -382,11 +382,11 @@
 
   // ---- 잠재력 (manual.json, 엑셀값) ----
   function potentialTable(chars) {
-    var cols = [{ label: "이름", cls: "l" }, { label: "직업", cls: "l" }];
+    var cols = [{ label: "이름", cls: "l name" }, { label: "직업", cls: "l cls" }];
     POT_SLOTS.forEach(function (s) { cols.push({ label: s[1], cls: "sm" }); });
     cols.push({ label: "유일", cls: "sm" });
     cols.push({ label: "영웅", cls: "sm" });
-    cols.push({ label: "티어", cls: "l" });
+    cols.push({ label: "티어", cls: "l tier" });
 
     var t = el("table", "grid");
     var thead = el("thead");
@@ -416,7 +416,7 @@
       tr.appendChild(td("<b>" + fmtManual(m.potentialUnique) + "</b>", "num sm " + ptClass(m.potentialUniqueTier), ptLabel(m.potentialUniqueTier)));
       tr.appendChild(td("<b>" + fmtManual(m.potentialEpic) + "</b>", "num sm " + ptClass(m.potentialEpicTier), ptLabel(m.potentialEpicTier)));
       tr.appendChild(td(m.tierName
-        ? '<span class="' + ptClass(m.tierCode) + ' tier-txt">' + esc(m.tierName) + "</span>" : "–", "l"));
+        ? '<span class="' + ptClass(m.tierCode) + ' tier-txt">' + esc(m.tierName) + "</span>" : "–", "l tier"));
       tb.appendChild(tr);
     });
     t.appendChild(tb);
@@ -444,7 +444,7 @@
     var flat = [];
     SOUL_GRID.forEach(function (g) { g.stats.forEach(function (ab) { flat.push([g.slot, g.ko, ab]); }); });
 
-    var cols = [{ label: "이름", cls: "l" }, { label: "직업", cls: "l" }];
+    var cols = [{ label: "이름", cls: "l name" }, { label: "직업", cls: "l cls" }];
     flat.forEach(function (p) { cols.push({ label: p[2], cls: "chk", title: p[1] + " · " + (SOUL_FULL[p[2]] || p[2]) }); });
 
     var t = el("table", "grid");

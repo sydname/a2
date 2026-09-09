@@ -73,11 +73,19 @@ code { background: var(--surface-2); border: 1px solid var(--border); border-rad
 .subtabs button.active { background: var(--text); color: #fff; }
 
 .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); background: var(--surface); }
-table.grid { border-collapse: collapse; width: 100%; font-size: 13px; }
-table.grid th, table.grid td { padding: 10px 12px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--border); }
+/* 자연 너비 + 열 종류별 고정폭 → 모든 탭에서 열 크기 일정 */
+table.grid { border-collapse: collapse; width: auto; font-size: 13px; }
+table.grid th, table.grid td {
+  padding: 9px 10px; text-align: right; white-space: nowrap;
+  border-bottom: 1px solid var(--border); box-sizing: border-box;
+}
 table.grid th.l, table.grid td.l { text-align: left; }
-table.grid th.sm, table.grid td.sm { padding-left: 8px; padding-right: 8px; }
-table.grid th.chk, table.grid td.chk { padding-left: 6px; padding-right: 6px; text-align: center; }
+table.grid th.name, table.grid td.name { width: 132px; }
+table.grid th.cls,  table.grid td.cls  { width: 66px; }
+table.grid th.num,  table.grid td.num  { width: 90px; }
+table.grid th.sm,   table.grid td.sm   { width: 64px; padding-left: 6px; padding-right: 6px; }
+table.grid th.chk,  table.grid td.chk  { width: 46px; padding-left: 4px; padding-right: 4px; text-align: center; }
+table.grid th.tier, table.grid td.tier { width: 244px; }
 table.grid thead th {
   position: sticky; top: 0; background: var(--surface-2); z-index: 2;
   font-size: 10.5px; letter-spacing: .03em; color: var(--muted); text-transform: uppercase; user-select: none;
