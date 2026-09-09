@@ -134,43 +134,59 @@ def main():
                     } if st else None,
                 })
 
-            # 방어구 7부위 영혼각인(subStats) 상세
-            ARMOR = [("Helmet", "투구"), ("Shoulder", "견갑"), ("Torso", "상의"),
-                     ("Pants", "하의"), ("Gloves", "장갑"), ("Boots", "신발"), ("Cape", "망토")]
+            # 방어구 7부위 영혼각인(subStats) + 전체 장착장비의 영혼각인 스킬 합계
+            ARMOR_KO = {"Helmet": "투구", "Shoulder": "견갑", "Torso": "상의", "Pants": "하의",
+                        "Gloves": "장갑", "Boots": "신발", "Cape": "망토"}
+            ARMOR_ORDER = ["Helmet", "Shoulder", "Torso", "Pants", "Gloves", "Boots", "Cape"]
             eq_by_slot = {it.get("slotPosName"): it for it in eq_list}
-            soul = []
-            for slot_name, slot_ko in ARMOR:
-                it = eq_by_slot.get(slot_name)
-                if not it:
-                    soul.append({"slot": slot_name, "slotKo": slot_ko, "name": None,
-                                 "subStatCount": None, "subStats": []})
-                    continue
-                time.sleep(random.uniform(0.7, 1.5))
+            gear_items = [it for it in eq_list
+                          if not ARCANA_RE.match(it.get("slotPosName", "") or "")]
+
+            item_detail = {}
+            for it in gear_items:
+                time.sleep(random.uniform(0.6, 1.3))
                 p = dict(base_params)
                 p.update({"id": it.get("id"), "enchantLevel": it.get("enchantLevel") or 0,
                           "slotPos": it.get("slotPos")})
                 try:
-                    d = http_get_json("/api/character/equipment/item", p, referer)
+                    item_detail[it.get("slotPosName")] = http_get_json(
+                        "/api/character/equipment/item", p, referer)
                 except Exception as e:  # noqa: BLE001
-                    print("    [soul fail] %s %s : %s" % (label, slot_ko, e), file=sys.stderr)
-                    soul.append({"slot": slot_name, "slotKo": slot_ko, "name": it.get("name"),
+                    print("    [item fail] %s %s : %s" % (label, it.get("slotPosName"), e), file=sys.stderr)
+
+            soul = []
+            for slot_name in ARMOR_ORDER:
+                d = item_detail.get(slot_name)
+                it = eq_by_slot.get(slot_name)
+                if not d:
+                    soul.append({"slot": slot_name, "slotKo": ARMOR_KO[slot_name],
+                                 "name": it.get("name") if it else None,
                                  "subStatCount": None, "subStats": []})
                     continue
                 soul.append({
-                    "slot": slot_name, "slotKo": slot_ko,
+                    "slot": slot_name, "slotKo": ARMOR_KO[slot_name],
                     "name": d.get("name"), "grade": d.get("grade"),
                     "subStatCount": d.get("subStatCount"),
                     "subStats": [{"name": s.get("name"), "value": s.get("value")}
                                  for s in (d.get("subStats") or [])],
                 })
 
+            equip_skills = {}
+            for d in item_detail.values():
+                for s in (d.get("subSkills") or []):
+                    nm = s.get("name")
+                    if nm:
+                        equip_skills[nm] = equip_skills.get(nm, 0) + int(s.get("level") or 0)
+
             result[key_of(sid, cid)] = {
                 "label": label,
                 "updatedAt": dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
                 "arcana": details,
                 "soul": soul,
+                "equipSkills": equip_skills,
             }
-            print("  [OK]   %s  아르카나 %d개 + 방어구 영혼각인 %d부위" % (label, len(details), len(soul)))
+            print("  [OK]   %s  아르카나 %d개 + 장비 %d부위(스킬 %d종)" % (
+                label, len(details), len(item_detail), len(equip_skills)))
         except Exception as e:  # noqa: BLE001
             print("  [FAIL] %s : %s" % (label, e), file=sys.stderr)
             errors.append({"label": label, "error": str(e)})

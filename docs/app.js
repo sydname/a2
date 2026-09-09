@@ -781,8 +781,11 @@
         "<h3>데바니온 <span class=\"cnt\">" + d.openedBoards + " / " + d.totalBoards + "</span> " +
         "<small>개방 노드 " + N(d.openNodeTotal) + " / " + N(d.nodeTotal) + "</small></h3>" +
         '<div class="daev">' + boards + "</div>" +
-        (stigmaChips ? '<h4 class="mt">상위 스티그마</h4><div class="stig-list">' + stigmaChips + "</div>" : "") +
       "</section>" +
+
+      (stigmaChips
+        ? '<section class="cbox"><h3>상위 스티그마</h3><div class="stig-list">' + stigmaChips + "</div></section>"
+        : "") +
 
       '<section class="cbox">' +
         "<h3>잠재력 <small>장비 칸의 [잠재] 배지 색 = 티어</small></h3>" +
@@ -836,8 +839,43 @@
         "</div>" +
         '<div class="arc-meta">' + arcMeta + "</div>" +
         '<div class="arc-list grid6">' + (arcHtml || '<p class="muted">착용한 아르카나가 없습니다.</p>') + "</div>" +
-      "</section>"
+      "</section>" +
+      skillMatrixSection(det)
     );
+  }
+
+  var SKILL_SRC = ["성배", "양피지", "나침반", "종", "거울", "천칭"];
+  function skillMatrixSection(det) {
+    if (!det || !(det.arcana || []).length) return "";
+    var bySrc = {};
+    SKILL_SRC.forEach(function (s) { bySrc[s] = {}; });
+    (det.arcana || []).forEach(function (a) {
+      if (bySrc[a.category]) (a.subSkills || []).forEach(function (s) { bySrc[a.category][s.name] = s.level || 0; });
+    });
+    var eqSk = det.equipSkills || {};
+    var names = {};
+    SKILL_SRC.forEach(function (s) { Object.keys(bySrc[s]).forEach(function (n) { names[n] = 1; }); });
+    Object.keys(eqSk).forEach(function (n) { names[n] = 1; });
+    var rows = Object.keys(names).map(function (n) {
+      var vals = SKILL_SRC.map(function (s) { return bySrc[s][n] || 0; });
+      var eq = eqSk[n] || 0;
+      return { name: n, vals: vals, eq: eq, total: vals.reduce(function (a, b) { return a + b; }, 0) + eq };
+    }).sort(function (a, b) { return b.total - a.total || a.name.localeCompare(b.name, "ko"); });
+    if (!rows.length) return "";
+
+    var head = "<tr><th>스킬</th>" + SKILL_SRC.map(function (s) { return "<th>" + esc(s) + "</th>"; }).join("") +
+      "<th>장비</th><th>합계</th></tr>";
+    var body = rows.map(function (r) {
+      var cells = r.vals.map(function (v) { return '<td class="' + (v ? "" : "z") + '">' + (v || "·") + "</td>"; }).join("");
+      return "<tr><td>" + esc(r.name) + "</td>" + cells +
+        '<td class="' + (r.eq ? "" : "z") + '">' + (r.eq || "·") + "</td>" +
+        '<td class="tot">' + r.total + "</td></tr>";
+    }).join("");
+
+    return '<section class="cbox">' +
+      "<h3>아르카나 스킬 현황 <small>성배·양피지·나침반·종·거울·천칭 + 장비(장착장비 영혼각인 스킬 합계)</small></h3>" +
+      '<div style="overflow-x:auto"><table class="skill-mat"><thead>' + head + "</thead><tbody>" + body + "</tbody></table></div>" +
+      "</section>";
   }
 
   function tag(t) { return t ? '<span class="tag">' + esc(t) + "</span>" : ""; }

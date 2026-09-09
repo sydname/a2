@@ -225,11 +225,22 @@ td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
 .g-en { font-size: 12px; font-weight: 800; color: var(--muted); }
 .g-ex { font-size: 10.5px; font-weight: 800; color: #fff; background: var(--gc); border-radius: 5px; padding: 1px 5px; }
 .g-pot { font-size: 10.5px; font-weight: 800; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border)); background: var(--accent-soft); border-radius: 5px; padding: 1px 5px; white-space: nowrap; }
-.g-pot.pt { color: #17202b; border-color: transparent; }   /* .pt-E4 등이 배경색 제공 */
+.g-pot.pt { color: #17202b; border-color: transparent; }
+.g-pot.pt-E3 { background: #e06666; } .g-pot.pt-E4 { background: #e69138; } .g-pot.pt-E5 { background: #f1c232; }
+.g-pot.pt-U4 { background: #a2c4c9; } .g-pot.pt-U5 { background: #d9d2e9; } .g-pot.pt-U6 { background: #f9cb9c; }
 
 .pot-legend { display: inline-flex; flex-wrap: wrap; gap: 6px; vertical-align: middle; }
 .pot-legend span { font-size: 11px; font-weight: 700; color: #17202b; padding: 2px 8px; border-radius: 5px; }
 .cbox .pot-legend { display: flex; margin-top: 2px; }
+
+/* 아르카나 스킬 현황 매트릭스 */
+.skill-mat { width: 100%; border-collapse: collapse; font-size: 11.5px; font-variant-numeric: tabular-nums; }
+.skill-mat th, .skill-mat td { padding: 4px 7px; border-bottom: 1px solid var(--border); text-align: center; white-space: nowrap; }
+.skill-mat th:first-child, .skill-mat td:first-child { text-align: left; font-weight: 600; }
+.skill-mat thead th { font-size: 10px; color: var(--muted-2); font-weight: 800; letter-spacing: .02em; }
+.skill-mat td.z { color: var(--border-strong); }
+.skill-mat td.tot { font-weight: 800; color: var(--accent); }
+.skill-mat tbody tr:hover { background: var(--accent-soft); }
 
 .stig-list { display: flex; flex-wrap: wrap; gap: 6px; }
 .stig { font-size: 11.5px; font-weight: 600; color: var(--muted); background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px; }
