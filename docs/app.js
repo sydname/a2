@@ -679,7 +679,11 @@
     return box;
   }
 
-  var CARD_ARMOR = { Helmet: 1, Shoulder: 1, Torso: 1, Pants: 1, Gloves: 1, Boots: 1, Cape: 1 };
+  // 방어구 구획: 방어구 7부위 → 허리띠 → 아뮬렛 → 팬던트 → 룬1 → 룬2 순
+  var CARD_ARMOR_ORDER = ["Helmet", "Shoulder", "Torso", "Pants", "Gloves", "Boots", "Cape",
+    "Belt", "Amulet", "Pendant", "Rune1", "Rune2"];
+  var CARD_ARMOR = {};
+  CARD_ARMOR_ORDER.forEach(function (s) { CARD_ARMOR[s] = 1; });
 
   function cheadHtml(c) {
     var p = c.profile || {};
@@ -730,7 +734,9 @@
     ]);
 
     var gearAll = (c.equipment || []).filter(function (e) { return !e.isArcana; });
-    var armor = gearAll.filter(function (e) { return CARD_ARMOR[e.slot]; });
+    var bySlot = {};
+    gearAll.forEach(function (e) { bySlot[e.slot] = e; });
+    var armor = CARD_ARMOR_ORDER.map(function (s) { return bySlot[s]; }).filter(Boolean);
     var wacc = gearAll.filter(function (e) { return !CARD_ARMOR[e.slot]; });
     var waHtml = wacc.map(function (e) { return gearRowHtml(c, e); }).join("");
     var arHtml = armor.map(function (e) { return gearRowHtml(c, e); }).join("");
