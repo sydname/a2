@@ -779,21 +779,21 @@
         '<div class="gear-list">' + (arHtml || '<p class="muted">–</p>') + "</div>" +
       "</section>" +
 
-      '<section class="cbox">' +
-        "<h3>데바니온 <span class=\"cnt\">" + d.openedBoards + " / " + d.totalBoards + "</span> " +
-        "<small>개방 노드 " + N(d.openNodeTotal) + " / " + N(d.nodeTotal) + "</small></h3>" +
-        '<div class="daev">' + boards + "</div>" +
-      "</section>" +
+      '<div class="cbox-stack">' +
+        '<section class="cbox">' +
+          "<h3>데바니온 <span class=\"cnt\">" + d.openedBoards + " / " + d.totalBoards + "</span> " +
+          "<small>개방 노드 " + N(d.openNodeTotal) + " / " + N(d.nodeTotal) + "</small></h3>" +
+          '<div class="daev">' + boards + "</div>" +
+        "</section>" +
+        (stigmaChips
+          ? '<section class="cbox"><h3>상위 스티그마</h3><div class="stig-list">' + stigmaChips + "</div></section>"
+          : "") +
+      "</div>" +
 
       '<section class="cbox">' +
         "<h3>잠재력 <small>장비 칸의 [잠재] 배지 색 = 티어</small></h3>" +
         potLegendHtml() +
-      "</section>" +
-
-      (stigmaChips
-        ? '<div class="cbox-gap" aria-hidden="true"></div>' +
-          '<section class="cbox"><h3>상위 스티그마</h3><div class="stig-list">' + stigmaChips + "</div></section>"
-        : "")
+      "</section>"
     );
   }
 
