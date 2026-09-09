@@ -108,6 +108,25 @@ aion2-character-tracker/
 
 ---
 
+## 체크박스 · 오드 동기화 (Firebase, 선택)
+
+기본값은 **이 브라우저(localStorage)에만** 저장 — 기기가 바뀌면 초기화됩니다.
+기기 간 동기화를 원하면 무료 Firebase Realtime Database 를 붙이세요.
+
+1. <https://console.firebase.google.com> → 프로젝트 만들기
+2. **빌드 → Realtime Database → 데이터베이스 만들기**
+3. Realtime Database **규칙** 탭에 붙여넣고 게시:
+   ```json
+   { "rules": { "checks": { ".read": true, ".write": true }, "ode": { ".read": true, ".write": true } } }
+   ```
+4. 프로젝트 설정(⚙) → 내 앱 → **</> 웹 앱 추가** → `firebaseConfig` 복사
+5. `docs/firebase-config.js` 의 `window.AION2_FIREBASE` 를 그 값으로 교체 → 커밋/푸시
+6. 사이트 상단에 `체크/오드 저장: Firebase 동기화` 가 뜨면 완료. 체크 즉시 저장·동기화되고, 매주 수요일 05:00(KST) 지난 주 데이터는 자동 정리됩니다.
+
+> `firebaseConfig` 의 apiKey 는 웹에 노출되어도 되는 값입니다(공개 저장소 커밋 OK). 접근 제한은 위 규칙으로 합니다.
+
+---
+
 ## 로컬에서 직접 돌려보기
 
 ```bash

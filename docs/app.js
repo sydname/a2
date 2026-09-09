@@ -87,9 +87,44 @@
     return anchor.getFullYear() + "-" + (anchor.getMonth() + 1) + "-" + anchor.getDate();
   }
   var WK = weekKey();
+
+  // ---------- Firebase (선택) — 없으면 localStorage 로 폴백 ----------
+  var FB_CFG = window.AION2_FIREBASE || null;
+  var fbdb = null, fbChecks = {}, fbOde = {};
+  function fbActive() { return !!fbdb; }
+  function skipRerender() {
+    var a = document.activeElement;
+    return a && a.classList && a.classList.contains("ode-inp");
+  }
+  function fbInit() {
+    if (!FB_CFG || !window.firebase || !FB_CFG.databaseURL) return;
+    try {
+      firebase.initializeApp(FB_CFG);
+      fbdb = firebase.database();
+      fbdb.ref("checks/" + WK).on("value", function (s) {
+        fbChecks = s.val() || {};
+        if (STATE.data && !skipRerender()) render();
+      });
+      fbdb.ref("ode").on("value", function (s) {
+        fbOde = s.val() || {};
+        if (STATE.data && !skipRerender()) render();
+      });
+      // 지난 주 체크 데이터 정리 (best effort)
+      fbdb.ref("checks").once("value", function (s) {
+        s.forEach(function (ch) { if (ch.key !== WK) ch.ref.remove(); });
+      });
+    } catch (e) { console.warn("Firebase 연결 실패, localStorage 로 폴백:", e); }
+  }
+
   function checkKey(charKey, field) { return "aion2.chk." + WK + "." + charKey + "." + field; }
-  function getCheck(charKey, field) { return lsGet(checkKey(charKey, field)) === "1"; }
-  function setCheck(charKey, field, on) { lsSet(checkKey(charKey, field), on ? "1" : "0"); }
+  function getCheck(charKey, field) {
+    if (fbActive()) return !!(fbChecks[charKey] && fbChecks[charKey][field]);
+    return lsGet(checkKey(charKey, field)) === "1";
+  }
+  function setCheck(charKey, field, on) {
+    if (fbActive()) { fbdb.ref("checks/" + WK + "/" + charKey + "/" + field).set(!!on); return; }
+    lsSet(checkKey(charKey, field), on ? "1" : "0");
+  }
   function pruneOldChecks() {
     try {
       var kill = [];
@@ -102,9 +137,18 @@
   }
 
   function odeKey(charKey) { return "aion2.ode." + charKey; }
+  function setOde(charKey, raw) {
+    var v = String(raw == null ? "" : raw).trim();
+    if (fbActive()) { fbdb.ref("ode/" + charKey).set(v === "" ? null : Number(v)); return; }
+    lsSet(odeKey(charKey), v);
+  }
   function getOde(c) {
-    var ov = lsGet(odeKey(c.key));
-    if (ov != null && ov !== "") return Number(ov);
+    if (fbActive()) {
+      if (fbOde[c.key] != null && fbOde[c.key] !== "") return Number(fbOde[c.key]);
+    } else {
+      var ov = lsGet(odeKey(c.key));
+      if (ov != null && ov !== "") return Number(ov);
+    }
     var m = STATE.manual[c.label];
     return m && m.ode != null ? m.ode : null;
   }
@@ -130,6 +174,7 @@
     pruneOldChecks();
     if (!STATE.sel && STATE.data.characters[0]) STATE.sel = STATE.data.characters[0].key;
     render();
+    fbInit();
   }).catch(function (e) {
     app.innerHTML = '<div class="err">데이터를 불러오지 못했습니다 (' + esc(e.message) + ").<br>" +
       "GitHub Actions 가 한 번 이상 실행되어 <code>docs/data/all.json</code> 이 생성되어야 합니다.</div>";
@@ -153,7 +198,8 @@
     var okCount = chars.filter(function (c) { return c.ok !== false; }).length;
     metaLine.innerHTML = "<b>" + chars.length + "명</b> · 마지막 수집 <b>" + esc(fmtDateTime(STATE.data.generatedAt)) +
       "</b> (" + esc(timeAgo(STATE.data.generatedAt)) + ")" +
-      (okCount < chars.length ? " · <span style='color:var(--neg)'>수집 실패 " + (chars.length - okCount) + "명</span>" : "");
+      (okCount < chars.length ? " · <span style='color:var(--neg)'>수집 실패 " + (chars.length - okCount) + "명</span>" : "") +
+      " · 체크/오드 저장: <b>" + (fbActive() ? "Firebase 동기화" : "이 브라우저") + "</b>";
 
     if (!chars.length) { app.innerHTML = '<div class="empty">characters.json 에 캐릭터를 추가하세요.</div>'; return; }
 
@@ -308,7 +354,7 @@
       inp.type = "number";
       inp.value = (getOde(c) == null ? "" : getOde(c));
       inp.placeholder = "–";
-      inp.addEventListener("change", function () { lsSet(odeKey(c.key), inp.value.trim()); });
+      inp.addEventListener("change", function () { setOde(c.key, inp.value); });
       odeTd.appendChild(inp);
       tr.appendChild(odeTd);
 
