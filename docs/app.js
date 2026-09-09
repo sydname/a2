@@ -208,13 +208,15 @@
     else if (tab === "bt")
       note.innerHTML = "돌파 단계는 공식 API 에서 매일 자동 갱신됩니다. 색: 0 회색 · 1 초록 · 2 파랑 · 3 주황 · 4 빨강 · 5 진한 검정.";
     else if (tab === "pot")
-      note.innerHTML = "잠재력 값 = 강화 단계, 칸 배경색 = 그 부위 아이템 티어 (엑셀 부캐영각 색 그대로). " +
-        "<span style='background:#e06666;padding:0 5px;border-radius:4px'>영웅3</span> " +
-        "<span style='background:#e69138;padding:0 5px;border-radius:4px'>영웅4</span> " +
-        "<span style='background:#f1c232;padding:0 5px;border-radius:4px'>영웅5</span> " +
-        "<span style='background:#a2c4c9;padding:0 5px;border-radius:4px'>유일4</span> " +
-        "<span style='background:#d9d2e9;padding:0 5px;border-radius:4px'>유일5</span> " +
-        "<span style='background:#f9cb9c;padding:0 5px;border-radius:4px'>유일6</span>";
+      note.innerHTML = "왼쪽 = 부위별 잠재력 <b>단계</b>(0~4), 칸 색 = 티어 " +
+        "(<span style='background:#e06666;padding:0 4px;border-radius:3px'>영웅3</span> " +
+        "<span style='background:#e69138;padding:0 4px;border-radius:3px'>영웅4</span> " +
+        "<span style='background:#f1c232;padding:0 4px;border-radius:3px'>영웅5</span> " +
+        "<span style='background:#a2c4c9;padding:0 4px;border-radius:3px'>유일4</span> " +
+        "<span style='background:#d9d2e9;padding:0 4px;border-radius:3px'>유일5</span> " +
+        "<span style='background:#f9cb9c;padding:0 4px;border-radius:3px'>유일6</span>). " +
+        "오른쪽 = 4단계까지 <b>남은 재화</b>를 티어별로 합산 " +
+        "(단계 상승 비용 — 영웅 2·4·6·8, 유일 1·2·3·4).";
     else if (tab === "soul")
       note.innerHTML = "영혼각인(방어구 subStats)은 <b>수동 갱신</b>입니다. [상세 갱신] → GitHub Actions 에서 Run workflow. " +
         "머리행 구분이 해당 부위에 각인돼 있으면 <b>O</b>. " +
@@ -390,20 +392,34 @@
   }
 
   // ---- 잠재력 (manual.json, 엑셀값) ----
+  // 단계 상승 비용: 영웅 [2,4,6,8], 유일 [1,2,3,4] (1→4단계). 남은 비용 = 현재단계 이후 합.
+  var POT_STEP = { E: [2, 4, 6, 8], U: [1, 2, 3, 4] };
+  function needFor(code, cur) {
+    if (!code) return { tier: 0, need: 0 };
+    var steps = POT_STEP[code[0]] || POT_STEP.U;
+    var tier = Number(code.slice(1)) || 0;
+    var lvl = (cur === "" || cur == null || cur === "-") ? NaN : Number(cur);
+    if (isNaN(lvl) || lvl >= 4) return { tier: tier, need: 0 };
+    var s = 0;
+    for (var i = Math.max(0, lvl); i < 4; i++) s += steps[i];
+    return { tier: tier, need: s };
+  }
+  var NEED_TIERS = [3, 4, 5, 6];
+
   function potentialTable(chars) {
     var cols = [{ label: "이름", cls: "l name" }, { label: "직업", cls: "l cls" }];
     POT_SLOTS.forEach(function (s) { cols.push({ label: s[1], cls: "sm" }); });
-    cols.push({ label: "유일", cls: "sm" });
-    cols.push({ label: "영웅", cls: "sm" });
+    NEED_TIERS.forEach(function (n) { cols.push({ label: n + "티어", cls: "sm" }); });
 
     var t = el("table", "grid");
     t.appendChild(makeCols(cols));
     var thead = el("thead");
     var g = el("tr", "grouprow");
     g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
-    g.appendChild(el("th", "grp", "부위별 잠재력"));
+    g.appendChild(el("th", "grp", "부위별 잠재력 단계"));
     for (var w = 0; w < 10; w++) g.appendChild(el("th", "", ""));
-    g.appendChild(el("th", "grp", "개수")); g.appendChild(el("th", "", ""));
+    g.appendChild(el("th", "grp", "티어별 필요 재화"));
+    for (var w2 = 0; w2 < 3; w2++) g.appendChild(el("th", "", ""));
     thead.appendChild(g);
     thead.appendChild(headerRow(cols));
     t.appendChild(thead);
@@ -413,6 +429,7 @@
       var m = manualOf(c);
       var p = m.potential || {};
       var pt = m.potentialTier || {};
+      var need = { 3: 0, 4: 0, 5: 0, 6: 0 };
       var tr = el("tr", c.ok === false ? "stale" : "");
       tr.appendChild(nameCell(c));
       tr.appendChild(classCell(c));
@@ -421,9 +438,14 @@
         var shown = (v === "" || v == null) ? "·" : (v === "-" ? "–" : String(v));
         var code = pt[sl[0]] || "";
         tr.appendChild(td("<b>" + esc(shown) + "</b>", "num sm " + ptClass(code), ptLabel(code)));
+        var r = needFor(code, v);
+        if (r.tier && need.hasOwnProperty(r.tier)) need[r.tier] += r.need;
       });
-      tr.appendChild(td("<b>" + fmtManual(m.potentialUnique) + "</b>", "num sm " + ptClass(m.potentialUniqueTier), ptLabel(m.potentialUniqueTier)));
-      tr.appendChild(td("<b>" + fmtManual(m.potentialEpic) + "</b>", "num sm " + ptClass(m.potentialEpicTier), ptLabel(m.potentialEpicTier)));
+      NEED_TIERS.forEach(function (n) {
+        var val = need[n];
+        tr.appendChild(td(val ? "<b>" + val + "</b>" : '<span class="soul-off">·</span>',
+          "num sm pt pt-" + (n === 6 ? "U6" : n === 5 ? "E5" : n === 4 ? "E4" : "E3")));
+      });
       tb.appendChild(tr);
     });
     t.appendChild(tb);
