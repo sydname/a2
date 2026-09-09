@@ -166,13 +166,45 @@
   }
 
   /* =====================================================================
-     표 뷰
+     표 뷰 — 기본 / 강화 / 돌파 / 잠재력 / 영혼각인
      ===================================================================== */
+  var TABS = [
+    ["basic", "기본"], ["enhance", "강화"], ["bt", "돌파"],
+    ["pot", "잠재력"], ["soul", "영혼각인"],
+  ];
+  var SORT_DEFAULT = { basic: "itemLevel", enhance: "daevBasic", bt: "name", pot: "name", soul: "soulCount" };
+
+  // 영혼각인 그리드 (엑셀 부캐영각 영혼각인표) — 7부위 14칸
+  var SOUL_GRID = [
+    { slot: "투구", stats: ["공증", "강타"] },
+    { slot: "상의", stats: ["피증", "치피증", "피내"] },
+    { slot: "견갑", stats: ["공증", "완벽"] },
+    { slot: "하의", stats: ["전속", "완벽"] },
+    { slot: "장갑", stats: ["이속", "완벽"] },
+    { slot: "신발", stats: ["공증", "강타"] },
+    { slot: "망토", stats: ["완벽"] },
+  ];
+  var SOUL_ABBR = {
+    "공증": "공격력 증가", "피내": "피해 내성", "피증": "피해 증폭",
+    "치피증": "치명타 피해 증폭", "전속": "전투 속도", "이속": "이동 속도",
+    "강타": "강타", "완벽": "완벽",
+  };
+  var POT_SLOTS = BT_SLOTS; // 무기/가더/목/귀1/귀2/반1/반2/팔1/팔2/브1/브2
+
+  function sortState(tab) {
+    if (!STATE.sort[tab]) {
+      STATE.sort[tab] = {
+        k: lsGet("aion2.sort." + tab + ".k") || SORT_DEFAULT[tab] || "name",
+        dir: lsGet("aion2.sort." + tab + ".dir") || (tab === "bt" || tab === "pot" || tab === "soul" ? "asc" : "desc"),
+      };
+    }
+    return STATE.sort[tab];
+  }
+
   function renderTableView(chars) {
     var box = el("div");
-
     var tabs = el("div", "subtabs");
-    [["basic", "기본 관리"], ["enhance", "강화 관리"]].forEach(function (t) {
+    TABS.forEach(function (t) {
       var b = el("button", STATE.tab === t[0] ? "active" : "", esc(t[1]));
       b.addEventListener("click", function () { STATE.tab = t[0]; lsSet("aion2.tab", t[0]); render(); });
       tabs.appendChild(b);
@@ -180,33 +212,48 @@
     box.appendChild(tabs);
 
     var scroll = el("div", "table-scroll");
-    scroll.appendChild(STATE.tab === "enhance" ? enhanceTable(chars) : basicTable(chars));
+    var tab = STATE.tab;
+    scroll.appendChild(
+      tab === "enhance" ? enhanceTable(chars) :
+      tab === "bt" ? breakthroughTable(chars) :
+      tab === "pot" ? potentialTable(chars) :
+      tab === "soul" ? soulTable(chars) :
+      basicTable(chars)
+    );
     box.appendChild(scroll);
 
     var note = el("p", "tbl-note");
-    note.innerHTML = STATE.tab === "basic"
-      ? "체크박스는 이 브라우저에 저장되고 <b>매주 수요일 05:00(KST)</b> 자동 초기화됩니다. 오드 값은 칸을 눌러 바로 수정할 수 있고, 영구 반영은 <code>manual.json</code> 을 편집하세요."
-      : "돌파 · 스티그마 · 데바니온은 공식 API 에서 매일 자동 갱신됩니다. 표에서는 증감을 표시하지 않습니다.";
+    if (tab === "basic")
+      note.innerHTML = "체크박스는 이 브라우저에 저장되고 <b>매주 수요일 05:00(KST)</b> 자동 초기화됩니다. 오드 값은 칸을 눌러 바로 수정하고, 영구 반영은 <code>manual.json</code>.";
+    else if (tab === "bt")
+      note.innerHTML = "돌파 단계는 공식 API 에서 매일 자동 갱신됩니다. 단계가 높을수록 색이 진해집니다 (5=금).";
+    else if (tab === "pot")
+      note.innerHTML = "잠재력은 <code>manual.json</code> 의 수동 값입니다. 각 칸 색은 그 부위에 착용한 아이템 등급색을 따릅니다.";
+    else if (tab === "soul")
+      note.innerHTML = "영혼각인은 <code>manual.json</code> 의 수동 값입니다. " +
+        Object.keys(SOUL_ABBR).map(function (k) { return "<b>" + esc(k) + "</b>=" + esc(SOUL_ABBR[k]); }).join(" · ");
+    else
+      note.innerHTML = "데바니온 · 스티그마는 공식 API 에서 매일 자동 갱신됩니다. 표에서는 증감을 표시하지 않습니다.";
     box.appendChild(note);
     return box;
   }
 
-  function sortedRows(chars, tab) {
-    var s = STATE.sort[tab];
-    var val = tab === "enhance" ? enhVal : basVal;
+  function sortedRows(chars, tab, valFn) {
+    var s = sortState(tab);
     return chars.slice().sort(function (a, b) {
-      var va = val(a, s.k), vb = val(b, s.k);
+      var va = valFn(a, s.k), vb = valFn(b, s.k);
       var r = (typeof va === "number" && typeof vb === "number")
         ? va - vb : String(va).localeCompare(String(vb), "ko");
       return s.dir === "asc" ? r : -r;
     });
   }
   function headerRow(cols, tab) {
-    var s = STATE.sort[tab];
+    var s = sortState(tab);
     var tr = el("tr");
     cols.forEach(function (col) {
       var th = el("th", col.cls || "", esc(col.label) +
         (s.k === col.k ? ' <span class="ar">' + (s.dir === "asc" ? "▲" : "▼") + "</span>" : ""));
+      if (col.title) th.title = col.title;
       if (col.k) {
         th.style.cursor = "pointer";
         th.addEventListener("click", function () {
@@ -226,17 +273,25 @@
     if (title) n.title = title;
     return n;
   }
+  function nameCell(c) {
+    return td('<span class="cn">' + esc(c.profile.name || c.label) +
+      (c.label && c.label !== c.profile.name ? ' <span class="lbl">' + esc(c.label) + "</span>" : "") +
+      (c.ok === false ? ' <span class="badge-fail">실패</span>' : "") + "</span>", "l");
+  }
+  function gradeBySlot(c) {
+    var m = {};
+    (c.equipment || []).forEach(function (e) { m[e.slot] = e.grade; });
+    return m;
+  }
 
-  // ---- 기본 관리 ----
+  // ---- 기본 ----
   function basVal(c, k) {
-    switch (k) {
-      case "name": return c.profile.name || c.label;
-      case "className": return c.profile.className || "";
-      case "itemLevel": return c.profile.itemLevel || 0;
-      case "combatPower": return c.profile.combatPower || 0;
-      case "ode": return getOde(c) || 0;
-      default: return 0;
-    }
+    if (k === "name") return c.profile.name || c.label;
+    if (k === "className") return c.profile.className || "";
+    if (k === "itemLevel") return c.profile.itemLevel || 0;
+    if (k === "combatPower") return c.profile.combatPower || 0;
+    if (k === "ode") return getOde(c) || 0;
+    return 0;
   }
   function basicTable(chars) {
     var cols = [
@@ -251,11 +306,9 @@
     var t = el("table", "grid");
     var thead = el("thead"); thead.appendChild(headerRow(cols, "basic")); t.appendChild(thead);
     var tb = el("tbody");
-    sortedRows(chars, "basic").forEach(function (c) {
+    sortedRows(chars, "basic", basVal).forEach(function (c) {
       var tr = el("tr", c.ok === false ? "stale" : "");
-      tr.appendChild(td('<span class="cn">' + esc(c.profile.name || c.label) +
-        (c.label && c.label !== c.profile.name ? ' <span class="lbl">' + esc(c.label) + "</span>" : "") +
-        (c.ok === false ? ' <span class="badge-fail">실패</span>' : "") + "</span>", "l"));
+      tr.appendChild(nameCell(c));
       tr.appendChild(td(esc(c.profile.className || "–"), "l"));
       tr.appendChild(td(N(c.profile.itemLevel), "num"));
       tr.appendChild(td(N(c.profile.combatPower), "num"));
@@ -288,20 +341,15 @@
     return t;
   }
 
-  // ---- 강화 관리 ----
+  // ---- 강화 (데바니온 + 스티그마) ----
   function enhVal(c, k) {
     if (k === "name") return c.profile.name || c.label;
     if (k === "className") return c.profile.className || "";
     if (k === "daevBasic") return c.daevanion.basic || 0;
     if (k === "yustiel") return c.daevanion.yustiel || 0;
-    if (k === "pendant") return (c.breakthrough && c.breakthrough.pendantEnchant) || 0;
-    if (k && k.indexOf("st") === 0 && k.length <= 3) {
+    if (k && k.indexOf("st") === 0) {
       var si = Number(k.slice(2)) - 1;
       return (c.stigma[si] && c.stigma[si].level) || 0;
-    }
-    if (k && k.indexOf("bt.") === 0) {
-      var slot = k.slice(3);
-      return (c.breakthrough && c.breakthrough.bySlot && c.breakthrough.bySlot[slot]) || 0;
     }
     return 0;
   }
@@ -312,9 +360,7 @@
       { k: "daevBasic", label: "기본데바니온" },
       { k: "yustiel", label: "유스티엘" },
     ];
-    for (var i = 1; i <= 6; i++) cols.push({ k: "st" + i, label: "스" + i, cls: "sm" });
-    BT_SLOTS.forEach(function (s) { cols.push({ k: "bt." + s[0], label: s[1], cls: "sm" }); });
-    cols.push({ k: "pendant", label: "팬던트", cls: "sm" });
+    for (var i = 1; i <= 6; i++) cols.push({ k: "st" + i, label: "" + i, cls: "sm" });
 
     var t = el("table", "grid");
     var thead = el("thead");
@@ -323,18 +369,14 @@
     g.appendChild(el("th", "grp", "데바니온")); g.appendChild(el("th", "", ""));
     g.appendChild(el("th", "grp", "상위 스티그마 6"));
     for (var s2 = 0; s2 < 5; s2++) g.appendChild(el("th", "", ""));
-    g.appendChild(el("th", "grp", "돌파 현황"));
-    for (var w = 0; w < 10; w++) g.appendChild(el("th", "", ""));
-    g.appendChild(el("th", "", ""));
     thead.appendChild(g);
     thead.appendChild(headerRow(cols, "enhance"));
     t.appendChild(thead);
 
     var tb = el("tbody");
-    sortedRows(chars, "enhance").forEach(function (c) {
+    sortedRows(chars, "enhance", enhVal).forEach(function (c) {
       var tr = el("tr", c.ok === false ? "stale" : "");
-      tr.appendChild(td('<span class="cn">' + esc(c.profile.name || c.label) +
-        (c.ok === false ? ' <span class="badge-fail">실패</span>' : "") + "</span>", "l"));
+      tr.appendChild(nameCell(c));
       tr.appendChild(td(esc(c.profile.className || "–"), "l"));
       tr.appendChild(td(N(c.daevanion.basic), "num"));
       tr.appendChild(td(N(c.daevanion.yustiel), "num"));
@@ -342,12 +384,165 @@
         var st = c.stigma[i];
         tr.appendChild(td(st ? N(st.level) : "–", "num sm", st ? st.name : ""));
       }
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);
+    return t;
+  }
+
+  // ---- 돌파 (자동) ----
+  function btVal(c, k) {
+    if (k === "name") return c.profile.name || c.label;
+    if (k === "className") return c.profile.className || "";
+    if (k === "pendant") return (c.breakthrough && c.breakthrough.pendantEnchant) || 0;
+    if (k && k.indexOf("bt.") === 0) {
+      var slot = k.slice(3);
+      var v = c.breakthrough && c.breakthrough.bySlot ? c.breakthrough.bySlot[slot] : null;
+      return v == null ? -1 : v;
+    }
+    return 0;
+  }
+  function breakthroughTable(chars) {
+    var cols = [
+      { k: "name", label: "이름", txt: true, cls: "l" },
+      { k: "className", label: "직업", txt: true, cls: "l" },
+    ];
+    BT_SLOTS.forEach(function (s) { cols.push({ k: "bt." + s[0], label: s[1], cls: "sm" }); });
+    cols.push({ k: "pendant", label: "팬던트", cls: "sm" });
+
+    var t = el("table", "grid");
+    var thead = el("thead");
+    var g = el("tr", "grouprow");
+    g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
+    g.appendChild(el("th", "grp", "돌파 단계"));
+    for (var w = 0; w < 10; w++) g.appendChild(el("th", "", ""));
+    g.appendChild(el("th", "grp", "강화"));
+    thead.appendChild(g);
+    thead.appendChild(headerRow(cols, "bt"));
+    t.appendChild(thead);
+
+    var tb = el("tbody");
+    sortedRows(chars, "bt", btVal).forEach(function (c) {
+      var tr = el("tr", c.ok === false ? "stale" : "");
+      tr.appendChild(nameCell(c));
+      tr.appendChild(td(esc(c.profile.className || "–"), "l"));
       BT_SLOTS.forEach(function (sl) {
         var v = c.breakthrough && c.breakthrough.bySlot ? c.breakthrough.bySlot[sl[0]] : null;
-        tr.appendChild(td(v == null ? "–" : N(v), "num sm"));
+        tr.appendChild(td(v == null ? "–" : String(v), "num sm ex ex-" + v));
       });
       var pe = c.breakthrough ? c.breakthrough.pendantEnchant : null;
       tr.appendChild(td(pe == null ? "–" : "+" + pe, "num sm"));
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);
+    return t;
+  }
+
+  // ---- 잠재력 (manual.json) ----
+  function manualOf(c) { return STATE.manual[c.label] || {}; }
+  function potSlotVal(c, slot) {
+    var p = manualOf(c).potential || {};
+    return (slot in p) ? p[slot] : "";
+  }
+  function potVal(c, k) {
+    if (k === "name") return c.profile.name || c.label;
+    if (k === "className") return c.profile.className || "";
+    if (k === "tier") return manualOf(c).tierName || "";
+    if (k === "potU") return num(manualOf(c).potentialUnique);
+    if (k === "potE") return num(manualOf(c).potentialEpic);
+    if (k && k.indexOf("pot.") === 0) return num(potSlotVal(c, k.slice(4)));
+    return 0;
+  }
+  function num(v) { return (typeof v === "number") ? v : (v === "" || v == null || v === "-" ? -1 : (isNaN(v) ? -1 : Number(v))); }
+
+  function potentialTable(chars) {
+    var cols = [
+      { k: "name", label: "이름", txt: true, cls: "l" },
+      { k: "className", label: "직업", txt: true, cls: "l" },
+    ];
+    POT_SLOTS.forEach(function (s) { cols.push({ k: "pot." + s[0], label: s[1], cls: "sm" }); });
+    cols.push({ k: "potU", label: "유일", cls: "sm" });
+    cols.push({ k: "potE", label: "영웅", cls: "sm" });
+    cols.push({ k: "tier", label: "티어", txt: true, cls: "l" });
+
+    var t = el("table", "grid");
+    var thead = el("thead");
+    var g = el("tr", "grouprow");
+    g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
+    g.appendChild(el("th", "grp", "부위별 잠재력"));
+    for (var w = 0; w < 10; w++) g.appendChild(el("th", "", ""));
+    g.appendChild(el("th", "grp", "세트")); g.appendChild(el("th", "", "")); g.appendChild(el("th", "", ""));
+    thead.appendChild(g);
+    thead.appendChild(headerRow(cols, "pot"));
+    t.appendChild(thead);
+
+    var tb = el("tbody");
+    sortedRows(chars, "pot", potVal).forEach(function (c) {
+      var gm = gradeBySlot(c);
+      var tr = el("tr", c.ok === false ? "stale" : "");
+      tr.appendChild(nameCell(c));
+      tr.appendChild(td(esc(c.profile.className || "–"), "l"));
+      POT_SLOTS.forEach(function (sl) {
+        var v = potSlotVal(c, sl[0]);
+        var shown = (v === "" || v == null) ? "·" : (v === "-" ? "–" : String(v));
+        tr.appendChild(td('<span class="' + gradeCls(gm[sl[0]]) + '"><b class="gv">' + esc(shown) + "</b></span>", "num sm"));
+      });
+      tr.appendChild(td(fmtManual(manualOf(c).potentialUnique), "num sm"));
+      tr.appendChild(td(fmtManual(manualOf(c).potentialEpic), "num sm"));
+      tr.appendChild(td(esc(manualOf(c).tierName || "–"), "l"));
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);
+    return t;
+  }
+  function fmtManual(v) { return (v === "" || v == null) ? "·" : esc(String(v)); }
+
+  // ---- 영혼각인 (manual.json) ----
+  function soulVal(c, k) {
+    if (k === "name") return c.profile.name || c.label;
+    if (k === "className") return c.profile.className || "";
+    if (k === "soulCount") {
+      var se = manualOf(c).soulEngraving || [];
+      return se.reduce(function (s, x) { return s + (x ? 1 : 0); }, 0);
+    }
+    return 0;
+  }
+  function soulTable(chars) {
+    var flat = [];
+    SOUL_GRID.forEach(function (grp) { grp.stats.forEach(function (st) { flat.push([grp.slot, st]); }); });
+
+    var cols = [
+      { k: "name", label: "이름", txt: true, cls: "l" },
+      { k: "className", label: "직업", txt: true, cls: "l" },
+    ];
+    flat.forEach(function (p) { cols.push({ label: p[1], cls: "chk", title: p[0] + " · " + (SOUL_ABBR[p[1]] || p[1]) }); });
+    cols.push({ k: "soulCount", label: "합계", cls: "sm" });
+
+    var t = el("table", "grid");
+    var thead = el("thead");
+    var g = el("tr", "grouprow");
+    g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
+    SOUL_GRID.forEach(function (grp) {
+      grp.stats.forEach(function (_, i) {
+        g.appendChild(el("th", i === 0 ? "grp" : "", i === 0 ? esc(grp.slot) : ""));
+      });
+    });
+    g.appendChild(el("th", "", ""));
+    thead.appendChild(g);
+    thead.appendChild(headerRow(cols, "soul"));
+    t.appendChild(thead);
+
+    var tb = el("tbody");
+    sortedRows(chars, "soul", soulVal).forEach(function (c) {
+      var se = manualOf(c).soulEngraving || [];
+      var tr = el("tr", c.ok === false ? "stale" : "");
+      tr.appendChild(nameCell(c));
+      tr.appendChild(td(esc(c.profile.className || "–"), "l"));
+      flat.forEach(function (p, i) {
+        var on = !!se[i];
+        tr.appendChild(td(on ? "O" : '<span class="soul-off">·</span>', "chk soul" + (on ? " on" : ""), p[0] + " · " + p[1]));
+      });
+      tr.appendChild(td(N(soulVal(c, "soulCount")), "num sm"));
       tb.appendChild(tr);
     });
     t.appendChild(tb);
@@ -454,7 +649,7 @@
 
     var boards = (d.boards || []).map(function (b) {
       var pct = b.totalNodeCount ? Math.round((b.openNodeCount / b.totalNodeCount) * 100) : (b.openPercent || 0);
-      var basic = [61, 62, 63, 64].indexOf(b.id) >= 0;
+      var basic = ["네자칸", "지켈", "바이젤", "트리니엘"].indexOf(b.name) >= 0;
       return '<div class="drow' + (basic ? " basic" : "") + '">' +
         '<span class="dn">' + esc(b.name) + (basic ? ' <em>기본</em>' : "") + "</span>" +
         '<span class="bar"><i data-w="' + pct + '" style="width:0%"></i></span>' +

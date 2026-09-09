@@ -58,9 +58,9 @@ ACCESSORY_SLOTS = {"Necklace", "Earring1", "Earring2", "Ring1", "Ring2",
 BREAKTHROUGH_SLOTS = ["MainHand", "SubHand", "Necklace", "Earring1", "Earring2",
                       "Ring1", "Ring2", "Bracelet1", "Bracelet2", "Brooch1", "Brooch2"]
 
-# 데바니온 보드 ID (info API boardList 기준)
-DAEV_BASIC_IDS = {61, 62, 63, 64}   # 네자칸 + 지켈 + 바이젤 + 트리니엘
-DAEV_YUSTIEL_ID = 68                 # 유스티엘
+# 데바니온 보드 (보드 ID 는 직업마다 다르므로 이름으로 매칭)
+DAEV_BASIC_NAMES = {"네자칸", "지켈", "바이젤", "트리니엘"}
+DAEV_YUSTIEL_NAME = "유스티엘"
 
 ARCANA_RE = re.compile(r"^Arcana\d+$")
 
@@ -190,10 +190,10 @@ def build_record(entry, info, equip):
         "icon": s.get("icon"), "id": s.get("id"),
     } for s in stig[:6]]
 
-    # 데바니온
-    def board_nodes(bid):
+    # 데바니온 (보드 이름으로 매칭)
+    def board_nodes_by_name(name):
         for b in daev_boards:
-            if b.get("id") == bid:
+            if b.get("name") == name:
                 return int(b.get("openNodeCount") or 0)
         return 0
     daev = {
@@ -201,8 +201,8 @@ def build_record(entry, info, equip):
         "totalBoards": len(daev_boards),
         "openNodeTotal": sum(int(b.get("openNodeCount") or 0) for b in daev_boards),
         "nodeTotal": sum(int(b.get("totalNodeCount") or 0) for b in daev_boards),
-        "basic": sum(board_nodes(i) for i in DAEV_BASIC_IDS),
-        "yustiel": board_nodes(DAEV_YUSTIEL_ID),
+        "basic": sum(board_nodes_by_name(n) for n in DAEV_BASIC_NAMES),
+        "yustiel": board_nodes_by_name(DAEV_YUSTIEL_NAME),
         "boards": [{
             "id": b.get("id"), "name": b.get("name"), "icon": b.get("icon"),
             "open": b.get("open"), "openNodeCount": b.get("openNodeCount"),
