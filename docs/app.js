@@ -208,7 +208,8 @@
     else if (tab === "bt")
       note.innerHTML = "돌파 단계는 공식 API 에서 매일 자동 갱신됩니다. 색: 0 회색 · 1 초록 · 2 파랑 · 3 주황 · 4 빨강 · 5 진한 검정.";
     else if (tab === "pot")
-      note.innerHTML = "잠재력은 <code>docs/manual.json</code> 의 수동 값(엑셀 기준)입니다. 색: 그 부위 아이템이 <b style='color:#d63a34'>영웅</b>이면 붉은색, <b style='color:#c99700'>유일</b>이면 노란색.";
+      note.innerHTML = "잠재력은 <code>docs/manual.json</code> 의 수동 값(엑셀 기준)입니다. 색은 티어 기준: " +
+        "<b style='color:#2f6ef0'>6티어 파랑</b> · <b style='color:#c99700'>5티어 노랑</b> · <b style='color:#12915a'>4티어 초록</b> · <b style='color:#d63a34'>3티어 빨강</b>.";
     else if (tab === "soul")
       note.innerHTML = "영혼각인(방어구 subStats)은 <b>수동 갱신</b>입니다. [상세 갱신] → GitHub Actions 에서 Run workflow. " +
         "머리행 구분이 해당 부위에 각인돼 있으면 <b>O</b>. " +
@@ -251,11 +252,11 @@
     if (grade === "Unique") return "gcol-unique";
     return "gcol-other";
   }
-  function gcolByTier(tierName) {
-    if (!tierName) return "gcol-other";
-    if (tierName.indexOf("영웅") === 0) return "gcol-epic";
-    if (tierName.indexOf("유일") === 0) return "gcol-unique";
-    return "gcol-other";
+  // 잠재력 색: 티어 숫자 기준 (6 파랑 · 5 노랑 · 4 초록 · 3 빨강 · 그 외 회색)
+  function tierColor(tierName) {
+    var m = /(\d+)\s*티어/.exec(tierName || "");
+    var n = m ? Number(m[1]) : 0;
+    return { 6: "tc-6", 5: "tc-5", 4: "tc-4", 3: "tc-3" }[n] || "tc-x";
   }
   function manualOf(c) { return STATE.manual[c.label] || {}; }
   function fmtManual(v) { return (v === "" || v == null) ? "·" : esc(String(v)); }
@@ -397,19 +398,19 @@
     chars.forEach(function (c) {
       var m = manualOf(c);
       var p = m.potential || {};
-      var gm = gradeBySlot(c);
+      var tcls = tierColor(m.tierName);
       var tr = el("tr", c.ok === false ? "stale" : "");
       tr.appendChild(nameCell(c));
       tr.appendChild(classCell(c));
       POT_SLOTS.forEach(function (sl) {
         var v = (sl[0] in p) ? p[sl[0]] : "";
         var shown = (v === "" || v == null) ? "·" : (v === "-" ? "–" : String(v));
-        tr.appendChild(td('<b class="gv ' + gcol(gm[sl[0]]) + '">' + esc(shown) + "</b>", "num sm"));
+        tr.appendChild(td('<b class="gv ' + tcls + '">' + esc(shown) + "</b>", "num sm"));
       });
       tr.appendChild(td(fmtManual(m.potentialUnique), "num sm"));
       tr.appendChild(td(fmtManual(m.potentialEpic), "num sm"));
       tr.appendChild(td(m.tierName
-        ? '<span class="tier-txt ' + gcolByTier(m.tierName) + '">' + esc(m.tierName) + "</span>" : "–", "l"));
+        ? '<span class="tier-txt ' + tcls + '">' + esc(m.tierName) + "</span>" : "–", "l"));
       tb.appendChild(tr);
     });
     t.appendChild(tb);

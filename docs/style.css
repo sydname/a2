@@ -119,12 +119,17 @@ td.ex-3 { color: #e07d1a; }
 td.ex-4 { color: #d63a34; }
 td.ex-5 { color: #0c0f14; }
 
-/* 아이템 등급색 판정: 영웅(Epic)=붉은색, 유일(Unique)=노란색, 그 외=회색 */
+/* 영혼각인 O 색: 영웅(Epic)=붉은색, 유일(Unique)=노란색, 그 외=회색 */
 .gcol-epic { color: #d63a34; }
 .gcol-unique { color: #c99700; }
 .gcol-other { color: var(--muted-2); }
 
-/* 잠재력 값 = 그 부위 아이템 등급색 */
+/* 잠재력 색: 티어 숫자 기준 */
+.tc-6 { color: #2f6ef0; }
+.tc-5 { color: #c99700; }
+.tc-4 { color: #12915a; }
+.tc-3 { color: #d63a34; }
+.tc-x { color: var(--muted-2); }
 td .gv { font-weight: 800; font-variant-numeric: tabular-nums; }
 td .tier-txt { font-weight: 700; }
 
