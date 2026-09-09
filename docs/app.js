@@ -775,11 +775,6 @@
       "</section>" +
 
       '<section class="cbox">' +
-        "<h3>잠재력 <small>장비 칸의 [잠재] 배지 색 = 티어</small></h3>" +
-        potLegendHtml() +
-      "</section>" +
-
-      '<section class="cbox">' +
         "<h3>방어구 <span class=\"cnt\">" + armor.length + "</span></h3>" +
         '<div class="gear-list">' + (arHtml || '<p class="muted">–</p>') + "</div>" +
       "</section>" +
@@ -790,8 +785,14 @@
         '<div class="daev">' + boards + "</div>" +
       "</section>" +
 
+      '<section class="cbox">' +
+        "<h3>잠재력 <small>장비 칸의 [잠재] 배지 색 = 티어</small></h3>" +
+        potLegendHtml() +
+      "</section>" +
+
       (stigmaChips
-        ? '<section class="cbox"><h3>상위 스티그마</h3><div class="stig-list">' + stigmaChips + "</div></section>"
+        ? '<div class="cbox-gap" aria-hidden="true"></div>' +
+          '<section class="cbox"><h3>상위 스티그마</h3><div class="stig-list">' + stigmaChips + "</div></section>"
         : "")
     );
   }

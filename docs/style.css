@@ -181,6 +181,8 @@ td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
 .card-subtabs { margin-bottom: 16px; }
 .card-body { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: start; }
 .card-body.arcana-mode { grid-template-columns: 1fr; }
+.cbox-gap { min-height: 1px; }
+@media (max-width: 680px) { .cbox-gap { display: none; } }
 .cbox {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   box-shadow: var(--shadow); padding: 18px;
