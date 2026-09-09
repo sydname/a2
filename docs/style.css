@@ -74,7 +74,7 @@ code { background: var(--surface-2); border: 1px solid var(--border); border-rad
 
 .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); background: var(--surface); }
 /* table-layout:fixed + 열 종류별 고정폭 → 모든 탭에서 열 위치·크기 완전 동일 */
-table.grid { border-collapse: collapse; table-layout: fixed; width: auto; font-size: 13px; }
+table.grid { border-collapse: collapse; table-layout: fixed; width: max-content; font-size: 13px; }
 table.grid th, table.grid td {
   padding: 9px 10px; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   border-bottom: 1px solid var(--border); box-sizing: border-box;
@@ -93,12 +93,13 @@ table.grid thead th {
   font-size: 10.5px; letter-spacing: .03em; color: var(--muted); text-transform: uppercase; user-select: none;
 }
 table.grid thead tr.grouprow th {
-  top: 0; font-size: 10px; color: var(--muted-2); border-bottom: 0; padding-top: 8px; padding-bottom: 2px;
+  top: 0; font-size: 10px; color: var(--muted-2); border-bottom: 0;
+  padding-top: 8px; padding-bottom: 2px; text-align: center;
 }
 table.grid thead tr.grouprow th.grp {
-  color: var(--accent); font-weight: 800; border-left: 1px solid var(--border);
+  color: var(--accent); font-weight: 800; border-left: 1px solid var(--border); text-align: left;
 }
-table.grid thead tr:nth-child(2) th { top: 26px; }
+table.grid thead tr:nth-child(2) th { top: 25px; }
 table.grid thead th .ar { color: var(--accent); font-size: 9px; }
 table.grid tbody tr:hover { background: var(--accent-soft); }
 table.grid td.num { font-variant-numeric: tabular-nums; font-weight: 700; }
@@ -143,8 +144,6 @@ td.ex-5 { color: #0c0f14; }
 .pt-U6 { background: #f9cb9c; }   /* 유일 6티어 */
 table.grid td.pt { color: #17202b; }
 table.grid td.pt b { font-weight: 800; }
-table.grid td.tier { font-weight: 700; }
-table.grid td.tier.pt { color: #17202b; }
 
 /* 영혼각인 O/· */
 .detail-bar { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }

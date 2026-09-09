@@ -202,6 +202,8 @@ def build_record(entry, info, equip):
         "openNodeTotal": sum(int(b.get("openNodeCount") or 0) for b in daev_boards),
         "nodeTotal": sum(int(b.get("totalNodeCount") or 0) for b in daev_boards),
         "basic": sum(board_nodes_by_name(n) for n in DAEV_BASIC_NAMES),
+        "arielle": board_nodes_by_name("아리엘"),
+        "markutan": board_nodes_by_name("마르쿠탄"),
         "yustiel": board_nodes_by_name(DAEV_YUSTIEL_NAME),
         "boards": [{
             "id": b.get("id"), "name": b.get("name"), "icon": b.get("icon"),
@@ -401,6 +403,8 @@ def main():
             "armorExceed": r["exceed"]["armor"]["total"],
             "accessoryExceed": r["exceed"]["accessory"]["total"],
             "daevanionBasic": r["daevanion"]["basic"],
+            "daevanionArielle": r["daevanion"]["arielle"],
+            "daevanionMarkutan": r["daevanion"]["markutan"],
             "daevanionYustiel": r["daevanion"]["yustiel"],
             "daevanionOpened": r["daevanion"]["openedBoards"],
             "daevanionTotal": r["daevanion"]["totalBoards"],

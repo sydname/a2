@@ -243,6 +243,16 @@
     });
     return tr;
   }
+  // 그룹 헤더 (colspan). specs = [{span, label, grp}]
+  function groupRow(specs) {
+    var tr = el("tr", "grouprow");
+    specs.forEach(function (s) {
+      var th = el("th", (s.grp ? "grp" : "") + (s.left ? " l" : ""), s.label ? esc(s.label) : "");
+      if (s.span > 1) th.colSpan = s.span;
+      tr.appendChild(th);
+    });
+    return tr;
+  }
   function td(html, cls, title) {
     var n = el("td", cls || "", html);
     if (title) n.title = title;
@@ -324,28 +334,31 @@
   // ---- 강화 (데바니온 + 스티그마) ----
   function enhanceTable(chars) {
     var cols = [{ label: "이름", cls: "l name" }, { label: "직업", cls: "l cls" },
-      { label: "기본데바니온", cls: "num" }, { label: "유스티엘", cls: "num" }];
+      { label: "기본", cls: "num" }, { label: "아리엘", cls: "num" },
+      { label: "마르쿠탄", cls: "num" }, { label: "유스티엘", cls: "num" }];
     for (var i = 1; i <= 6; i++) cols.push({ label: "" + i, cls: "sm" });
 
     var t = el("table", "grid");
     t.appendChild(makeCols(cols));
     var thead = el("thead");
-    var g = el("tr", "grouprow");
-    g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
-    g.appendChild(el("th", "grp", "데바니온")); g.appendChild(el("th", "", ""));
-    g.appendChild(el("th", "grp", "상위 스티그마 6"));
-    for (var s2 = 0; s2 < 5; s2++) g.appendChild(el("th", "", ""));
-    thead.appendChild(g);
+    thead.appendChild(groupRow([
+      { span: 2 },
+      { span: 4, label: "데바니온", grp: true },
+      { span: 6, label: "상위 스티그마 6", grp: true },
+    ]));
     thead.appendChild(headerRow(cols));
     t.appendChild(thead);
 
     var tb = el("tbody");
     chars.forEach(function (c) {
+      var d = c.daevanion || {};
       var tr = el("tr", c.ok === false ? "stale" : "");
       tr.appendChild(nameCell(c));
       tr.appendChild(classCell(c));
-      tr.appendChild(td(N(c.daevanion.basic), "num"));
-      tr.appendChild(td(N(c.daevanion.yustiel), "num"));
+      tr.appendChild(td(N(d.basic), "num"));
+      tr.appendChild(td(N(d.arielle), "num"));
+      tr.appendChild(td(N(d.markutan), "num"));
+      tr.appendChild(td(N(d.yustiel), "num"));
       for (var i = 0; i < 6; i++) {
         var st = c.stigma[i];
         tr.appendChild(td(st ? N(st.level) : "–", "num sm", st ? st.name : ""));
@@ -365,12 +378,11 @@
     var t = el("table", "grid");
     t.appendChild(makeCols(cols));
     var thead = el("thead");
-    var g = el("tr", "grouprow");
-    g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
-    g.appendChild(el("th", "grp", "돌파 단계"));
-    for (var w = 0; w < 10; w++) g.appendChild(el("th", "", ""));
-    g.appendChild(el("th", "grp", "강화"));
-    thead.appendChild(g);
+    thead.appendChild(groupRow([
+      { span: 2 },
+      { span: 11, label: "돌파 단계", grp: true },
+      { span: 1, label: "강화", grp: true },
+    ]));
     thead.appendChild(headerRow(cols));
     t.appendChild(thead);
 
@@ -414,13 +426,11 @@
     var t = el("table", "grid");
     t.appendChild(makeCols(cols));
     var thead = el("thead");
-    var g = el("tr", "grouprow");
-    g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
-    g.appendChild(el("th", "grp", "부위별 잠재력 단계"));
-    for (var w = 0; w < 10; w++) g.appendChild(el("th", "", ""));
-    g.appendChild(el("th", "grp", "티어별 필요 재화"));
-    for (var w2 = 0; w2 < 3; w2++) g.appendChild(el("th", "", ""));
-    thead.appendChild(g);
+    thead.appendChild(groupRow([
+      { span: 2 },
+      { span: 11, label: "부위별 잠재력 단계", grp: true },
+      { span: 4, label: "티어별 필요 재화", grp: true },
+    ]));
     thead.appendChild(headerRow(cols));
     t.appendChild(thead);
 
@@ -443,8 +453,7 @@
       });
       NEED_TIERS.forEach(function (n) {
         var val = need[n];
-        tr.appendChild(td(val ? "<b>" + val + "</b>" : '<span class="soul-off">·</span>',
-          "num sm pt pt-" + (n === 6 ? "U6" : n === 5 ? "E5" : n === 4 ? "E4" : "E3")));
+        tr.appendChild(td(val ? "<b>" + val + "</b>" : '<span class="soul-off">·</span>', "num sm"));
       });
       tb.appendChild(tr);
     });
@@ -479,14 +488,9 @@
     var t = el("table", "grid");
     t.appendChild(makeCols(cols));
     var thead = el("thead");
-    var g = el("tr", "grouprow");
-    g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
-    SOUL_GRID.forEach(function (grp) {
-      grp.stats.forEach(function (_, i) {
-        g.appendChild(el("th", i === 0 ? "grp" : "", i === 0 ? esc(grp.ko) : ""));
-      });
-    });
-    thead.appendChild(g);
+    var specs = [{ span: 2 }];
+    SOUL_GRID.forEach(function (grp) { specs.push({ span: grp.stats.length, label: grp.ko, grp: true }); });
+    thead.appendChild(groupRow(specs));
     thead.appendChild(headerRow(cols));
     t.appendChild(thead);
 

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-09T02:01:14Z",
+ "generatedAt": "2026-09-09T03:16:30Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -263,6 +263,8 @@
     "openNodeTotal": 1003,
     "nodeTotal": 1216,
     "basic": 496,
+    "arielle": 152,
+    "markutan": 152,
     "yustiel": 152,
     "boards": [
      {
@@ -840,13 +842,13 @@
    },
    "titles": {
     "ownedCount": 400,
-    "totalCount": 427,
+    "totalCount": 431,
     "equipped": [
      {
       "category": "Defense",
       "name": "만물을 다스리다",
       "grade": "Unique",
-      "ownedPercent": 94
+      "ownedPercent": 93
      },
      {
       "category": "Attack",
@@ -1036,7 +1038,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 3
    },
-   "updatedAt": "2026-09-09T02:00:48Z",
+   "updatedAt": "2026-09-09T03:16:04Z",
    "ok": true
   },
   {
@@ -1301,6 +1303,8 @@
     "openNodeTotal": 880,
     "nodeTotal": 1216,
     "basic": 476,
+    "arielle": 152,
+    "markutan": 143,
     "yustiel": 69,
     "boards": [
      {
@@ -1878,19 +1882,19 @@
    },
    "titles": {
     "ownedCount": 310,
-    "totalCount": 427,
+    "totalCount": 431,
     "equipped": [
      {
       "category": "Defense",
       "name": "알트가르드의 성자",
       "grade": "Unique",
-      "ownedPercent": 74
+      "ownedPercent": 73
      },
      {
       "category": "Attack",
       "name": "종족의 굴레를 벗다",
       "grade": "Unique",
-      "ownedPercent": 72
+      "ownedPercent": 71
      },
      {
       "category": "Etc",
@@ -2074,7 +2078,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 476
    },
-   "updatedAt": "2026-09-09T02:00:53Z",
+   "updatedAt": "2026-09-09T03:16:08Z",
    "ok": true
   },
   {
@@ -2339,6 +2343,8 @@
     "openNodeTotal": 863,
     "nodeTotal": 1216,
     "basic": 447,
+    "arielle": 152,
+    "markutan": 152,
     "yustiel": 71,
     "boards": [
      {
@@ -2916,13 +2922,13 @@
    },
    "titles": {
     "ownedCount": 297,
-    "totalCount": 427,
+    "totalCount": 431,
     "equipped": [
      {
       "category": "Defense",
       "name": "알트가르드의 성자",
       "grade": "Unique",
-      "ownedPercent": 72
+      "ownedPercent": 71
      },
      {
       "category": "Attack",
@@ -2934,7 +2940,7 @@
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 71
+      "ownedPercent": 70
      }
     ]
    },
@@ -3112,7 +3118,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 447
    },
-   "updatedAt": "2026-09-09T02:00:57Z",
+   "updatedAt": "2026-09-09T03:16:13Z",
    "ok": true
   },
   {
@@ -3377,6 +3383,8 @@
     "openNodeTotal": 859,
     "nodeTotal": 1216,
     "basic": 449,
+    "arielle": 152,
+    "markutan": 152,
     "yustiel": 62,
     "boards": [
      {
@@ -3954,7 +3962,7 @@
    },
    "titles": {
     "ownedCount": 310,
-    "totalCount": 427,
+    "totalCount": 431,
     "equipped": [
      {
       "category": "Attack",
@@ -3966,7 +3974,7 @@
       "category": "Defense",
       "name": "파편의 주인은 나야",
       "grade": "Unique",
-      "ownedPercent": 74
+      "ownedPercent": 73
      },
      {
       "category": "Etc",
@@ -4150,7 +4158,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 449
    },
-   "updatedAt": "2026-09-09T02:01:01Z",
+   "updatedAt": "2026-09-09T03:16:17Z",
    "ok": true
   },
   {
@@ -4167,7 +4175,7 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 533659,
+    "combatPower": 533663,
     "itemLevel": 4874,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188785270",
     "titleName": "무스펠의 성배에 거주하는"
@@ -4415,6 +4423,8 @@
     "openNodeTotal": 825,
     "nodeTotal": 1216,
     "basic": 449,
+    "arielle": 152,
+    "markutan": 143,
     "yustiel": 38,
     "boards": [
      {
@@ -4991,8 +5001,8 @@
     }
    },
    "titles": {
-    "ownedCount": 270,
-    "totalCount": 427,
+    "ownedCount": 271,
+    "totalCount": 431,
     "equipped": [
      {
       "category": "Attack",
@@ -5010,7 +5020,7 @@
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 65
+      "ownedPercent": 64
      }
     ]
    },
@@ -5170,7 +5180,7 @@
     },
     {
      "date": "2026-09-09",
-     "combatPower": 533659,
+     "combatPower": 533663,
      "itemLevel": 4874,
      "weaponExceed": 6,
      "armorExceed": 18,
@@ -5181,14 +5191,14 @@
    ],
    "delta": {
     "sinceDate": "2026-09-08",
-    "combatPower": 128,
+    "combatPower": 132,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 449
    },
-   "updatedAt": "2026-09-09T02:01:05Z",
+   "updatedAt": "2026-09-09T03:16:21Z",
    "ok": true
   },
   {
@@ -5453,6 +5463,8 @@
     "openNodeTotal": 817,
     "nodeTotal": 1216,
     "basic": 446,
+    "arielle": 152,
+    "markutan": 148,
     "yustiel": 25,
     "boards": [
      {
@@ -6030,25 +6042,25 @@
    },
    "titles": {
     "ownedCount": 299,
-    "totalCount": 427,
+    "totalCount": 431,
     "equipped": [
      {
       "category": "Attack",
       "name": "종족의 굴레를 벗다",
       "grade": "Unique",
-      "ownedPercent": 69
+      "ownedPercent": 68
      },
      {
       "category": "Defense",
       "name": "만물을 다스리다",
       "grade": "Unique",
-      "ownedPercent": 72
+      "ownedPercent": 71
      },
      {
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 70
+      "ownedPercent": 69
      }
     ]
    },
@@ -6226,7 +6238,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 446
    },
-   "updatedAt": "2026-09-09T02:01:10Z",
+   "updatedAt": "2026-09-09T03:16:26Z",
    "ok": true
   },
   {
@@ -6473,6 +6485,8 @@
     "openNodeTotal": 646,
     "nodeTotal": 1216,
     "basic": 383,
+    "arielle": 99,
+    "markutan": 113,
     "yustiel": 4,
     "boards": [
      {
@@ -6940,13 +6954,13 @@
    },
    "titles": {
     "ownedCount": 243,
-    "totalCount": 427,
+    "totalCount": 431,
     "equipped": [
      {
       "category": "Defense",
       "name": "알트가르드의 성자",
       "grade": "Unique",
-      "ownedPercent": 60
+      "ownedPercent": 59
      },
      {
       "category": "Attack",
@@ -7136,7 +7150,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 383
    },
-   "updatedAt": "2026-09-09T02:01:14Z",
+   "updatedAt": "2026-09-09T03:16:30Z",
    "ok": true
   }
  ]
