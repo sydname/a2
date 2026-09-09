@@ -141,7 +141,8 @@ td.ex-5 { color: #0c0f14; }
 .pt-U6 { background: #f9cb9c; }   /* 유일 6티어 */
 table.grid td.pt { color: #17202b; }
 table.grid td.pt b { font-weight: 800; }
-.tier-txt { display: inline-block; font-weight: 700; color: #17202b; padding: 2px 8px; border-radius: 6px; }
+table.grid td.tier { font-weight: 700; }
+table.grid td.tier.pt { color: #17202b; }
 
 /* 영혼각인 O/· */
 .detail-bar { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }

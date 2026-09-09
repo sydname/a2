@@ -415,8 +415,8 @@
       });
       tr.appendChild(td("<b>" + fmtManual(m.potentialUnique) + "</b>", "num sm " + ptClass(m.potentialUniqueTier), ptLabel(m.potentialUniqueTier)));
       tr.appendChild(td("<b>" + fmtManual(m.potentialEpic) + "</b>", "num sm " + ptClass(m.potentialEpicTier), ptLabel(m.potentialEpicTier)));
-      tr.appendChild(td(m.tierName
-        ? '<span class="' + ptClass(m.tierCode) + ' tier-txt">' + esc(m.tierName) + "</span>" : "–", "l tier"));
+      tr.appendChild(td(m.tierName ? "<b>" + esc(m.tierName) + "</b>" : "–",
+        "l tier " + ptClass(m.tierCode)));
       tb.appendChild(tr);
     });
     t.appendChild(tb);
