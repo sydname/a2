@@ -17,42 +17,42 @@
       "potential": { "MainHand": "-", "SubHand": "-", "Necklace": 4, "Earring1": 4, "Earring2": 4, "Ring1": "-", "Ring2": "-", "Bracelet1": 4, "Bracelet2": 4, "Brooch1": 4, "Brooch2": 4 },
       "potentialUnique": 6,
       "potentialEpic": "",
-      "tierName": "영웅 5티어 · 용암"
+      "tierName": "영웅 5티어"
     },
     "감자미": {
       "ode": 1225,
       "potential": { "MainHand": 4, "SubHand": 4, "Necklace": 3, "Earring1": 4, "Earring2": 4, "Ring1": "-", "Ring2": "-", "Bracelet1": 4, "Bracelet2": 4, "Brooch1": 4, "Brooch2": 4 },
       "potentialUnique": 5,
       "potentialEpic": 5,
-      "tierName": "영웅 4티어 · 침식"
+      "tierName": "영웅 4티어"
     },
     "잔열": {
       "ode": 360,
       "potential": { "MainHand": 4, "SubHand": 0, "Necklace": 1, "Earring1": "-", "Earring2": "-", "Ring1": 0, "Ring2": 1, "Bracelet1": 4, "Bracelet2": 4, "Brooch1": 2, "Brooch2": 2 },
       "potentialUnique": 4,
       "potentialEpic": 4,
-      "tierName": "영웅 3티어 · 고대정령 / 루드라"
+      "tierName": "영웅 3티어"
     },
     "괌자": {
       "ode": 745,
       "potential": { "MainHand": 4, "SubHand": 4, "Necklace": 0, "Earring1": 0, "Earring2": 0, "Ring1": 0, "Ring2": 0, "Bracelet1": "", "Bracelet2": 4, "Brooch1": "", "Brooch2": "" },
       "potentialUnique": 3,
       "potentialEpic": 3,
-      "tierName": "유일 6티어 · 바실루스 / 아티엘"
+      "tierName": "유일 6티어"
     },
     "넌강해졌다": {
       "ode": 940,
       "potential": { "MainHand": 4, "SubHand": 4, "Necklace": 0, "Earring1": 2, "Earring2": 0, "Ring1": 1, "Ring2": 1, "Bracelet1": 4, "Bracelet2": 4, "Brooch1": 4, "Brooch2": "" },
       "potentialUnique": "",
       "potentialEpic": "",
-      "tierName": "유일 5티어 · 나트하라 / 알투라돈·광휘"
+      "tierName": "유일 5티어"
     },
     "고구미": {
       "ode": 2375,
       "potential": { "MainHand": 0, "SubHand": 0, "Necklace": 0, "Earring1": 0, "Earring2": 0, "Ring1": 0, "Ring2": 0, "Bracelet1": 4, "Bracelet2": 4, "Brooch1": "", "Brooch2": "" },
       "potentialUnique": "",
       "potentialEpic": "",
-      "tierName": "유일 4티어 · 드라마타 / 바카르마"
+      "tierName": "유일 4티어"
     },
     "크로매데": {
       "ode": 1890,

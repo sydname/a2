@@ -119,14 +119,20 @@ td.ex-3 { color: #e07d1a; }
 td.ex-4 { color: #d63a34; }
 td.ex-5 { color: #0c0f14; }
 
+/* 아이템 등급색 판정: 영웅(Epic)=붉은색, 유일(Unique)=노란색, 그 외=회색 */
+.gcol-epic { color: #d63a34; }
+.gcol-unique { color: #c99700; }
+.gcol-other { color: var(--muted-2); }
+
 /* 잠재력 값 = 그 부위 아이템 등급색 */
-td .gv { color: var(--gc); font-weight: 800; font-variant-numeric: tabular-nums; }
+td .gv { font-weight: 800; font-variant-numeric: tabular-nums; }
+td .tier-txt { font-weight: 700; }
 
 /* 영혼각인 O/· */
-.detail-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+.detail-bar { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
 .detail-bar .arc-upd { font-size: 11px; color: var(--muted-2); }
-td.soul { text-align: center; font-weight: 800; color: var(--pos); }
-td.soul.on { background: color-mix(in srgb, var(--pos) 12%, var(--surface)); }
+td.soul { text-align: center; font-weight: 800; }
+td.soul.on { background: color-mix(in srgb, currentColor 10%, var(--surface)); }
 td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
 
 /* =========================================================

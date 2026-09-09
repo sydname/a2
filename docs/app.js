@@ -182,16 +182,6 @@
     box.appendChild(tabs);
 
     var tab = STATE.tab;
-    if (tab === "soul") {
-      var det = STATE.arcanaGeneratedAt;
-      var bar = el("div", "detail-bar");
-      bar.innerHTML =
-        (det ? '<span class="arc-upd">상세 수집 ' + esc(fmtDateTime(det)) + " (" + esc(timeAgo(det)) + ")</span>"
-             : '<span class="arc-upd">상세 미수집 — [상세 갱신] 을 눌러 한 번 수집하세요</span>') +
-        '<a class="refresh-btn" href="' + esc(actionsUrl("arcana.yml")) + '" target="_blank" rel="noopener">상세 갱신 ↗</a>';
-      box.appendChild(bar);
-    }
-
     var scroll = el("div", "table-scroll");
     scroll.appendChild(
       tab === "enhance" ? enhanceTable(chars) :
@@ -202,13 +192,23 @@
     );
     box.appendChild(scroll);
 
+    if (tab === "soul") {
+      var det = STATE.arcanaGeneratedAt;
+      var bar = el("div", "detail-bar");
+      bar.innerHTML =
+        '<a class="refresh-btn" href="' + esc(actionsUrl("arcana.yml")) + '" target="_blank" rel="noopener">상세 갱신 ↗</a>' +
+        (det ? '<span class="arc-upd">상세 수집 ' + esc(fmtDateTime(det)) + " (" + esc(timeAgo(det)) + ")</span>"
+             : '<span class="arc-upd">상세 미수집 — [상세 갱신] 을 눌러 한 번 수집하세요</span>');
+      box.appendChild(bar);
+    }
+
     var note = el("p", "tbl-note");
     if (tab === "basic")
       note.innerHTML = "체크박스는 이 브라우저에 저장되고 <b>매주 수요일 05:00(KST)</b> 자동 초기화됩니다. 오드 값은 칸을 눌러 바로 수정하고, 영구 반영은 <code>docs/manual.json</code>.";
     else if (tab === "bt")
-      note.innerHTML = "돌파 단계는 공식 API 에서 매일 자동 갱신됩니다. 단계가 높을수록 색이 진해집니다 (5=금).";
+      note.innerHTML = "돌파 단계는 공식 API 에서 매일 자동 갱신됩니다. 색: 0 회색 · 1 초록 · 2 파랑 · 3 주황 · 4 빨강 · 5 진한 검정.";
     else if (tab === "pot")
-      note.innerHTML = "잠재력은 <code>docs/manual.json</code> 의 수동 값(엑셀 기준)입니다. 각 칸 색은 그 부위에 착용한 아이템 등급색을 따릅니다.";
+      note.innerHTML = "잠재력은 <code>docs/manual.json</code> 의 수동 값(엑셀 기준)입니다. 색: 그 부위 아이템이 <b style='color:#d63a34'>영웅</b>이면 붉은색, <b style='color:#c99700'>유일</b>이면 노란색.";
     else if (tab === "soul")
       note.innerHTML = "영혼각인(방어구 subStats)은 <b>수동 갱신</b>입니다. [상세 갱신] → GitHub Actions 에서 Run workflow. " +
         "머리행 구분이 해당 부위에 각인돼 있으면 <b>O</b>. " +
@@ -244,6 +244,18 @@
     var m = {};
     (c.equipment || []).forEach(function (e) { m[e.slot] = e.grade; });
     return m;
+  }
+  // 등급 → 색 클래스 (영웅=Epic 붉은색, 유일=Unique 노란색)
+  function gcol(grade) {
+    if (grade === "Epic") return "gcol-epic";
+    if (grade === "Unique") return "gcol-unique";
+    return "gcol-other";
+  }
+  function gcolByTier(tierName) {
+    if (!tierName) return "gcol-other";
+    if (tierName.indexOf("영웅") === 0) return "gcol-epic";
+    if (tierName.indexOf("유일") === 0) return "gcol-unique";
+    return "gcol-other";
   }
   function manualOf(c) { return STATE.manual[c.label] || {}; }
   function fmtManual(v) { return (v === "" || v == null) ? "·" : esc(String(v)); }
@@ -376,7 +388,7 @@
     g.appendChild(el("th", "l", "")); g.appendChild(el("th", "l", ""));
     g.appendChild(el("th", "grp", "부위별 잠재력"));
     for (var w = 0; w < 10; w++) g.appendChild(el("th", "", ""));
-    g.appendChild(el("th", "grp", "세트")); g.appendChild(el("th", "", "")); g.appendChild(el("th", "", ""));
+    g.appendChild(el("th", "grp", "티어 정보")); g.appendChild(el("th", "", "")); g.appendChild(el("th", "", ""));
     thead.appendChild(g);
     thead.appendChild(headerRow(cols));
     t.appendChild(thead);
@@ -392,11 +404,12 @@
       POT_SLOTS.forEach(function (sl) {
         var v = (sl[0] in p) ? p[sl[0]] : "";
         var shown = (v === "" || v == null) ? "·" : (v === "-" ? "–" : String(v));
-        tr.appendChild(td('<span class="' + gradeCls(gm[sl[0]]) + '"><b class="gv">' + esc(shown) + "</b></span>", "num sm"));
+        tr.appendChild(td('<b class="gv ' + gcol(gm[sl[0]]) + '">' + esc(shown) + "</b>", "num sm"));
       });
       tr.appendChild(td(fmtManual(m.potentialUnique), "num sm"));
       tr.appendChild(td(fmtManual(m.potentialEpic), "num sm"));
-      tr.appendChild(td(esc(m.tierName || "–"), "l"));
+      tr.appendChild(td(m.tierName
+        ? '<span class="tier-txt ' + gcolByTier(m.tierName) + '">' + esc(m.tierName) + "</span>" : "–", "l"));
       tb.appendChild(tr);
     });
     t.appendChild(tb);
@@ -443,18 +456,22 @@
     var tb = el("tbody");
     chars.forEach(function (c) {
       var det = STATE.arcana[c.key];
-      var bySlot = {};
+      var bySlot = {}, gradeSlot = {};
       ((det && det.soul) || []).forEach(function (s) {
         bySlot[s.slot] = (s.subStats || []).map(function (x) { return x.name; });
+        gradeSlot[s.slot] = s.grade;
       });
+      var gm = gradeBySlot(c);
       var tr = el("tr", c.ok === false ? "stale" : "");
       tr.appendChild(nameCell(c));
       tr.appendChild(classCell(c));
       flat.forEach(function (p) {
         var names = bySlot[p[0]];
         if (!names) { tr.appendChild(td('<span class="soul-off">·</span>', "chk soul")); return; }
+        var gc = gcol(gradeSlot[p[0]] || gm[p[0]]);
         var on = names.indexOf(SOUL_FULL[p[2]] || p[2]) >= 0;
-        tr.appendChild(td(on ? "O" : '<span class="soul-off">·</span>', "chk soul" + (on ? " on" : ""), p[1] + " · " + (SOUL_FULL[p[2]] || p[2])));
+        tr.appendChild(td(on ? "O" : '<span class="soul-off">·</span>',
+          "chk soul " + gc + (on ? " on" : ""), p[1] + " · " + (SOUL_FULL[p[2]] || p[2])));
       });
       tb.appendChild(tr);
     });
