@@ -256,6 +256,16 @@
 
     var tab = STATE.tab;
 
+    var scroll = el("div", "table-scroll");
+    scroll.appendChild(
+      tab === "enhance" ? enhanceTable(chars) :
+      tab === "bt" ? breakthroughTable(chars) :
+      tab === "pot" ? potentialTable(chars) :
+      tab === "soul" ? soulTable(chars) :
+      basicTable(chars)
+    );
+    box.appendChild(scroll);
+
     if (tab === "pot") {
       var pbar = el("div", "detail-bar pot-bar");
       var pbtn = el("button", "refresh-btn" + (STATE.potEdit ? " on" : ""),
@@ -267,16 +277,6 @@
         : "엑셀 기준값. 수정하려면 [정보 수정]"));
       box.appendChild(pbar);
     }
-
-    var scroll = el("div", "table-scroll");
-    scroll.appendChild(
-      tab === "enhance" ? enhanceTable(chars) :
-      tab === "bt" ? breakthroughTable(chars) :
-      tab === "pot" ? potentialTable(chars) :
-      tab === "soul" ? soulTable(chars) :
-      basicTable(chars)
-    );
-    box.appendChild(scroll);
 
     if (tab === "soul") {
       var det = STATE.arcanaGeneratedAt;
