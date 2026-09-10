@@ -915,7 +915,7 @@
     var en = w.enchantLevel ? " +" + w.enchantLevel : "";
     return '<span class="tag tag-wing ' + (gcol(w.grade) || "") + '">' +
       (w.icon ? '<img loading="lazy" alt="" src="' + esc(w.icon) + '">' : "") +
-      "날개 " + esc(w.name) + en + "</span>";
+      esc(w.name) + en + "</span>";
   }
 
   // github.io 주소에서 저장소 Actions 워크플로 URL 을 추론
