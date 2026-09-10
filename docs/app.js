@@ -685,6 +685,7 @@
         (c.label && c.label !== p.name ? ' <span class="lbl">' + esc(c.label) + "</span>" : "") + "</div>" +
       '<div class="c-tags">' +
         tag(p.className) + tag(p.raceName) + (p.guildName ? tag(p.guildName) : "") +
+        wingTag(c) +
         (c.ok === false ? '<span class="badge-fail">수집실패</span>' : "") +
       "</div>" +
       '<a class="c-link" href="' + esc(c.officialUrl) + '" target="_blank" rel="noopener">공식 페이지 ↗</a>' +
@@ -870,32 +871,52 @@
       var lvl = totByKey[skKey(n)];
       var active = !!(bySrc["양피지"][n] || bySrc["나침반"][n]);
       return {
-        name: n, vals: vals, eq: eq,
+        name: n, vals: vals, eq: eq, active: active,
         total: vals.reduce(function (a, b) { return a + b; }, 0) + eq,
         lvl: (lvl == null ? null : lvl),
-        hi: active && lvl != null && lvl > 20,
+        hi: active && lvl != null && lvl >= 20,
       };
-    }).sort(function (a, b) { return (b.lvl || 0) - (a.lvl || 0) || b.total - a.total || a.name.localeCompare(b.name, "ko"); });
+    }).sort(function (a, b) {
+      return (b.active - a.active) || (b.lvl || 0) - (a.lvl || 0) || b.total - a.total || a.name.localeCompare(b.name, "ko");
+    });
     if (!rows.length) return "";
 
+    var colSpan = 1 + SKILL_SRC.length + 3;
     var head = "<tr><th>스킬</th>" + SKILL_SRC.map(function (s) { return "<th>" + esc(s) + "</th>"; }).join("") +
       "<th>장비</th><th>합계</th><th>총 레벨</th></tr>";
-    var body = rows.map(function (r) {
+    function grpRow(label) {
+      return '<tr class="skill-grp"><td colspan="' + colSpan + '">' + label + "</td></tr>";
+    }
+    var body = "", prevActive = null;
+    rows.forEach(function (r) {
+      if (r.active !== prevActive) {
+        body += grpRow(r.active ? "액티브 (양피지 · 나침반)" : "패시브 (종 · 거울 등)");
+        prevActive = r.active;
+      }
       var cells = r.vals.map(function (v) { return '<td class="' + (v ? "" : "z") + '">' + (v || "·") + "</td>"; }).join("");
-      return "<tr><td>" + esc(r.name) + "</td>" + cells +
+      body += "<tr><td>" + esc(r.name) + "</td>" + cells +
         '<td class="' + (r.eq ? "" : "z") + '">' + (r.eq || "·") + "</td>" +
         '<td class="tot">' + r.total + "</td>" +
         '<td class="lvl' + (r.hi ? " skill-hi" : "") + '">' + (r.lvl == null ? "·" : r.lvl) + "</td></tr>";
-    }).join("");
+    });
 
     return '<section class="cbox">' +
       "<h3>아르카나 스킬 현황 <small>종·거울 포함 · 장비=장착장비 영혼각인 스킬 합계 · 총 레벨=공식 스킬 레벨</small></h3>" +
       '<div style="overflow-x:auto"><table class="skill-mat"><thead>' + head + "</thead><tbody>" + body + "</tbody></table></div>" +
-      '<p class="muted" style="margin:6px 0 0;font-size:11px">액티브(양피지·나침반) 스킬이 20 초과면 <b style="color:#2f6ef0">파란색</b>. 종·거울(패시브)은 검정색.</p>' +
+      '<p class="muted" style="margin:6px 0 0;font-size:11px">액티브(양피지·나침반) 스킬이 20 이상이면 <b style="color:#2f6ef0">파란색</b>. 종·거울(패시브)은 검정색.</p>' +
       "</section>";
   }
 
   function tag(t) { return t ? '<span class="tag">' + esc(t) + "</span>" : ""; }
+
+  function wingTag(c) {
+    var w = c && c.petwing && c.petwing.wing;
+    if (!w || !w.name) return "";
+    var en = w.enchantLevel ? " +" + w.enchantLevel : "";
+    return '<span class="tag tag-wing ' + (gcol(w.grade) || "") + '">' +
+      (w.icon ? '<img loading="lazy" alt="" src="' + esc(w.icon) + '">' : "") +
+      "날개 " + esc(w.name) + en + "</span>";
+  }
 
   // github.io 주소에서 저장소 Actions 워크플로 URL 을 추론
   function actionsUrl(workflowFile) {

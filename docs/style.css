@@ -200,6 +200,10 @@ td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
 .chead .c-link { margin-left: auto; font-size: 12px; font-weight: 600; color: var(--accent); text-decoration: none; }
 .chead .c-link:hover { text-decoration: underline; }
 .tag { font-size: 11.5px; font-weight: 600; color: var(--muted); background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 2px 9px; }
+.tag-wing { display: inline-flex; align-items: center; gap: 4px; }
+.tag-wing img { width: 14px; height: 14px; object-fit: contain; }
+.tag-wing.gcol-epic { color: #d63a34; border-color: #d63a3455; }
+.tag-wing.gcol-unique { color: #c99700; border-color: #c9970055; }
 
 .kpis {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
@@ -245,6 +249,8 @@ td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
 .skill-mat td.lvl { font-weight: 800; color: var(--text); }
 .skill-mat td.lvl.skill-hi { color: #2f6ef0; }
 .skill-mat tbody tr:hover { background: var(--accent-soft); }
+.skill-mat tr.skill-grp td { text-align: left; font-weight: 800; font-size: 10px; letter-spacing: .04em; color: var(--muted-2); background: var(--surface-2); text-transform: uppercase; padding: 5px 7px; }
+.skill-mat tr.skill-grp:hover td { background: var(--surface-2); }
 
 .stig-list { display: flex; flex-wrap: wrap; gap: 6px; }
 .stig { font-size: 11.5px; font-weight: 600; color: var(--muted); background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px; }
