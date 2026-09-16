@@ -30,6 +30,8 @@
     { key: "rudra", label: "루드라", dow: 3, hour: 5 },
     { key: "erosion", label: "침식", dow: 3, hour: 5 },
     { key: "muspel", label: "무스펠", dow: 3, hour: 5 },
+    { key: "grief", label: "비탄", dow: 3, hour: 5 },
+    { key: "trial", label: "시련", dow: 3, hour: 5 },
   ];
   var BT_SLOTS = [
     ["MainHand", "무기"], ["SubHand", "가더"], ["Necklace", "목걸이"],
@@ -300,7 +302,7 @@
 
     var note = el("p", "tbl-note");
     if (tab === "basic")
-      note.innerHTML = "체크박스 자동 초기화(KST): <b>회랑</b> 수 22시 · <b>일회</b> 토 22시 · <b>각성·루드라·침식·무스펠</b> 수 05시. " +
+      note.innerHTML = "체크박스 자동 초기화(KST): <b>회랑</b> 수 22시 · <b>일회</b> 토 22시 · <b>각성·루드라·침식·무스펠·비탄·시련</b> 수 05시. " +
         "저장 위치는 상단 표시(Firebase 동기화 / 이 브라우저). 오드 값은 칸을 눌러 수정.";
     else if (tab === "bt")
       note.innerHTML = "돌파 단계는 공식 API 에서 매일 자동 갱신됩니다. 색: 0 회색 · 1 초록 · 2 파랑 · 3 주황 · 4 빨강 · 5 진한 검정.";
