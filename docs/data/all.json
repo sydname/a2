@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-20T17:45:03Z",
+ "generatedAt": "2026-09-21T19:46:35Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -15,8 +15,8 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 959662,
-    "itemLevel": 6357,
+    "combatPower": 977517,
+    "itemLevel": 6443,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188620645",
     "titleName": "비탄의 설원을 지배한"
    },
@@ -37,11 +37,11 @@
       {
        "slot": "SubHand",
        "slotKo": "가더",
-       "name": "기룡왕의 가더",
+       "name": "멸룡왕의 가더",
        "grade": "Epic",
        "enchant": 20,
        "exceed": 5,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_U_011.png"
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_0117_T05.png"
       }
      ]
     },
@@ -184,11 +184,11 @@
       {
        "slot": "Ring1",
        "slotKo": "반지1",
-       "name": "빛나는 건룡왕의 반지",
-       "grade": "Unique",
-       "enchant": 15,
+       "name": "멸룡왕의 반지",
+       "grade": "Epic",
+       "enchant": 20,
        "exceed": 5,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_0036.png"
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Beads_06.png"
       },
       {
        "slot": "Ring2",
@@ -493,11 +493,11 @@
      "slotPos": 2,
      "slot": "SubHand",
      "slotKo": "가더",
-     "name": "기룡왕의 가더",
+     "name": "멸룡왕의 가더",
      "grade": "Epic",
      "enchant": 20,
      "exceed": 5,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_U_011.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_0117_T05.png",
      "isArcana": false
     },
     {
@@ -614,11 +614,11 @@
      "slotPos": 13,
      "slot": "Ring1",
      "slotKo": "반지1",
-     "name": "빛나는 건룡왕의 반지",
-     "grade": "Unique",
-     "enchant": 15,
+     "name": "멸룡왕의 반지",
+     "grade": "Epic",
+     "enchant": 20,
      "exceed": 5,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_0036.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Beads_06.png",
      "isArcana": false
     },
     {
@@ -887,7 +887,7 @@
     }
    },
    "titles": {
-    "ownedCount": 404,
+    "ownedCount": 405,
     "totalCount": 431,
     "equipped": [
      {
@@ -900,7 +900,7 @@
       "category": "Attack",
       "name": "천지창조",
       "grade": "Unique",
-      "ownedPercent": 95
+      "ownedPercent": 96
      },
      {
       "category": "Etc",
@@ -914,9 +914,9 @@
     {
      "type": "STR",
      "name": "위력",
-     "value": 301,
+     "value": 309,
      "effects": [
-      "공격력 증가 +30.1%"
+      "공격력 증가 +30.9%"
      ]
     },
     {
@@ -948,10 +948,10 @@
     {
      "type": "AGI",
      "name": "정확",
-     "value": 301,
+     "value": 309,
      "effects": [
-      "명중 증가 +30.1%",
-      "치명타 증가 +30.1%"
+      "명중 증가 +30.9%",
+      "치명타 증가 +30.9%"
      ]
     },
     {
@@ -1193,18 +1193,28 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-09-22",
+     "combatPower": 977517,
+     "itemLevel": 6443,
+     "weaponExceed": 10,
+     "armorExceed": 12,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-20",
-    "combatPower": 8844,
-    "itemLevel": 15,
+    "sinceDate": "2026-09-21",
+    "combatPower": 17855,
+    "itemLevel": 86,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-20T17:44:36Z",
+   "updatedAt": "2026-09-21T19:46:08Z",
    "ok": true
   },
   {
@@ -1221,8 +1231,8 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 617945,
-    "itemLevel": 5054,
+    "combatPower": 613200,
+    "itemLevel": 5067,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188725968",
     "titleName": "무스펠의 성배에 거주하는"
    },
@@ -1490,12 +1500,12 @@
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
-    "openNodeTotal": 880,
+    "openNodeTotal": 888,
     "nodeTotal": 1216,
     "basic": 472,
     "arielle": 152,
     "markutan": 143,
-    "yustiel": 73,
+    "yustiel": 81,
     "boards": [
      {
       "id": 21,
@@ -1565,9 +1575,9 @@
       "name": "유스티엘",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Mace.png",
       "open": 1,
-      "openNodeCount": 73,
+      "openNodeCount": 81,
       "totalNodeCount": 152,
-      "openPercent": 48
+      "openPercent": 53
      }
     ]
    },
@@ -2377,18 +2387,28 @@
      "accessoryExceed": 28,
      "daevanionBasic": 472,
      "daevanionOpenNodes": 880
+    },
+    {
+     "date": "2026-09-22",
+     "combatPower": 613200,
+     "itemLevel": 5067,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 28,
+     "daevanionBasic": 472,
+     "daevanionOpenNodes": 888
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-20",
-    "combatPower": 10943,
-    "itemLevel": 4,
+    "sinceDate": "2026-09-21",
+    "combatPower": -4745,
+    "itemLevel": 13,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
-    "daevanionBasic": -4
+    "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-20T17:44:41Z",
+   "updatedAt": "2026-09-21T19:46:13Z",
    "ok": true
   },
   {
@@ -2405,7 +2425,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 609231,
+    "combatPower": 609435,
     "itemLevel": 5040,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188716923",
     "titleName": "무스펠의 성배에 거주하는"
@@ -3255,7 +3275,7 @@
     }
    },
    "titles": {
-    "ownedCount": 298,
+    "ownedCount": 300,
     "totalCount": 431,
     "equipped": [
      {
@@ -3268,7 +3288,7 @@
       "category": "Attack",
       "name": "종족의 굴레를 벗다",
       "grade": "Unique",
-      "ownedPercent": 66
+      "ownedPercent": 67
      },
      {
       "category": "Etc",
@@ -3561,18 +3581,28 @@
      "accessoryExceed": 23,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 869
+    },
+    {
+     "date": "2026-09-22",
+     "combatPower": 609435,
+     "itemLevel": 5040,
+     "weaponExceed": 5,
+     "armorExceed": 0,
+     "accessoryExceed": 23,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 869
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-20",
-    "combatPower": 11180,
-    "itemLevel": 18,
+    "sinceDate": "2026-09-21",
+    "combatPower": 204,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
-    "accessoryExceed": 2,
+    "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-20T17:44:45Z",
+   "updatedAt": "2026-09-21T19:46:17Z",
    "ok": true
   },
   {
@@ -4745,18 +4775,28 @@
      "accessoryExceed": 8,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 860
+    },
+    {
+     "date": "2026-09-22",
+     "combatPower": 566731,
+     "itemLevel": 5055,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 8,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 860
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-20",
-    "combatPower": 18847,
-    "itemLevel": 35,
+    "sinceDate": "2026-09-21",
+    "combatPower": 0,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-20T17:44:49Z",
+   "updatedAt": "2026-09-21T19:46:21Z",
    "ok": true
   },
   {
@@ -5929,18 +5969,28 @@
      "accessoryExceed": 19,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 828
+    },
+    {
+     "date": "2026-09-22",
+     "combatPower": 541772,
+     "itemLevel": 4906,
+     "weaponExceed": 6,
+     "armorExceed": 18,
+     "accessoryExceed": 19,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 828
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-20",
-    "combatPower": 154,
-    "itemLevel": 4,
+    "sinceDate": "2026-09-21",
+    "combatPower": 0,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-20T17:44:54Z",
+   "updatedAt": "2026-09-21T19:46:26Z",
    "ok": true
   },
   {
@@ -7113,18 +7163,28 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 820
+    },
+    {
+     "date": "2026-09-22",
+     "combatPower": 443441,
+     "itemLevel": 4677,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 820
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-20",
-    "combatPower": 362,
-    "itemLevel": 10,
+    "sinceDate": "2026-09-21",
+    "combatPower": 0,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-20T17:44:59Z",
+   "updatedAt": "2026-09-21T19:46:31Z",
    "ok": true
   },
   {
@@ -8169,10 +8229,20 @@
      "accessoryExceed": 0,
      "daevanionBasic": 383,
      "daevanionOpenNodes": 646
+    },
+    {
+     "date": "2026-09-22",
+     "combatPower": 321541,
+     "itemLevel": 3588,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 383,
+     "daevanionOpenNodes": 646
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-20",
+    "sinceDate": "2026-09-21",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -8180,7 +8250,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-20T17:45:03Z",
+   "updatedAt": "2026-09-21T19:46:35Z",
    "ok": true
   }
  ]
