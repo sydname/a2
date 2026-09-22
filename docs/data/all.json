@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-21T19:46:35Z",
+ "generatedAt": "2026-09-22T18:22:25Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -15,7 +15,7 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 977517,
+    "combatPower": 978184,
     "itemLevel": 6443,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188620645",
     "titleName": "비탄의 설원을 지배한"
@@ -887,14 +887,14 @@
     }
    },
    "titles": {
-    "ownedCount": 405,
+    "ownedCount": 407,
     "totalCount": 431,
     "equipped": [
      {
       "category": "Defense",
       "name": "만물을 다스리다",
       "grade": "Unique",
-      "ownedPercent": 94
+      "ownedPercent": 95
      },
      {
       "category": "Attack",
@@ -1203,18 +1203,28 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-09-23",
+     "combatPower": 978184,
+     "itemLevel": 6443,
+     "weaponExceed": 10,
+     "armorExceed": 12,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-21",
-    "combatPower": 17855,
-    "itemLevel": 86,
+    "sinceDate": "2026-09-22",
+    "combatPower": 667,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-21T19:46:08Z",
+   "updatedAt": "2026-09-22T18:22:00Z",
    "ok": true
   },
   {
@@ -2397,18 +2407,28 @@
      "accessoryExceed": 28,
      "daevanionBasic": 472,
      "daevanionOpenNodes": 888
+    },
+    {
+     "date": "2026-09-23",
+     "combatPower": 613200,
+     "itemLevel": 5067,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 28,
+     "daevanionBasic": 472,
+     "daevanionOpenNodes": 888
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-21",
-    "combatPower": -4745,
-    "itemLevel": 13,
+    "sinceDate": "2026-09-22",
+    "combatPower": 0,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-21T19:46:13Z",
+   "updatedAt": "2026-09-22T18:22:04Z",
    "ok": true
   },
   {
@@ -3591,18 +3611,28 @@
      "accessoryExceed": 23,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 869
+    },
+    {
+     "date": "2026-09-23",
+     "combatPower": 609435,
+     "itemLevel": 5040,
+     "weaponExceed": 5,
+     "armorExceed": 0,
+     "accessoryExceed": 23,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 869
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-21",
-    "combatPower": 204,
+    "sinceDate": "2026-09-22",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-21T19:46:17Z",
+   "updatedAt": "2026-09-22T18:22:08Z",
    "ok": true
   },
   {
@@ -4785,10 +4815,20 @@
      "accessoryExceed": 8,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 860
+    },
+    {
+     "date": "2026-09-23",
+     "combatPower": 566731,
+     "itemLevel": 5055,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 8,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 860
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-21",
+    "sinceDate": "2026-09-22",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -4796,7 +4836,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-21T19:46:21Z",
+   "updatedAt": "2026-09-22T18:22:13Z",
    "ok": true
   },
   {
@@ -5979,10 +6019,20 @@
      "accessoryExceed": 19,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 828
+    },
+    {
+     "date": "2026-09-23",
+     "combatPower": 541772,
+     "itemLevel": 4906,
+     "weaponExceed": 6,
+     "armorExceed": 18,
+     "accessoryExceed": 19,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 828
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-21",
+    "sinceDate": "2026-09-22",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -5990,7 +6040,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-21T19:46:26Z",
+   "updatedAt": "2026-09-22T18:22:18Z",
    "ok": true
   },
   {
@@ -6007,8 +6057,8 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 443441,
-    "itemLevel": 4677,
+    "combatPower": 443723,
+    "itemLevel": 4678,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188628440",
     "titleName": "무스펠의 성배에 다녀온"
    },
@@ -6169,7 +6219,7 @@
        "slotKo": "목걸이",
        "name": "아티엘의 목걸이",
        "grade": "Unique",
-       "enchant": 10,
+       "enchant": 11,
        "exceed": 0,
        "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_NL_0043.png"
       },
@@ -6575,7 +6625,7 @@
      "slotKo": "목걸이",
      "name": "아티엘의 목걸이",
      "grade": "Unique",
-     "enchant": 10,
+     "enchant": 11,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_NL_0043.png",
      "isArcana": false
@@ -7173,18 +7223,28 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 820
+    },
+    {
+     "date": "2026-09-23",
+     "combatPower": 443723,
+     "itemLevel": 4678,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 820
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-21",
-    "combatPower": 0,
-    "itemLevel": 0,
+    "sinceDate": "2026-09-22",
+    "combatPower": 282,
+    "itemLevel": 1,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-21T19:46:31Z",
+   "updatedAt": "2026-09-22T18:22:21Z",
    "ok": true
   },
   {
@@ -7201,7 +7261,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "",
-    "combatPower": 321541,
+    "combatPower": 321547,
     "itemLevel": 3588,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188696311",
     "titleName": "침식의 정화소를 지배한"
@@ -8239,18 +8299,28 @@
      "accessoryExceed": 0,
      "daevanionBasic": 383,
      "daevanionOpenNodes": 646
+    },
+    {
+     "date": "2026-09-23",
+     "combatPower": 321547,
+     "itemLevel": 3588,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 383,
+     "daevanionOpenNodes": 646
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-21",
-    "combatPower": 0,
+    "sinceDate": "2026-09-22",
+    "combatPower": 6,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-21T19:46:35Z",
+   "updatedAt": "2026-09-22T18:22:25Z",
    "ok": true
   }
  ]
