@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T20:52:41Z",
+ "generatedAt": "2026-09-29T19:41:30Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -1273,10 +1273,20 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-09-30",
+     "combatPower": 978184,
+     "itemLevel": 6443,
+     "weaponExceed": 10,
+     "armorExceed": 12,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-28",
+    "sinceDate": "2026-09-29",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -1284,7 +1294,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-28T20:52:11Z",
+   "updatedAt": "2026-09-29T19:41:01Z",
    "ok": true
   },
   {
@@ -1301,7 +1311,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 604700,
+    "combatPower": 613200,
     "itemLevel": 5067,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188725968",
     "titleName": "무스펠의 성배에 거주하는"
@@ -2537,18 +2547,28 @@
      "accessoryExceed": 28,
      "daevanionBasic": 472,
      "daevanionOpenNodes": 888
+    },
+    {
+     "date": "2026-09-30",
+     "combatPower": 613200,
+     "itemLevel": 5067,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 28,
+     "daevanionBasic": 472,
+     "daevanionOpenNodes": 888
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-28",
-    "combatPower": 0,
+    "sinceDate": "2026-09-29",
+    "combatPower": 8500,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-28T20:52:16Z",
+   "updatedAt": "2026-09-29T19:41:06Z",
    "ok": true
   },
   {
@@ -3801,10 +3821,20 @@
      "accessoryExceed": 23,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 869
+    },
+    {
+     "date": "2026-09-30",
+     "combatPower": 609435,
+     "itemLevel": 5040,
+     "weaponExceed": 5,
+     "armorExceed": 0,
+     "accessoryExceed": 23,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 869
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-28",
+    "sinceDate": "2026-09-29",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -3812,7 +3842,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-28T20:52:21Z",
+   "updatedAt": "2026-09-29T19:41:11Z",
    "ok": true
   },
   {
@@ -5065,10 +5095,20 @@
      "accessoryExceed": 8,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 860
+    },
+    {
+     "date": "2026-09-30",
+     "combatPower": 566731,
+     "itemLevel": 5055,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 8,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 860
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-28",
+    "sinceDate": "2026-09-29",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -5076,7 +5116,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-28T20:52:26Z",
+   "updatedAt": "2026-09-29T19:41:16Z",
    "ok": true
   },
   {
@@ -5093,7 +5133,7 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 541772,
+    "combatPower": 474472,
     "itemLevel": 4906,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188785270",
     "titleName": "무스펠의 성배에 거주하는"
@@ -6329,18 +6369,28 @@
      "accessoryExceed": 19,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 828
+    },
+    {
+     "date": "2026-09-30",
+     "combatPower": 474472,
+     "itemLevel": 4906,
+     "weaponExceed": 6,
+     "armorExceed": 18,
+     "accessoryExceed": 19,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 828
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-28",
-    "combatPower": 0,
+    "sinceDate": "2026-09-29",
+    "combatPower": -67300,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-28T20:52:31Z",
+   "updatedAt": "2026-09-29T19:41:21Z",
    "ok": true
   },
   {
@@ -7593,10 +7643,20 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 820
+    },
+    {
+     "date": "2026-09-30",
+     "combatPower": 443723,
+     "itemLevel": 4678,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 820
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-28",
+    "sinceDate": "2026-09-29",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -7604,7 +7664,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-28T20:52:35Z",
+   "updatedAt": "2026-09-29T19:41:25Z",
    "ok": true
   },
   {
@@ -8729,10 +8789,20 @@
      "accessoryExceed": 0,
      "daevanionBasic": 383,
      "daevanionOpenNodes": 646
+    },
+    {
+     "date": "2026-09-30",
+     "combatPower": 321547,
+     "itemLevel": 3588,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 383,
+     "daevanionOpenNodes": 646
     }
    ],
    "delta": {
-    "sinceDate": "2026-09-28",
+    "sinceDate": "2026-09-29",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -8740,7 +8810,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-09-28T20:52:41Z",
+   "updatedAt": "2026-09-29T19:41:30Z",
    "ok": true
   }
  ]
