@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-06T19:53:00Z",
+ "generatedAt": "2026-10-07T20:14:13Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -15,7 +15,7 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 1000874,
+    "combatPower": 1002138,
     "itemLevel": 6479,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188620645",
     "titleName": "비탄의 설원을 지배한"
@@ -1303,18 +1303,28 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-10-08",
+     "combatPower": 1002138,
+     "itemLevel": 6479,
+     "weaponExceed": 10,
+     "armorExceed": 12,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-06",
-    "combatPower": 150303,
-    "itemLevel": 313,
+    "sinceDate": "2026-10-07",
+    "combatPower": 1264,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-06T19:52:36Z",
+   "updatedAt": "2026-10-07T20:13:45Z",
    "ok": true
   },
   {
@@ -1331,8 +1341,8 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 616670,
-    "itemLevel": 5088,
+    "combatPower": 617936,
+    "itemLevel": 5092,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188725968",
     "titleName": "무스펠의 성배에 거주하는"
    },
@@ -2597,18 +2607,28 @@
      "accessoryExceed": 28,
      "daevanionBasic": 472,
      "daevanionOpenNodes": 899
+    },
+    {
+     "date": "2026-10-08",
+     "combatPower": 617936,
+     "itemLevel": 5092,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 28,
+     "daevanionBasic": 472,
+     "daevanionOpenNodes": 899
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-06",
-    "combatPower": 8057,
-    "itemLevel": 10,
+    "sinceDate": "2026-10-07",
+    "combatPower": 1266,
+    "itemLevel": 4,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-06T19:52:39Z",
+   "updatedAt": "2026-10-07T20:13:50Z",
    "ok": true
   },
   {
@@ -2625,8 +2645,8 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 613358,
-    "itemLevel": 5054,
+    "combatPower": 621263,
+    "itemLevel": 5082,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188716923",
     "titleName": "무스펠의 성배에 거주하는"
    },
@@ -2844,9 +2864,15 @@
     },
     {
      "name": "흡혈의 검",
-     "level": 20,
+     "level": 21,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GL_SKILL_034.png",
      "id": 11340000
+    },
+    {
+     "name": "집중 막기",
+     "level": 20,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GL_SKILL_011.png",
+     "id": 11110000
     },
     {
      "name": "격노 폭발",
@@ -2859,12 +2885,6 @@
      "level": 20,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GL_SKILL_041.png",
      "id": 11410000
-    },
-    {
-     "name": "집중 막기",
-     "level": 18,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_GL_SKILL_011.png",
-     "id": 11110000
     }
    ],
    "skills": {
@@ -2894,12 +2914,12 @@
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
-    "openNodeTotal": 878,
+    "openNodeTotal": 885,
     "nodeTotal": 1216,
     "basic": 447,
     "arielle": 152,
     "markutan": 152,
-    "yustiel": 86,
+    "yustiel": 93,
     "boards": [
      {
       "id": 11,
@@ -2969,9 +2989,9 @@
       "name": "유스티엘",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Mace.png",
       "open": 1,
-      "openNodeCount": 86,
+      "openNodeCount": 93,
       "totalNodeCount": 152,
-      "openPercent": 57
+      "openPercent": 61
      }
     ]
    },
@@ -3460,7 +3480,7 @@
      "name": "날쌘 루기"
     },
     "wing": {
-     "enchantLevel": 3,
+     "enchantLevel": 5,
      "grade": "Unique",
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WingC_009.png",
      "id": 40300900,
@@ -3475,7 +3495,7 @@
     }
    },
    "titles": {
-    "ownedCount": 300,
+    "ownedCount": 303,
     "totalCount": 431,
     "equipped": [
      {
@@ -3494,7 +3514,7 @@
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 70
+      "ownedPercent": 73
      }
     ]
    },
@@ -3891,18 +3911,28 @@
      "accessoryExceed": 23,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 878
+    },
+    {
+     "date": "2026-10-08",
+     "combatPower": 621263,
+     "itemLevel": 5082,
+     "weaponExceed": 5,
+     "armorExceed": 0,
+     "accessoryExceed": 23,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 885
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-06",
-    "combatPower": 660,
-    "itemLevel": 1,
+    "sinceDate": "2026-10-07",
+    "combatPower": 7905,
+    "itemLevel": 28,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-06T19:52:44Z",
+   "updatedAt": "2026-10-07T20:13:54Z",
    "ok": true
   },
   {
@@ -3919,7 +3949,7 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 571182,
+    "combatPower": 572816,
     "itemLevel": 5076,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188640042",
     "titleName": "무스펠의 성배에 거주하는"
@@ -5185,18 +5215,28 @@
      "accessoryExceed": 8,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 869
+    },
+    {
+     "date": "2026-10-08",
+     "combatPower": 572816,
+     "itemLevel": 5076,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 8,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 869
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-06",
-    "combatPower": 0,
+    "sinceDate": "2026-10-07",
+    "combatPower": 1634,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-06T19:52:48Z",
+   "updatedAt": "2026-10-07T20:13:59Z",
    "ok": true
   },
   {
@@ -5213,8 +5253,8 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 569739,
-    "itemLevel": 4925,
+    "combatPower": 570365,
+    "itemLevel": 4926,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188785270",
     "titleName": "무스펠의 성배를 지배한"
    },
@@ -6159,19 +6199,19 @@
     {
      "type": "Illusion",
      "name": "환상[카이시넬]",
-     "value": 103,
+     "value": 107,
      "effects": [
-      "재시전 시간 -20.6%",
-      "철벽 관통 +20.6%"
+      "재시전 시간 -21.4%",
+      "철벽 관통 +21.4%"
      ]
     },
     {
      "type": "Life",
      "name": "생명[유스티엘]",
-     "value": 82,
+     "value": 83,
      "effects": [
-      "생명력 증가 +16.4%",
-      "재생 +16.4%"
+      "생명력 증가 +16.6%",
+      "재생 +16.6%"
      ]
     },
     {
@@ -6204,19 +6244,19 @@
     {
      "type": "Wisdom",
      "name": "지혜[루미엘]",
-     "value": 182,
+     "value": 179,
      "effects": [
-      "정신력 소모량 -36.4%",
-      "강타 +36.4%"
+      "정신력 소모량 -35.8%",
+      "강타 +35.8%"
      ]
     },
     {
      "type": "Destiny",
      "name": "운명[마르쿠탄]",
-     "value": 50,
+     "value": 54,
      "effects": [
-      "정신력 증가 +10%",
-      "철벽 +10%"
+      "정신력 증가 +10.8%",
+      "철벽 +10.8%"
      ]
     },
     {
@@ -6479,18 +6519,28 @@
      "accessoryExceed": 19,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 828
+    },
+    {
+     "date": "2026-10-08",
+     "combatPower": 570365,
+     "itemLevel": 4926,
+     "weaponExceed": 6,
+     "armorExceed": 18,
+     "accessoryExceed": 19,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 828
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-06",
-    "combatPower": 36,
-    "itemLevel": 0,
+    "sinceDate": "2026-10-07",
+    "combatPower": 626,
+    "itemLevel": 1,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-06T19:52:52Z",
+   "updatedAt": "2026-10-07T20:14:03Z",
    "ok": true
   },
   {
@@ -6507,8 +6557,8 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 444789,
-    "itemLevel": 4680,
+    "combatPower": 451924,
+    "itemLevel": 4686,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188628440",
     "titleName": "무스펠의 성배에 다녀온"
    },
@@ -6738,7 +6788,7 @@
     },
     {
      "name": "협공: 파멸의 공세",
-     "level": 15,
+     "level": 19,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_EL_SKILL_024.png",
      "id": 16240000
     },
@@ -6776,12 +6826,12 @@
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
-    "openNodeTotal": 820,
+    "openNodeTotal": 823,
     "nodeTotal": 1216,
     "basic": 446,
     "arielle": 152,
     "markutan": 148,
-    "yustiel": 28,
+    "yustiel": 31,
     "boards": [
      {
       "id": 51,
@@ -6851,9 +6901,9 @@
       "name": "유스티엘",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Mace.png",
       "open": 1,
-      "openNodeCount": 28,
+      "openNodeCount": 31,
       "totalNodeCount": 152,
-      "openPercent": 18
+      "openPercent": 20
      }
     ]
    },
@@ -7453,19 +7503,19 @@
     {
      "type": "Illusion",
      "name": "환상[카이시넬]",
-     "value": 94,
+     "value": 102,
      "effects": [
-      "재시전 시간 -18.8%",
-      "철벽 관통 +18.8%"
+      "재시전 시간 -20.4%",
+      "철벽 관통 +20.4%"
      ]
     },
     {
      "type": "Life",
      "name": "생명[유스티엘]",
-     "value": 72,
+     "value": 69,
      "effects": [
-      "생명력 증가 +14.4%",
-      "재생 +14.4%"
+      "생명력 증가 +13.8%",
+      "재생 +13.8%"
      ]
     },
     {
@@ -7498,19 +7548,19 @@
     {
      "type": "Wisdom",
      "name": "지혜[루미엘]",
-     "value": 166,
+     "value": 174,
      "effects": [
-      "정신력 소모량 -33.2%",
-      "강타 +33.2%"
+      "정신력 소모량 -34.8%",
+      "강타 +34.8%"
      ]
     },
     {
      "type": "Destiny",
      "name": "운명[마르쿠탄]",
-     "value": 56,
+     "value": 61,
      "effects": [
-      "정신력 증가 +11.2%",
-      "철벽 +11.2%"
+      "정신력 증가 +12.2%",
+      "철벽 +12.2%"
      ]
     },
     {
@@ -7773,18 +7823,28 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 820
+    },
+    {
+     "date": "2026-10-08",
+     "combatPower": 451924,
+     "itemLevel": 4686,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 823
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-06",
-    "combatPower": 0,
-    "itemLevel": 0,
+    "sinceDate": "2026-10-07",
+    "combatPower": 7135,
+    "itemLevel": 6,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-06T19:52:56Z",
+   "updatedAt": "2026-10-07T20:14:08Z",
    "ok": true
   },
   {
@@ -8939,10 +8999,20 @@
      "accessoryExceed": 0,
      "daevanionBasic": 383,
      "daevanionOpenNodes": 646
+    },
+    {
+     "date": "2026-10-08",
+     "combatPower": 321991,
+     "itemLevel": 3588,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 383,
+     "daevanionOpenNodes": 646
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-06",
+    "sinceDate": "2026-10-07",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -8950,7 +9020,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-06T19:53:00Z",
+   "updatedAt": "2026-10-07T20:14:13Z",
    "ok": true
   }
  ]
