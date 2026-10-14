@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-13T20:24:28Z",
+ "generatedAt": "2026-10-14T19:00:01Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -1373,10 +1373,20 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-10-15",
+     "combatPower": 1045219,
+     "itemLevel": 6498,
+     "weaponExceed": 10,
+     "armorExceed": 12,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-13",
+    "sinceDate": "2026-10-14",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -1384,7 +1394,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-13T20:23:59Z",
+   "updatedAt": "2026-10-14T18:59:35Z",
    "ok": true
   },
   {
@@ -1401,24 +1411,24 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 662290,
-    "itemLevel": 5457,
+    "combatPower": 705986,
+    "itemLevel": 5503,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188725968",
     "titleName": "무스펠의 성배를 지배한"
    },
    "exceed": {
     "weapon": {
-     "total": 6,
+     "total": 7,
      "count": 2,
      "slots": [
       {
        "slot": "MainHand",
        "slotKo": "무기",
-       "name": "분노한 크로메데의 검",
-       "grade": "Unique",
-       "enchant": 15,
-       "exceed": 3,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_SW_0041_T06.png"
+       "name": "침식된 지배자의 작열검",
+       "grade": "Epic",
+       "enchant": 20,
+       "exceed": 4,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_SW_Dream_01.png"
       },
       {
        "slot": "SubHand",
@@ -1501,7 +1511,7 @@
      ]
     },
     "accessory": {
-     "total": 29,
+     "total": 30,
      "count": 9,
      "slots": [
       {
@@ -1564,7 +1574,7 @@
        "name": "흩어진 광휘의 목걸이",
        "grade": "Unique",
        "enchant": 15,
-       "exceed": 3,
+       "exceed": 4,
        "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_NL_Beads_03.png"
       },
       {
@@ -1590,9 +1600,9 @@
    },
    "breakthrough": {
     "bySlot": {
-     "MainHand": 3,
+     "MainHand": 4,
      "SubHand": 3,
-     "Necklace": 3,
+     "Necklace": 4,
      "Earring1": 4,
      "Earring2": 4,
      "Ring1": 3,
@@ -1868,11 +1878,11 @@
      "slotPos": 1,
      "slot": "MainHand",
      "slotKo": "무기",
-     "name": "분노한 크로메데의 검",
-     "grade": "Unique",
-     "enchant": 15,
-     "exceed": 3,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_SW_0041_T06.png",
+     "name": "침식된 지배자의 작열검",
+     "grade": "Epic",
+     "enchant": 20,
+     "exceed": 4,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_SW_Dream_01.png",
      "isArcana": false
     },
     {
@@ -1970,7 +1980,7 @@
      "name": "흩어진 광휘의 목걸이",
      "grade": "Unique",
      "enchant": 15,
-     "exceed": 3,
+     "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_NL_Beads_03.png",
      "isArcana": false
     },
@@ -2252,10 +2262,10 @@
    ],
    "petwing": {
     "pet": {
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_Frugon_01.png",
-     "id": 1264,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_Ghost_01.png",
+     "id": 1343,
      "level": 5,
-     "name": "설원 프루곤"
+     "name": "꼬마 유령"
     },
     "wing": {
      "enchantLevel": 10,
@@ -2300,9 +2310,9 @@
     {
      "type": "STR",
      "name": "위력",
-     "value": 262,
+     "value": 287,
      "effects": [
-      "공격력 증가 +26.2%"
+      "공격력 증가 +28.7%"
      ]
     },
     {
@@ -2759,18 +2769,28 @@
      "accessoryExceed": 29,
      "daevanionBasic": 472,
      "daevanionOpenNodes": 907
+    },
+    {
+     "date": "2026-10-15",
+     "combatPower": 705986,
+     "itemLevel": 5503,
+     "weaponExceed": 7,
+     "armorExceed": 0,
+     "accessoryExceed": 30,
+     "daevanionBasic": 472,
+     "daevanionOpenNodes": 907
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-13",
-    "combatPower": 25087,
-    "itemLevel": 250,
-    "weaponExceed": 0,
+    "sinceDate": "2026-10-14",
+    "combatPower": 43696,
+    "itemLevel": 46,
+    "weaponExceed": 1,
     "armorExceed": 0,
-    "accessoryExceed": 0,
+    "accessoryExceed": 1,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-13T20:24:04Z",
+   "updatedAt": "2026-10-14T18:59:39Z",
    "ok": true
   },
   {
@@ -4145,18 +4165,28 @@
      "accessoryExceed": 26,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 909
+    },
+    {
+     "date": "2026-10-15",
+     "combatPower": 686349,
+     "itemLevel": 5533,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 26,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 909
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-13",
-    "combatPower": 29772,
-    "itemLevel": 277,
+    "sinceDate": "2026-10-14",
+    "combatPower": 0,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-13T20:24:09Z",
+   "updatedAt": "2026-10-14T18:59:43Z",
    "ok": true
   },
   {
@@ -4409,10 +4439,10 @@
      "id": 18420000
     },
     {
-     "name": "차단의 권능",
-     "level": 16,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_CH_SKILL_024.png",
-     "id": 18240000
+     "name": "마르쿠탄의 분노",
+     "level": 5,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_CH_SKILL_033.png",
+     "id": 18330000
     }
    ],
    "skills": {
@@ -5509,10 +5539,20 @@
      "accessoryExceed": 14,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 869
+    },
+    {
+     "date": "2026-10-15",
+     "combatPower": 603091,
+     "itemLevel": 5128,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 14,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 869
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-13",
+    "sinceDate": "2026-10-14",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -5520,7 +5560,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-13T20:24:15Z",
+   "updatedAt": "2026-10-14T18:59:47Z",
    "ok": true
   },
   {
@@ -6873,18 +6913,28 @@
      "accessoryExceed": 22,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 828
+    },
+    {
+     "date": "2026-10-15",
+     "combatPower": 604359,
+     "itemLevel": 5016,
+     "weaponExceed": 6,
+     "armorExceed": 18,
+     "accessoryExceed": 22,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 828
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-13",
-    "combatPower": 2128,
+    "sinceDate": "2026-10-14",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-13T20:24:19Z",
+   "updatedAt": "2026-10-14T18:59:52Z",
    "ok": true
   },
   {
@@ -7730,10 +7780,10 @@
    ],
    "petwing": {
     "pet": {
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_SkateBoard_01.png",
-     "id": 1274,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_Ghost_01.png",
+     "id": 1343,
      "level": 5,
-     "name": "핑키 스핀 스케이트보드"
+     "name": "꼬마 유령"
     },
     "wing": {
      "enchantLevel": 3,
@@ -8237,10 +8287,20 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 837
+    },
+    {
+     "date": "2026-10-15",
+     "combatPower": 468128,
+     "itemLevel": 4708,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 837
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-13",
+    "sinceDate": "2026-10-14",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -8248,7 +8308,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-13T20:24:23Z",
+   "updatedAt": "2026-10-14T18:59:56Z",
    "ok": true
   },
   {
@@ -8264,11 +8324,11 @@
     "className": "살성",
     "raceName": "마족",
     "genderName": "여성",
-    "guildName": "",
-    "combatPower": 330315,
-    "itemLevel": 3599,
+    "guildName": "천지창조",
+    "combatPower": 330931,
+    "itemLevel": 3603,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188696311",
-    "titleName": "침식의 정화소를 지배한"
+    "titleName": ""
    },
    "exceed": {
     "weapon": {
@@ -8516,9 +8576,9 @@
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
-    "openNodeTotal": 655,
+    "openNodeTotal": 659,
     "nodeTotal": 1216,
-    "basic": 385,
+    "basic": 389,
     "arielle": 106,
     "markutan": 113,
     "yustiel": 4,
@@ -8537,7 +8597,7 @@
       "name": "지켈",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Mace.png",
       "open": 1,
-      "openNodeCount": 109,
+      "openNodeCount": 110,
       "totalNodeCount": 152,
       "openPercent": 72
      },
@@ -8546,18 +8606,18 @@
       "name": "바이젤",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Sword_1H.png",
       "open": 1,
-      "openNodeCount": 114,
+      "openNodeCount": 116,
       "totalNodeCount": 152,
-      "openPercent": 75
+      "openPercent": 76
      },
      {
       "id": 44,
       "name": "트리니엘",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Mace.png",
       "open": 1,
-      "openNodeCount": 49,
+      "openNodeCount": 50,
       "totalNodeCount": 152,
-      "openPercent": 32
+      "openPercent": 33
      },
      {
       "id": 45,
@@ -8966,10 +9026,10 @@
    ],
    "petwing": {
     "pet": {
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_SkateBoard_01.png",
-     "id": 1274,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Vehicle_Portrait_Ghost_01.png",
+     "id": 1343,
      "level": 5,
-     "name": "핑키 스핀 스케이트보드"
+     "name": "꼬마 유령"
     },
     "wing": {
      "enchantLevel": 0,
@@ -8987,7 +9047,7 @@
     }
    },
    "titles": {
-    "ownedCount": 246,
+    "ownedCount": 248,
     "totalCount": 431,
     "equipped": [
      {
@@ -9006,7 +9066,7 @@
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 56
+      "ownedPercent": 57
      }
     ]
    },
@@ -9473,18 +9533,28 @@
      "accessoryExceed": 0,
      "daevanionBasic": 385,
      "daevanionOpenNodes": 655
+    },
+    {
+     "date": "2026-10-15",
+     "combatPower": 330931,
+     "itemLevel": 3603,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 389,
+     "daevanionOpenNodes": 659
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-13",
-    "combatPower": 0,
-    "itemLevel": 0,
+    "sinceDate": "2026-10-14",
+    "combatPower": 616,
+    "itemLevel": 4,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
-    "daevanionBasic": 0
+    "daevanionBasic": 4
    },
-   "updatedAt": "2026-10-13T20:24:28Z",
+   "updatedAt": "2026-10-14T19:00:01Z",
    "ok": true
   }
  ]
