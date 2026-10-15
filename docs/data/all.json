@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-14T19:00:01Z",
+ "generatedAt": "2026-10-15T18:43:40Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -1383,10 +1383,20 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-10-16",
+     "combatPower": 1045219,
+     "itemLevel": 6498,
+     "weaponExceed": 10,
+     "armorExceed": 12,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-14",
+    "sinceDate": "2026-10-15",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -1394,7 +1404,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-14T18:59:35Z",
+   "updatedAt": "2026-10-15T18:43:18Z",
    "ok": true
   },
   {
@@ -1411,8 +1421,8 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 705986,
-    "itemLevel": 5503,
+    "combatPower": 706143,
+    "itemLevel": 5507,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188725968",
     "titleName": "무스펠의 성배를 지배한"
    },
@@ -1680,12 +1690,12 @@
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
-    "openNodeTotal": 907,
+    "openNodeTotal": 910,
     "nodeTotal": 1216,
     "basic": 472,
     "arielle": 152,
     "markutan": 143,
-    "yustiel": 100,
+    "yustiel": 103,
     "boards": [
      {
       "id": 21,
@@ -1755,9 +1765,9 @@
       "name": "유스티엘",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Mace.png",
       "open": 1,
-      "openNodeCount": 100,
+      "openNodeCount": 103,
       "totalNodeCount": 152,
-      "openPercent": 66
+      "openPercent": 68
      }
     ]
    },
@@ -2779,18 +2789,28 @@
      "accessoryExceed": 30,
      "daevanionBasic": 472,
      "daevanionOpenNodes": 907
+    },
+    {
+     "date": "2026-10-16",
+     "combatPower": 706143,
+     "itemLevel": 5507,
+     "weaponExceed": 7,
+     "armorExceed": 0,
+     "accessoryExceed": 30,
+     "daevanionBasic": 472,
+     "daevanionOpenNodes": 910
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-14",
-    "combatPower": 43696,
-    "itemLevel": 46,
-    "weaponExceed": 1,
+    "sinceDate": "2026-10-15",
+    "combatPower": 157,
+    "itemLevel": 4,
+    "weaponExceed": 0,
     "armorExceed": 0,
-    "accessoryExceed": 1,
+    "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-14T18:59:39Z",
+   "updatedAt": "2026-10-15T18:43:22Z",
    "ok": true
   },
   {
@@ -4175,10 +4195,20 @@
      "accessoryExceed": 26,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 909
+    },
+    {
+     "date": "2026-10-16",
+     "combatPower": 686349,
+     "itemLevel": 5533,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 26,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 909
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-14",
+    "sinceDate": "2026-10-15",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -4186,7 +4216,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-14T18:59:43Z",
+   "updatedAt": "2026-10-15T18:43:26Z",
    "ok": true
   },
   {
@@ -5549,10 +5579,20 @@
      "accessoryExceed": 14,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 869
+    },
+    {
+     "date": "2026-10-16",
+     "combatPower": 603091,
+     "itemLevel": 5128,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 14,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 869
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-14",
+    "sinceDate": "2026-10-15",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -5560,7 +5600,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-14T18:59:47Z",
+   "updatedAt": "2026-10-15T18:43:29Z",
    "ok": true
   },
   {
@@ -5577,8 +5617,8 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 604359,
-    "itemLevel": 5016,
+    "combatPower": 606089,
+    "itemLevel": 5003,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188785270",
     "titleName": "무스펠의 성배를 지배한"
    },
@@ -5608,7 +5648,7 @@
      ]
     },
     "armor": {
-     "total": 18,
+     "total": 15,
      "count": 7,
      "slots": [
       {
@@ -5623,11 +5663,11 @@
       {
        "slot": "Cape",
        "slotKo": "망토",
-       "name": "비상하는 데바의 망토",
-       "grade": "Unique",
-       "enchant": 15,
-       "exceed": 3,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0178_T04_Cape.png"
+       "name": "침식된 잔영의 망토",
+       "grade": "Epic",
+       "enchant": 9,
+       "exceed": 0,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Cape.png"
       },
       {
        "slot": "Gloves",
@@ -6242,11 +6282,11 @@
      "slotPos": 19,
      "slot": "Cape",
      "slotKo": "망토",
-     "name": "비상하는 데바의 망토",
-     "grade": "Unique",
-     "enchant": 15,
-     "exceed": 3,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0178_T04_Cape.png",
+     "name": "침식된 잔영의 망토",
+     "grade": "Epic",
+     "enchant": 9,
+     "exceed": 0,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Cape.png",
      "isArcana": false
     },
     {
@@ -6427,14 +6467,14 @@
     }
    },
    "titles": {
-    "ownedCount": 277,
+    "ownedCount": 278,
     "totalCount": 431,
     "equipped": [
      {
       "category": "Attack",
       "name": "종족의 굴레를 벗다",
       "grade": "Unique",
-      "ownedPercent": 62
+      "ownedPercent": 63
      },
      {
       "category": "Defense",
@@ -6923,18 +6963,28 @@
      "accessoryExceed": 22,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 828
+    },
+    {
+     "date": "2026-10-16",
+     "combatPower": 606089,
+     "itemLevel": 5003,
+     "weaponExceed": 6,
+     "armorExceed": 15,
+     "accessoryExceed": 22,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 828
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-14",
-    "combatPower": 0,
-    "itemLevel": 0,
+    "sinceDate": "2026-10-15",
+    "combatPower": 1730,
+    "itemLevel": -13,
     "weaponExceed": 0,
-    "armorExceed": 0,
+    "armorExceed": -3,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-14T18:59:52Z",
+   "updatedAt": "2026-10-15T18:43:33Z",
    "ok": true
   },
   {
@@ -8297,10 +8347,20 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 837
+    },
+    {
+     "date": "2026-10-16",
+     "combatPower": 468128,
+     "itemLevel": 4708,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 837
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-14",
+    "sinceDate": "2026-10-15",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -8308,7 +8368,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-14T18:59:56Z",
+   "updatedAt": "2026-10-15T18:43:36Z",
    "ok": true
   },
   {
@@ -9543,18 +9603,28 @@
      "accessoryExceed": 0,
      "daevanionBasic": 389,
      "daevanionOpenNodes": 659
+    },
+    {
+     "date": "2026-10-16",
+     "combatPower": 330931,
+     "itemLevel": 3603,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 389,
+     "daevanionOpenNodes": 659
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-14",
-    "combatPower": 616,
-    "itemLevel": 4,
+    "sinceDate": "2026-10-15",
+    "combatPower": 0,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
-    "daevanionBasic": 4
+    "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-14T19:00:01Z",
+   "updatedAt": "2026-10-15T18:43:40Z",
    "ok": true
   }
  ]
