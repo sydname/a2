@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-18T17:36:52Z",
+ "generatedAt": "2026-10-19T20:15:56Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -1423,18 +1423,28 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-10-20",
+     "combatPower": 1045325,
+     "itemLevel": 6498,
+     "weaponExceed": 10,
+     "armorExceed": 12,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-18",
-    "combatPower": 44846,
+    "sinceDate": "2026-10-19",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-18T17:36:26Z",
+   "updatedAt": "2026-10-19T20:15:29Z",
    "ok": true
   },
   {
@@ -1451,14 +1461,14 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 728633,
-    "itemLevel": 5665,
+    "combatPower": 739217,
+    "itemLevel": 5681,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188725968",
     "titleName": "무스펠의 성배를 지배한"
    },
    "exceed": {
     "weapon": {
-     "total": 7,
+     "total": 8,
      "count": 2,
      "slots": [
       {
@@ -1476,7 +1486,7 @@
        "name": "루드라의 심장",
        "grade": "Epic",
        "enchant": 20,
-       "exceed": 3,
+       "exceed": 4,
        "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_U_010.png"
       }
      ]
@@ -1551,7 +1561,7 @@
      ]
     },
     "accessory": {
-     "total": 33,
+     "total": 34,
      "count": 9,
      "slots": [
       {
@@ -1632,7 +1642,7 @@
        "name": "빛나는 건룡왕의 반지",
        "grade": "Unique",
        "enchant": 15,
-       "exceed": 3,
+       "exceed": 4,
        "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_0036.png"
       }
      ]
@@ -1641,12 +1651,12 @@
    "breakthrough": {
     "bySlot": {
      "MainHand": 4,
-     "SubHand": 3,
+     "SubHand": 4,
      "Necklace": 4,
      "Earring1": 4,
      "Earring2": 4,
      "Ring1": 4,
-     "Ring2": 3,
+     "Ring2": 4,
      "Bracelet1": 3,
      "Bracelet2": 3,
      "Brooch1": 4,
@@ -1932,7 +1942,7 @@
      "name": "루드라의 심장",
      "grade": "Epic",
      "enchant": 20,
-     "exceed": 3,
+     "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_U_010.png",
      "isArcana": false
     },
@@ -2064,7 +2074,7 @@
      "name": "빛나는 건룡왕의 반지",
      "grade": "Unique",
      "enchant": 15,
-     "exceed": 3,
+     "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_0036.png",
      "isArcana": false
     },
@@ -2173,7 +2183,7 @@
      "slotKo": "Seal1",
      "name": "해방자의 인장",
      "grade": "Legend",
-     "enchant": 10,
+     "enchant": 12,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Seal_l_001.png",
      "isArcana": false
@@ -2184,7 +2194,7 @@
      "slotKo": "Seal2",
      "name": "해방자의 인장",
      "grade": "Legend",
-     "enchant": 10,
+     "enchant": 12,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Seal_l_001.png",
      "isArcana": false
@@ -2323,7 +2333,7 @@
     }
    },
    "titles": {
-    "ownedCount": 336,
+    "ownedCount": 337,
     "totalCount": 431,
     "equipped": [
      {
@@ -2358,11 +2368,11 @@
     {
      "type": "DEX",
      "name": "민첩",
-     "value": 150,
+     "value": 206,
      "effects": [
-      "회피 증가 +15%",
-      "막기 증가 +15%",
-      "치명타 저항 증가 +15%"
+      "회피 증가 +20.6%",
+      "막기 증가 +20.6%",
+      "치명타 저항 증가 +20.6%"
      ]
     },
     {
@@ -2419,19 +2429,19 @@
     {
      "type": "Illusion",
      "name": "환상[카이시넬]",
-     "value": 105,
+     "value": 107,
      "effects": [
-      "재시전 시간 -21%",
-      "철벽 관통 +21%"
+      "재시전 시간 -21.4%",
+      "철벽 관통 +21.4%"
      ]
     },
     {
      "type": "Life",
      "name": "생명[유스티엘]",
-     "value": 76,
+     "value": 80,
      "effects": [
-      "생명력 증가 +15.2%",
-      "재생 +15.2%"
+      "생명력 증가 +16%",
+      "재생 +16%"
      ]
     },
     {
@@ -2464,19 +2474,19 @@
     {
      "type": "Wisdom",
      "name": "지혜[루미엘]",
-     "value": 191,
+     "value": 193,
      "effects": [
-      "정신력 소모량 -38.2%",
-      "강타 +38.2%"
+      "정신력 소모량 -38.6%",
+      "강타 +38.6%"
      ]
     },
     {
      "type": "Destiny",
      "name": "운명[마르쿠탄]",
-     "value": 75,
+     "value": 79,
      "effects": [
-      "정신력 증가 +15%",
-      "철벽 +15%"
+      "정신력 증가 +15.8%",
+      "철벽 +15.8%"
      ]
     },
     {
@@ -2859,18 +2869,28 @@
      "accessoryExceed": 33,
      "daevanionBasic": 472,
      "daevanionOpenNodes": 924
+    },
+    {
+     "date": "2026-10-20",
+     "combatPower": 739217,
+     "itemLevel": 5681,
+     "weaponExceed": 8,
+     "armorExceed": 0,
+     "accessoryExceed": 34,
+     "daevanionBasic": 472,
+     "daevanionOpenNodes": 924
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-18",
-    "combatPower": 22484,
-    "itemLevel": 158,
-    "weaponExceed": 0,
+    "sinceDate": "2026-10-19",
+    "combatPower": 10584,
+    "itemLevel": 16,
+    "weaponExceed": 1,
     "armorExceed": 0,
-    "accessoryExceed": 3,
+    "accessoryExceed": 1,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-18T17:36:30Z",
+   "updatedAt": "2026-10-19T20:15:34Z",
    "ok": true
   },
   {
@@ -2887,8 +2907,8 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 688541,
-    "itemLevel": 5570,
+    "combatPower": 691279,
+    "itemLevel": 5584,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188716923",
     "titleName": "무스펠의 성배를 지배한"
    },
@@ -3759,7 +3779,7 @@
     }
    },
    "titles": {
-    "ownedCount": 309,
+    "ownedCount": 310,
     "totalCount": 431,
     "equipped": [
      {
@@ -3855,19 +3875,19 @@
     {
      "type": "Illusion",
      "name": "환상[카이시넬]",
-     "value": 109,
+     "value": 113,
      "effects": [
-      "재시전 시간 -21.8%",
-      "철벽 관통 +21.8%"
+      "재시전 시간 -22.6%",
+      "철벽 관통 +22.6%"
      ]
     },
     {
      "type": "Life",
      "name": "생명[유스티엘]",
-     "value": 42,
+     "value": 38,
      "effects": [
-      "생명력 증가 +8.4%",
-      "재생 +8.4%"
+      "생명력 증가 +7.6%",
+      "재생 +7.6%"
      ]
     },
     {
@@ -4295,18 +4315,28 @@
      "accessoryExceed": 26,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 914
+    },
+    {
+     "date": "2026-10-20",
+     "combatPower": 691279,
+     "itemLevel": 5584,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 26,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 914
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-18",
-    "combatPower": 1932,
-    "itemLevel": 37,
+    "sinceDate": "2026-10-19",
+    "combatPower": 2738,
+    "itemLevel": 14,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-18T17:36:34Z",
+   "updatedAt": "2026-10-19T20:15:37Z",
    "ok": true
   },
   {
@@ -5709,10 +5739,20 @@
      "accessoryExceed": 14,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 869
+    },
+    {
+     "date": "2026-10-20",
+     "combatPower": 603091,
+     "itemLevel": 5128,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 14,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 869
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-18",
+    "sinceDate": "2026-10-19",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -5720,7 +5760,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-18T17:36:39Z",
+   "updatedAt": "2026-10-19T20:15:43Z",
    "ok": true
   },
   {
@@ -7123,18 +7163,28 @@
      "accessoryExceed": 22,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 828
+    },
+    {
+     "date": "2026-10-20",
+     "combatPower": 614082,
+     "itemLevel": 5003,
+     "weaponExceed": 6,
+     "armorExceed": 15,
+     "accessoryExceed": 22,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 828
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-18",
-    "combatPower": 7932,
+    "sinceDate": "2026-10-19",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-18T17:36:44Z",
+   "updatedAt": "2026-10-19T20:15:48Z",
    "ok": true
   },
   {
@@ -7151,7 +7201,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 470207,
+    "combatPower": 470711,
     "itemLevel": 4713,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188628440",
     "titleName": "무스펠의 성배에 다녀온"
@@ -8537,18 +8587,28 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 837
+    },
+    {
+     "date": "2026-10-20",
+     "combatPower": 470711,
+     "itemLevel": 4713,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 837
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-18",
-    "combatPower": 2079,
-    "itemLevel": 5,
+    "sinceDate": "2026-10-19",
+    "combatPower": 504,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-18T17:36:48Z",
+   "updatedAt": "2026-10-19T20:15:52Z",
    "ok": true
   },
   {
@@ -8565,7 +8625,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "불의신전에군림하는",
-    "combatPower": 299235,
+    "combatPower": 299979,
     "itemLevel": 3610,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188696311",
     "titleName": ""
@@ -9823,18 +9883,28 @@
      "accessoryExceed": 0,
      "daevanionBasic": 389,
      "daevanionOpenNodes": 662
+    },
+    {
+     "date": "2026-10-20",
+     "combatPower": 299979,
+     "itemLevel": 3610,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 389,
+     "daevanionOpenNodes": 662
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-18",
-    "combatPower": -31696,
-    "itemLevel": 7,
+    "sinceDate": "2026-10-19",
+    "combatPower": 744,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-18T17:36:52Z",
+   "updatedAt": "2026-10-19T20:15:56Z",
    "ok": true
   }
  ]
