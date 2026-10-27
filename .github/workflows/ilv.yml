@@ -48,6 +48,10 @@ jobs:
             echo "변경 없음"
           else
             git commit -m "chore: 시뮬 상세 갱신 (${{ inputs.label }}, $(date -u +%Y-%m-%dT%H:%MZ))"
-            git pull --rebase
-            git push
+            ok=0
+            for i in 1 2 3; do
+              if git pull --rebase && git push; then ok=1; break; fi
+              echo "push 실패 — 재시도 $i"; sleep 5
+            done
+            [ "$ok" = 1 ]
           fi

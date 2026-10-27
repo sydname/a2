@@ -41,5 +41,10 @@ jobs:
             echo "변경 없음 — 커밋 생략"
           else
             git commit -m "chore: 캐릭터 정보 자동 갱신 ($(date -u +%Y-%m-%dT%H:%MZ))"
-            git push
+            ok=0
+            for i in 1 2 3; do
+              if git pull --rebase && git push; then ok=1; break; fi
+              echo "push 실패 — 재시도 $i"; sleep 5
+            done
+            [ "$ok" = 1 ]
           fi

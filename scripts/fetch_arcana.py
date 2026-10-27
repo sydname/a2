@@ -72,12 +72,18 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="characters.json")
     ap.add_argument("--out", default="docs/data")
+    ap.add_argument("--label", default="all", help="캐릭터 label (all = 전체, 나머지는 기존 값 유지)")
     args = ap.parse_args()
 
     with open(args.config, encoding="utf-8") as f:
         cfg = json.load(f)
     lang = cfg.get("language", "ko")
     entries = cfg.get("characters", [])
+    if args.label != "all":
+        entries = [e for e in entries if e.get("label") == args.label]
+        if not entries:
+            print("characters.json 에 '%s' 가 없습니다." % args.label, file=sys.stderr)
+            sys.exit(1)
 
     result = {}
     errors = []
@@ -102,7 +108,7 @@ def main():
 
             details = []
             for it, slot_pos in arc_slots:
-                time.sleep(random.uniform(0.7, 1.5))
+                time.sleep(random.uniform(0.2, 0.5))
                 p = dict(base_params)
                 p.update({"id": it.get("id"), "enchantLevel": it.get("enchantLevel") or 0,
                           "slotPos": slot_pos})
@@ -144,7 +150,7 @@ def main():
 
             item_detail = {}
             for it in gear_items:
-                time.sleep(random.uniform(0.6, 1.3))
+                time.sleep(random.uniform(0.2, 0.5))
                 p = dict(base_params)
                 p.update({"id": it.get("id"), "enchantLevel": it.get("enchantLevel") or 0,
                           "slotPos": it.get("slotPos")})

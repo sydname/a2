@@ -3,7 +3,21 @@ name: 아르카나·영혼각인 상세 갱신 (수동)
 # 아르카나 상세 강화 내역 + 방어구 영혼각인(subStats)은 자주 바뀌지 않으므로 수동 실행 전용입니다.
 # GitHub 저장소 → Actions 탭 → 이 워크플로 선택 → "Run workflow" 클릭.
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      label:
+        description: "캐릭터 (all = 전체)"
+        type: choice
+        default: all
+        options:
+          - all
+          - 감자밍
+          - 감자미
+          - 잔열
+          - 넌강해졌다
+          - 괌자
+          - 고구미
+          - 크로매데
 
 permissions:
   contents: write
@@ -23,7 +37,7 @@ jobs:
           python-version: "3.12"
 
       - name: 아르카나 상세 수집
-        run: python scripts/fetch_arcana.py --config characters.json --out docs/data
+        run: python scripts/fetch_arcana.py --config characters.json --out docs/data --label "${{ inputs.label }}"
 
       - name: 커밋
         run: |
@@ -33,6 +47,11 @@ jobs:
           if git diff --cached --quiet; then
             echo "변경 없음"
           else
-            git commit -m "chore: 아르카나 상세 갱신 ($(date -u +%Y-%m-%dT%H:%MZ))"
-            git push
+            git commit -m "chore: 아르카나 상세 갱신 (${{ inputs.label }}, $(date -u +%Y-%m-%dT%H:%MZ))"
+            ok=0
+            for i in 1 2 3; do
+              if git pull --rebase && git push; then ok=1; break; fi
+              echo "push 실패 — 재시도 $i"; sleep 5
+            done
+            [ "$ok" = 1 ]
           fi
