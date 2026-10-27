@@ -1302,10 +1302,7 @@
             N(Math.round(Math.abs(diff) * 10) / 10) + "</span>" : "") + "</div></div>" +
         '<div class="kpi"><div class="k">공식 계산 / 보정</div><div class="v">' + N(Math.round(estTotal)) +
           ' <small>' + (offset >= 0 ? "+" : "") + N(Math.round(offset * 10) / 10) + (staleN ? " (추정)" : "") + "</small></div></div>" +
-      "</div>" +
-      (costSum.kinah ? '<div class="sim-cost"><b>예상 비용</b> 키나 <b>' + man(costSum.kinah) + "</b>" +
-        (Object.keys(costSum.mats).length ? " · " + matsHtml(costSum.mats) : "") +
-        (costSum.unknown ? ' <span class="muted">(비용 데이터 없는 부위 ' + costSum.unknown + "개 제외)</span>" : "") + "</div>" : "");
+      "</div>";
     var reset = el("button", "refresh-btn", "현재 장비로 초기화");
     reset.addEventListener("click", function () { saveSim(c.key, {}); render(); });
     top.appendChild(reset);
@@ -1320,7 +1317,9 @@
 
     // ---- 구성 (장비 외) ----
     var comp = el("section", "cbox");
-    comp.innerHTML = "<h3>구성 <small>현재 → 시뮬</small></h3>";
+    var split = el("div", "sim-split");
+    var left = el("div", "");
+    left.innerHTML = "<h3>구성 <small>현재 → 시뮬</small></h3>";
     var ct = el("table", "sim-comp");
     function compRow(label, a, b, inputEl) {
       var tr = el("tr");
@@ -1340,7 +1339,29 @@
       simInput(simDaev, 0, null, function (v) { update(function (s) { s.daev = v; }); }));
     compRow("날개 강화 합", cur.wing, simWing,
       simInput(simWing, 0, null, function (v) { update(function (s) { s.wing = v; }); }));
-    comp.appendChild(ct);
+    left.appendChild(ct);
+    split.appendChild(left);
+
+    // ---- 예상 재화 합계 ----
+    var right = el("div", "sim-costbox");
+    var changedN = rows.filter(function (r) { return r.changed; }).length;
+    right.innerHTML = "<h3>예상 재화 합계 <small>바꾼 부위 " + changedN + "개</small></h3>";
+    var mt = el("table", "sim-comp");
+    function costRow(label, v) {
+      var tr = el("tr");
+      tr.appendChild(el("td", "l", esc(label)));
+      tr.appendChild(el("td", "", v));
+      mt.appendChild(tr);
+    }
+    costRow("키나", man(costSum.kinah));
+    Object.keys(costSum.mats).forEach(function (k) {
+      costRow(k, (Math.round(costSum.mats[k] * 10) / 10).toLocaleString("ko-KR"));
+    });
+    right.appendChild(mt);
+    if (!costSum.kinah) right.appendChild(el("p", "muted sim-note", "아래 부위별 표에서 단계·강화·돌파를 바꾸면 합계가 나옵니다."));
+    if (costSum.unknown) right.appendChild(el("p", "muted sim-note", "비용 데이터 없는 부위 " + costSum.unknown + "개 제외 (허리띠·아뮬렛·룬·아르카나 등)."));
+    split.appendChild(right);
+    comp.appendChild(split);
     comp.appendChild(el("p", "muted sim-note",
       "보정 = 실제 템렙 − 공식 계산값 (출처 미확인 항목). 시뮬 템렙 = 현재 템렙 + 증감. " +
       "단계를 바꾼 부위의 마석은 줄 수 × " + STONE_MID + " (중간값). 단계 목록 = 인벤 DB + 우리 캐릭 착용템. " +
