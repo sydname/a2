@@ -1,0 +1,1548 @@
+{
+ "_help": "인벤 아이온2 DB(class2 부위별 목록, 마족)에서 만든 단계 테이블. 같은 (기본레벨, 등급) = 같은 단계.",
+ "source": "https://aion2.inven.co.kr/db/item/",
+ "generatedAt": "2026-10-27",
+ "families": {
+  "weapon": [
+   {
+    "level": 154,
+    "grade": "Epic",
+    "names": [
+     "[진] 빛나는 멸룡왕"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 148,
+    "grade": "Epic",
+    "names": [
+     "[진] 멸룡왕",
+     "해방된 백야"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 134,
+    "grade": "Epic",
+    "names": [
+     "빛나는 멸룡왕"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 128,
+    "grade": "Epic",
+    "names": [
+     "멸룡왕",
+     "용암 심장",
+     "가디언 친위대장",
+     "아칸 친위대장",
+     "정예 가디언 친위대장",
+     "정예 아칸 친위대장"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 114,
+    "grade": "Epic",
+    "names": [
+     "빛나는 기룡왕"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 108,
+    "grade": "Epic",
+    "names": [
+     "기룡왕",
+     "가디언 군단장",
+     "아칸 군단장",
+     "정예 가디언 군단장",
+     "정예 아칸 군단장",
+     "침식된 지배자"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 108,
+    "grade": "Unique",
+    "names": [
+     "빛나는 적룡왕",
+     "아티엘",
+     "바실루스"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 102,
+    "grade": "Unique",
+    "names": [
+     "적룡왕"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 100,
+    "grade": "Unique",
+    "names": [
+     "빛나는 마룡왕",
+     "나트하라",
+     "비상하는 데바",
+     "깨어난 알투라돈"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 98,
+    "grade": "Epic",
+    "names": [
+     "루드라"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 94,
+    "grade": "Unique",
+    "names": [
+     "마룡왕"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 92,
+    "grade": "Unique",
+    "names": [
+     "빛나는 암룡왕",
+     "고뇌하는 바카르마",
+     "두르바티"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 88,
+    "grade": "Unique",
+    "names": [
+     "잔인무도",
+     "고귀한 지혜",
+     "나흐마"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 87,
+    "grade": "Unique",
+    "names": [
+     "가디언 천부장",
+     "아칸 천부장"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 86,
+    "grade": "Unique",
+    "names": [
+     "암룡왕"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 84,
+    "grade": "Unique",
+    "names": [
+     "빛나는 흑룡왕",
+     "분노한 크로메데",
+     "심연",
+     "누아쿰"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 80,
+    "grade": "Unique",
+    "names": [
+     "구원",
+     "저주"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 78,
+    "grade": "Unique",
+    "names": [
+     "흑룡왕"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 78,
+    "grade": "Legend",
+    "names": [
+     "광기"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 77,
+    "grade": "Unique",
+    "names": [
+     "가디언 백부장",
+     "아칸 백부장"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 76,
+    "grade": "Unique",
+    "names": [
+     "빛나는 건룡왕",
+     "아울라무스",
+     "바크론"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 75,
+    "grade": "Unique",
+    "names": [
+     "신비",
+     "비탄"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 70,
+    "grade": "Unique",
+    "names": [
+     "건룡왕"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 68,
+    "grade": "Unique",
+    "names": [
+     "파열",
+     "바카르마"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 67,
+    "grade": "Unique",
+    "names": [
+     "가디언 십부장",
+     "아칸 십부장"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 67,
+    "grade": "Legend",
+    "names": [
+     "타락한 심판관",
+     "검은 발톱",
+     "이그누스"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 65,
+    "grade": "Unique",
+    "names": [
+     "지상",
+     "금단",
+     "불굴"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 60,
+    "grade": "Unique",
+    "names": [
+     "몰락한 고대신",
+     "달인",
+     "달인의 빛나는 진실"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 59,
+    "grade": "Legend",
+    "names": [
+     "신성한 협곡",
+     "불굴",
+     "격동"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 57,
+    "grade": "Unique",
+    "names": [
+     "크로메데",
+     "초월자"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 55,
+    "grade": "Unique",
+    "names": [
+     "성령",
+     "사령",
+     "용기"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 54,
+    "grade": "Legend",
+    "names": [
+     "밀약"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 52,
+    "grade": "Legend",
+    "names": [
+     "달인",
+     "달인의 진실"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 51,
+    "grade": "Legend",
+    "names": [
+     "번뇌",
+     "분열",
+     "봉인된 의지"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 50,
+    "grade": "Unique",
+    "names": [
+     "지혜",
+     "환상",
+     "평정"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 49,
+    "grade": "Legend",
+    "names": [
+     "질서",
+     "규율",
+     "서약"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 46,
+    "grade": "Legend",
+    "names": [
+     "장인",
+     "장인의 빛나는 진실"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 44,
+    "grade": "Legend",
+    "names": [
+     "환영",
+     "파괴",
+     "피를 부르는 대검",
+     "신앙",
+     "피를 부르는 마법서",
+     "피를 부르는 가더"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 39,
+    "grade": "Legend",
+    "names": [
+     "신전 수호자",
+     "실리주의자",
+     "속삭이는 망각"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 38,
+    "grade": "Rare",
+    "names": [
+     "떠돌이",
+     "장인",
+     "장인의 진실"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 36,
+    "grade": "Legend",
+    "names": [
+     "붉은 강옥"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 34,
+    "grade": "Legend",
+    "names": [
+     "원로",
+     "유물 발견자",
+     "방위병"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 33,
+    "grade": "Rare",
+    "names": [
+     "유성",
+     "광명",
+     "침입자"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 30,
+    "grade": "Rare",
+    "names": [
+     "빛나는 오리하르콘 대검",
+     "빛나는 진실",
+     "빛나는 오리하르콘 가더"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 28,
+    "grade": "Rare",
+    "names": [
+     "천공",
+     "혼돈",
+     "전선"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 23,
+    "grade": "Rare",
+    "names": [
+     "비오는 숲",
+     "폭풍"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 22,
+    "grade": "Common",
+    "names": [
+     "오리하르콘 대검",
+     "대지",
+     "진실",
+     "오리하르콘 가더"
+    ],
+    "stoneSlots": 1
+   },
+   {
+    "level": 20,
+    "grade": "Common",
+    "names": [
+     "강가",
+     "환몽"
+    ],
+    "stoneSlots": 1
+   },
+   {
+    "level": 15,
+    "grade": "Common",
+    "names": [
+     "잊혀진 대검",
+     "그늘",
+     "잊혀진 마법서",
+     "잊혀진 가더"
+    ],
+    "stoneSlots": 1
+   }
+  ],
+  "armor": [
+   {
+    "level": 134,
+    "grade": "Epic",
+    "names": [
+     "빛나는 멸룡왕"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 128,
+    "grade": "Epic",
+    "names": [
+     "멸룡왕",
+     "용암 심장",
+     "가디언 친위대장",
+     "아칸 친위대장"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 114,
+    "grade": "Epic",
+    "names": [
+     "빛나는 기룡왕"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 108,
+    "grade": "Epic",
+    "names": [
+     "기룡왕",
+     "가디언 군단장",
+     "아칸 군단장",
+     "침식된 잔영"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 108,
+    "grade": "Unique",
+    "names": [
+     "빛나는 적룡왕",
+     "바실루스"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 102,
+    "grade": "Unique",
+    "names": [
+     "적룡왕"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 100,
+    "grade": "Unique",
+    "names": [
+     "빛나는 마룡왕",
+     "깨어난 알투라돈",
+     "비상하는 데바",
+     "나트하라"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 98,
+    "grade": "Epic",
+    "names": [
+     "고대 정령"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 96,
+    "grade": "Unique",
+    "names": [
+     "수호신장 나흐마"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 94,
+    "grade": "Unique",
+    "names": [
+     "마룡왕"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 92,
+    "grade": "Unique",
+    "names": [
+     "빛나는 암룡왕",
+     "두르바티"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 88,
+    "grade": "Unique",
+    "names": [
+     "수호신장 나흐마"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 87,
+    "grade": "Unique",
+    "names": [
+     "가디언 천부장",
+     "아칸 천부장"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 86,
+    "grade": "Unique",
+    "names": [
+     "암룡왕"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 84,
+    "grade": "Unique",
+    "names": [
+     "빛나는 흑룡왕",
+     "누아쿰",
+     "심연"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 80,
+    "grade": "Unique",
+    "names": [
+     "구원",
+     "저주",
+     "카르코티",
+     "비바츠라",
+     "미나사라",
+     "사르바카"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 78,
+    "grade": "Unique",
+    "names": [
+     "흑룡왕"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 78,
+    "grade": "Legend",
+    "names": [
+     "광기"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 77,
+    "grade": "Unique",
+    "names": [
+     "가디언 백부장",
+     "아칸 백부장"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 76,
+    "grade": "Unique",
+    "names": [
+     "빛나는 건룡왕",
+     "바크론"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 75,
+    "grade": "Unique",
+    "names": [
+     "신비",
+     "비탄",
+     "가르투아"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 74,
+    "grade": "Unique",
+    "names": [
+     "아그로"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 74,
+    "grade": "Legend",
+    "names": [
+     "드라마타",
+     "임계"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 70,
+    "grade": "Unique",
+    "names": [
+     "건룡왕",
+     "카이라"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 68,
+    "grade": "Unique",
+    "names": [
+     "바카르마"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 67,
+    "grade": "Unique",
+    "names": [
+     "가디언 십부장",
+     "아칸 십부장"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 67,
+    "grade": "Legend",
+    "names": [
+     "타락한 심판관",
+     "검은 발톱"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 65,
+    "grade": "Unique",
+    "names": [
+     "정복"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 60,
+    "grade": "Unique",
+    "names": [
+     "몰락한 고대신",
+     "달인",
+     "타르탄",
+     "카샤파",
+     "군단장 라그타"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 59,
+    "grade": "Legend",
+    "names": [
+     "신성한 협곡",
+     "불굴"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 57,
+    "grade": "Unique",
+    "names": [
+     "초월자"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 55,
+    "grade": "Unique",
+    "names": [
+     "성령",
+     "사령",
+     "용기"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 54,
+    "grade": "Legend",
+    "names": [
+     "밀약"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 52,
+    "grade": "Legend",
+    "names": [
+     "달인"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 51,
+    "grade": "Legend",
+    "names": [
+     "번뇌",
+     "분열",
+     "쿠산",
+     "가르심",
+     "프닌",
+     "사루스",
+     "라울라",
+     "가르산",
+     "트리드",
+     "켈피나",
+     "누타",
+     "타울로",
+     "우라무",
+     "레일라",
+     "라와",
+     "데미로스",
+     "안사스",
+     "모샤브",
+     "르사나",
+     "링크스",
+     "노블루드",
+     "악시오스",
+     "하디룬",
+     "바르시엔",
+     "구루타",
+     "크나쉬",
+     "세트람",
+     "카시아",
+     "슈자칸",
+     "카루카",
+     "비슈베다",
+     "쉬라크"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 50,
+    "grade": "Unique",
+    "names": [
+     "지혜",
+     "환상",
+     "평정"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 49,
+    "grade": "Legend",
+    "names": [
+     "심판관",
+     "질서",
+     "규율",
+     "서약"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 46,
+    "grade": "Legend",
+    "names": [
+     "장인"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 44,
+    "grade": "Legend",
+    "names": [
+     "환영",
+     "파괴",
+     "피를 부르는 투구",
+     "신앙",
+     "피를 부르는 흉갑",
+     "피를 부르는 망토"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 43,
+    "grade": "Rare",
+    "names": [
+     "케르논",
+     "다나르",
+     "네이켈",
+     "쿠타르",
+     "코린",
+     "티간트",
+     "아에드",
+     "라지트",
+     "발그",
+     "란나르"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 39,
+    "grade": "Legend",
+    "names": [
+     "신전 수호자",
+     "실리주의자",
+     "속삭이는 망각"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 38,
+    "grade": "Rare",
+    "names": [
+     "떠돌이",
+     "장인"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 36,
+    "grade": "Legend",
+    "names": [
+     "붉은 강옥"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 34,
+    "grade": "Legend",
+    "names": [
+     "원로",
+     "유물 발견자",
+     "방위병"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 33,
+    "grade": "Rare",
+    "names": [
+     "유성",
+     "광명",
+     "침입자"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 30,
+    "grade": "Rare",
+    "names": [
+     "빛나는 오리하르콘 투구",
+     "빛나는 오리하르콘 흉갑",
+     "빛나는 오리하르콘 망토"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 28,
+    "grade": "Rare",
+    "names": [
+     "천공",
+     "혼돈",
+     "전선"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 23,
+    "grade": "Rare",
+    "names": [
+     "비오는 숲",
+     "폭풍"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 22,
+    "grade": "Common",
+    "names": [
+     "대지"
+    ],
+    "stoneSlots": 1
+   },
+   {
+    "level": 20,
+    "grade": "Common",
+    "names": [
+     "강가",
+     "환몽",
+     "오리하르콘 투구",
+     "오리하르콘 흉갑",
+     "오리하르콘 망토"
+    ],
+    "stoneSlots": 1
+   },
+   {
+    "level": 15,
+    "grade": "Common",
+    "names": [
+     "잊혀진 투구",
+     "그늘",
+     "잊혀진 흉갑",
+     "잊혀진 망토"
+    ],
+    "stoneSlots": 1
+   }
+  ],
+  "acc": [
+   {
+    "level": 134,
+    "grade": "Epic",
+    "names": [
+     "빛나는 멸룡왕"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 128,
+    "grade": "Epic",
+    "names": [
+     "멸룡왕",
+     "용암 심장",
+     "가디언 친위대장",
+     "아칸 친위대장"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 114,
+    "grade": "Epic",
+    "names": [
+     "빛나는 기룡왕"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 108,
+    "grade": "Epic",
+    "names": [
+     "기룡왕",
+     "가디언 군단장",
+     "아칸 군단장",
+     "침식된 잔영"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 108,
+    "grade": "Unique",
+    "names": [
+     "빛나는 적룡왕",
+     "아티엘"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 102,
+    "grade": "Unique",
+    "names": [
+     "적룡왕"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 100,
+    "grade": "Unique",
+    "names": [
+     "빛나는 마룡왕",
+     "흩어진 광휘",
+     "비상하는 데바"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 98,
+    "grade": "Epic",
+    "names": [
+     "고대 정령",
+     "루드라"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 94,
+    "grade": "Unique",
+    "names": [
+     "마룡왕",
+     "침식"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 92,
+    "grade": "Unique",
+    "names": [
+     "빛나는 암룡왕",
+     "고뇌하는 바카르마"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 88,
+    "grade": "Unique",
+    "names": [
+     "수호신장 나흐마"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 87,
+    "grade": "Unique",
+    "names": [
+     "가디언 천부장",
+     "아칸 천부장"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 86,
+    "grade": "Unique",
+    "names": [
+     "암룡왕"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 84,
+    "grade": "Unique",
+    "names": [
+     "빛나는 흑룡왕",
+     "분노한 크로메데",
+     "심연",
+     "비상하는 데바"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 80,
+    "grade": "Unique",
+    "names": [
+     "구원",
+     "저주"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 78,
+    "grade": "Unique",
+    "names": [
+     "흑룡왕"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 77,
+    "grade": "Unique",
+    "names": [
+     "가디언 백부장",
+     "아칸 백부장"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 76,
+    "grade": "Unique",
+    "names": [
+     "빛나는 건룡왕",
+     "아울라무스"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 75,
+    "grade": "Unique",
+    "names": [
+     "가르투아",
+     "신비",
+     "비탄"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 74,
+    "grade": "Unique",
+    "names": [
+     "아그로"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 74,
+    "grade": "Legend",
+    "names": [
+     "드라마타",
+     "임계"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 70,
+    "grade": "Unique",
+    "names": [
+     "건룡왕",
+     "카이라"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 68,
+    "grade": "Unique",
+    "names": [
+     "베르크"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 67,
+    "grade": "Unique",
+    "names": [
+     "가디언 십부장",
+     "아칸 십부장"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 67,
+    "grade": "Legend",
+    "names": [
+     "타락한 심판관",
+     "야성",
+     "무르트",
+     "검은 발톱",
+     "로탄"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 65,
+    "grade": "Unique",
+    "names": [
+     "정복"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 60,
+    "grade": "Unique",
+    "names": [
+     "몰락한 고대신",
+     "달인",
+     "타르탄",
+     "카샤파",
+     "군단장 라그타"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 59,
+    "grade": "Legend",
+    "names": [
+     "신성한 협곡",
+     "불굴",
+     "풍림"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 56,
+    "grade": "Legend",
+    "names": [
+     "베레놈",
+     "비고르",
+     "츠바인",
+     "이게티스",
+     "수페르비아",
+     "멜트림",
+     "니호그",
+     "크티마",
+     "마이노",
+     "람푸스",
+     "파르곤",
+     "발라크",
+     "레눌프",
+     "하르칸",
+     "글레이시아",
+     "피오스",
+     "바투",
+     "브란트",
+     "불라간",
+     "그림니르"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 55,
+    "grade": "Unique",
+    "names": [
+     "용기"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 54,
+    "grade": "Legend",
+    "names": [
+     "밀약",
+     "순례자",
+     "해방자"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 52,
+    "grade": "Legend",
+    "names": [
+     "달인"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 51,
+    "grade": "Legend",
+    "names": [
+     "분열",
+     "라크슈미",
+     "사라스와티",
+     "번뇌"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 50,
+    "grade": "Unique",
+    "names": [
+     "평정"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 49,
+    "grade": "Legend",
+    "names": [
+     "서약",
+     "심판관"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 46,
+    "grade": "Legend",
+    "names": [
+     "장인"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 44,
+    "grade": "Legend",
+    "names": [
+     "맹세"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 39,
+    "grade": "Legend",
+    "names": [
+     "별빛"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 38,
+    "grade": "Rare",
+    "names": [
+     "황혼",
+     "장인"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 34,
+    "grade": "Legend",
+    "names": [
+     "제의"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 33,
+    "grade": "Rare",
+    "names": [
+     "매혹"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 31,
+    "grade": "Rare",
+    "names": [
+     "산들바람",
+     "쫓는 자"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 30,
+    "grade": "Rare",
+    "names": [
+     "빛나는 루비 목걸이",
+     "빛나는 다이아몬드 귀걸이",
+     "빛나는 사파이어 반지"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 28,
+    "grade": "Rare",
+    "names": [
+     "신념"
+    ],
+    "stoneSlots": 2
+   },
+   {
+    "level": 22,
+    "grade": "Common",
+    "names": [
+     "희생"
+    ],
+    "stoneSlots": 1
+   },
+   {
+    "level": 20,
+    "grade": "Common",
+    "names": [
+     "루비 목걸이",
+     "다이아몬드 귀걸이",
+     "사파이어 반지"
+    ],
+    "stoneSlots": 1
+   },
+   {
+    "level": 14,
+    "grade": "Common",
+    "names": [
+     "새벽",
+     "옛 용병단장"
+    ],
+    "stoneSlots": 1
+   }
+  ],
+  "brooch": [
+   {
+    "level": 118,
+    "grade": "Epic",
+    "names": [
+     "델트라스"
+    ],
+    "stoneSlots": 5
+   },
+   {
+    "level": 112,
+    "grade": "Unique",
+    "names": [
+     "칼드릭스",
+     "델트라스"
+    ],
+    "stoneSlots": 4
+   },
+   {
+    "level": 106,
+    "grade": "Legend",
+    "names": [
+     "순례자",
+     "해방자"
+    ],
+    "stoneSlots": 3
+   },
+   {
+    "level": 50,
+    "grade": "Rare",
+    "names": [
+     "탐험가"
+    ],
+    "stoneSlots": 2
+   }
+  ],
+  "belt": [
+   {
+    "level": 76,
+    "grade": "Epic",
+    "names": [
+     "고결",
+     "계시",
+     "격전"
+    ],
+    "stoneSlots": 0
+   },
+   {
+    "level": 65,
+    "grade": "Unique",
+    "names": [
+     "고결",
+     "계시",
+     "격전"
+    ],
+    "stoneSlots": 0
+   },
+   {
+    "level": 36,
+    "grade": "Legend",
+    "names": [
+     "고결",
+     "계시",
+     "격전"
+    ],
+    "stoneSlots": 0
+   },
+   {
+    "level": 13,
+    "grade": "Rare",
+    "names": [
+     "고결",
+     "계시",
+     "격전"
+    ],
+    "stoneSlots": 0
+   }
+  ],
+  "pendant": [
+   {
+    "level": 65,
+    "grade": "Unique",
+    "names": [
+     "드라코닉 펜던트"
+    ],
+    "stoneSlots": 0
+   },
+   {
+    "level": 36,
+    "grade": "Legend",
+    "names": [
+     "드라코닉 펜던트"
+    ],
+    "stoneSlots": 0
+   },
+   {
+    "level": 13,
+    "grade": "Rare",
+    "names": [
+     "드라코닉 펜던트"
+    ],
+    "stoneSlots": 0
+   }
+  ],
+  "rune": [
+   {
+    "level": 40,
+    "grade": "Special",
+    "names": [
+     "격돌",
+     "전념"
+    ],
+    "stoneSlots": 0
+   }
+  ]
+ }
+}

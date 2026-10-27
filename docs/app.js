@@ -6,6 +6,8 @@
   var DATA_URL = "./data/all.json";
   var MANUAL_URL = "./manual.json";
   var ARCANA_URL = "./data/arcana.json";
+  var ILV_URL = "./data/ilv.json";       // 시뮬 상세 (수동 갱신, 캐릭터별)
+  var TIERS_URL = "./data/tiers.json";   // 인벤 DB 단계 테이블
   var app = document.getElementById("app");
   var metaLine = document.getElementById("metaLine");
   var toggle = document.getElementById("viewToggle");
@@ -22,6 +24,8 @@
     potEdit: false,                           // 잠재력 편집 모드
     wingEdit: false,                          // 날개 편집 모드
     wings: [],                                // 날개 목록 (manual.json wings)
+    ilv: {},                                  // 시뮬 상세 (ilv.json characters)
+    tiers: {},                                // 인벤 단계 테이블 (tiers.json families)
   };
 
   // dow: 0=일 … 3=수 … 6=토 / hour: 리셋 시각(KST). 그 시각을 지나면 초기화.
@@ -236,12 +240,16 @@
     }),
     fetch(MANUAL_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
     fetch(ARCANA_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
+    fetch(ILV_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
+    fetch(TIERS_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
   ]).then(function (res) {
     STATE.data = res[0];
     STATE.manual = (res[1] && res[1].characters) || {};
     STATE.wings = (res[1] && res[1].wings) || [];
     STATE.arcana = (res[2] && res[2].characters) || {};
     STATE.arcanaGeneratedAt = res[2] && res[2].generatedAt || null;
+    STATE.ilv = (res[3] && res[3].characters) || {};
+    STATE.tiers = (res[4] && res[4].families) || {};
     pruneOldChecks();
     if (!STATE.sel && STATE.data.characters[0]) STATE.sel = STATE.data.characters[0].key;
     render();
@@ -357,7 +365,7 @@
         " 오른쪽 = 4단계까지 <b>남은 재화</b>를 티어별로 합산 (단계 상승 비용 — 영웅 2·4·6·8, 유일 1·2·3·4).";
     else if (tab === "wing")
       note.innerHTML = "보유 날개의 <b>강화 수치 합</b>이 아이템 레벨에 그대로 더해집니다 (강화 1 = 템렙 1). " +
-        "<b>·</b> 미보유 · <b>0</b> 보유(미강화). 맨 윗줄 = 날개 템렙 합 (시뮬 탭에서 사용).";
+        "<b>·</b> 미보유 · <b>0</b> 보유(미강화) · <span style='color:var(--muted-2)'>10</span> 최대 강화(회색). 맨 윗줄 = 날개 템렙 합 (시뮬 탭에서 사용).";
     else if (tab === "soul")
       note.innerHTML = "영혼각인(방어구 subStats)은 <b>수동 갱신</b>입니다. [상세 갱신] → GitHub Actions 에서 Run workflow. " +
         "머리행 구분이 해당 부위에 각인돼 있으면 <b>O</b>. " +
@@ -695,15 +703,23 @@
   function wingGradeCls(g) {
     return { "유일": "gcol-unique", "전승": "wg-legend", "희귀": "wg-rare" }[g] || "gcol-other";
   }
+  // 등급 내림차순 (같은 등급은 엑셀 순서 유지)
+  var WING_RANK = { "유일": 0, "전승": 1, "희귀": 2, "일반": 3 };
+  function sortedWings() {
+    return STATE.wings.map(function (w, i) { return { w: w, i: i }; }).sort(function (a, b) {
+      var ra = WING_RANK[a.w.grade], rb = WING_RANK[b.w.grade];
+      return (ra == null ? 9 : ra) - (rb == null ? 9 : rb) || a.i - b.i;
+    }).map(function (x) { return x.w; });
+  }
   function wingTable(chars) {
     var edit = STATE.wingEdit;
-    var cols = [{ label: "등급", cls: "chk" }, { label: "날개", cls: "l wname" }];
+    var cols = [{ label: "등급", cls: "chk" }, { label: "날개", cls: "l wname" }, { label: "강화효과", cls: "l weff" }];
     chars.forEach(function (c) { cols.push({ label: c.label || c.profile.name, cls: "sm" }); });
 
     var t = el("table", "grid" + (edit ? " edit" : ""));
     t.appendChild(makeCols(cols));
     var thead = el("thead");
-    thead.appendChild(groupRow([{ span: 2 },
+    thead.appendChild(groupRow([{ span: 3 },
       { span: chars.length, label: "캐릭터별 강화 수치" + (edit ? " (수정 중)" : ""), grp: true }]));
     thead.appendChild(headerRow(cols));
     t.appendChild(thead);
@@ -712,13 +728,15 @@
     var sum = el("tr", "wing-sum");
     sum.appendChild(td("", "chk"));
     sum.appendChild(td("날개 템렙 합", "l"));
+    sum.appendChild(td("", "l"));
     chars.forEach(function (c) { sum.appendChild(td("<b>" + N(wingTotal(c)) + "</b>", "num sm")); });
     tb.appendChild(sum);
 
-    STATE.wings.forEach(function (w) {
+    sortedWings().forEach(function (w) {
       var tr = el("tr");
       tr.appendChild(td(esc(w.grade), "chk " + wingGradeCls(w.grade)));
-      tr.appendChild(td(esc(w.name), "l"));
+      tr.appendChild(td(esc(w.name), "l", w.name));
+      tr.appendChild(td(esc(w.effect || ""), "l weff", w.effect || ""));
       chars.forEach(function (c) {
         var v = getWing(c, w.name);
         if (edit) {
@@ -729,7 +747,7 @@
           tr.appendChild(cell);
         } else {
           tr.appendChild(td(v == null ? '<span class="soul-off">·</span>' : String(v),
-            "num sm" + (v === 10 ? " wg-max" : v === 0 ? " wg-zero" : "")));
+            "num sm" + (v === 10 ? " wg-max" : "")));
         }
       });
       tb.appendChild(tr);
@@ -1012,29 +1030,54 @@
      템렙 = Σ(기본레벨 + 강화 + 돌파×5 + 마석 + 신석) + 데바니온 노드 + 날개 강화 합 (+ 보정)
      마석/데바니온: 흰1 · 초록2 · 파랑3 · 노랑4 / 신석: 초록1 · 파랑2
      API 등급명: Common=흰 · Rare=초록 · Legend(전승)=파랑 · Unique(유일)=노랑
+     상세(기본레벨·마석·노드 등급)는 ilv.json (수동 갱신), 단계 목록은 tiers.json (인벤 DB) + 착용템.
      ===================================================================== */
   var ILV_W = { Common: 1, Rare: 2, Legend: 3, Unique: 4 };
   var GOD_W = { Rare: 1, Legend: 2 };
   var STONE_MID = 2.5; // 시뮬에서 새로 바꾼 아이템의 마석 1줄 = 중간값
   var GRADE_KO = { Epic: "영웅", Unique: "유일", Legend: "전승", Rare: "희귀", Special: "특별", Common: "일반" };
   var SIM_SLOT_KO = { Amulet: "아뮬렛", Seal1: "인장1", Seal2: "인장2" };
+  // 등급별 강화/돌파 상한 기본값 (착용템 실측값이 있으면 그걸 우선)
+  var EN_DEFAULT = {
+    gear: { Epic: [20, 5], Unique: [15, 5], Legend: [15, 5], Rare: [10, 0] },
+    belt: { Epic: [10, 0], Unique: [10, 0], Legend: [10, 0], Rare: [10, 0] },
+    pendant: { Unique: [20, 0], Legend: [15, 0], Rare: [10, 0] },
+    rune: { Special: [10, 0] },
+    arcana: { Unique: [5, 0], Epic: [5, 0] },
+  };
 
   function stoneSum(e) { return (e.stones || []).reduce(function (s, g) { return s + (ILV_W[g] || 0); }, 0); }
   function godSum(e) { return (e.godStones || []).reduce(function (s, g) { return s + (GOD_W[g] || 0); }, 0); }
   function itemIlv(e) {
     return (e.baseLevel || 0) + (e.enchant || 0) + 5 * (e.exceed || 0) + stoneSum(e) + godSum(e);
   }
+  // 현재 장비(all.json, 매일) + 상세(ilv.json). 상세 수집 이후 아이템이 바뀐 슬롯은 stale.
+  function ilvEquip(c) {
+    var det = (STATE.ilv[c.key] || {}).items || {};
+    return (c.equipment || []).map(function (e) {
+      var d = det[e.slot];
+      var x = {};
+      for (var k in e) x[k] = e[k];
+      if (d && d.name === e.name) {
+        ["baseLevel", "maxEnchant", "maxExceed", "stones", "stoneSlots", "godStones"].forEach(function (k) { x[k] = d[k]; });
+      } else {
+        x.stale = true; x.baseLevel = null; x.stones = []; x.godStones = [];
+      }
+      return x;
+    });
+  }
   function daevIlv(c) {
-    var g = (c.daevanion || {}).nodeGrades;
-    if (!g) return null;
-    return Object.keys(g).reduce(function (s, k) { return s + (ILV_W[k] || 0) * g[k]; }, 0);
+    var det = STATE.ilv[c.key];
+    if (!det || !det.nodeGrades) return null;
+    var g = det.nodeGrades;
+    var v = Object.keys(g).reduce(function (s, k) { return s + (ILV_W[k] || 0) * g[k]; }, 0);
+    // 상세 수집 이후 새로 연 노드는 흰색(+1)으로 가정
+    var extra = ((c.daevanion || {}).openNodeTotal || 0) - (det.openNodeTotal || 0);
+    return { value: v + Math.max(0, extra), extra: extra };
   }
-  function hasIlvDetail(c) {
-    return (c.equipment || []).some(function (e) { return e.baseLevel != null; }) && daevIlv(c) != null;
-  }
-  function calcIlv(c) {
-    var eq = c.equipment || [];
-    var r = { equip: 0, stones: 0, god: 0, daev: daevIlv(c) || 0, wing: wingTotal(c) };
+  function calcIlv(c, eq) {
+    var dv = daevIlv(c);
+    var r = { equip: 0, stones: 0, god: 0, daev: dv ? dv.value : 0, daevExtra: dv ? dv.extra : 0, wing: wingTotal(c) };
     eq.forEach(function (e) {
       r.equip += (e.baseLevel || 0) + (e.enchant || 0) + 5 * (e.exceed || 0);
       r.stones += stoneSum(e);
@@ -1044,14 +1087,18 @@
     return r;
   }
 
-  // 단계 테이블: 슬롯 계열별로 전 캐릭터 착용템에서 (기본레벨, 등급) 단계를 모음
+  // 단계 그룹: 무기(무기·가더) / 방어구 / 악세(목귀반팔) / 브로치·인장 / 허리띠·아뮬렛 / 펜던트 / 룬 / 아르카나
   function simFamily(slot) {
+    if (slot === "MainHand" || slot === "SubHand") return "weapon";
+    if (/^(Helmet|Shoulder|Torso|Pants|Gloves|Boots|Cape)$/.test(slot)) return "armor";
+    if (/^(Brooch|Seal)/.test(slot)) return "brooch";
     if (/^Arcana/.test(slot)) return "arcana";
     if (/^Rune/.test(slot)) return "rune";
     if (slot === "Belt" || slot === "Amulet") return "belt";
     if (slot === "Pendant") return "pendant";
-    return "gear"; // 무기/가더/방어구/악세서리 — 같은 단계면 레벨 동일
+    return "acc";
   }
+  function enFamily(fam) { return EN_DEFAULT[fam] ? fam : "gear"; }
   function tierPrefix(name) {
     var n = String(name || ""), i = n.lastIndexOf("의 ");
     return i > 0 ? n.slice(0, i) : n;
@@ -1061,25 +1108,47 @@
   function simTiers(chars) {
     if (TIER_CACHE && TIER_CACHE.src === STATE.data) return TIER_CACHE.t;
     var t = {};
+    function add(fam, lv, grade, name, o) {
+      var f = t[fam] || (t[fam] = {}), k = tierKey(lv, grade);
+      var x = f[k] || (f[k] = { key: k, level: lv, grade: grade, names: {}, maxEnchant: 0, maxExceed: 0, stoneSlots: 0, seen: false });
+      if (name) x.names[name] = 1;
+      if (o.seen) {
+        x.seen = true;
+        x.maxEnchant = Math.max(x.maxEnchant, o.maxEnchant || 0);
+        x.maxExceed = Math.max(x.maxExceed, o.maxExceed || 0);
+      }
+      x.stoneSlots = Math.max(x.stoneSlots, o.stoneSlots || 0);
+    }
+    Object.keys(STATE.tiers || {}).forEach(function (fam) {
+      (STATE.tiers[fam] || []).forEach(function (r) {
+        (r.names || []).forEach(function (n) { add(fam, r.level, r.grade, n, { stoneSlots: r.stoneSlots }); });
+      });
+    });
     chars.forEach(function (c) {
-      (c.equipment || []).forEach(function (e) {
+      ilvEquip(c).forEach(function (e) {
         if (e.baseLevel == null) return;
-        var fam = simFamily(e.slot), k = tierKey(e.baseLevel, e.grade);
-        var f = t[fam] || (t[fam] = {});
-        var x = f[k] || (f[k] = { key: k, level: e.baseLevel, grade: e.grade, names: {},
-          maxEnchant: 0, maxExceed: 0, stoneSlots: 0 });
-        x.names[tierPrefix(e.name)] = 1;
-        x.maxEnchant = Math.max(x.maxEnchant, e.maxEnchant || 0);
-        x.maxExceed = Math.max(x.maxExceed, e.maxExceed || 0);
-        x.stoneSlots = Math.max(x.stoneSlots, e.stoneSlots || (e.stones || []).length);
+        add(simFamily(e.slot), e.baseLevel, e.grade, tierPrefix(e.name), {
+          seen: true, maxEnchant: e.maxEnchant, maxExceed: e.maxExceed,
+          stoneSlots: e.stoneSlots || (e.stones || []).length });
       });
     });
     Object.keys(t).forEach(function (fam) {
-      t[fam] = Object.keys(t[fam]).map(function (k) { return t[fam][k]; })
-        .sort(function (a, b) { return b.level - a.level || String(a.grade).localeCompare(String(b.grade)); });
+      t[fam] = Object.keys(t[fam]).map(function (k) {
+        var x = t[fam][k];
+        if (!x.seen) {
+          var d = (EN_DEFAULT[enFamily(fam)] || {})[x.grade] || [0, 0];
+          x.maxEnchant = d[0]; x.maxExceed = d[1];
+        }
+        return x;
+      }).sort(function (a, b) { return b.level - a.level || String(a.grade).localeCompare(String(b.grade)); });
     });
     TIER_CACHE = { src: STATE.data, t: t };
     return t;
+  }
+  function tierLabel(x) {
+    var names = Object.keys(x.names);
+    return x.level + " · " + (GRADE_KO[x.grade] || x.grade) + " · " +
+      names.slice(0, 4).join("/") + (names.length > 4 ? " 외" + (names.length - 4) : "");
   }
 
   // 시뮬 입력값 (브라우저 저장, 캐릭터별)
@@ -1102,6 +1171,19 @@
     return i;
   }
 
+  function simRefreshBar(c) {
+    var det = STATE.ilv[c.key];
+    var bar = el("div", "detail-bar");
+    bar.innerHTML =
+      '<a class="refresh-btn" href="' + esc(actionsUrl("ilv.yml")) + '" target="_blank" rel="noopener">' +
+        esc(c.label) + " 상세 갱신 ↗</a>" +
+      '<span class="arc-upd">' + (det && det.updatedAt
+        ? "상세 수집 " + esc(fmtDateTime(det.updatedAt)) + " (" + esc(timeAgo(det.updatedAt)) + ")"
+        : "상세 미수집") +
+      " · Actions 에서 Run workflow → 캐릭터 <b>" + esc(c.label) + "</b> 선택 → 실행 (1~2분 뒤 새로고침)</span>";
+    return bar;
+  }
+
   function renderSimView(chars) {
     var box = el("div", "simview");
     var picker = el("div", "picker");
@@ -1113,48 +1195,60 @@
     box.appendChild(picker);
 
     var c = chars.filter(function (x) { return x.key === STATE.sel; })[0] || chars[0];
-    if (!hasIlvDetail(c)) {
-      box.appendChild(el("div", "empty", "이 캐릭터는 아이템 상세(기본레벨·마석·데바니온 노드)가 아직 수집되지 않았습니다. " +
-        "다음 자동 수집 후 사용할 수 있습니다."));
+    if (!STATE.ilv[c.key]) {
+      var emp = el("section", "cbox");
+      emp.innerHTML = cheadHtml(c) + '<p class="muted">이 캐릭터는 시뮬 상세(아이템 기본레벨·마석·데바니온 노드)가 아직 없습니다. 아래 버튼으로 한 번 받아주세요.</p>';
+      emp.appendChild(simRefreshBar(c));
+      box.appendChild(emp);
       return box;
     }
 
     var tiers = simTiers(chars);
+    var eqAll = ilvEquip(c);
+    var staleN = eqAll.filter(function (e) { return e.stale; }).length;
     var sim = getSim(c.key);
     sim.slots = sim.slots || {};
-    var cur = calcIlv(c);
+    var cur = calcIlv(c, eqAll);
     var actual = c.profile.itemLevel;
-    var offset = actual != null ? actual - cur.total : 0;
 
-    var simEquip = 0, simStones = 0, simGod = 0;
-    var rows = (c.equipment || []).map(function (e) {
+    var simEquip = 0, simStones = 0, simGod = 0, estTotal = 0;
+    var rows = eqAll.map(function (e) {
       var fam = simFamily(e.slot);
-      var curKey = tierKey(e.baseLevel, e.grade);
+      var list = tiers[fam] || [];
+      // 상세 없는(바뀐) 아이템은 이름 접두어로 단계 추정
+      var guess = e.stale ? list.filter(function (x) { return x.grade === e.grade && x.names[tierPrefix(e.name)]; })[0] : null;
+      var curKey = e.stale ? (guess ? guess.key : "") : tierKey(e.baseLevel, e.grade);
       var s = sim.slots[e.slot] || {};
       var k = s.k || curKey;
-      var tier = (tiers[fam] || []).filter(function (x) { return x.key === k; })[0];
-      var same = k === curKey;
+      var tier = list.filter(function (x) { return x.key === k; })[0];
+      var same = k === curKey && !e.stale;
       var maxEn = (same ? e.maxEnchant : tier && tier.maxEnchant) || e.maxEnchant || 20;
       var maxEx = (same ? e.maxExceed : tier && tier.maxExceed) || 0;
-      var lv = same ? e.baseLevel : tier ? tier.level : e.baseLevel;
+      var lv = same ? e.baseLevel : tier ? tier.level : 0;
       var en = Math.min(s.en != null ? s.en : (e.enchant || 0), maxEn);
       var ex = Math.min(s.ex != null ? s.ex : (e.exceed || 0), maxEx);
       if (ex > 0) en = maxEn; // 돌파는 최대 강화 이후
-      var lines = same ? null : (tier ? tier.stoneSlots : (e.stones || []).length);
+      var lines = same ? null : (tier ? (tier.stoneSlots || { Epic: 5, Unique: 4 }[tier.grade] || 0) : 0);
       var st = same ? stoneSum(e) : lines * STONE_MID;
       var god = godSum(e);
       var val = (lv || 0) + en + 5 * ex + st + god;
+      // 시뮬 미변경 기준값 (상세 없는 슬롯은 추정 단계 기준)
+      var def = !e.stale ? itemIlv(e) : guess ? guess.level + (e.enchant || 0) + 5 * (e.exceed || 0) +
+        (guess.stoneSlots || { Epic: 5, Unique: 4 }[guess.grade] || 0) * STONE_MID + god : 0;
+      estTotal += def;
       simEquip += (lv || 0) + en + 5 * ex; simStones += st; simGod += god;
       return { e: e, fam: fam, k: k, tier: tier, same: same, lv: lv, en: en, ex: ex,
-        maxEn: maxEn, maxEx: maxEx, st: st, lines: lines, val: val, cur: itemIlv(e),
-        grade: same ? e.grade : (tier ? tier.grade : e.grade) };
+        maxEn: maxEn, maxEx: maxEx, st: st, lines: lines, val: val,
+        cur: def, changed: k !== curKey || en !== (e.enchant || 0) || ex !== (e.exceed || 0) };
     });
 
     var simDaev = sim.daev != null ? sim.daev : cur.daev;
     var simWing = sim.wing != null ? sim.wing : cur.wing;
     var simTotal = simEquip + simStones + simGod + simDaev + simWing;
-    var simIlv = simTotal + offset;
-    var diff = simTotal - cur.total;
+    estTotal += cur.daev + cur.wing;
+    var offset = actual != null ? actual - estTotal : 0;
+    var diff = simTotal - estTotal;
+    var simIlv = (actual != null ? actual : estTotal) + diff;
 
     function update(fn) { fn(sim); saveSim(c.key, sim); render(); }
 
@@ -1164,14 +1258,21 @@
       '<div class="kpis">' +
         '<div class="kpi"><div class="k">현재 아이템 레벨</div><div class="v">' + N(actual) + "</div></div>" +
         '<div class="kpi"><div class="k">시뮬 아이템 레벨</div><div class="v">' + N(Math.round(simIlv)) +
-          (diff ? ' <span class="delta ' + (diff > 0 ? "up" : "down") + '">' + (diff > 0 ? "▲" : "▼") +
+          (Math.round(diff * 10) ? ' <span class="delta ' + (diff > 0 ? "up" : "down") + '">' + (diff > 0 ? "▲" : "▼") +
             N(Math.round(Math.abs(diff) * 10) / 10) + "</span>" : "") + "</div></div>" +
-        '<div class="kpi"><div class="k">공식 계산 / 보정</div><div class="v">' + N(cur.total) +
-          ' <small>' + (offset >= 0 ? "+" : "") + N(offset) + "</small></div></div>" +
+        '<div class="kpi"><div class="k">공식 계산 / 보정</div><div class="v">' + N(Math.round(estTotal)) +
+          ' <small>' + (offset >= 0 ? "+" : "") + N(Math.round(offset * 10) / 10) + (staleN ? " (추정)" : "") + "</small></div></div>" +
       "</div>";
     var reset = el("button", "refresh-btn", "현재 장비로 초기화");
     reset.addEventListener("click", function () { saveSim(c.key, {}); render(); });
     top.appendChild(reset);
+    top.appendChild(simRefreshBar(c));
+    if (staleN || cur.daevExtra) {
+      top.appendChild(el("p", "sim-warn",
+        (staleN ? "상세 수집 이후 바뀐 장비 " + staleN + "개는 이름으로 단계를 추정했습니다(마석 중간값). " : "") +
+        (cur.daevExtra ? "데바니온 노드가 상세 수집 이후 " + (cur.daevExtra > 0 ? "+" : "") + cur.daevExtra + "개 달라져 흰색(+1)으로 가정했습니다. " : "") +
+        "정확히 하려면 [상세 갱신]."));
+    }
     box.appendChild(top);
 
     // ---- 구성 (장비 외) ----
@@ -1198,8 +1299,8 @@
       simInput(simWing, 0, null, function (v) { update(function (s) { s.wing = v; }); }));
     comp.appendChild(ct);
     comp.appendChild(el("p", "muted sim-note",
-      "보정 = 실제 템렙 − 공식 계산값 (출처 미확인 항목). 시뮬 템렙 = 시뮬 계산값 + 보정. " +
-      "단계를 바꾼 부위의 마석은 줄 수 × " + STONE_MID + " (중간값)으로 계산."));
+      "보정 = 실제 템렙 − 공식 계산값 (출처 미확인 항목). 시뮬 템렙 = 현재 템렙 + 증감. " +
+      "단계를 바꾼 부위의 마석은 줄 수 × " + STONE_MID + " (중간값). 단계 목록 = 인벤 DB + 우리 캐릭 착용템."));
     box.appendChild(comp);
 
     // ---- 부위별 ----
@@ -1215,16 +1316,15 @@
     var tb = el("tbody");
     rows.forEach(function (r) {
       var e = r.e;
-      var tr = el("tr", r.same && r.en === (e.enchant || 0) && r.ex === (e.exceed || 0) ? "" : "sim-changed");
+      var tr = el("tr", r.changed ? "sim-changed" : "");
       tr.appendChild(td(esc(SIM_SLOT_KO[e.slot] || e.slotKo || e.slot), "l cls"));
       tr.appendChild(td('<span class="' + gcol(e.grade) + '">' + esc(e.name || "–") + "</span>" +
-        ' <small class="muted">' + N(e.baseLevel) + " · +" + (e.enchant || 0) + (e.exceed ? " · " + e.exceed + "돌" : "") + "</small>",
-        "l", e.name));
+        ' <small class="muted">' + (e.stale ? "상세없음" : N(e.baseLevel)) + " · +" + (e.enchant || 0) +
+        (e.exceed ? " · " + e.exceed + "돌" : "") + "</small>", "l", e.name));
 
       var tcell = td("", "l");
-      var opts = (tiers[r.fam] || []).map(function (x) {
-        return [x.key, x.level + " · " + (GRADE_KO[x.grade] || x.grade) + " · " + Object.keys(x.names).join("/")];
-      });
+      var opts = (tiers[r.fam] || []).map(function (x) { return [x.key, tierLabel(x)]; });
+      if (!r.tier) opts.unshift([r.k, "– 단계 선택 –"]);
       tcell.appendChild(mkSelect("sim-inp sim-tier", opts, r.k, function (val) {
         update(function (s) { s.slots[e.slot] = { k: val }; });
       }));
@@ -1244,7 +1344,7 @@
       tr.appendChild(xcell);
       tr.appendChild(td(r.same ? N(r.st) : r.lines + "줄≈" + r.st, "num sm", r.same ? (e.stones || []).join(", ") : "중간값"));
       tr.appendChild(td(N(Math.round(r.val * 10) / 10), "num sm"));
-      var d = Math.round((r.val - r.cur) * 10) / 10;
+      var d = r.cur == null ? null : Math.round((r.val - r.cur) * 10) / 10;
       tr.appendChild(td(d ? deltaHtml(d) : "", "num sm"));
       tb.appendChild(tr);
     });

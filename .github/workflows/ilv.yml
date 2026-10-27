@@ -1,0 +1,53 @@
+name: 시뮬 상세 갱신 (수동)
+
+# 아이템레벨 시뮬용 상세(아이템 기본레벨·마석·신석, 데바니온 노드 등급)를 캐릭터 지정으로 수집합니다.
+# GitHub 저장소 → Actions 탭 → 이 워크플로 선택 → "Run workflow" → 캐릭터 선택 후 실행.
+on:
+  workflow_dispatch:
+    inputs:
+      label:
+        description: "캐릭터"
+        type: choice
+        default: all
+        options:
+          - all
+          - 감자밍
+          - 감자미
+          - 잔열
+          - 넌강해졌다
+          - 괌자
+          - 고구미
+          - 크로매데
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  ilv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 시뮬 상세 수집
+        run: python scripts/fetch_ilv.py --config characters.json --out docs/data --label "${{ inputs.label }}"
+
+      - name: 커밋
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/ilv.json
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "chore: 시뮬 상세 갱신 (${{ inputs.label }}, $(date -u +%Y-%m-%dT%H:%MZ))"
+            git pull --rebase
+            git push
+          fi

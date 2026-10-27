@@ -88,6 +88,7 @@ table.grid col.sm   { width: 66px; }
 table.grid col.chk  { width: 46px; }
 table.grid col.med  { width: 92px; }
 table.grid col.wname { width: 170px; }
+table.grid col.weff { width: 150px; }
 table.grid col.sname { width: 250px; }
 table.grid col.stier { width: 250px; }
 table.grid th.sm,  table.grid td.sm,
@@ -328,8 +329,8 @@ td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
    ========================================================= */
 .wg-legend { color: #2f6ef0; }
 .wg-rare { color: #12915a; }
-table.grid td.wg-max { color: var(--text); }
-table.grid td.wg-zero { color: var(--muted-2); font-weight: 600; }
+table.grid td.wg-max { color: var(--muted-2); font-weight: 600; }
+table.grid td.weff { font-size: 12px; color: var(--muted); }
 table.grid tr.wing-sum td { background: var(--accent-soft); font-weight: 800; }
 table.grid td.pt-edit select.wg-sel { font-weight: 800; }
 
@@ -354,3 +355,5 @@ select.sim-inp.sim-tier { width: 100%; text-align: left; cursor: pointer; }
 table.grid.sim-grid td { padding-top: 5px; padding-bottom: 5px; }
 table.grid.sim-grid td small { font-weight: 500; }
 table.grid tr.sim-changed td { background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+.sim-warn { font-size: 12px; color: #b4570c; margin: 10px 0 0; }
+.simview .detail-bar b { color: var(--text); }

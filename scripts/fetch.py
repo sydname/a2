@@ -140,45 +140,7 @@ def summarize_exceed(equip_by_slot, slot_set):
     return {"total": total, "count": len(slots), "slots": slots}
 
 
-def fetch_ilv_details(params, referer, equip_list, daev_boards):
-    """아이템레벨 계산용 상세: 아이템별 기본레벨/마석/신석, 데바니온 노드 등급 개수.
-    실패한 항목은 빠진 채로 반환 (사이트는 있는 값만으로 계산)."""
-    items = {}
-    for it in equip_list:
-        p = dict(params, id=it.get("id"), enchantLevel=it.get("enchantLevel") or 0,
-                 slotPos=it.get("slotPos"))
-        try:
-            r = http_get_json("/api/character/equipment/item", p, referer, retries=2)
-            items[it.get("slotPosName")] = {
-                "baseLevel": r.get("level"),
-                "maxEnchant": r.get("maxEnchantLevel"),
-                "maxExceed": r.get("maxExceedEnchantLevel"),
-                "stones": [m.get("grade") for m in (r.get("magicStoneStat") or [])],
-                "stoneSlots": r.get("magicStoneSlotCount"),
-                "godStones": [g.get("grade") for g in (r.get("godStoneStat") or [])],
-            }
-        except Exception as e:  # noqa: BLE001
-            print("    [ilv] %s 상세 실패: %s" % (it.get("slotPosName"), e), file=sys.stderr)
-        time.sleep(random.uniform(0.2, 0.5))
-    nodes = {}
-    for b in daev_boards:
-        if not b.get("open"):
-            continue
-        try:
-            r = http_get_json("/api/character/daevanion/detail",
-                              dict(params, boardId=b.get("id")), referer, retries=2)
-        except Exception as e:  # noqa: BLE001
-            print("    [ilv] 데바니온 %s 실패: %s" % (b.get("name"), e), file=sys.stderr)
-            return items, None
-        for n in r.get("nodeList") or []:
-            g = n.get("grade")
-            if n.get("open") and g and g != "None":
-                nodes[g] = nodes.get(g, 0) + 1
-        time.sleep(random.uniform(0.2, 0.5))
-    return items, nodes
-
-
-def build_record(entry, info, equip, ilv=None):
+def build_record(entry, info, equip):
     profile = info.get("profile", {}) or {}
     stat_list = (info.get("stat", {}) or {}).get("statList", []) or []
     equip_list = (equip.get("equipment", {}) or {}).get("equipmentList", []) or []
@@ -201,7 +163,6 @@ def build_record(entry, info, equip, ilv=None):
             "exceed": it.get("exceedLevel"), "icon": it.get("icon"),
             "isArcana": bool(ARCANA_RE.match(name)),
         })
-        equipment[-1].update((ilv or ({}, None))[0].get(name) or {})
     arcana = [e for e in equipment if e["isArcana"]]
 
     weapon = summarize_exceed(equip_by_slot, WEAPON_SLOTS)
@@ -240,7 +201,6 @@ def build_record(entry, info, equip, ilv=None):
         "totalBoards": len(daev_boards),
         "openNodeTotal": sum(int(b.get("openNodeCount") or 0) for b in daev_boards),
         "nodeTotal": sum(int(b.get("totalNodeCount") or 0) for b in daev_boards),
-        "nodeGrades": (ilv or ({}, None))[1],
         "basic": sum(board_nodes_by_name(n) for n in DAEV_BASIC_NAMES),
         "arielle": board_nodes_by_name("아리엘"),
         "markutan": board_nodes_by_name("마르쿠탄"),
@@ -397,10 +357,7 @@ def main():
             info = http_get_json("/api/character/info", params, referer)
             time.sleep(random.uniform(0.8, 1.8))
             equip = http_get_json("/api/character/equipment", params, referer)
-            ilv = fetch_ilv_details(params, referer,
-                                    (equip.get("equipment", {}) or {}).get("equipmentList", []) or [],
-                                    (info.get("daevanion", {}) or {}).get("boardList", []) or [])
-            rec = build_record(entry, info, equip, ilv)
+            rec = build_record(entry, info, equip)
             rec = merge_history(rec, prev, keep)
             rec["updatedAt"] = dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
             rec["ok"] = True
