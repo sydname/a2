@@ -87,6 +87,9 @@ table.grid col.num  { width: 92px; }
 table.grid col.sm   { width: 66px; }
 table.grid col.chk  { width: 46px; }
 table.grid col.med  { width: 92px; }
+table.grid col.wname { width: 170px; }
+table.grid col.sname { width: 250px; }
+table.grid col.stier { width: 250px; }
 table.grid th.sm,  table.grid td.sm,
 table.grid th.med, table.grid td.med { padding-left: 6px; padding-right: 6px; }
 table.grid th.chk, table.grid td.chk { padding-left: 4px; padding-right: 4px; text-align: center; }
@@ -319,3 +322,35 @@ td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
   .kpis { grid-template-columns: repeat(2, 1fr); }
   .drow { grid-template-columns: 80px 1fr 78px; }
 }
+
+/* =========================================================
+   날개 표
+   ========================================================= */
+.wg-legend { color: #2f6ef0; }
+.wg-rare { color: #12915a; }
+table.grid td.wg-max { color: var(--text); }
+table.grid td.wg-zero { color: var(--muted-2); font-weight: 600; }
+table.grid tr.wing-sum td { background: var(--accent-soft); font-weight: 800; }
+table.grid td.pt-edit select.wg-sel { font-weight: 800; }
+
+/* =========================================================
+   시뮬 뷰
+   ========================================================= */
+.simview { display: grid; gap: 16px; }
+.simview .picker { margin-bottom: 2px; }
+.sim-top .refresh-btn { margin-top: 12px; }
+.sim-comp { border-collapse: collapse; font-size: 13px; width: 100%; max-width: 520px; }
+.sim-comp td { padding: 6px 8px; border-bottom: 1px solid var(--border); text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+.sim-comp td.l { text-align: left; font-weight: 600; color: var(--muted); }
+.sim-comp td.d { width: 70px; }
+.sim-note { font-size: 11.5px; margin: 10px 0 0; line-height: 1.6; }
+.sim-inp {
+  width: 64px; border: 1px solid var(--border); border-radius: 6px; padding: 4px 6px;
+  font: inherit; font-size: 12.5px; font-variant-numeric: tabular-nums; text-align: right;
+  background: var(--surface-2); color: var(--text);
+}
+.sim-inp:focus { outline: 2px solid var(--accent); outline-offset: 0; background: #fff; }
+select.sim-inp.sim-tier { width: 100%; text-align: left; cursor: pointer; }
+table.grid.sim-grid td { padding-top: 5px; padding-bottom: 5px; }
+table.grid.sim-grid td small { font-weight: 500; }
+table.grid tr.sim-changed td { background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }

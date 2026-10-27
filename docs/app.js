@@ -1,5 +1,5 @@
 /* 아이온 2 캐릭터 트래커 — 프론트엔드 (외부 라이브러리 없음)
-   표(기본관리 / 강화관리) + 카드(캐릭터 선택형) 두 뷰. 표가 기본. */
+   표(기본관리 / 강화관리) + 카드(캐릭터 선택형) + 시뮬(아이템레벨) 세 뷰. 표가 기본. */
 (function () {
   "use strict";
 
@@ -16,10 +16,12 @@
     arcana: {},           // 아르카나 상세 (arcana.json)
     arcanaGeneratedAt: null,
     view: lsGet("aion2.view") || "table",
-    tab: lsGet("aion2.tab") || "basic",       // basic | enhance | bt | pot | soul
+    tab: lsGet("aion2.tab") || "basic",       // basic | enhance | bt | pot | soul | wing
     sel: lsGet("aion2.sel") || null,          // 카드뷰 선택 캐릭터 key
     cardTab: lsGet("aion2.cardtab") || "gear", // gear | arcana
     potEdit: false,                           // 잠재력 편집 모드
+    wingEdit: false,                          // 날개 편집 모드
+    wings: [],                                // 날개 목록 (manual.json wings)
   };
 
   // dow: 0=일 … 3=수 … 6=토 / hour: 리셋 시각(KST). 그 시각을 지나면 초기화.
@@ -98,12 +100,13 @@
 
   // ---------- Firebase (선택) — 없으면 localStorage 로 폴백 ----------
   var FB_CFG = window.AION2_FIREBASE || null;
-  var fbdb = null, fbChecks = {}, fbOde = {}, fbPot = {};
+  var fbdb = null, fbChecks = {}, fbOde = {}, fbPot = {}, fbWing = {};
   function fbActive() { return !!fbdb; }
   function skipRerender() {
     var a = document.activeElement;
     return a && a.classList && (a.classList.contains("ode-inp") ||
-      a.classList.contains("pv") || a.classList.contains("pt-sel"));
+      a.classList.contains("pv") || a.classList.contains("pt-sel") ||
+      a.classList.contains("wg-sel") || a.classList.contains("sim-inp"));
   }
   function fbInit() {
     if (!FB_CFG || !window.firebase || !FB_CFG.databaseURL) return;
@@ -120,6 +123,10 @@
       });
       fbdb.ref("pot").on("value", function (s) {
         fbPot = s.val() || {};
+        if (STATE.data && !skipRerender()) render();
+      });
+      fbdb.ref("wing").on("value", function (s) {
+        fbWing = s.val() || {};
         if (STATE.data && !skipRerender()) render();
       });
       // 지난 기간 체크 데이터 정리 (best effort)
@@ -148,6 +155,30 @@
     var all = fbPotChar(charKey);
     all[slot] = payload;
     lsSet(potLsKey(charKey), JSON.stringify(all));
+  }
+
+  // 날개 강화 수치: Firebase 우선, 없으면 manual.json. 값 = 숫자(강화) / "-"(미보유)
+  function wingSafe(name) { return String(name).replace(/[.#$\[\]\/]/g, "_"); }
+  function wingLsKey(charKey) { return "aion2.wing." + charKey; }
+  function fbWingChar(charKey) {
+    if (fbActive()) return fbWing[charKey] || {};
+    try { return JSON.parse(lsGet(wingLsKey(charKey)) || "{}"); } catch (e) { return {}; }
+  }
+  function getWing(c, name) {
+    var ov = fbWingChar(c.key)[wingSafe(name)];
+    if (ov != null) return ov === "-" ? null : Number(ov);
+    var v = (manualOf(c).wings || {})[name];
+    return v == null ? null : Number(v);
+  }
+  function setWing(charKey, name, v) {
+    var val = (v === "" || v == null) ? "-" : Number(v);
+    if (fbActive()) { fbdb.ref("wing/" + charKey + "/" + wingSafe(name)).set(val); return; }
+    var all = fbWingChar(charKey);
+    all[wingSafe(name)] = val;
+    lsSet(wingLsKey(charKey), JSON.stringify(all));
+  }
+  function wingTotal(c) {
+    return STATE.wings.reduce(function (s, w) { return s + (getWing(c, w.name) || 0); }, 0);
   }
 
   // field 는 CHECK_FIELDS 항목(객체). 항목마다 리셋 주기가 다름.
@@ -208,6 +239,7 @@
   ]).then(function (res) {
     STATE.data = res[0];
     STATE.manual = (res[1] && res[1].characters) || {};
+    STATE.wings = (res[1] && res[1].wings) || [];
     STATE.arcana = (res[2] && res[2].characters) || {};
     STATE.arcanaGeneratedAt = res[2] && res[2].generatedAt || null;
     pruneOldChecks();
@@ -243,7 +275,8 @@
     if (!chars.length) { app.innerHTML = '<div class="empty">characters.json 에 캐릭터를 추가하세요.</div>'; return; }
 
     app.innerHTML = "";
-    app.appendChild(STATE.view === "card" ? renderCardView(chars) : renderTableView(chars));
+    app.appendChild(STATE.view === "card" ? renderCardView(chars) :
+      STATE.view === "sim" ? renderSimView(chars) : renderTableView(chars));
   }
 
   /* =====================================================================
@@ -252,7 +285,7 @@
      ===================================================================== */
   var TABS = [
     ["basic", "기본"], ["enhance", "강화"], ["bt", "돌파"],
-    ["pot", "잠재력"], ["soul", "영혼각인"],
+    ["pot", "잠재력"], ["soul", "영혼각인"], ["wing", "날개"],
   ];
   var POT_SLOTS = BT_SLOTS; // 무기/가더/목/귀1/귀2/반1/반2/팔1/팔2/브1/브2
 
@@ -274,6 +307,7 @@
       tab === "bt" ? breakthroughTable(chars) :
       tab === "pot" ? potentialTable(chars) :
       tab === "soul" ? soulTable(chars) :
+      tab === "wing" ? wingTable(chars) :
       basicTable(chars)
     );
     box.appendChild(scroll);
@@ -288,6 +322,18 @@
         ? ("칸의 단계·티어를 바꾸면 즉시 저장됩니다 (" + (fbActive() ? "Firebase 동기화" : "이 브라우저") + ")")
         : "엑셀 기준값. 수정하려면 [정보 수정]"));
       box.appendChild(pbar);
+    }
+
+    if (tab === "wing") {
+      var wbar = el("div", "detail-bar pot-bar");
+      var wbtn = el("button", "refresh-btn" + (STATE.wingEdit ? " on" : ""),
+        STATE.wingEdit ? "편집 종료" : "정보 수정");
+      wbtn.addEventListener("click", function () { STATE.wingEdit = !STATE.wingEdit; render(); });
+      wbar.appendChild(wbtn);
+      wbar.appendChild(el("span", "arc-upd", STATE.wingEdit
+        ? ("칸의 강화 수치를 바꾸면 즉시 저장됩니다 (" + (fbActive() ? "Firebase 동기화" : "이 브라우저") + ")")
+        : "엑셀 날개 시트 기준값. 수정하려면 [정보 수정]"));
+      box.appendChild(wbar);
     }
 
     if (tab === "soul") {
@@ -309,6 +355,9 @@
     else if (tab === "pot")
       note.innerHTML = "왼쪽 = 부위별 잠재력 <b>단계</b>(0~4), 칸 색 = 티어 " + potLegendHtml() +
         " 오른쪽 = 4단계까지 <b>남은 재화</b>를 티어별로 합산 (단계 상승 비용 — 영웅 2·4·6·8, 유일 1·2·3·4).";
+    else if (tab === "wing")
+      note.innerHTML = "보유 날개의 <b>강화 수치 합</b>이 아이템 레벨에 그대로 더해집니다 (강화 1 = 템렙 1). " +
+        "<b>·</b> 미보유 · <b>0</b> 보유(미강화). 맨 윗줄 = 날개 템렙 합 (시뮬 탭에서 사용).";
     else if (tab === "soul")
       note.innerHTML = "영혼각인(방어구 subStats)은 <b>수동 갱신</b>입니다. [상세 갱신] → GitHub Actions 에서 Run workflow. " +
         "머리행 구분이 해당 부위에 각인돼 있으면 <b>O</b>. " +
@@ -640,6 +689,55 @@
     return t;
   }
 
+  // ---- 날개 (manual.json + Firebase 수정값) ----
+  var WING_OPTS = [["", "·"]];
+  for (var _w = 0; _w <= 10; _w++) WING_OPTS.push(["" + _w, "" + _w]);
+  function wingGradeCls(g) {
+    return { "유일": "gcol-unique", "전승": "wg-legend", "희귀": "wg-rare" }[g] || "gcol-other";
+  }
+  function wingTable(chars) {
+    var edit = STATE.wingEdit;
+    var cols = [{ label: "등급", cls: "chk" }, { label: "날개", cls: "l wname" }];
+    chars.forEach(function (c) { cols.push({ label: c.label || c.profile.name, cls: "sm" }); });
+
+    var t = el("table", "grid" + (edit ? " edit" : ""));
+    t.appendChild(makeCols(cols));
+    var thead = el("thead");
+    thead.appendChild(groupRow([{ span: 2 },
+      { span: chars.length, label: "캐릭터별 강화 수치" + (edit ? " (수정 중)" : ""), grp: true }]));
+    thead.appendChild(headerRow(cols));
+    t.appendChild(thead);
+
+    var tb = el("tbody");
+    var sum = el("tr", "wing-sum");
+    sum.appendChild(td("", "chk"));
+    sum.appendChild(td("날개 템렙 합", "l"));
+    chars.forEach(function (c) { sum.appendChild(td("<b>" + N(wingTotal(c)) + "</b>", "num sm")); });
+    tb.appendChild(sum);
+
+    STATE.wings.forEach(function (w) {
+      var tr = el("tr");
+      tr.appendChild(td(esc(w.grade), "chk " + wingGradeCls(w.grade)));
+      tr.appendChild(td(esc(w.name), "l"));
+      chars.forEach(function (c) {
+        var v = getWing(c, w.name);
+        if (edit) {
+          var cell = td("", "sm pt-edit");
+          cell.appendChild(mkSelect("wg-sel", WING_OPTS, v == null ? "" : String(v), function (val) {
+            setWing(c.key, w.name, val); render();
+          }));
+          tr.appendChild(cell);
+        } else {
+          tr.appendChild(td(v == null ? '<span class="soul-off">·</span>' : String(v),
+            "num sm" + (v === 10 ? " wg-max" : v === 0 ? " wg-zero" : "")));
+        }
+      });
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);
+    return t;
+  }
+
   /* =====================================================================
      카드 뷰 — 캐릭터 선택형
      ===================================================================== */
@@ -907,6 +1005,254 @@
       '<div style="overflow-x:auto"><table class="skill-mat"><thead>' + head + "</thead><tbody>" + body + "</tbody></table></div>" +
       '<p class="muted" style="margin:6px 0 0;font-size:11px">액티브(양피지·나침반) 스킬이 20 이상이면 <b style="color:#2f6ef0">파란색</b>. 종·거울(패시브)은 검정색.</p>' +
       "</section>";
+  }
+
+  /* =====================================================================
+     시뮬 뷰 — 아이템레벨 시뮬레이터
+     템렙 = Σ(기본레벨 + 강화 + 돌파×5 + 마석 + 신석) + 데바니온 노드 + 날개 강화 합 (+ 보정)
+     마석/데바니온: 흰1 · 초록2 · 파랑3 · 노랑4 / 신석: 초록1 · 파랑2
+     API 등급명: Common=흰 · Rare=초록 · Legend(전승)=파랑 · Unique(유일)=노랑
+     ===================================================================== */
+  var ILV_W = { Common: 1, Rare: 2, Legend: 3, Unique: 4 };
+  var GOD_W = { Rare: 1, Legend: 2 };
+  var STONE_MID = 2.5; // 시뮬에서 새로 바꾼 아이템의 마석 1줄 = 중간값
+  var GRADE_KO = { Epic: "영웅", Unique: "유일", Legend: "전승", Rare: "희귀", Special: "특별", Common: "일반" };
+  var SIM_SLOT_KO = { Amulet: "아뮬렛", Seal1: "인장1", Seal2: "인장2" };
+
+  function stoneSum(e) { return (e.stones || []).reduce(function (s, g) { return s + (ILV_W[g] || 0); }, 0); }
+  function godSum(e) { return (e.godStones || []).reduce(function (s, g) { return s + (GOD_W[g] || 0); }, 0); }
+  function itemIlv(e) {
+    return (e.baseLevel || 0) + (e.enchant || 0) + 5 * (e.exceed || 0) + stoneSum(e) + godSum(e);
+  }
+  function daevIlv(c) {
+    var g = (c.daevanion || {}).nodeGrades;
+    if (!g) return null;
+    return Object.keys(g).reduce(function (s, k) { return s + (ILV_W[k] || 0) * g[k]; }, 0);
+  }
+  function hasIlvDetail(c) {
+    return (c.equipment || []).some(function (e) { return e.baseLevel != null; }) && daevIlv(c) != null;
+  }
+  function calcIlv(c) {
+    var eq = c.equipment || [];
+    var r = { equip: 0, stones: 0, god: 0, daev: daevIlv(c) || 0, wing: wingTotal(c) };
+    eq.forEach(function (e) {
+      r.equip += (e.baseLevel || 0) + (e.enchant || 0) + 5 * (e.exceed || 0);
+      r.stones += stoneSum(e);
+      r.god += godSum(e);
+    });
+    r.total = r.equip + r.stones + r.god + r.daev + r.wing;
+    return r;
+  }
+
+  // 단계 테이블: 슬롯 계열별로 전 캐릭터 착용템에서 (기본레벨, 등급) 단계를 모음
+  function simFamily(slot) {
+    if (/^Arcana/.test(slot)) return "arcana";
+    if (/^Rune/.test(slot)) return "rune";
+    if (slot === "Belt" || slot === "Amulet") return "belt";
+    if (slot === "Pendant") return "pendant";
+    return "gear"; // 무기/가더/방어구/악세서리 — 같은 단계면 레벨 동일
+  }
+  function tierPrefix(name) {
+    var n = String(name || ""), i = n.lastIndexOf("의 ");
+    return i > 0 ? n.slice(0, i) : n;
+  }
+  function tierKey(lv, grade) { return lv + "|" + grade; }
+  var TIER_CACHE = null;
+  function simTiers(chars) {
+    if (TIER_CACHE && TIER_CACHE.src === STATE.data) return TIER_CACHE.t;
+    var t = {};
+    chars.forEach(function (c) {
+      (c.equipment || []).forEach(function (e) {
+        if (e.baseLevel == null) return;
+        var fam = simFamily(e.slot), k = tierKey(e.baseLevel, e.grade);
+        var f = t[fam] || (t[fam] = {});
+        var x = f[k] || (f[k] = { key: k, level: e.baseLevel, grade: e.grade, names: {},
+          maxEnchant: 0, maxExceed: 0, stoneSlots: 0 });
+        x.names[tierPrefix(e.name)] = 1;
+        x.maxEnchant = Math.max(x.maxEnchant, e.maxEnchant || 0);
+        x.maxExceed = Math.max(x.maxExceed, e.maxExceed || 0);
+        x.stoneSlots = Math.max(x.stoneSlots, e.stoneSlots || (e.stones || []).length);
+      });
+    });
+    Object.keys(t).forEach(function (fam) {
+      t[fam] = Object.keys(t[fam]).map(function (k) { return t[fam][k]; })
+        .sort(function (a, b) { return b.level - a.level || String(a.grade).localeCompare(String(b.grade)); });
+    });
+    TIER_CACHE = { src: STATE.data, t: t };
+    return t;
+  }
+
+  // 시뮬 입력값 (브라우저 저장, 캐릭터별)
+  function simLsKey(charKey) { return "aion2.sim." + charKey; }
+  function getSim(charKey) {
+    try { return JSON.parse(lsGet(simLsKey(charKey)) || "{}"); } catch (e) { return {}; }
+  }
+  function saveSim(charKey, s) { lsSet(simLsKey(charKey), JSON.stringify(s)); }
+
+  function simInput(val, min, max, onChange) {
+    var i = el("input", "sim-inp");
+    i.type = "number"; i.value = val; i.min = min; if (max != null) i.max = max;
+    i.addEventListener("change", function () {
+      var v = Number(i.value);
+      if (isNaN(v)) v = 0;
+      if (v < min) v = min;
+      if (max != null && v > max) v = max;
+      onChange(v);
+    });
+    return i;
+  }
+
+  function renderSimView(chars) {
+    var box = el("div", "simview");
+    var picker = el("div", "picker");
+    chars.forEach(function (c) {
+      var b = el("button", c.key === STATE.sel ? "active" : "", esc(c.label || c.profile.name));
+      b.addEventListener("click", function () { STATE.sel = c.key; lsSet("aion2.sel", c.key); render(); });
+      picker.appendChild(b);
+    });
+    box.appendChild(picker);
+
+    var c = chars.filter(function (x) { return x.key === STATE.sel; })[0] || chars[0];
+    if (!hasIlvDetail(c)) {
+      box.appendChild(el("div", "empty", "이 캐릭터는 아이템 상세(기본레벨·마석·데바니온 노드)가 아직 수집되지 않았습니다. " +
+        "다음 자동 수집 후 사용할 수 있습니다."));
+      return box;
+    }
+
+    var tiers = simTiers(chars);
+    var sim = getSim(c.key);
+    sim.slots = sim.slots || {};
+    var cur = calcIlv(c);
+    var actual = c.profile.itemLevel;
+    var offset = actual != null ? actual - cur.total : 0;
+
+    var simEquip = 0, simStones = 0, simGod = 0;
+    var rows = (c.equipment || []).map(function (e) {
+      var fam = simFamily(e.slot);
+      var curKey = tierKey(e.baseLevel, e.grade);
+      var s = sim.slots[e.slot] || {};
+      var k = s.k || curKey;
+      var tier = (tiers[fam] || []).filter(function (x) { return x.key === k; })[0];
+      var same = k === curKey;
+      var maxEn = (same ? e.maxEnchant : tier && tier.maxEnchant) || e.maxEnchant || 20;
+      var maxEx = (same ? e.maxExceed : tier && tier.maxExceed) || 0;
+      var lv = same ? e.baseLevel : tier ? tier.level : e.baseLevel;
+      var en = Math.min(s.en != null ? s.en : (e.enchant || 0), maxEn);
+      var ex = Math.min(s.ex != null ? s.ex : (e.exceed || 0), maxEx);
+      if (ex > 0) en = maxEn; // 돌파는 최대 강화 이후
+      var lines = same ? null : (tier ? tier.stoneSlots : (e.stones || []).length);
+      var st = same ? stoneSum(e) : lines * STONE_MID;
+      var god = godSum(e);
+      var val = (lv || 0) + en + 5 * ex + st + god;
+      simEquip += (lv || 0) + en + 5 * ex; simStones += st; simGod += god;
+      return { e: e, fam: fam, k: k, tier: tier, same: same, lv: lv, en: en, ex: ex,
+        maxEn: maxEn, maxEx: maxEx, st: st, lines: lines, val: val, cur: itemIlv(e),
+        grade: same ? e.grade : (tier ? tier.grade : e.grade) };
+    });
+
+    var simDaev = sim.daev != null ? sim.daev : cur.daev;
+    var simWing = sim.wing != null ? sim.wing : cur.wing;
+    var simTotal = simEquip + simStones + simGod + simDaev + simWing;
+    var simIlv = simTotal + offset;
+    var diff = simTotal - cur.total;
+
+    function update(fn) { fn(sim); saveSim(c.key, sim); render(); }
+
+    // ---- 요약 ----
+    var top = el("section", "cbox sim-top");
+    top.innerHTML = cheadHtml(c) +
+      '<div class="kpis">' +
+        '<div class="kpi"><div class="k">현재 아이템 레벨</div><div class="v">' + N(actual) + "</div></div>" +
+        '<div class="kpi"><div class="k">시뮬 아이템 레벨</div><div class="v">' + N(Math.round(simIlv)) +
+          (diff ? ' <span class="delta ' + (diff > 0 ? "up" : "down") + '">' + (diff > 0 ? "▲" : "▼") +
+            N(Math.round(Math.abs(diff) * 10) / 10) + "</span>" : "") + "</div></div>" +
+        '<div class="kpi"><div class="k">공식 계산 / 보정</div><div class="v">' + N(cur.total) +
+          ' <small>' + (offset >= 0 ? "+" : "") + N(offset) + "</small></div></div>" +
+      "</div>";
+    var reset = el("button", "refresh-btn", "현재 장비로 초기화");
+    reset.addEventListener("click", function () { saveSim(c.key, {}); render(); });
+    top.appendChild(reset);
+    box.appendChild(top);
+
+    // ---- 구성 (장비 외) ----
+    var comp = el("section", "cbox");
+    comp.innerHTML = "<h3>구성 <small>현재 → 시뮬</small></h3>";
+    var ct = el("table", "sim-comp");
+    function compRow(label, a, b, inputEl) {
+      var tr = el("tr");
+      tr.appendChild(el("td", "l", esc(label)));
+      tr.appendChild(el("td", "", N(a)));
+      var tdv = el("td", "");
+      if (inputEl) tdv.appendChild(inputEl); else tdv.innerHTML = N(Math.round(b * 10) / 10);
+      tr.appendChild(tdv);
+      var d = Math.round((b - a) * 10) / 10;
+      tr.appendChild(el("td", "d", d ? deltaHtml(d) : ""));
+      ct.appendChild(tr);
+    }
+    compRow("장비 (기본+강화+돌파×5)", cur.equip, simEquip);
+    compRow("마석", cur.stones, simStones);
+    compRow("신석", cur.god, simGod);
+    compRow("데바니온 노드", cur.daev, simDaev,
+      simInput(simDaev, 0, null, function (v) { update(function (s) { s.daev = v; }); }));
+    compRow("날개 강화 합", cur.wing, simWing,
+      simInput(simWing, 0, null, function (v) { update(function (s) { s.wing = v; }); }));
+    comp.appendChild(ct);
+    comp.appendChild(el("p", "muted sim-note",
+      "보정 = 실제 템렙 − 공식 계산값 (출처 미확인 항목). 시뮬 템렙 = 시뮬 계산값 + 보정. " +
+      "단계를 바꾼 부위의 마석은 줄 수 × " + STONE_MID + " (중간값)으로 계산."));
+    box.appendChild(comp);
+
+    // ---- 부위별 ----
+    var sec = el("section", "cbox sim-slots");
+    sec.innerHTML = "<h3>부위별 <small>단계를 고르고 강화·돌파를 입력하세요</small></h3>";
+    var scroll = el("div", "table-scroll");
+    var t = el("table", "grid sim-grid");
+    var cols = [{ label: "부위", cls: "l cls" }, { label: "현재", cls: "l sname" },
+      { label: "단계", cls: "l stier" }, { label: "강화", cls: "sm" }, { label: "돌파", cls: "sm" },
+      { label: "마석", cls: "sm" }, { label: "템렙", cls: "sm" }, { label: "증감", cls: "sm" }];
+    t.appendChild(makeCols(cols));
+    var thead = el("thead"); thead.appendChild(headerRow(cols)); t.appendChild(thead);
+    var tb = el("tbody");
+    rows.forEach(function (r) {
+      var e = r.e;
+      var tr = el("tr", r.same && r.en === (e.enchant || 0) && r.ex === (e.exceed || 0) ? "" : "sim-changed");
+      tr.appendChild(td(esc(SIM_SLOT_KO[e.slot] || e.slotKo || e.slot), "l cls"));
+      tr.appendChild(td('<span class="' + gcol(e.grade) + '">' + esc(e.name || "–") + "</span>" +
+        ' <small class="muted">' + N(e.baseLevel) + " · +" + (e.enchant || 0) + (e.exceed ? " · " + e.exceed + "돌" : "") + "</small>",
+        "l", e.name));
+
+      var tcell = td("", "l");
+      var opts = (tiers[r.fam] || []).map(function (x) {
+        return [x.key, x.level + " · " + (GRADE_KO[x.grade] || x.grade) + " · " + Object.keys(x.names).join("/")];
+      });
+      tcell.appendChild(mkSelect("sim-inp sim-tier", opts, r.k, function (val) {
+        update(function (s) { s.slots[e.slot] = { k: val }; });
+      }));
+      tr.appendChild(tcell);
+
+      var ecell = td("", "sm");
+      ecell.appendChild(simInput(r.en, 0, r.maxEn, function (v) {
+        update(function (s) { var o = s.slots[e.slot] || (s.slots[e.slot] = { k: r.k }); o.en = v; if (v < r.maxEn) o.ex = 0; });
+      }));
+      tr.appendChild(ecell);
+      var xcell = td("", "sm");
+      if (r.maxEx) {
+        xcell.appendChild(simInput(r.ex, 0, r.maxEx, function (v) {
+          update(function (s) { var o = s.slots[e.slot] || (s.slots[e.slot] = { k: r.k }); o.ex = v; });
+        }));
+      } else xcell.innerHTML = '<span class="soul-off">·</span>';
+      tr.appendChild(xcell);
+      tr.appendChild(td(r.same ? N(r.st) : r.lines + "줄≈" + r.st, "num sm", r.same ? (e.stones || []).join(", ") : "중간값"));
+      tr.appendChild(td(N(Math.round(r.val * 10) / 10), "num sm"));
+      var d = Math.round((r.val - r.cur) * 10) / 10;
+      tr.appendChild(td(d ? deltaHtml(d) : "", "num sm"));
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);
+    scroll.appendChild(t);
+    sec.appendChild(scroll);
+    box.appendChild(sec);
+    return box;
   }
 
   function tag(t) { return t ? '<span class="tag">' + esc(t) + "</span>" : ""; }
