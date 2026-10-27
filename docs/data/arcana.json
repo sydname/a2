@@ -1,6 +1,515 @@
 {
- "generatedAt": "2026-10-06T02:56:09Z",
+ "generatedAt": "2026-10-27T03:14:49Z",
  "characters": {
+  "2010-844b10c56dfe": {
+   "label": "크로매데",
+   "updatedAt": "2026-10-27T03:14:49Z",
+   "arcana": [
+    {
+     "slot": "Arcana1",
+     "slotKo": "아르카나1",
+     "name": "광분의 성배",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_OffenseSet2.png",
+     "category": "성배",
+     "enchant": 5,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "시간[시엘]",
+       "value": "20",
+       "extra": "5"
+      }
+     ],
+     "subSkills": [
+      {
+       "name": "심장 찌르기",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_035.png"
+      },
+      {
+       "name": "맹수의 포효",
+       "level": 3,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_009.png"
+      },
+      {
+       "name": "배후 강타",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_004.png"
+      },
+      {
+       "name": "그림자 낙하",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_020.png"
+      }
+     ],
+     "set": {
+      "name": "광분",
+      "equippedCount": 2,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "PVE 공격력 50 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "보스 피해 증폭 5%, 생명력이 70% 이하일 때 보스 피해 내성 10% 증가"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana2",
+     "slotKo": "아르카나2",
+     "name": "광분의 양피지",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_OffenseSet2.png",
+     "category": "양피지",
+     "enchant": 5,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "생명[유스티엘]",
+       "value": "20",
+       "extra": "5"
+      }
+     ],
+     "subSkills": [
+      {
+       "name": "심장 찌르기",
+       "level": 3,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_035.png"
+      },
+      {
+       "name": "빠른 베기",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_001.png"
+      },
+      {
+       "name": "문양 폭발",
+       "level": 4,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_013.png"
+      },
+      {
+       "name": "암습",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_007.png"
+      }
+     ],
+     "set": {
+      "name": "광분",
+      "equippedCount": 2,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "PVE 공격력 50 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "보스 피해 증폭 5%, 생명력이 70% 이하일 때 보스 피해 내성 10% 증가"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana3",
+     "slotKo": "아르카나3",
+     "name": "순수의 나침반",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_DefenceSet1.png",
+     "category": "나침반",
+     "enchant": 3,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "죽음[트리니엘]",
+       "value": "20",
+       "extra": "3"
+      }
+     ],
+     "subSkills": [
+      {
+       "name": "맹수의 포효",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_009.png"
+      },
+      {
+       "name": "기습",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_006.png"
+      },
+      {
+       "name": "섬광 베기",
+       "level": 3,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_005.png"
+      },
+      {
+       "name": "폭풍 난무",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_034.png"
+      }
+     ],
+     "set": {
+      "name": "순수한 피",
+      "equippedCount": 4,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "PVE 방어력 500 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "치명타 피해 증폭 5%, 생명력이 70% 이하일 때 방어력 1000 증가"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana4",
+     "slotKo": "아르카나4",
+     "name": "순수의 종",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_DefenceSet1.png",
+     "category": "종",
+     "enchant": 3,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "파괴[지켈]",
+       "value": "20",
+       "extra": "3"
+      }
+     ],
+     "subSkills": [
+      {
+       "name": "강습 자세",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_006.png"
+      },
+      {
+       "name": "기습 자세",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_007.png"
+      },
+      {
+       "name": "회생의 계약",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_009.png"
+      },
+      {
+       "name": "육감 극대화",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_001.png"
+      }
+     ],
+     "set": {
+      "name": "순수한 피",
+      "equippedCount": 4,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "PVE 방어력 500 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "치명타 피해 증폭 5%, 생명력이 70% 이하일 때 방어력 1000 증가"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana5",
+     "slotKo": "아르카나5",
+     "name": "순수의 거울",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_DefenceSet1.png",
+     "category": "거울",
+     "enchant": 3,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "지혜[루미엘]",
+       "value": "20",
+       "extra": "3"
+      }
+     ],
+     "subSkills": [
+      {
+       "name": "빈틈 노리기",
+       "level": 2,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_002.png"
+      },
+      {
+       "name": "각오",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_010.png"
+      },
+      {
+       "name": "충격 적중",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_011.png"
+      },
+      {
+       "name": "배후 강타",
+       "level": 3,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_004.png"
+      }
+     ],
+     "set": {
+      "name": "순수한 피",
+      "equippedCount": 4,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "PVE 방어력 500 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "치명타 피해 증폭 5%, 생명력이 70% 이하일 때 방어력 1000 증가"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "slot": "Arcana6",
+     "slotKo": "아르카나6",
+     "name": "순수의 천칭",
+     "grade": "Unique",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_DefenceSet1.png",
+     "category": "천칭",
+     "enchant": 2,
+     "maxEnchant": 5,
+     "mainStats": [
+      {
+       "name": "파괴[지켈]",
+       "value": "10",
+       "extra": "2"
+      },
+      {
+       "name": "운명[마르쿠탄]",
+       "value": "10",
+       "extra": "2"
+      }
+     ],
+     "subSkills": [
+      {
+       "name": "독 바르기",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_003.png"
+      },
+      {
+       "name": "강습 자세",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_006.png"
+      },
+      {
+       "name": "그림자 낙하",
+       "level": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_020.png"
+      },
+      {
+       "name": "배후 강타",
+       "level": 3,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_004.png"
+      }
+     ],
+     "set": {
+      "name": "순수한 피",
+      "equippedCount": 4,
+      "bonuses": [
+       {
+        "degree": 2,
+        "descriptions": [
+         "PVE 방어력 500 증가"
+        ]
+       },
+       {
+        "degree": 4,
+        "descriptions": [
+         "치명타 피해 증폭 5%, 생명력이 70% 이하일 때 방어력 1000 증가"
+        ]
+       }
+      ]
+     }
+    }
+   ],
+   "soul": [
+    {
+     "slot": "Helmet",
+     "slotKo": "투구",
+     "name": "두르바티의 투구",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "강타",
+       "value": "1.6%"
+      },
+      {
+       "name": "공격력",
+       "value": "19"
+      }
+     ]
+    },
+    {
+     "slot": "Shoulder",
+     "slotKo": "견갑",
+     "name": "깨어난 알투라돈의 견갑",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "20"
+      },
+      {
+       "name": "치명타 피해 증폭",
+       "value": "13.7%"
+      },
+      {
+       "name": "명중",
+       "value": "33"
+      }
+     ]
+    },
+    {
+     "slot": "Torso",
+     "slotKo": "상의",
+     "name": "두르바티의 흉갑",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "치명타",
+       "value": "28"
+      },
+      {
+       "name": "피해 증폭",
+       "value": "11.2%"
+      },
+      {
+       "name": "공격력",
+       "value": "24"
+      }
+     ]
+    },
+    {
+     "slot": "Pants",
+     "slotKo": "하의",
+     "name": "두르바티의 각반",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "피해 내성",
+       "value": "9%"
+      },
+      {
+       "name": "완벽",
+       "value": "3.8%"
+      }
+     ]
+    },
+    {
+     "slot": "Gloves",
+     "slotKo": "장갑",
+     "name": "고대 정령의 장갑",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "전투 속도",
+       "value": "8.9%"
+      },
+      {
+       "name": "방어력 증가",
+       "value": "3%"
+      }
+     ]
+    },
+    {
+     "slot": "Boots",
+     "slotKo": "신발",
+     "name": "침식된 잔영의 장화",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "이동 속도",
+       "value": "23.9%"
+      },
+      {
+       "name": "명중",
+       "value": "35"
+      },
+      {
+       "name": "치명타",
+       "value": "22"
+      },
+      {
+       "name": "공격력",
+       "value": "20"
+      }
+     ]
+    },
+    {
+     "slot": "Cape",
+     "slotKo": "망토",
+     "name": "깨어난 알투라돈의 망토",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력 증가",
+       "value": "1.7%"
+      },
+      {
+       "name": "강타",
+       "value": "1.7%"
+      },
+      {
+       "name": "치명타",
+       "value": "16"
+      },
+      {
+       "name": "공격력",
+       "value": "15"
+      }
+     ]
+    }
+   ],
+   "equipSkills": {
+    "배후 강타": 5,
+    "빈틈 노리기": 4,
+    "충격 적중": 3,
+    "강습 자세": 3,
+    "방어 균열": 1,
+    "심장 찌르기": 2,
+    "빠른 베기": 1,
+    "폭풍 난무": 1,
+    "맹수의 포효": 1
+   }
+  },
   "2010-d7b11559c850": {
    "label": "감자밍",
    "updatedAt": "2026-10-06T02:51:30Z",
@@ -4414,515 +4923,6 @@
     "소환: 물의 정령": 1,
     "소환: 땅의 정령": 1,
     "냉기 충격": 1
-   }
-  },
-  "2010-844b10c56dfe": {
-   "label": "크로매데",
-   "updatedAt": "2026-10-06T02:56:09Z",
-   "arcana": [
-    {
-     "slot": "Arcana1",
-     "slotKo": "아르카나1",
-     "name": "광분의 성배",
-     "grade": "Unique",
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_OffenseSet2.png",
-     "category": "성배",
-     "enchant": 5,
-     "maxEnchant": 5,
-     "mainStats": [
-      {
-       "name": "시간[시엘]",
-       "value": "20",
-       "extra": "5"
-      }
-     ],
-     "subSkills": [
-      {
-       "name": "심장 찌르기",
-       "level": 2,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_035.png"
-      },
-      {
-       "name": "맹수의 포효",
-       "level": 3,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_009.png"
-      },
-      {
-       "name": "배후 강타",
-       "level": 2,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_004.png"
-      },
-      {
-       "name": "그림자 낙하",
-       "level": 2,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_020.png"
-      }
-     ],
-     "set": {
-      "name": "광분",
-      "equippedCount": 2,
-      "bonuses": [
-       {
-        "degree": 2,
-        "descriptions": [
-         "PVE 공격력 50 증가"
-        ]
-       },
-       {
-        "degree": 4,
-        "descriptions": [
-         "보스 피해 증폭 5%, 생명력이 70% 이하일 때 보스 피해 내성 10% 증가"
-        ]
-       }
-      ]
-     }
-    },
-    {
-     "slot": "Arcana2",
-     "slotKo": "아르카나2",
-     "name": "광분의 양피지",
-     "grade": "Unique",
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_OffenseSet2.png",
-     "category": "양피지",
-     "enchant": 5,
-     "maxEnchant": 5,
-     "mainStats": [
-      {
-       "name": "생명[유스티엘]",
-       "value": "20",
-       "extra": "5"
-      }
-     ],
-     "subSkills": [
-      {
-       "name": "심장 찌르기",
-       "level": 3,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_035.png"
-      },
-      {
-       "name": "빠른 베기",
-       "level": 1,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_001.png"
-      },
-      {
-       "name": "문양 폭발",
-       "level": 4,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_013.png"
-      },
-      {
-       "name": "암습",
-       "level": 1,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_007.png"
-      }
-     ],
-     "set": {
-      "name": "광분",
-      "equippedCount": 2,
-      "bonuses": [
-       {
-        "degree": 2,
-        "descriptions": [
-         "PVE 공격력 50 증가"
-        ]
-       },
-       {
-        "degree": 4,
-        "descriptions": [
-         "보스 피해 증폭 5%, 생명력이 70% 이하일 때 보스 피해 내성 10% 증가"
-        ]
-       }
-      ]
-     }
-    },
-    {
-     "slot": "Arcana3",
-     "slotKo": "아르카나3",
-     "name": "순수의 나침반",
-     "grade": "Unique",
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_DefenceSet1.png",
-     "category": "나침반",
-     "enchant": 3,
-     "maxEnchant": 5,
-     "mainStats": [
-      {
-       "name": "죽음[트리니엘]",
-       "value": "20",
-       "extra": "3"
-      }
-     ],
-     "subSkills": [
-      {
-       "name": "맹수의 포효",
-       "level": 2,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_009.png"
-      },
-      {
-       "name": "기습",
-       "level": 1,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_006.png"
-      },
-      {
-       "name": "섬광 베기",
-       "level": 3,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_005.png"
-      },
-      {
-       "name": "폭풍 난무",
-       "level": 1,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_034.png"
-      }
-     ],
-     "set": {
-      "name": "순수한 피",
-      "equippedCount": 4,
-      "bonuses": [
-       {
-        "degree": 2,
-        "descriptions": [
-         "PVE 방어력 500 증가"
-        ]
-       },
-       {
-        "degree": 4,
-        "descriptions": [
-         "치명타 피해 증폭 5%, 생명력이 70% 이하일 때 방어력 1000 증가"
-        ]
-       }
-      ]
-     }
-    },
-    {
-     "slot": "Arcana4",
-     "slotKo": "아르카나4",
-     "name": "순수의 종",
-     "grade": "Unique",
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_DefenceSet1.png",
-     "category": "종",
-     "enchant": 3,
-     "maxEnchant": 5,
-     "mainStats": [
-      {
-       "name": "파괴[지켈]",
-       "value": "20",
-       "extra": "3"
-      }
-     ],
-     "subSkills": [
-      {
-       "name": "강습 자세",
-       "level": 2,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_006.png"
-      },
-      {
-       "name": "기습 자세",
-       "level": 2,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_007.png"
-      },
-      {
-       "name": "회생의 계약",
-       "level": 2,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_009.png"
-      },
-      {
-       "name": "육감 극대화",
-       "level": 1,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_001.png"
-      }
-     ],
-     "set": {
-      "name": "순수한 피",
-      "equippedCount": 4,
-      "bonuses": [
-       {
-        "degree": 2,
-        "descriptions": [
-         "PVE 방어력 500 증가"
-        ]
-       },
-       {
-        "degree": 4,
-        "descriptions": [
-         "치명타 피해 증폭 5%, 생명력이 70% 이하일 때 방어력 1000 증가"
-        ]
-       }
-      ]
-     }
-    },
-    {
-     "slot": "Arcana5",
-     "slotKo": "아르카나5",
-     "name": "순수의 거울",
-     "grade": "Unique",
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_DefenceSet1.png",
-     "category": "거울",
-     "enchant": 3,
-     "maxEnchant": 5,
-     "mainStats": [
-      {
-       "name": "지혜[루미엘]",
-       "value": "20",
-       "extra": "3"
-      }
-     ],
-     "subSkills": [
-      {
-       "name": "빈틈 노리기",
-       "level": 2,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_002.png"
-      },
-      {
-       "name": "각오",
-       "level": 1,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_010.png"
-      },
-      {
-       "name": "충격 적중",
-       "level": 1,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_011.png"
-      },
-      {
-       "name": "배후 강타",
-       "level": 3,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_004.png"
-      }
-     ],
-     "set": {
-      "name": "순수한 피",
-      "equippedCount": 4,
-      "bonuses": [
-       {
-        "degree": 2,
-        "descriptions": [
-         "PVE 방어력 500 증가"
-        ]
-       },
-       {
-        "degree": 4,
-        "descriptions": [
-         "치명타 피해 증폭 5%, 생명력이 70% 이하일 때 방어력 1000 증가"
-        ]
-       }
-      ]
-     }
-    },
-    {
-     "slot": "Arcana6",
-     "slotKo": "아르카나6",
-     "name": "순수의 천칭",
-     "grade": "Unique",
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_DefenceSet1.png",
-     "category": "천칭",
-     "enchant": 2,
-     "maxEnchant": 5,
-     "mainStats": [
-      {
-       "name": "파괴[지켈]",
-       "value": "10",
-       "extra": "2"
-      },
-      {
-       "name": "운명[마르쿠탄]",
-       "value": "10",
-       "extra": "2"
-      }
-     ],
-     "subSkills": [
-      {
-       "name": "독 바르기",
-       "level": 1,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_003.png"
-      },
-      {
-       "name": "강습 자세",
-       "level": 1,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_006.png"
-      },
-      {
-       "name": "그림자 낙하",
-       "level": 1,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_020.png"
-      },
-      {
-       "name": "배후 강타",
-       "level": 3,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_AS_SKILL_Passive_004.png"
-      }
-     ],
-     "set": {
-      "name": "순수한 피",
-      "equippedCount": 4,
-      "bonuses": [
-       {
-        "degree": 2,
-        "descriptions": [
-         "PVE 방어력 500 증가"
-        ]
-       },
-       {
-        "degree": 4,
-        "descriptions": [
-         "치명타 피해 증폭 5%, 생명력이 70% 이하일 때 방어력 1000 증가"
-        ]
-       }
-      ]
-     }
-    }
-   ],
-   "soul": [
-    {
-     "slot": "Helmet",
-     "slotKo": "투구",
-     "name": "두르바티의 투구",
-     "grade": "Unique",
-     "subStatCount": 4,
-     "subStats": [
-      {
-       "name": "강타",
-       "value": "1.6%"
-      },
-      {
-       "name": "공격력",
-       "value": "19"
-      }
-     ]
-    },
-    {
-     "slot": "Shoulder",
-     "slotKo": "견갑",
-     "name": "깨어난 알투라돈의 견갑",
-     "grade": "Unique",
-     "subStatCount": 4,
-     "subStats": [
-      {
-       "name": "공격력",
-       "value": "20"
-      },
-      {
-       "name": "치명타 피해 증폭",
-       "value": "13.7%"
-      },
-      {
-       "name": "명중",
-       "value": "33"
-      }
-     ]
-    },
-    {
-     "slot": "Torso",
-     "slotKo": "상의",
-     "name": "두르바티의 흉갑",
-     "grade": "Unique",
-     "subStatCount": 4,
-     "subStats": [
-      {
-       "name": "치명타",
-       "value": "28"
-      },
-      {
-       "name": "피해 증폭",
-       "value": "11.2%"
-      },
-      {
-       "name": "공격력",
-       "value": "24"
-      }
-     ]
-    },
-    {
-     "slot": "Pants",
-     "slotKo": "하의",
-     "name": "두르바티의 각반",
-     "grade": "Unique",
-     "subStatCount": 4,
-     "subStats": [
-      {
-       "name": "피해 내성",
-       "value": "9%"
-      },
-      {
-       "name": "완벽",
-       "value": "3.8%"
-      }
-     ]
-    },
-    {
-     "slot": "Gloves",
-     "slotKo": "장갑",
-     "name": "고대 정령의 장갑",
-     "grade": "Epic",
-     "subStatCount": 5,
-     "subStats": [
-      {
-       "name": "전투 속도",
-       "value": "8.9%"
-      },
-      {
-       "name": "방어력 증가",
-       "value": "3%"
-      }
-     ]
-    },
-    {
-     "slot": "Boots",
-     "slotKo": "신발",
-     "name": "침식된 잔영의 장화",
-     "grade": "Epic",
-     "subStatCount": 5,
-     "subStats": [
-      {
-       "name": "이동 속도",
-       "value": "23.9%"
-      },
-      {
-       "name": "명중",
-       "value": "35"
-      },
-      {
-       "name": "치명타",
-       "value": "22"
-      },
-      {
-       "name": "공격력",
-       "value": "20"
-      }
-     ]
-    },
-    {
-     "slot": "Cape",
-     "slotKo": "망토",
-     "name": "깨어난 알투라돈의 망토",
-     "grade": "Unique",
-     "subStatCount": 4,
-     "subStats": [
-      {
-       "name": "공격력 증가",
-       "value": "1.7%"
-      },
-      {
-       "name": "강타",
-       "value": "1.7%"
-      },
-      {
-       "name": "치명타",
-       "value": "16"
-      },
-      {
-       "name": "공격력",
-       "value": "15"
-      }
-     ]
-    }
-   ],
-   "equipSkills": {
-    "배후 강타": 5,
-    "빈틈 노리기": 4,
-    "충격 적중": 3,
-    "강습 자세": 3,
-    "방어 균열": 1,
-    "심장 찌르기": 2,
-    "빠른 베기": 1,
-    "폭풍 난무": 1,
-    "맹수의 포효": 1
    }
   }
  }
