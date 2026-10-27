@@ -8,6 +8,7 @@
   var ARCANA_URL = "./data/arcana.json";
   var ILV_URL = "./data/ilv.json";       // 시뮬 상세 (수동 갱신, 캐릭터별)
   var TIERS_URL = "./data/tiers.json";   // 인벤 DB 단계 테이블
+  var ENH_URL = "./data/enhance.json";   // 강화/돌파 단계별 기댓값 (aion2tool)
   var app = document.getElementById("app");
   var metaLine = document.getElementById("metaLine");
   var toggle = document.getElementById("viewToggle");
@@ -26,6 +27,7 @@
     wings: [],                                // 날개 목록 (manual.json wings)
     ilv: {},                                  // 시뮬 상세 (ilv.json characters)
     tiers: {},                                // 인벤 단계 테이블 (tiers.json families)
+    enh: {},                                  // 강화/돌파 기댓값 (enhance.json)
   };
 
   // dow: 0=일 … 3=수 … 6=토 / hour: 리셋 시각(KST). 그 시각을 지나면 초기화.
@@ -242,6 +244,7 @@
     fetch(ARCANA_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
     fetch(ILV_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
     fetch(TIERS_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
+    fetch(ENH_URL, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
   ]).then(function (res) {
     STATE.data = res[0];
     STATE.manual = (res[1] && res[1].characters) || {};
@@ -250,6 +253,7 @@
     STATE.arcanaGeneratedAt = res[2] && res[2].generatedAt || null;
     STATE.ilv = (res[3] && res[3].characters) || {};
     STATE.tiers = (res[4] && res[4].families) || {};
+    STATE.enh = res[5] || {};
     pruneOldChecks();
     if (!STATE.sel && STATE.data.characters[0]) STATE.sel = STATE.data.characters[0].key;
     render();
@@ -1151,6 +1155,35 @@
       names.slice(0, 4).join("/") + (names.length > 4 ? " 외" + (names.length - 4) : "");
   }
 
+  // 강화/돌파 예상 비용: 단계별 기댓값 [키나, 재료1, 재료2] 을 구간만큼 합산.
+  // 강화 = (등급, 아이템 레벨) 별 / 돌파 = 등급별 (브로치·인장은 따로). 부위 종류는 무관.
+  function addCost(acc, tbl, from, to) {
+    if (!tbl || !(to > from)) return !!tbl || !(to > from);
+    for (var i = from; i < to && i < tbl.stages.length; i++) {
+      var st = tbl.stages[i];
+      acc.kinah += st[0];
+      if (st[1]) acc.mats[tbl.mat1] = (acc.mats[tbl.mat1] || 0) + st[1];
+      if (st[2] && tbl.mat2 && tbl.mat2 !== "-") acc.mats[tbl.mat2] = (acc.mats[tbl.mat2] || 0) + st[2];
+    }
+    return true;
+  }
+  function slotCost(fam, grade, level, en0, en1, ex0, ex1) {
+    var acc = { kinah: 0, mats: {}, known: true };
+    var enh = (STATE.enh.enhance || {})[grade + "|" + level];
+    var bt = (STATE.enh.breakthrough || {})[grade + (fam === "brooch" ? "|brooch" : "")];
+    acc.known = addCost(acc, enh, en0, en1) && addCost(acc, bt, ex0, ex1);
+    return acc;
+  }
+  function man(n) { // 키나 → 만 단위
+    var v = Math.round(n / 1000) / 10;
+    return v >= 1 ? v.toLocaleString("ko-KR") + "만" : Math.round(n).toLocaleString("ko-KR");
+  }
+  function matsHtml(m) {
+    return Object.keys(m).map(function (k) {
+      return esc(k.replace(/\s*\(([^)]+)\)/, "($1)")) + " " + (Math.round(m[k] * 10) / 10).toLocaleString("ko-KR");
+    }).join(" · ");
+  }
+
   // 시뮬 입력값 (브라우저 저장, 캐릭터별)
   function simLsKey(charKey) { return "aion2.sim." + charKey; }
   function getSim(charKey) {
@@ -1212,6 +1245,7 @@
     var actual = c.profile.itemLevel;
 
     var simEquip = 0, simStones = 0, simGod = 0, estTotal = 0;
+    var costSum = { kinah: 0, mats: {}, unknown: 0 };
     var rows = eqAll.map(function (e) {
       var fam = simFamily(e.slot);
       var list = tiers[fam] || [];
@@ -1236,10 +1270,16 @@
       var def = !e.stale ? itemIlv(e) : guess ? guess.level + (e.enchant || 0) + 5 * (e.exceed || 0) +
         (guess.stoneSlots || { Epic: 5, Unique: 4 }[guess.grade] || 0) * STONE_MID + god : 0;
       estTotal += def;
+      // 예상 비용: 같은 단계면 현재 강화/돌파 → 목표, 단계 변경이면 새 아이템(0) → 목표
+      var g0 = same ? e.grade : (tier ? tier.grade : e.grade);
+      var cost = slotCost(fam, g0, lv, same ? (e.enchant || 0) : 0, en, same ? (e.exceed || 0) : 0, ex);
+      costSum.kinah += cost.kinah;
+      Object.keys(cost.mats).forEach(function (k) { costSum.mats[k] = (costSum.mats[k] || 0) + cost.mats[k]; });
+      if (!cost.known) costSum.unknown++;
       simEquip += (lv || 0) + en + 5 * ex; simStones += st; simGod += god;
       return { e: e, fam: fam, k: k, tier: tier, same: same, lv: lv, en: en, ex: ex,
         maxEn: maxEn, maxEx: maxEx, st: st, lines: lines, val: val,
-        cur: def, changed: k !== curKey || en !== (e.enchant || 0) || ex !== (e.exceed || 0) };
+        cur: def, cost: cost, changed: k !== curKey || en !== (e.enchant || 0) || ex !== (e.exceed || 0) };
     });
 
     var simDaev = sim.daev != null ? sim.daev : cur.daev;
@@ -1262,7 +1302,10 @@
             N(Math.round(Math.abs(diff) * 10) / 10) + "</span>" : "") + "</div></div>" +
         '<div class="kpi"><div class="k">공식 계산 / 보정</div><div class="v">' + N(Math.round(estTotal)) +
           ' <small>' + (offset >= 0 ? "+" : "") + N(Math.round(offset * 10) / 10) + (staleN ? " (추정)" : "") + "</small></div></div>" +
-      "</div>";
+      "</div>" +
+      (costSum.kinah ? '<div class="sim-cost"><b>예상 비용</b> 키나 <b>' + man(costSum.kinah) + "</b>" +
+        (Object.keys(costSum.mats).length ? " · " + matsHtml(costSum.mats) : "") +
+        (costSum.unknown ? ' <span class="muted">(비용 데이터 없는 부위 ' + costSum.unknown + "개 제외)</span>" : "") + "</div>" : "");
     var reset = el("button", "refresh-btn", "현재 장비로 초기화");
     reset.addEventListener("click", function () { saveSim(c.key, {}); render(); });
     top.appendChild(reset);
@@ -1300,7 +1343,8 @@
     comp.appendChild(ct);
     comp.appendChild(el("p", "muted sim-note",
       "보정 = 실제 템렙 − 공식 계산값 (출처 미확인 항목). 시뮬 템렙 = 현재 템렙 + 증감. " +
-      "단계를 바꾼 부위의 마석은 줄 수 × " + STONE_MID + " (중간값). 단계 목록 = 인벤 DB + 우리 캐릭 착용템."));
+      "단계를 바꾼 부위의 마석은 줄 수 × " + STONE_MID + " (중간값). 단계 목록 = 인벤 DB + 우리 캐릭 착용템. " +
+      "예상 비용 = aion2tool 강화/돌파 기댓값 (같은 단계는 현재→목표, 단계 변경은 0강→목표)."));
     box.appendChild(comp);
 
     // ---- 부위별 ----
@@ -1310,7 +1354,8 @@
     var t = el("table", "grid sim-grid");
     var cols = [{ label: "부위", cls: "l cls" }, { label: "현재", cls: "l sname" },
       { label: "단계", cls: "l stier" }, { label: "강화", cls: "sm" }, { label: "돌파", cls: "sm" },
-      { label: "마석", cls: "sm" }, { label: "템렙", cls: "sm" }, { label: "증감", cls: "sm" }];
+      { label: "마석", cls: "sm" }, { label: "템렙", cls: "sm" }, { label: "증감", cls: "sm" },
+      { label: "예상 키나", cls: "num" }, { label: "예상 재료", cls: "l smat" }];
     t.appendChild(makeCols(cols));
     var thead = el("thead"); thead.appendChild(headerRow(cols)); t.appendChild(thead);
     var tb = el("tbody");
@@ -1346,6 +1391,10 @@
       tr.appendChild(td(N(Math.round(r.val * 10) / 10), "num sm"));
       var d = r.cur == null ? null : Math.round((r.val - r.cur) * 10) / 10;
       tr.appendChild(td(d ? deltaHtml(d) : "", "num sm"));
+      var cs = r.cost;
+      tr.appendChild(td(cs.kinah ? man(cs.kinah) : (cs.known ? "" : '<span class="soul-off">?</span>'), "num",
+        cs.known ? "" : "비용 데이터 없음"));
+      tr.appendChild(td(matsHtml(cs.mats), "l sm smat", matsHtml(cs.mats)));
       tb.appendChild(tr);
     });
     t.appendChild(tb);

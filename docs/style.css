@@ -91,6 +91,7 @@ table.grid col.wname { width: 170px; }
 table.grid col.weff { width: 150px; }
 table.grid col.sname { width: 250px; }
 table.grid col.stier { width: 250px; }
+table.grid col.smat { width: 210px; }
 table.grid th.sm,  table.grid td.sm,
 table.grid th.med, table.grid td.med { padding-left: 6px; padding-right: 6px; }
 table.grid th.chk, table.grid td.chk { padding-left: 4px; padding-right: 4px; text-align: center; }
@@ -357,3 +358,6 @@ table.grid.sim-grid td small { font-weight: 500; }
 table.grid tr.sim-changed td { background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
 .sim-warn { font-size: 12px; color: #b4570c; margin: 10px 0 0; }
 .simview .detail-bar b { color: var(--text); }
+.sim-cost { margin-top: 12px; font-size: 13px; color: var(--muted); }
+.sim-cost b { color: var(--text); }
+table.grid td.smat { font-size: 11.5px; color: var(--muted); }
