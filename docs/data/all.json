@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-26T20:12:14Z",
+ "generatedAt": "2026-10-27T02:42:58Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -286,6 +286,12 @@
     "totalBoards": 8,
     "openNodeTotal": 1003,
     "nodeTotal": 1216,
+    "nodeGrades": {
+     "Common": 730,
+     "Unique": 53,
+     "Rare": 117,
+     "Legend": 103
+    },
     "basic": 496,
     "arielle": 152,
     "markutan": 152,
@@ -375,7 +381,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -386,7 +398,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -397,7 +415,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -408,7 +432,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -419,7 +449,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -430,7 +466,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 47,
@@ -441,7 +483,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Key_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 48,
@@ -452,7 +500,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Hourglass_u_PvpSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 49,
@@ -463,7 +517,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Dice_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 50,
@@ -474,7 +534,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_PvpSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "equipment": [
@@ -487,7 +553,21 @@
      "enchant": 20,
      "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_MB_0117_T05.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 154,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Rare",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": [
+      "Legend"
+     ]
     },
     {
      "slotPos": 2,
@@ -498,7 +578,21 @@
      "enchant": 20,
      "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_0117_T05.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Rare",
+      "Legend",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": [
+      "Legend"
+     ]
     },
     {
      "slotPos": 3,
@@ -509,7 +603,19 @@
      "enchant": 20,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Helmet.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Unique",
+      "Legend",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 4,
@@ -520,7 +626,19 @@
      "enchant": 20,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Shoulder.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Rare",
+      "Rare",
+      "Legend",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 5,
@@ -531,7 +649,19 @@
      "enchant": 20,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Torso.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Unique",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 6,
@@ -542,7 +672,19 @@
      "enchant": 20,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Pants.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Unique",
+      "Legend",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 7,
@@ -553,7 +695,19 @@
      "enchant": 20,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Gloves.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Rare",
+      "Rare",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 8,
@@ -564,7 +718,19 @@
      "enchant": 14,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Boots.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Rare",
+      "Unique",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 9,
@@ -575,7 +741,13 @@
      "enchant": 20,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Pendant_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 20,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 10,
@@ -586,7 +758,19 @@
      "enchant": 20,
      "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_NL_0015.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Legend",
+      "Legend",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 11,
@@ -597,7 +781,19 @@
      "enchant": 20,
      "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_0075.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Legend",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 12,
@@ -608,7 +804,19 @@
      "enchant": 20,
      "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_0015.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Legend",
+      "Rare",
+      "Unique",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 13,
@@ -619,7 +827,19 @@
      "enchant": 20,
      "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Beads_06.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Unique",
+      "Unique",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 14,
@@ -630,7 +850,19 @@
      "enchant": 20,
      "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Beads_06.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Unique",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 15,
@@ -641,7 +873,19 @@
      "enchant": 20,
      "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Bracelet_ErosionPurifier.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Legend",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 16,
@@ -652,7 +896,19 @@
      "enchant": 20,
      "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Bracelet_R_026.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 98,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Legend",
+      "Unique",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 17,
@@ -663,7 +919,13 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Belt_R_041.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 76,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 18,
@@ -674,7 +936,18 @@
      "enchant": 15,
      "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 112,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Legend",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 19,
@@ -685,7 +958,19 @@
      "enchant": 20,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Cape.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Legend",
+      "Unique",
+      "Legend",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 20,
@@ -696,7 +981,18 @@
      "enchant": 15,
      "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 112,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Rare",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 22,
@@ -707,7 +1003,13 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Item_Craft_Conversion_Crystal_L_lv6_01.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 76,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 23,
@@ -718,7 +1020,13 @@
      "enchant": 7,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 24,
@@ -729,7 +1037,13 @@
      "enchant": 7,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 25,
@@ -740,7 +1054,18 @@
      "enchant": 15,
      "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Seal_u_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 112,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 26,
@@ -751,7 +1076,18 @@
      "enchant": 15,
      "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Seal_u_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 112,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 41,
@@ -762,7 +1098,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -773,7 +1115,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -784,7 +1132,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -795,7 +1149,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -806,7 +1166,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -817,7 +1183,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 47,
@@ -828,7 +1200,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Key_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 48,
@@ -839,7 +1217,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Hourglass_u_PvpSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 49,
@@ -850,7 +1234,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Dice_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 50,
@@ -861,7 +1251,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_PvpSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "petwing": {
@@ -1514,7 +1910,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-26T20:11:47Z",
+   "updatedAt": "2026-10-27T02:40:46Z",
    "ok": true
   },
   {
@@ -1802,6 +2198,12 @@
     "totalBoards": 8,
     "openNodeTotal": 939,
     "nodeTotal": 1216,
+    "nodeGrades": {
+     "Common": 677,
+     "Unique": 54,
+     "Rare": 119,
+     "Legend": 89
+    },
     "basic": 472,
     "arielle": 152,
     "markutan": 143,
@@ -1891,7 +2293,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -1902,7 +2310,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -1913,7 +2327,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -1924,7 +2344,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -1935,7 +2361,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -1946,7 +2378,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 47,
@@ -1957,7 +2395,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Key_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 48,
@@ -1968,7 +2412,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Hourglass_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 49,
@@ -1979,7 +2429,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Dice_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 50,
@@ -1990,7 +2446,13 @@
      "enchant": 4,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_PvpSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "equipment": [
@@ -2003,7 +2465,21 @@
      "enchant": 20,
      "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_SW_Dream_01.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Unique",
+      "Legend",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": [
+      "Legend"
+     ]
     },
     {
      "slotPos": 2,
@@ -2014,7 +2490,21 @@
      "enchant": 20,
      "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_U_010.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 98,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Legend",
+      "Rare",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": [
+      "Legend"
+     ]
     },
     {
      "slotPos": 3,
@@ -2025,7 +2515,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Helmet.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Rare",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 4,
@@ -2036,7 +2538,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Shoulder.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Rare",
+      "Unique",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 5,
@@ -2047,7 +2561,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Torso.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Unique",
+      "Legend",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 6,
@@ -2058,7 +2584,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Pants.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Legend",
+      "Rare",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 7,
@@ -2069,7 +2607,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Gloves.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Legend",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 8,
@@ -2080,7 +2630,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Boots.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Legend",
+      "Unique",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 9,
@@ -2091,7 +2653,13 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Pendant_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 20,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 10,
@@ -2102,7 +2670,18 @@
      "enchant": 15,
      "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_NL_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 11,
@@ -2113,7 +2692,18 @@
      "enchant": 15,
      "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Legend",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 12,
@@ -2124,7 +2714,18 @@
      "enchant": 15,
      "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Legend",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 13,
@@ -2135,7 +2736,18 @@
      "enchant": 15,
      "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_0036.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 76,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Unique",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 14,
@@ -2146,7 +2758,18 @@
      "enchant": 15,
      "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_0036.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 76,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 15,
@@ -2157,7 +2780,19 @@
      "enchant": 20,
      "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Bracelet_ErosionPurifier.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Rare",
+      "Legend",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 16,
@@ -2168,7 +2803,19 @@
      "enchant": 20,
      "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Bracelet_R_026.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 98,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Rare",
+      "Legend",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 17,
@@ -2179,7 +2826,13 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Belt_R_041.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 76,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 18,
@@ -2190,7 +2843,18 @@
      "enchant": 15,
      "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 112,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Unique",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 19,
@@ -2201,7 +2865,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Cape.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Rare",
+      "Rare",
+      "Unique",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 20,
@@ -2212,7 +2888,18 @@
      "enchant": 15,
      "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 112,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Legend",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 22,
@@ -2223,7 +2910,13 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Item_Craft_Conversion_Crystal_L_lv6_01.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 76,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 23,
@@ -2234,7 +2927,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 24,
@@ -2245,7 +2944,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 25,
@@ -2256,7 +2961,17 @@
      "enchant": 12,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Seal_l_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 106,
+     "maxEnchant": 15,
+     "maxExceed": null,
+     "stones": [
+      "Legend",
+      "Legend",
+      "Legend"
+     ],
+     "stoneSlots": 3,
+     "godStones": []
     },
     {
      "slotPos": 26,
@@ -2267,7 +2982,17 @@
      "enchant": 12,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Seal_l_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 106,
+     "maxEnchant": 15,
+     "maxExceed": null,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 3,
+     "godStones": []
     },
     {
      "slotPos": 41,
@@ -2278,7 +3003,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -2289,7 +3020,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -2300,7 +3037,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -2311,7 +3054,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -2322,7 +3071,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -2333,7 +3088,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 47,
@@ -2344,7 +3105,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Key_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 48,
@@ -2355,7 +3122,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Hourglass_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 49,
@@ -2366,7 +3139,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Dice_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 50,
@@ -2377,7 +3156,13 @@
      "enchant": 4,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_PvpSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "petwing": {
@@ -3030,7 +3815,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-26T20:11:51Z",
+   "updatedAt": "2026-10-27T02:41:08Z",
    "ok": true
   },
   {
@@ -3318,6 +4103,12 @@
     "totalBoards": 8,
     "openNodeTotal": 916,
     "nodeTotal": 1216,
+    "nodeGrades": {
+     "Common": 646,
+     "Rare": 116,
+     "Legend": 103,
+     "Unique": 51
+    },
     "basic": 447,
     "arielle": 152,
     "markutan": 152,
@@ -3407,7 +4198,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -3418,7 +4215,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -3429,7 +4232,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -3440,7 +4249,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -3451,7 +4266,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_PvpSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -3462,7 +4283,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 47,
@@ -3473,7 +4300,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Key_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 48,
@@ -3484,7 +4317,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Hourglass_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 49,
@@ -3495,7 +4334,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Dice_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 50,
@@ -3506,7 +4351,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "equipment": [
@@ -3519,7 +4370,21 @@
      "enchant": 20,
      "exceed": 4,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_SF_01.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Legend",
+      "Legend",
+      "Legend",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": [
+      "Legend"
+     ]
     },
     {
      "slotPos": 2,
@@ -3530,7 +4395,20 @@
      "enchant": 15,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_U_007.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 92,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Unique",
+      "Unique",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": [
+      "Rare"
+     ]
     },
     {
      "slotPos": 3,
@@ -3541,7 +4419,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Hugo_01_Helmet.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 92,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 4,
@@ -3552,7 +4441,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Shoulder.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Unique",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 5,
@@ -3563,7 +4464,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Torso.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Unique",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 6,
@@ -3574,7 +4487,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Pants.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Legend",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 7,
@@ -3585,7 +4510,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Gloves.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Legend",
+      "Legend",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 8,
@@ -3596,7 +4533,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Boots.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Rare",
+      "Unique",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 9,
@@ -3607,7 +4556,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Pendant_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 20,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 10,
@@ -3618,7 +4573,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_NL_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Rare",
+      "Legend",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 11,
@@ -3629,7 +4595,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_0047.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 86,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Rare",
+      "Unique",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 12,
@@ -3640,7 +4617,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_0047.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 86,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Legend",
+      "Unique",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 13,
@@ -3651,7 +4639,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Legend",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 14,
@@ -3662,7 +4661,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 15,
@@ -3673,7 +4683,19 @@
      "enchant": 20,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Bracelet_R_026.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 98,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Legend",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 16,
@@ -3684,7 +4706,19 @@
      "enchant": 20,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Bracelet_ErosionPurifier.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Unique",
+      "Unique",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 17,
@@ -3695,7 +4729,13 @@
      "enchant": 7,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Belt_C_022.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 18,
@@ -3706,7 +4746,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 112,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 19,
@@ -3717,7 +4768,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Cape.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Legend",
+      "Unique",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 20,
@@ -3728,7 +4791,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 112,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 22,
@@ -3739,7 +4813,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Item_Craft_Conversion_Crystal_L_lv6_01.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 76,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 23,
@@ -3750,7 +4830,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 24,
@@ -3761,7 +4847,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 25,
@@ -3772,7 +4864,17 @@
      "enchant": 12,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Seal_l_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 106,
+     "maxEnchant": 15,
+     "maxExceed": null,
+     "stones": [
+      "Rare",
+      "Legend",
+      "Legend"
+     ],
+     "stoneSlots": 3,
+     "godStones": []
     },
     {
      "slotPos": 26,
@@ -3783,7 +4885,17 @@
      "enchant": 12,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Seal_l_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 106,
+     "maxEnchant": 15,
+     "maxExceed": null,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Unique"
+     ],
+     "stoneSlots": 3,
+     "godStones": []
     },
     {
      "slotPos": 41,
@@ -3794,7 +4906,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -3805,7 +4923,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -3816,7 +4940,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -3827,7 +4957,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -3838,7 +4974,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_PvpSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -3849,7 +4991,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 47,
@@ -3860,7 +5008,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Key_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 48,
@@ -3871,7 +5025,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Hourglass_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 49,
@@ -3882,7 +5042,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Dice_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 50,
@@ -3893,7 +5059,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "petwing": {
@@ -4546,7 +5718,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-26T20:11:56Z",
+   "updatedAt": "2026-10-27T02:41:33Z",
    "ok": true
   },
   {
@@ -4834,6 +6006,12 @@
     "totalBoards": 8,
     "openNodeTotal": 887,
     "nodeTotal": 1216,
+    "nodeGrades": {
+     "Common": 632,
+     "Unique": 46,
+     "Rare": 111,
+     "Legend": 98
+    },
     "basic": 449,
     "arielle": 152,
     "markutan": 152,
@@ -4923,7 +6101,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -4934,7 +6118,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -4945,7 +6135,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -4956,7 +6152,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -4967,7 +6169,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -4978,7 +6186,13 @@
      "enchant": 4,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PvpSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 47,
@@ -4989,7 +6203,13 @@
      "enchant": 1,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Key_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 48,
@@ -5000,7 +6220,13 @@
      "enchant": 1,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Hourglass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 49,
@@ -5011,7 +6237,13 @@
      "enchant": 3,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Dice_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 50,
@@ -5022,7 +6254,13 @@
      "enchant": 1,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_PvpSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "equipment": [
@@ -5035,7 +6273,21 @@
      "enchant": 20,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_ST_SF_01.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Unique",
+      "Legend",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": [
+      "Legend"
+     ]
     },
     {
      "slotPos": 2,
@@ -5046,7 +6298,21 @@
      "enchant": 20,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_U_010.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 98,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Legend",
+      "Unique",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": [
+      "Rare"
+     ]
     },
     {
      "slotPos": 3,
@@ -5057,7 +6323,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0167_T03_Helmet.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Rare",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 4,
@@ -5068,7 +6345,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Shoulder.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Legend",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 5,
@@ -5079,7 +6368,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0050_T05_Torso.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 98,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Rare",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 6,
@@ -5090,7 +6391,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0167_T03_Pants.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 7,
@@ -5101,7 +6413,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Gloves.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Rare",
+      "Legend",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 8,
@@ -5112,7 +6436,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0167_T03_Boots.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 9,
@@ -5123,7 +6458,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Pendant_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 20,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 10,
@@ -5134,7 +6475,18 @@
      "enchant": 15,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_NL_0043.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Unique",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 11,
@@ -5145,7 +6497,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_0015.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Unique",
+      "Legend",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 12,
@@ -5156,7 +6520,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Legend",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 13,
@@ -5167,7 +6542,18 @@
      "enchant": 15,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Legend",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 14,
@@ -5178,7 +6564,18 @@
      "enchant": 15,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Unique",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 15,
@@ -5189,7 +6586,19 @@
      "enchant": 20,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Bracelet_ErosionPurifier.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Rare",
+      "Legend",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 16,
@@ -5200,7 +6609,19 @@
      "enchant": 20,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Bracelet_ErosionPurifier.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Rare",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 17,
@@ -5211,7 +6632,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Belt_R_041.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 76,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 18,
@@ -5222,7 +6649,18 @@
      "enchant": 15,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 112,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Legend",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 19,
@@ -5233,7 +6671,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Cape.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Rare",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 20,
@@ -5244,7 +6694,18 @@
      "enchant": 15,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 112,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 22,
@@ -5255,7 +6716,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Item_Craft_Conversion_Crystal_L_lv6_01.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 76,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 23,
@@ -5266,7 +6733,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 24,
@@ -5277,7 +6750,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 41,
@@ -5288,7 +6767,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -5299,7 +6784,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -5310,7 +6801,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -5321,7 +6818,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -5332,7 +6835,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -5343,7 +6852,13 @@
      "enchant": 4,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PvpSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 47,
@@ -5354,7 +6869,13 @@
      "enchant": 1,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Key_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 48,
@@ -5365,7 +6886,13 @@
      "enchant": 1,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Hourglass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 49,
@@ -5376,7 +6903,13 @@
      "enchant": 3,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Dice_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 50,
@@ -5387,7 +6920,13 @@
      "enchant": 1,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_PvpSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "petwing": {
@@ -6040,7 +7579,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-26T20:12:01Z",
+   "updatedAt": "2026-10-27T02:41:55Z",
    "ok": true
   },
   {
@@ -6328,6 +7867,12 @@
     "totalBoards": 8,
     "openNodeTotal": 843,
     "nodeTotal": 1216,
+    "nodeGrades": {
+     "Common": 603,
+     "Unique": 45,
+     "Rare": 104,
+     "Legend": 91
+    },
     "basic": 449,
     "arielle": 152,
     "markutan": 143,
@@ -6417,7 +7962,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -6428,7 +7979,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -6439,7 +7996,13 @@
      "enchant": 4,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -6450,7 +8013,13 @@
      "enchant": 4,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -6461,7 +8030,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -6472,7 +8047,13 @@
      "enchant": 1,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 47,
@@ -6483,7 +8064,13 @@
      "enchant": 2,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Key_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 48,
@@ -6494,7 +8081,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Hourglass_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 49,
@@ -6505,7 +8098,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Dice_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 50,
@@ -6516,7 +8115,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "equipment": [
@@ -6529,7 +8134,21 @@
      "enchant": 20,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GT_SF_01.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Rare",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": [
+      "Legend"
+     ]
     },
     {
      "slotPos": 2,
@@ -6540,7 +8159,21 @@
      "enchant": 20,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_SF_01.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Unique",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": [
+      "Legend"
+     ]
     },
     {
      "slotPos": 3,
@@ -6551,7 +8184,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0178_T04_Helmet.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Rare",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 4,
@@ -6562,7 +8206,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0178_T04_Shoulder.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Legend",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 5,
@@ -6573,7 +8228,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0178_T04_Torso.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Rare",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 6,
@@ -6584,7 +8250,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0178_T04_Pants.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Legend",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 7,
@@ -6595,7 +8272,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Gloves.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Rare",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 8,
@@ -6606,7 +8295,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0178_T04_Boots.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 9,
@@ -6617,7 +8317,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Pendant_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 20,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 10,
@@ -6628,7 +8334,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_NL_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Common",
+      "Legend",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 11,
@@ -6639,7 +8356,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Common",
+      "Legend",
+      "Common",
+      "Common"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 12,
@@ -6650,7 +8378,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Common",
+      "Rare",
+      "Common"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 13,
@@ -6661,7 +8400,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Legend",
+      "Legend",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 14,
@@ -6672,7 +8422,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Legend",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 15,
@@ -6683,7 +8444,19 @@
      "enchant": 20,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Bracelet_ErosionPurifier.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Unique",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 16,
@@ -6694,7 +8467,19 @@
      "enchant": 20,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Bracelet_ErosionPurifier.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Rare",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 17,
@@ -6705,7 +8490,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Belt_C_022.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 18,
@@ -6716,7 +8507,18 @@
      "enchant": 15,
      "exceed": 3,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 112,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Legend",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 19,
@@ -6727,7 +8529,19 @@
      "enchant": 9,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Cape.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Legend",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 20,
@@ -6738,7 +8552,16 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_r_003.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 50,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 2,
+     "godStones": []
     },
     {
      "slotPos": 22,
@@ -6749,7 +8572,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Item_Craft_Conversion_Crystal_L_lv5_01.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 23,
@@ -6760,7 +8589,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 24,
@@ -6771,7 +8606,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 41,
@@ -6782,7 +8623,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -6793,7 +8640,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -6804,7 +8657,13 @@
      "enchant": 4,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -6815,7 +8674,13 @@
      "enchant": 4,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -6826,7 +8691,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -6837,7 +8708,13 @@
      "enchant": 1,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 47,
@@ -6848,7 +8725,13 @@
      "enchant": 2,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Key_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 48,
@@ -6859,7 +8742,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Hourglass_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 49,
@@ -6870,7 +8759,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Dice_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 50,
@@ -6881,7 +8776,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "petwing": {
@@ -7534,7 +9435,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-26T20:12:06Z",
+   "updatedAt": "2026-10-27T02:42:15Z",
    "ok": true
   },
   {
@@ -7822,6 +9723,12 @@
     "totalBoards": 8,
     "openNodeTotal": 837,
     "nodeTotal": 1216,
+    "nodeGrades": {
+     "Common": 599,
+     "Rare": 102,
+     "Unique": 49,
+     "Legend": 87
+    },
     "basic": 446,
     "arielle": 152,
     "markutan": 148,
@@ -7911,7 +9818,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -7922,7 +9835,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_PveSet2.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -7933,7 +9852,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -7944,7 +9869,13 @@
      "enchant": 3,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -7955,7 +9886,13 @@
      "enchant": 2,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -7966,7 +9903,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 47,
@@ -7977,7 +9920,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Key_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 48,
@@ -7988,7 +9937,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Hourglass_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 49,
@@ -7999,7 +9954,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Dice_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 50,
@@ -8010,7 +9971,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "equipment": [
@@ -8023,7 +9990,20 @@
      "enchant": 15,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_OR_0115_T05.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Rare",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": [
+      "Rare"
+     ]
     },
     {
      "slotPos": 2,
@@ -8034,7 +10014,20 @@
      "enchant": 15,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_U_007.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 92,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Rare",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": [
+      "Rare"
+     ]
     },
     {
      "slotPos": 3,
@@ -8045,7 +10038,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0050_T05_Helmet.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 98,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Legend",
+      "Unique",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 4,
@@ -8056,7 +10061,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Shoulder.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Rare",
+      "Unique",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 5,
@@ -8067,7 +10084,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0178_T04_Torso.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Rare",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 6,
@@ -8078,7 +10106,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0169_T03_Pants.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Legend",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 7,
@@ -8089,7 +10128,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Gloves.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Rare",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 8,
@@ -8100,7 +10151,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Boots.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Rare",
+      "Rare",
+      "Legend",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 9,
@@ -8111,7 +10174,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Pendant_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 20,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 10,
@@ -8122,7 +10191,18 @@
      "enchant": 13,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_NL_0043.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Rare",
+      "Legend",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 11,
@@ -8133,7 +10213,18 @@
      "enchant": 12,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Common",
+      "Rare",
+      "Rare",
+      "Common"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 12,
@@ -8144,7 +10235,18 @@
      "enchant": 12,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Common",
+      "Legend",
+      "Rare",
+      "Common"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 13,
@@ -8155,7 +10257,18 @@
      "enchant": 15,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Sun_09.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 92,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 14,
@@ -8166,7 +10279,18 @@
      "enchant": 15,
      "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Sun_09.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 92,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 15,
@@ -8177,7 +10301,19 @@
      "enchant": 13,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Bracelet_R_026.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 98,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Unique",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 16,
@@ -8188,7 +10324,19 @@
      "enchant": 13,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Bracelet_R_026.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 98,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Legend",
+      "Unique",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 17,
@@ -8199,7 +10347,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Belt_C_022.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 18,
@@ -8210,7 +10364,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 112,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 19,
@@ -8221,7 +10386,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0169_T03_Cape.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Legend",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 20,
@@ -8232,7 +10408,17 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_l_003.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 106,
+     "maxEnchant": 15,
+     "maxExceed": null,
+     "stones": [
+      "Unique",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 3,
+     "godStones": []
     },
     {
      "slotPos": 22,
@@ -8243,7 +10429,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Item_Craft_Conversion_Crystal_L_lv5_01.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 23,
@@ -8254,7 +10446,13 @@
      "enchant": 4,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 24,
@@ -8265,7 +10463,13 @@
      "enchant": 4,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 41,
@@ -8276,7 +10480,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -8287,7 +10497,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_PveSet2.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -8298,7 +10514,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -8309,7 +10531,13 @@
      "enchant": 3,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -8320,7 +10548,13 @@
      "enchant": 2,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -8331,7 +10565,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 47,
@@ -8342,7 +10582,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Key_u_PveSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 48,
@@ -8353,7 +10599,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Hourglass_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 49,
@@ -8364,7 +10616,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Dice_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 50,
@@ -8375,7 +10633,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_CureSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 90,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "petwing": {
@@ -9028,7 +11292,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-26T20:12:10Z",
+   "updatedAt": "2026-10-27T02:42:38Z",
    "ok": true
   },
   {
@@ -9298,6 +11562,12 @@
     "totalBoards": 8,
     "openNodeTotal": 663,
     "nodeTotal": 1216,
+    "nodeGrades": {
+     "Common": 488,
+     "Legend": 59,
+     "Unique": 37,
+     "Rare": 79
+    },
     "basic": 389,
     "arielle": 110,
     "markutan": 113,
@@ -9387,7 +11657,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_OffenseSet2.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -9398,7 +11674,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_OffenseSet2.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -9409,7 +11691,13 @@
      "enchant": 3,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_DefenceSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -9420,7 +11708,13 @@
      "enchant": 3,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_DefenceSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -9431,7 +11725,13 @@
      "enchant": 3,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_DefenceSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -9442,7 +11742,13 @@
      "enchant": 2,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_DefenceSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "equipment": [
@@ -9455,7 +11761,20 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_DA_0115_T05.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Legend",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": [
+      "Rare"
+     ]
     },
     {
      "slotPos": 2,
@@ -9466,7 +11785,20 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_U_007.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 92,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Legend",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": [
+      "Rare"
+     ]
     },
     {
      "slotPos": 3,
@@ -9477,7 +11809,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Hugo_01_Helmet.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 92,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 4,
@@ -9488,7 +11831,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0169_T03_Shoulder.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 5,
@@ -9499,7 +11853,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Hugo_01_Torso.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 92,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Legend",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 6,
@@ -9510,7 +11875,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Hugo_01_Pants.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 92,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Legend",
+      "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 7,
@@ -9521,7 +11897,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0050_T05_Gloves.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 98,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Legend",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 8,
@@ -9532,7 +11920,19 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Boots.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 108,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Common",
+      "Rare",
+      "Rare",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 9,
@@ -9543,7 +11943,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Pendant_A_u_001.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 20,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 10,
@@ -9554,7 +11960,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_NL_0053.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 84,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Legend",
+      "Common"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 11,
@@ -9565,7 +11982,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_Sun_09.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 92,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Legend",
+      "Rare",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 12,
@@ -9576,7 +12004,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_ER_Sun_09.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 92,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Common",
+      "Rare"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 13,
@@ -9587,7 +12026,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Sun_09.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 92,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Legend",
+      "Common",
+      "Rare",
+      "Common"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 14,
@@ -9598,7 +12048,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_ACC_Ring_Beads_03.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Unique",
+      "Legend",
+      "Legend",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 15,
@@ -9609,7 +12070,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Bracelet_R_026.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 98,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Legend",
+      "Legend",
+      "Legend",
+      "Legend"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 16,
@@ -9620,7 +12093,19 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Bracelet_R_026.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 98,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [
+      "Common",
+      "Rare",
+      "Legend",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
     },
     {
      "slotPos": 17,
@@ -9631,7 +12116,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Belt_C_022.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 19,
@@ -9642,7 +12133,18 @@
      "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0169_T03_Cape.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
     },
     {
      "slotPos": 22,
@@ -9653,7 +12155,13 @@
      "enchant": 0,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Item_Craft_Conversion_Crystal_L_lv5_01.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 65,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 23,
@@ -9664,7 +12172,13 @@
      "enchant": 4,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 24,
@@ -9675,7 +12189,13 @@
      "enchant": 4,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Rune_R_002.png",
-     "isArcana": false
+     "isArcana": false,
+     "baseLevel": 40,
+     "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 41,
@@ -9686,7 +12206,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Grail_u_OffenseSet2.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 42,
@@ -9697,7 +12223,13 @@
      "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_OffenseSet2.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 43,
@@ -9708,7 +12240,13 @@
      "enchant": 3,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_DefenceSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 44,
@@ -9719,7 +12257,13 @@
      "enchant": 3,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Bell_u_DefenceSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 45,
@@ -9730,7 +12274,13 @@
      "enchant": 3,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_DefenceSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     },
     {
      "slotPos": 46,
@@ -9741,7 +12291,13 @@
      "enchant": 2,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_DefenceSet1.png",
-     "isArcana": true
+     "isArcana": true,
+     "baseLevel": 80,
+     "maxEnchant": 5,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
     }
    ],
    "petwing": {
@@ -10394,7 +12950,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-26T20:12:14Z",
+   "updatedAt": "2026-10-27T02:42:58Z",
    "ok": true
   }
  ]
