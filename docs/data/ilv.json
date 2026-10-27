@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-27T02:42:58Z",
+ "generatedAt": "2026-10-27T02:52:39Z",
  "characters": {
   "2010-d7b11559c850": {
    "items": {
@@ -2593,34 +2593,6 @@
       "Rare"
      ]
     },
-    "Helmet": {
-     "name": "두르바티의 투구",
-     "baseLevel": 92,
-     "maxEnchant": 15,
-     "maxExceed": 5,
-     "stones": [
-      "Rare",
-      "Unique",
-      "Unique",
-      "Legend"
-     ],
-     "stoneSlots": 4,
-     "godStones": []
-    },
-    "Shoulder": {
-     "name": "깨어난 알투라돈의 견갑",
-     "baseLevel": 100,
-     "maxEnchant": 15,
-     "maxExceed": 5,
-     "stones": [
-      "Rare",
-      "Rare",
-      "Legend",
-      "Rare"
-     ],
-     "stoneSlots": 4,
-     "godStones": []
-    },
     "Torso": {
      "name": "두르바티의 흉갑",
      "baseLevel": 92,
@@ -2645,6 +2617,34 @@
       "Unique",
       "Legend",
       "Unique"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
+    },
+    "Helmet": {
+     "name": "두르바티의 투구",
+     "baseLevel": 92,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Unique",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
+    },
+    "Shoulder": {
+     "name": "깨어난 알투라돈의 견갑",
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Legend",
+      "Rare"
      ],
      "stoneSlots": 4,
      "godStones": []
@@ -2679,10 +2679,24 @@
      "stoneSlots": 5,
      "godStones": []
     },
-    "Pendant": {
-     "name": "드라코닉 펜던트",
+    "Cape": {
+     "name": "깨어난 알투라돈의 망토",
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Rare",
+      "Rare",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
+    },
+    "Belt": {
+     "name": "고결의 허리띠",
      "baseLevel": 65,
-     "maxEnchant": 20,
+     "maxEnchant": 10,
      "maxExceed": null,
      "stones": [],
      "stoneSlots": null,
@@ -2758,21 +2772,6 @@
      "stoneSlots": 4,
      "godStones": []
     },
-    "Bracelet1": {
-     "name": "루드라의 팔찌",
-     "baseLevel": 98,
-     "maxEnchant": 20,
-     "maxExceed": 5,
-     "stones": [
-      "Rare",
-      "Legend",
-      "Legend",
-      "Legend",
-      "Legend"
-     ],
-     "stoneSlots": 5,
-     "godStones": []
-    },
     "Bracelet2": {
      "name": "루드라의 팔찌",
      "baseLevel": 98,
@@ -2788,32 +2787,24 @@
      "stoneSlots": 5,
      "godStones": []
     },
-    "Belt": {
-     "name": "고결의 허리띠",
-     "baseLevel": 65,
-     "maxEnchant": 10,
-     "maxExceed": null,
-     "stones": [],
-     "stoneSlots": null,
-     "godStones": []
-    },
-    "Cape": {
-     "name": "깨어난 알투라돈의 망토",
-     "baseLevel": 100,
-     "maxEnchant": 15,
+    "Bracelet1": {
+     "name": "루드라의 팔찌",
+     "baseLevel": 98,
+     "maxEnchant": 20,
      "maxExceed": 5,
      "stones": [
       "Rare",
-      "Rare",
-      "Rare",
+      "Legend",
+      "Legend",
+      "Legend",
       "Legend"
      ],
-     "stoneSlots": 4,
+     "stoneSlots": 5,
      "godStones": []
     },
-    "Amulet": {
-     "name": "계시의 아뮬렛",
-     "baseLevel": 65,
+    "Rune2": {
+     "name": "격돌의 룬",
+     "baseLevel": 40,
      "maxEnchant": 10,
      "maxExceed": null,
      "stones": [],
@@ -2829,10 +2820,19 @@
      "stoneSlots": null,
      "godStones": []
     },
-    "Rune2": {
-     "name": "격돌의 룬",
-     "baseLevel": 40,
+    "Amulet": {
+     "name": "계시의 아뮬렛",
+     "baseLevel": 65,
      "maxEnchant": 10,
+     "maxExceed": null,
+     "stones": [],
+     "stoneSlots": null,
+     "godStones": []
+    },
+    "Pendant": {
+     "name": "드라코닉 펜던트",
+     "baseLevel": 65,
+     "maxEnchant": 20,
      "maxExceed": null,
      "stones": [],
      "stoneSlots": null,
@@ -2901,7 +2901,7 @@
    },
    "openNodeTotal": 663,
    "label": "크로매데",
-   "updatedAt": "2026-10-27T02:42:58Z"
+   "updatedAt": "2026-10-27T02:52:39Z"
   }
  }
 }
