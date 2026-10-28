@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+NotMeter.exe
+NotMeter.zip
+scripts/notmeter/*.log
