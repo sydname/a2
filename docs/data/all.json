@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-27T19:42:35Z",
+ "generatedAt": "2026-10-28T19:55:44Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -15,7 +15,7 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 1045717,
+    "combatPower": 1043317,
     "itemLevel": 6510,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188620645",
     "titleName": "불의 신전에 군림하는"
@@ -245,16 +245,16 @@
      "id": 15160000
     },
     {
+     "name": "저주: 나무",
+     "level": 20,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_SO_SKILL_014.png",
+     "id": 15140000
+    },
+    {
      "name": "냉기 폭풍",
      "level": 20,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_SO_SKILL_019.png",
      "id": 15200000
-    },
-    {
-     "name": "지연 폭발",
-     "level": 20,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_SO_SKILL_032.png",
-     "id": 15320000
     }
    ],
    "skills": {
@@ -1513,18 +1513,28 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-10-29",
+     "combatPower": 1043317,
+     "itemLevel": 6510,
+     "weaponExceed": 10,
+     "armorExceed": 12,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-27",
-    "combatPower": 0,
+    "sinceDate": "2026-10-28",
+    "combatPower": -2400,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-27T19:42:06Z",
+   "updatedAt": "2026-10-28T19:55:16Z",
    "ok": true
   },
   {
@@ -1541,8 +1551,8 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 761409,
-    "itemLevel": 5810,
+    "combatPower": 745277,
+    "itemLevel": 5814,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188725968",
     "titleName": "무스펠의 성배를 지배한"
    },
@@ -2413,14 +2423,14 @@
     }
    },
    "titles": {
-    "ownedCount": 364,
+    "ownedCount": 365,
     "totalCount": 431,
     "equipped": [
      {
       "category": "Defense",
       "name": "알트가르드의 성자",
       "grade": "Unique",
-      "ownedPercent": 83
+      "ownedPercent": 84
      },
      {
       "category": "Attack",
@@ -3039,18 +3049,28 @@
      "accessoryExceed": 36,
      "daevanionBasic": 472,
      "daevanionOpenNodes": 939
+    },
+    {
+     "date": "2026-10-29",
+     "combatPower": 745277,
+     "itemLevel": 5814,
+     "weaponExceed": 8,
+     "armorExceed": 0,
+     "accessoryExceed": 36,
+     "daevanionBasic": 472,
+     "daevanionOpenNodes": 939
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-27",
-    "combatPower": 16500,
-    "itemLevel": 0,
+    "sinceDate": "2026-10-28",
+    "combatPower": -16132,
+    "itemLevel": 4,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-27T19:42:11Z",
+   "updatedAt": "2026-10-28T19:55:21Z",
    "ok": true
   },
   {
@@ -3067,8 +3087,8 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 700527,
-    "itemLevel": 5616,
+    "combatPower": 701683,
+    "itemLevel": 5630,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188716923",
     "titleName": "무스펠의 성배를 지배한"
    },
@@ -3269,7 +3289,7 @@
      "Brooch2": 3
     },
     "pendantEnchant": 5,
-    "amuletEnchant": 0
+    "amuletEnchant": 4
    },
    "stigma": [
     {
@@ -3327,7 +3347,7 @@
     "피의 흡수": 17,
     "약점 파악": 15,
     "공격 준비": 22,
-    "충격 적중": 23,
+    "충격 적중": 24,
     "파괴 충동": 15,
     "노련한 반격": 31,
     "생존 의지": 14,
@@ -3711,10 +3731,10 @@
      "slot": "Belt",
      "slotKo": "허리띠",
      "name": "고결의 허리띠",
-     "grade": "Unique",
-     "enchant": 7,
+     "grade": "Epic",
+     "enchant": 5,
      "exceed": 0,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Belt_C_022.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Acc_Belt_R_041.png",
      "isArcana": false
     },
     {
@@ -3756,7 +3776,7 @@
      "slotKo": "인장",
      "name": "계시의 아뮬렛",
      "grade": "Epic",
-     "enchant": 0,
+     "enchant": 4,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Item_Craft_Conversion_Crystal_L_lv6_01.png",
      "isArcana": false
@@ -4565,18 +4585,28 @@
      "accessoryExceed": 27,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 916
+    },
+    {
+     "date": "2026-10-29",
+     "combatPower": 701683,
+     "itemLevel": 5630,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 27,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 916
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-27",
-    "combatPower": 387,
-    "itemLevel": 0,
+    "sinceDate": "2026-10-28",
+    "combatPower": 1156,
+    "itemLevel": 14,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-27T19:42:16Z",
+   "updatedAt": "2026-10-28T19:55:26Z",
    "ok": true
   },
   {
@@ -6069,10 +6099,20 @@
      "accessoryExceed": 14,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 887
+    },
+    {
+     "date": "2026-10-29",
+     "combatPower": 607785,
+     "itemLevel": 5153,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 14,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 887
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-27",
+    "sinceDate": "2026-10-28",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -6080,7 +6120,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-27T19:42:22Z",
+   "updatedAt": "2026-10-28T19:55:30Z",
    "ok": true
   },
   {
@@ -6097,8 +6137,8 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 615859,
-    "itemLevel": 5026,
+    "combatPower": 615422,
+    "itemLevel": 5019,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188785270",
     "titleName": "무스펠의 성배를 지배한"
    },
@@ -6128,17 +6168,17 @@
      ]
     },
     "armor": {
-     "total": 15,
+     "total": 12,
      "count": 7,
      "slots": [
       {
        "slot": "Boots",
        "slotKo": "신발",
-       "name": "비상하는 데바의 장화",
-       "grade": "Unique",
-       "enchant": 15,
-       "exceed": 3,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0178_T04_Boots.png"
+       "name": "침식된 잔영의 장화",
+       "grade": "Epic",
+       "enchant": 10,
+       "exceed": 0,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Boots.png"
       },
       {
        "slot": "Cape",
@@ -6346,18 +6386,18 @@
     "질풍격": 14,
     "연환권": 16,
     "태풍 연타": 16,
-    "회전각": 14,
+    "회전각": 12,
     "지면 강타": 16,
-    "철산고": 11,
+    "철산고": 12,
     "폭렬권": 17,
     "승천타": 20,
     "충격 해제": 12,
     "정신 전환": 15,
     "전선 유지": 14,
     "정면 돌파": 16,
-    "위세": 25,
-    "폭주 증폭": 19,
-    "충격 적중": 18,
+    "위세": 26,
+    "폭주 증폭": 20,
+    "충격 적중": 19,
     "충격타": 11,
     "거대한 분노": 22,
     "회생의 계약": 8,
@@ -6641,11 +6681,11 @@
      "slotPos": 8,
      "slot": "Boots",
      "slotKo": "신발",
-     "name": "비상하는 데바의 장화",
-     "grade": "Unique",
-     "enchant": 15,
-     "exceed": 3,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0178_T04_Boots.png",
+     "name": "침식된 잔영의 장화",
+     "grade": "Epic",
+     "enchant": 10,
+     "exceed": 0,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Boots.png",
      "isArcana": false
     },
     {
@@ -7573,18 +7613,28 @@
      "accessoryExceed": 22,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 843
+    },
+    {
+     "date": "2026-10-29",
+     "combatPower": 615422,
+     "itemLevel": 5019,
+     "weaponExceed": 6,
+     "armorExceed": 12,
+     "accessoryExceed": 22,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 843
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-27",
-    "combatPower": 45,
-    "itemLevel": 1,
+    "sinceDate": "2026-10-28",
+    "combatPower": -437,
+    "itemLevel": -7,
     "weaponExceed": 0,
-    "armorExceed": 0,
+    "armorExceed": -3,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-27T19:42:26Z",
+   "updatedAt": "2026-10-28T19:55:34Z",
    "ok": true
   },
   {
@@ -9077,18 +9127,28 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 840
+    },
+    {
+     "date": "2026-10-29",
+     "combatPower": 485557,
+     "itemLevel": 4793,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 840
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-27",
-    "combatPower": 3032,
-    "itemLevel": 3,
+    "sinceDate": "2026-10-28",
+    "combatPower": 0,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-27T19:42:30Z",
+   "updatedAt": "2026-10-28T19:55:40Z",
    "ok": true
   },
   {
@@ -10453,18 +10513,28 @@
      "accessoryExceed": 0,
      "daevanionBasic": 389,
      "daevanionOpenNodes": 663
+    },
+    {
+     "date": "2026-10-29",
+     "combatPower": 333506,
+     "itemLevel": 3616,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 389,
+     "daevanionOpenNodes": 663
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-27",
-    "combatPower": 809,
+    "sinceDate": "2026-10-28",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-27T19:42:35Z",
+   "updatedAt": "2026-10-28T19:55:44Z",
    "ok": true
   }
  ]
