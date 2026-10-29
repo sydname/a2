@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-28T19:55:44Z",
+ "generatedAt": "2026-10-29T19:55:40Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -15,8 +15,8 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 1043317,
-    "itemLevel": 6510,
+    "combatPower": 1047740,
+    "itemLevel": 6526,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188620645",
     "titleName": "불의 신전에 군림하는"
    },
@@ -46,7 +46,7 @@
      ]
     },
     "armor": {
-     "total": 12,
+     "total": 14,
      "count": 7,
      "slots": [
       {
@@ -54,8 +54,8 @@
        "slotKo": "신발",
        "name": "용암 심장의 장화",
        "grade": "Epic",
-       "enchant": 14,
-       "exceed": 0,
+       "enchant": 20,
+       "exceed": 2,
        "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Boots.png"
       },
       {
@@ -561,8 +561,8 @@
      "slotKo": "신발",
      "name": "용암 심장의 장화",
      "grade": "Epic",
-     "enchant": 14,
-     "exceed": 0,
+     "enchant": 20,
+     "exceed": 2,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Boots.png",
      "isArcana": false
     },
@@ -1523,18 +1523,28 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-10-30",
+     "combatPower": 1047740,
+     "itemLevel": 6526,
+     "weaponExceed": 10,
+     "armorExceed": 14,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-28",
-    "combatPower": -2400,
-    "itemLevel": 0,
+    "sinceDate": "2026-10-29",
+    "combatPower": 4423,
+    "itemLevel": 16,
     "weaponExceed": 0,
-    "armorExceed": 0,
+    "armorExceed": 2,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-28T19:55:16Z",
+   "updatedAt": "2026-10-29T19:55:14Z",
    "ok": true
   },
   {
@@ -1551,8 +1561,8 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 745277,
-    "itemLevel": 5814,
+    "combatPower": 761485,
+    "itemLevel": 5815,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188725968",
     "titleName": "무스펠의 성배를 지배한"
    },
@@ -1798,7 +1808,7 @@
     "연속 난타": 20,
     "포획": 12,
     "방패 강타": 12,
-    "심판": 20,
+    "심판": 19,
     "섬광 난무": 16,
     "쇠약의 맹타": 12,
     "비호의 일격": 20,
@@ -1806,13 +1816,13 @@
     "섬멸": 12,
     "징벌": 20,
     "충격 해제": 12,
-    "체력 강화": 15,
+    "체력 강화": 16,
     "비호의 방패": 5,
     "단죄의 가호": 15,
     "철벽 방어": 17,
     "수호의 인장": 5,
     "충격 적중": 23,
-    "모욕의 포효": 28,
+    "모욕의 포효": 29,
     "격앙": 33,
     "생존 의지": 13,
     "고통 차단": 15
@@ -1961,11 +1971,11 @@
      "slotPos": 46,
      "slot": "Arcana6",
      "slotKo": "아르카나6",
-     "name": "징벌의 천칭",
+     "name": "불굴의 천칭",
      "grade": "Unique",
      "enchant": 5,
      "exceed": 0,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PveSet1.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PvpSet1.png",
      "isArcana": true
     },
     {
@@ -2007,7 +2017,7 @@
      "slotKo": "아르카나10",
      "name": "불굴의 등불",
      "grade": "Unique",
-     "enchant": 4,
+     "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_PvpSet1.png",
      "isArcana": true
@@ -2348,11 +2358,11 @@
      "slotPos": 46,
      "slot": "Arcana6",
      "slotKo": "아르카나6",
-     "name": "징벌의 천칭",
+     "name": "불굴의 천칭",
      "grade": "Unique",
      "enchant": 5,
      "exceed": 0,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PveSet1.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PvpSet1.png",
      "isArcana": true
     },
     {
@@ -2394,7 +2404,7 @@
      "slotKo": "아르카나10",
      "name": "불굴의 등불",
      "grade": "Unique",
-     "enchant": 4,
+     "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Lantern_u_PvpSet1.png",
      "isArcana": true
@@ -2458,11 +2468,11 @@
     {
      "type": "DEX",
      "name": "민첩",
-     "value": 242,
+     "value": 243,
      "effects": [
-      "회피 증가 +24.2%",
-      "막기 증가 +24.2%",
-      "치명타 저항 증가 +24.2%"
+      "회피 증가 +24.3%",
+      "막기 증가 +24.3%",
+      "치명타 저항 증가 +24.3%"
      ]
     },
     {
@@ -2528,10 +2538,10 @@
     {
      "type": "Life",
      "name": "생명[유스티엘]",
-     "value": 80,
+     "value": 100,
      "effects": [
-      "생명력 증가 +16%",
-      "재생 +16%"
+      "생명력 증가 +20%",
+      "재생 +20%"
      ]
     },
     {
@@ -2573,10 +2583,10 @@
     {
      "type": "Destiny",
      "name": "운명[마르쿠탄]",
-     "value": 79,
+     "value": 59,
      "effects": [
-      "정신력 증가 +15.8%",
-      "철벽 +15.8%"
+      "정신력 증가 +11.8%",
+      "철벽 +11.8%"
      ]
     },
     {
@@ -3059,18 +3069,28 @@
      "accessoryExceed": 36,
      "daevanionBasic": 472,
      "daevanionOpenNodes": 939
+    },
+    {
+     "date": "2026-10-30",
+     "combatPower": 761485,
+     "itemLevel": 5815,
+     "weaponExceed": 8,
+     "armorExceed": 0,
+     "accessoryExceed": 36,
+     "daevanionBasic": 472,
+     "daevanionOpenNodes": 939
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-28",
-    "combatPower": -16132,
-    "itemLevel": 4,
+    "sinceDate": "2026-10-29",
+    "combatPower": 16208,
+    "itemLevel": 1,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-28T19:55:21Z",
+   "updatedAt": "2026-10-29T19:55:18Z",
    "ok": true
   },
   {
@@ -3087,14 +3107,14 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 701683,
-    "itemLevel": 5630,
+    "combatPower": 725524,
+    "itemLevel": 5688,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188716923",
     "titleName": "무스펠의 성배를 지배한"
    },
    "exceed": {
     "weapon": {
-     "total": 6,
+     "total": 5,
      "count": 2,
      "slots": [
       {
@@ -3109,11 +3129,11 @@
       {
        "slot": "SubHand",
        "slotKo": "가더",
-       "name": "두르바티의 가더",
-       "grade": "Unique",
-       "enchant": 15,
-       "exceed": 2,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_U_007.png"
+       "name": "용암 심장의 결계",
+       "grade": "Epic",
+       "enchant": 20,
+       "exceed": 1,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_SF_01.png"
       }
      ]
     },
@@ -3277,7 +3297,7 @@
    "breakthrough": {
     "bySlot": {
      "MainHand": 4,
-     "SubHand": 2,
+     "SubHand": 1,
      "Necklace": 3,
      "Earring1": 3,
      "Earring2": 3,
@@ -3289,7 +3309,7 @@
      "Brooch2": 3
     },
     "pendantEnchant": 5,
-    "amuletEnchant": 4
+    "amuletEnchant": 10
    },
    "stigma": [
     {
@@ -3347,11 +3367,11 @@
     "피의 흡수": 17,
     "약점 파악": 15,
     "공격 준비": 22,
-    "충격 적중": 24,
-    "파괴 충동": 15,
+    "충격 적중": 23,
+    "파괴 충동": 14,
     "노련한 반격": 31,
     "생존 의지": 14,
-    "살기 파열": 31
+    "살기 파열": 32
    },
    "daevanion": {
     "openedBoards": 8,
@@ -3565,11 +3585,11 @@
      "slotPos": 2,
      "slot": "SubHand",
      "slotKo": "가더",
-     "name": "두르바티의 가더",
-     "grade": "Unique",
-     "enchant": 15,
-     "exceed": 2,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_U_007.png",
+     "name": "용암 심장의 결계",
+     "grade": "Epic",
+     "enchant": 20,
+     "exceed": 1,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Weapon_Guarder_SF_01.png",
      "isArcana": false
     },
     {
@@ -3776,7 +3796,7 @@
      "slotKo": "인장",
      "name": "계시의 아뮬렛",
      "grade": "Epic",
-     "enchant": 4,
+     "enchant": 10,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Item_Craft_Conversion_Crystal_L_lv6_01.png",
      "isArcana": false
@@ -3986,9 +4006,9 @@
     {
      "type": "STR",
      "name": "위력",
-     "value": 286,
+     "value": 302,
      "effects": [
-      "공격력 증가 +28.6%"
+      "공격력 증가 +30.2%"
      ]
     },
     {
@@ -4020,10 +4040,10 @@
     {
      "type": "AGI",
      "name": "정확",
-     "value": 175,
+     "value": 114,
      "effects": [
-      "명중 증가 +17.5%",
-      "치명타 증가 +17.5%"
+      "명중 증가 +11.4%",
+      "치명타 증가 +11.4%"
      ]
     },
     {
@@ -4595,18 +4615,28 @@
      "accessoryExceed": 27,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 916
+    },
+    {
+     "date": "2026-10-30",
+     "combatPower": 725524,
+     "itemLevel": 5688,
+     "weaponExceed": 5,
+     "armorExceed": 0,
+     "accessoryExceed": 27,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 916
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-28",
-    "combatPower": 1156,
-    "itemLevel": 14,
-    "weaponExceed": 0,
+    "sinceDate": "2026-10-29",
+    "combatPower": 23841,
+    "itemLevel": 58,
+    "weaponExceed": -1,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-28T19:55:26Z",
+   "updatedAt": "2026-10-29T19:55:23Z",
    "ok": true
   },
   {
@@ -6109,10 +6139,20 @@
      "accessoryExceed": 14,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 887
+    },
+    {
+     "date": "2026-10-30",
+     "combatPower": 607785,
+     "itemLevel": 5153,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 14,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 887
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-28",
+    "sinceDate": "2026-10-29",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -6120,7 +6160,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-28T19:55:30Z",
+   "updatedAt": "2026-10-29T19:55:27Z",
    "ok": true
   },
   {
@@ -6137,8 +6177,8 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 615422,
-    "itemLevel": 5019,
+    "combatPower": 621496,
+    "itemLevel": 5034,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188785270",
     "titleName": "무스펠의 성배를 지배한"
    },
@@ -6168,7 +6208,7 @@
      ]
     },
     "armor": {
-     "total": 12,
+     "total": 9,
      "count": 7,
      "slots": [
       {
@@ -6219,11 +6259,11 @@
       {
        "slot": "Shoulder",
        "slotKo": "견갑",
-       "name": "비상하는 데바의 견갑",
-       "grade": "Unique",
-       "enchant": 15,
-       "exceed": 3,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0178_T04_Shoulder.png"
+       "name": "용암 심장의 견갑",
+       "grade": "Epic",
+       "enchant": 10,
+       "exceed": 0,
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Shoulder.png"
       },
       {
        "slot": "Torso",
@@ -6380,28 +6420,28 @@
     }
    ],
    "skills": {
-    "연격": 18,
-    "비각": 19,
+    "연격": 16,
+    "비각": 21,
     "폭주": 20,
     "질풍격": 14,
-    "연환권": 16,
+    "연환권": 18,
     "태풍 연타": 16,
     "회전각": 12,
     "지면 강타": 16,
     "철산고": 12,
-    "폭렬권": 17,
+    "폭렬권": 16,
     "승천타": 20,
-    "충격 해제": 12,
+    "충격 해제": 13,
     "정신 전환": 15,
-    "전선 유지": 14,
-    "정면 돌파": 16,
-    "위세": 26,
-    "폭주 증폭": 20,
-    "충격 적중": 19,
+    "전선 유지": 13,
+    "정면 돌파": 17,
+    "위세": 29,
+    "폭주 증폭": 22,
+    "충격 적중": 18,
     "충격타": 11,
-    "거대한 분노": 22,
+    "거대한 분노": 20,
     "회생의 계약": 8,
-    "경량화": 7
+    "경량화": 11
    },
    "daevanion": {
     "openedBoards": 8,
@@ -6503,11 +6543,11 @@
      "slotPos": 42,
      "slot": "Arcana2",
      "slotKo": "아르카나2",
-     "name": "수호의 양피지",
+     "name": "징벌의 양피지",
      "grade": "Unique",
      "enchant": 5,
      "exceed": 0,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_CureSet1.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_PveSet1.png",
      "isArcana": true
     },
     {
@@ -6516,7 +6556,7 @@
      "slotKo": "아르카나3",
      "name": "징벌의 나침반",
      "grade": "Unique",
-     "enchant": 4,
+     "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
      "isArcana": true
@@ -6536,22 +6576,22 @@
      "slotPos": 45,
      "slot": "Arcana5",
      "slotKo": "아르카나5",
-     "name": "징벌의 거울",
+     "name": "수호의 거울",
      "grade": "Unique",
      "enchant": 5,
      "exceed": 0,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_PveSet1.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_CureSet1.png",
      "isArcana": true
     },
     {
      "slotPos": 46,
      "slot": "Arcana6",
      "slotKo": "아르카나6",
-     "name": "수호의 천칭",
+     "name": "불굴의 천칭",
      "grade": "Unique",
-     "enchant": 1,
+     "enchant": 4,
      "exceed": 0,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_CureSet1.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PvpSet1.png",
      "isArcana": true
     },
     {
@@ -6637,11 +6677,11 @@
      "slotPos": 4,
      "slot": "Shoulder",
      "slotKo": "견갑",
-     "name": "비상하는 데바의 견갑",
-     "grade": "Unique",
-     "enchant": 15,
-     "exceed": 3,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0178_T04_Shoulder.png",
+     "name": "용암 심장의 견갑",
+     "grade": "Epic",
+     "enchant": 10,
+     "exceed": 0,
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Shoulder.png",
      "isArcana": false
     },
     {
@@ -6868,11 +6908,11 @@
      "slotPos": 42,
      "slot": "Arcana2",
      "slotKo": "아르카나2",
-     "name": "수호의 양피지",
+     "name": "징벌의 양피지",
      "grade": "Unique",
      "enchant": 5,
      "exceed": 0,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_CureSet1.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Parchment_u_PveSet1.png",
      "isArcana": true
     },
     {
@@ -6881,7 +6921,7 @@
      "slotKo": "아르카나3",
      "name": "징벌의 나침반",
      "grade": "Unique",
-     "enchant": 4,
+     "enchant": 5,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Compass_u_PveSet1.png",
      "isArcana": true
@@ -6901,22 +6941,22 @@
      "slotPos": 45,
      "slot": "Arcana5",
      "slotKo": "아르카나5",
-     "name": "징벌의 거울",
+     "name": "수호의 거울",
      "grade": "Unique",
      "enchant": 5,
      "exceed": 0,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_PveSet1.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Mirror_u_CureSet1.png",
      "isArcana": true
     },
     {
      "slotPos": 46,
      "slot": "Arcana6",
      "slotKo": "아르카나6",
-     "name": "수호의 천칭",
+     "name": "불굴의 천칭",
      "grade": "Unique",
-     "enchant": 1,
+     "enchant": 4,
      "exceed": 0,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_CureSet1.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Arcana_Card_Libra_u_PvpSet1.png",
      "isArcana": true
     },
     {
@@ -7065,10 +7105,10 @@
     {
      "type": "Justice",
      "name": "정의[네자칸]",
-     "value": 82,
+     "value": 70,
      "effects": [
-      "방어력 증가 +16.4%",
-      "완벽 +16.4%"
+      "방어력 증가 +14%",
+      "완벽 +14%"
      ]
     },
     {
@@ -7083,19 +7123,19 @@
     {
      "type": "Illusion",
      "name": "환상[카이시넬]",
-     "value": 113,
+     "value": 143,
      "effects": [
-      "재시전 시간 -22.6%",
-      "철벽 관통 +22.6%"
+      "재시전 시간 -28.6%",
+      "철벽 관통 +28.6%"
      ]
     },
     {
      "type": "Life",
      "name": "생명[유스티엘]",
-     "value": 84,
+     "value": 60,
      "effects": [
-      "생명력 증가 +16.8%",
-      "재생 +16.8%"
+      "생명력 증가 +12%",
+      "재생 +12%"
      ]
     },
     {
@@ -7110,37 +7150,37 @@
     {
      "type": "Destruction",
      "name": "파괴[지켈]",
-     "value": 143,
+     "value": 161,
      "effects": [
-      "공격력 증가 +28.6%",
-      "완벽 저항 +28.6%"
+      "공격력 증가 +32.2%",
+      "완벽 저항 +32.2%"
      ]
     },
     {
      "type": "Death",
      "name": "죽음[트리니엘]",
-     "value": 99,
+     "value": 101,
      "effects": [
-      "치명타 증가 +19.8%",
-      "재생 관통 +19.8%"
+      "치명타 증가 +20.2%",
+      "재생 관통 +20.2%"
      ]
     },
     {
      "type": "Wisdom",
      "name": "지혜[루미엘]",
-     "value": 184,
+     "value": 154,
      "effects": [
-      "정신력 소모량 -36.8%",
-      "강타 +36.8%"
+      "정신력 소모량 -30.8%",
+      "강타 +30.8%"
      ]
     },
     {
      "type": "Destiny",
      "name": "운명[마르쿠탄]",
-     "value": 51,
+     "value": 81,
      "effects": [
-      "정신력 증가 +10.2%",
-      "철벽 +10.2%"
+      "정신력 증가 +16.2%",
+      "철벽 +16.2%"
      ]
     },
     {
@@ -7623,18 +7663,28 @@
      "accessoryExceed": 22,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 843
+    },
+    {
+     "date": "2026-10-30",
+     "combatPower": 621496,
+     "itemLevel": 5034,
+     "weaponExceed": 6,
+     "armorExceed": 9,
+     "accessoryExceed": 22,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 843
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-28",
-    "combatPower": -437,
-    "itemLevel": -7,
+    "sinceDate": "2026-10-29",
+    "combatPower": 6074,
+    "itemLevel": 15,
     "weaponExceed": 0,
     "armorExceed": -3,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-28T19:55:34Z",
+   "updatedAt": "2026-10-29T19:55:31Z",
    "ok": true
   },
   {
@@ -9137,10 +9187,20 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 840
+    },
+    {
+     "date": "2026-10-30",
+     "combatPower": 485557,
+     "itemLevel": 4793,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 840
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-28",
+    "sinceDate": "2026-10-29",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -9148,7 +9208,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-28T19:55:40Z",
+   "updatedAt": "2026-10-29T19:55:36Z",
    "ok": true
   },
   {
@@ -10523,10 +10583,20 @@
      "accessoryExceed": 0,
      "daevanionBasic": 389,
      "daevanionOpenNodes": 663
+    },
+    {
+     "date": "2026-10-30",
+     "combatPower": 333506,
+     "itemLevel": 3616,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 389,
+     "daevanionOpenNodes": 663
     }
    ],
    "delta": {
-    "sinceDate": "2026-10-28",
+    "sinceDate": "2026-10-29",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -10534,7 +10604,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-10-28T19:55:44Z",
+   "updatedAt": "2026-10-29T19:55:40Z",
    "ok": true
   }
  ]
