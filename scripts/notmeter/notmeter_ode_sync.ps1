@@ -10,11 +10,13 @@
     .\notmeter_ode_sync.ps1 -Once        # 한 번만 업로드
     .\notmeter_ode_sync.ps1              # 감시 모드 (파일이 바뀔 때마다 업로드)
     .\notmeter_ode_sync.ps1 -Path "C:\...\aether-energy.json"   # 파일 위치 직접 지정
+    .\notmeter_ode_sync.ps1 -Export      # aether-energy.json / abyss-corridors.json 을 samples\ 로 복사 (구조 확인용)
 #>
 param(
   [string]$Path = $env:NOTMETER_AETHER,
   [switch]$Once,
   [switch]$DryRun,
+  [switch]$Export,
   [string]$Field = "Base",
   [string]$SiteData = "https://sydname.github.io/a2/data/all.json",
   [string]$DbUrl = "https://a2-tracker-default-rtdb.asia-southeast1.firebasedatabase.app"
@@ -119,6 +121,16 @@ function Sync-Once($file) {
 
 $file = Find-AetherFile
 Log "대상 파일: $file"
+if ($Export) {
+  $dst = Join-Path $PSScriptRoot "samples"
+  New-Item -ItemType Directory -Force -Path $dst | Out-Null
+  foreach ($n in @("aether-energy.json", "abyss-corridors.json")) {
+    $src = Join-Path (Split-Path $file) $n
+    if (Test-Path $src) { Copy-Item $src $dst -Force; Log "복사: $src -> $dst" }
+    else { Log "없음: $src" }
+  }
+  return
+}
 Sync-Once $file
 if ($Once -or $DryRun) { return }
 
