@@ -732,27 +732,40 @@
   }
   function wingTable(chars) {
     var edit = STATE.wingEdit;
-    var cols = [{ label: "등급", cls: "chk" }, { label: "날개", cls: "l wname" }, { label: "강화효과", cls: "l weff" }];
+    var cols = [{ label: "#", cls: "wno" }, { label: "등급", cls: "chk" }, { label: "날개", cls: "l wname" }, { label: "강화효과", cls: "l weff" }];
     chars.forEach(function (c) { cols.push({ label: c.label || c.profile.name, cls: "sm" }); });
 
     var t = el("table", "grid" + (edit ? " edit" : ""));
     t.appendChild(makeCols(cols));
     var thead = el("thead");
-    thead.appendChild(groupRow([{ span: 3 },
+    thead.appendChild(groupRow([{ span: 4 },
       { span: chars.length, label: "캐릭터별 강화 수치" + (edit ? " (수정 중)" : ""), grp: true }]));
     thead.appendChild(headerRow(cols));
     t.appendChild(thead);
 
     var tb = el("tbody");
     var sum = el("tr", "wing-sum");
+    sum.appendChild(td("", "wno"));
     sum.appendChild(td("", "chk"));
     sum.appendChild(td("날개 템렙 합", "l"));
     sum.appendChild(td("", "l"));
     chars.forEach(function (c) { sum.appendChild(td("<b>" + N(wingTotal(c)) + "</b>", "num sm")); });
     tb.appendChild(sum);
 
-    sortedWings().forEach(function (w) {
+    var max = el("tr", "wing-sum");
+    max.appendChild(td("", "wno"));
+    max.appendChild(td("", "chk"));
+    max.appendChild(td("10강 개수", "l"));
+    max.appendChild(td("", "l"));
+    chars.forEach(function (c) {
+      var n = STATE.wings.filter(function (w) { return getWing(c, w.name) === 10; }).length;
+      max.appendChild(td("<b>" + n + "</b>", "num sm"));
+    });
+    tb.appendChild(max);
+
+    sortedWings().forEach(function (w, i) {
       var tr = el("tr");
+      tr.appendChild(td(String(i + 1), "wno"));
       tr.appendChild(td(esc(w.grade), "chk " + wingGradeCls(w.grade)));
       tr.appendChild(td(esc(w.name), "l", w.name));
       tr.appendChild(td(esc(w.effect || ""), "l weff", w.effect || ""));

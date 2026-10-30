@@ -89,6 +89,7 @@ table.grid col.chk  { width: 46px; }
 table.grid col.med  { width: 92px; }
 table.grid col.wname { width: 170px; }
 table.grid col.weff { width: 150px; }
+table.grid col.wno  { width: 34px; }
 table.grid col.sname { width: 250px; }
 table.grid col.stier { width: 250px; }
 table.grid col.smat { width: 210px; }
@@ -332,6 +333,7 @@ td.soul .soul-off { color: var(--border-strong); font-weight: 400; }
 .wg-rare { color: #12915a; }
 table.grid td.wg-max { color: var(--muted-2); font-weight: 600; }
 table.grid td.weff { font-size: 12px; color: var(--muted); }
+table.grid td.wno { text-align: center; font-size: 12px; color: var(--muted-2); }
 table.grid tr.wing-sum td { background: var(--accent-soft); font-weight: 800; }
 table.grid td.pt-edit select.wg-sel { font-weight: 800; }
 
