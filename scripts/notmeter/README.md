@@ -25,6 +25,7 @@ NotMeter(<https://github.com/Not4You-Dev>)가 게임 패킷에서 읽은 **캐�
 | 파일 | 용도 |
 |---|---|
 | `notmeter_ode_sync.ps1` | 본체 스크립트 |
+| `diagnose_ode_sync.cmd` | 더블클릭 → 진단 정보 모아서 GitHub 에 올림 (문제 생겼을 때) |
 | `test_ode_sync.cmd` | 더블클릭 → 업로드 없이 무엇을 올릴지만 출력 (확인용) |
 | `start_ode_sync.cmd` | 더블클릭 → 창 없이 백그라운드 감시 모드 실행 |
 | `notmeter_ode_sync.log` | 실행 기록 (자동 생성, git 제외) |
@@ -118,6 +119,26 @@ git add samples ; git commit -m "NotMeter 샘플" ; git push
 ```
 
 `samples\` 에 두 파일이 복사된다. (레포가 Public 이면 캐릭터명/수치가 공개되는 점 참고)
+
+## 공유가 안 될 때 (미터기 PC 에서 Claude 없이)
+
+**1단계 — 스스로 확인 (5분)**
+
+1. 작업 관리자 → 세부 정보 탭에 `powershell.exe` 가 있는지 → 없으면 `start_ode_sync.cmd` 더블클릭
+2. `notmeter_ode_sync.log` 를 메모장으로 열어 **맨 아래 줄** 확인 → 아래 "로그 읽는 법" 표 대로
+3. 그래도 모르겠으면: 작업 관리자에서 `Windows PowerShell` 종료 → `git pull` → `start_ode_sync.cmd` 다시 실행
+4. NotMeter 에서 캐릭터 오드가 떠 있는 상태인지 확인 (안 뜨면 NotMeter 쪽 문제 — 게임 재접속)
+
+**2단계 — 진단 올리기 (1분)**
+
+`diagnose_ode_sync.cmd` 더블클릭. 실행 상태 · 파일 위치/수정 시각 · 네트워크 · 로그 · 올릴 값을
+`diag\` 폴더에 모으고 **자동으로 GitHub 에 push** 한다.
+→ 사무실에서 Claude 에게 **"진단 올렸음"** 이라고만 하면 됨. (push 실패 시 `diag\` 폴더를 압축해서 옮기기)
+
+**3단계 — 급하면 수동 입력**
+
+사이트 '기본' 탭의 오드 칸을 눌러 숫자를 직접 입력하면 바로 저장된다 (폰에서도 가능).
+스크립트가 다음에 정상 동작하면 그 값으로 덮어쓴다.
 
 ## 문제 해결
 
