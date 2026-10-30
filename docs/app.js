@@ -107,7 +107,9 @@
   // ---------- Firebase (선택) — 없으면 localStorage 로 폴백 ----------
   var FB_CFG = window.AION2_FIREBASE || null;
   var fbdb = null, fbChecks = {}, fbOde = {}, fbPot = {}, fbWing = {};
+  var wingDenied = false;   // DB 규칙에 wing 이 없으면 권한 거부 → 이 브라우저(localStorage)로 폴백
   function fbActive() { return !!fbdb; }
+  function wingFb() { return fbActive() && !wingDenied; }
   function skipRerender() {
     var a = document.activeElement;
     return a && a.classList && (a.classList.contains("ode-inp") ||
@@ -134,6 +136,10 @@
       fbdb.ref("wing").on("value", function (s) {
         fbWing = s.val() || {};
         if (STATE.data && !skipRerender()) render();
+      }, function (e) {
+        console.warn("Firebase wing 권한 없음, localStorage 로 폴백:", e);
+        wingDenied = true;
+        if (STATE.data) render();
       });
       // 지난 기간 체크 데이터 정리 (best effort)
       fbdb.ref("checks").once("value", function (s) {
@@ -167,7 +173,7 @@
   function wingSafe(name) { return String(name).replace(/[.#$\[\]\/]/g, "_"); }
   function wingLsKey(charKey) { return "aion2.wing." + charKey; }
   function fbWingChar(charKey) {
-    if (fbActive()) return fbWing[charKey] || {};
+    if (wingFb()) return fbWing[charKey] || {};
     try { return JSON.parse(lsGet(wingLsKey(charKey)) || "{}"); } catch (e) { return {}; }
   }
   function getWing(c, name) {
@@ -178,7 +184,15 @@
   }
   function setWing(charKey, name, v) {
     var val = (v === "" || v == null) ? "-" : Number(v);
-    if (fbActive()) { fbdb.ref("wing/" + charKey + "/" + wingSafe(name)).set(val); return; }
+    if (wingFb()) {
+      fbdb.ref("wing/" + charKey + "/" + wingSafe(name)).set(val).catch(function (e) {
+        console.warn("Firebase wing 저장 실패, localStorage 로 폴백:", e);
+        wingDenied = true;
+        setWing(charKey, name, v);
+        render();
+      });
+      return;
+    }
     var all = fbWingChar(charKey);
     all[wingSafe(name)] = val;
     lsSet(wingLsKey(charKey), JSON.stringify(all));
@@ -343,7 +357,8 @@
       wbtn.addEventListener("click", function () { STATE.wingEdit = !STATE.wingEdit; render(); });
       wbar.appendChild(wbtn);
       wbar.appendChild(el("span", "arc-upd", STATE.wingEdit
-        ? ("칸의 강화 수치를 바꾸면 즉시 저장됩니다 (" + (fbActive() ? "Firebase 동기화" : "이 브라우저") + ")")
+        ? ("칸의 강화 수치를 바꾸면 즉시 저장됩니다 (" + (wingFb() ? "Firebase 동기화" :
+            wingDenied ? "이 브라우저 — Firebase 규칙에 wing 권한이 없어 동기화 안 됨" : "이 브라우저") + ")")
         : "엑셀 날개 시트 기준값. 수정하려면 [정보 수정]"));
       box.appendChild(wbar);
     }
