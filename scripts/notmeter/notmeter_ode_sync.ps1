@@ -18,6 +18,7 @@ param(
   [switch]$DryRun,
   [switch]$Export,
   [string]$Field = "Base",
+  [int]$IntervalMinutes = 5,
   [string]$SiteData = "https://sydname.github.io/a2/data/all.json",
   [string]$DbUrl = "https://a2-tracker-default-rtdb.asia-southeast1.firebasedatabase.app"
 )
@@ -94,7 +95,10 @@ function Get-CharKeys {
   return $map
 }
 
-function Sync-Once($file) {
+$script:LastPayload = $null
+
+function Sync-Once($file, [switch]$Force) {
+  Log ("파일 수정 시각: {0}" -f (Get-Item $file).LastWriteTime.ToString("yyyy-MM-dd HH:mm:ss"))
   $json = Read-Json $file
   $recs = New-Object System.Collections.Generic.List[object]
   Get-Records $json $recs
@@ -114,11 +118,26 @@ function Sync-Once($file) {
 
   $payload = $body | ConvertTo-Json -Compress
   if ($DryRun) { Log "DryRun: PATCH $DbUrl/ode.json $payload"; return }
+  if (-not $Force -and $payload -eq $script:LastPayload) { Log "변경 없음 - 업로드 생략"; return }
   Invoke-RestMethod -Method Patch -Uri "$DbUrl/ode.json" -ContentType "application/json; charset=utf-8" `
     -Body ([Text.Encoding]::UTF8.GetBytes($payload)) | Out-Null
-  Log ("업로드 완료: {0}명" -f $body.Count)
+  $script:LastPayload = $payload
+  # 실제 반영 확인용으로 다시 읽어서 기록
+  $now = Invoke-RestMethod -Uri "$DbUrl/ode.json"
+  Log ("업로드 완료: {0}명 / 현재 사이트 값: {1}" -f $body.Count, ($now | ConvertTo-Json -Compress))
 }
 
+function Try-Sync($file, [switch]$Force) {
+  try { Sync-Once $file -Force:$Force; return $true }
+  catch { Log ("실패: {0}" -f $_.Exception.Message); return $false }
+}
+
+# 창 없이 돌 때 에러가 묻히지 않도록 로그에 남기고 종료
+trap { Log ("오류로 종료: {0}" -f $_.Exception.Message); break }
+
+# PowerShell 5.1 기본값이 TLS1.0 일 수 있어 명시
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+Log ("시작 (PowerShell {0}, 모드: {1})" -f $PSVersionTable.PSVersion, $(if ($DryRun) {"DryRun"} elseif ($Once) {"Once"} elseif ($Export) {"Export"} else {"감시"}))
 $file = Find-AetherFile
 Log "대상 파일: $file"
 if ($Export) {
@@ -131,17 +150,28 @@ if ($Export) {
   }
   return
 }
-Sync-Once $file
-if ($Once -or $DryRun) { return }
+if ($Once -or $DryRun) { Sync-Once $file -Force; return }
 
-# 감시 모드: 파일이 바뀌면 3초 모아서(연속 쓰기 대비) 업로드
+# 로그인 직후엔 네트워크가 아직 없을 수 있어 성공할 때까지 재시도
+for ($i = 0; -not (Try-Sync $file -Force) -and $i -lt 20; $i++) { Start-Sleep -Seconds 30 }
+
+# 감시 모드: 파일이 바뀌면 3초 모아서(연속 쓰기 대비) 업로드.
+# 임시파일→이름변경 방식 저장은 감시가 놓칠 수 있어 IntervalMinutes 마다 수정 시각도 확인.
 $fsw = New-Object IO.FileSystemWatcher (Split-Path $file), (Split-Path $file -Leaf)
 $fsw.NotifyFilter = [IO.NotifyFilters]"LastWrite, Size, FileName"
 $fsw.EnableRaisingEvents = $true
-Log "감시 시작 (Ctrl+C 로 종료)"
+$lastWrite = (Get-Item $file).LastWriteTime
+$nextPoll = (Get-Date).AddMinutes($IntervalMinutes)
+Log "감시 시작 (Ctrl+C 로 종료, $IntervalMinutes 분마다 확인)"
 while ($true) {
-  $r = $fsw.WaitForChanged([IO.WatcherChangeTypes]::All, 60000)
-  if ($r.TimedOut) { continue }
+  $r = $fsw.WaitForChanged([IO.WatcherChangeTypes]::All, 30000)
+  $changed = -not $r.TimedOut
+  if (-not $changed -and (Get-Date) -ge $nextPoll) {
+    $nextPoll = (Get-Date).AddMinutes($IntervalMinutes)
+    try { $changed = (Get-Item $file).LastWriteTime -ne $lastWrite } catch {}
+  }
+  if (-not $changed) { continue }
   Start-Sleep -Seconds 3
-  try { Sync-Once $file } catch { Log "실패: $($_.Exception.Message)" }
+  try { $lastWrite = (Get-Item $file).LastWriteTime } catch {}
+  Try-Sync $file | Out-Null
 }

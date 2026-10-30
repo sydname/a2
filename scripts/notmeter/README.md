@@ -96,6 +96,16 @@ powershell -ExecutionPolicy Bypass -File .\notmeter_ode_sync.ps1 -Once
 3. 지금 바로 켜려면 `start_ode_sync.cmd` 더블클릭 (창 안 뜸)
 
 잘 도는지는 `notmeter_ode_sync.log` 로 확인. 끄려면 작업 관리자에서 `Windows PowerShell` 종료.
+스크립트를 업데이트(`git pull`)했으면 PowerShell 을 종료하고 `start_ode_sync.cmd` 를 다시 실행해야 새 버전이 돈다.
+
+로그 읽는 법:
+
+| 로그 | 의미 |
+|---|---|
+| `업로드 완료: N명 / 현재 사이트 값: {...}` | 정상. 사이트 값이 게임 값과 같아야 함 |
+| `파일 수정 시각: ...` 이 오래전 | NotMeter 가 파일을 아직 안 씀 (게임 중 감지 안 됨 / 종료 시에만 저장) |
+| `변경 없음 - 업로드 생략` | 값이 그대로라 안 올림 (정상) |
+| `실패: ...` / `오류로 종료: ...` | 에러 — 이 줄을 그대로 알려주기 |
 
 ## 5. 샘플 내보내기 (회랑/입장권/키나 연동용)
 
