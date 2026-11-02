@@ -2,7 +2,8 @@
   NotMeter 오드 현황 -> 사이트(Firebase ode/<캐릭터키>) 자동 업로드.
 
   NotMeter 는 캐릭터별 오드 기록을 aether-energy.json 에 저장한다.
-  이 스크립트는 그 파일을 감시하다가 바뀌면 기본 오드(Base) 값을 Firebase 에 PATCH 한다.
+  이 스크립트는 그 파일을 감시하다가 바뀌면 기본 오드(Base)·충전 오드(Bonus)·감지 시각을 Firebase 에 PATCH 한다.
+  사이트는 감지 시각 이후 자연 충전(3시간마다 +15)을 더해서 보여준다.
   게임/미터기를 켜두는 동안 백그라운드로 돌려두면 끄기 전에 따로 할 일이 없다.
 
   사용법 (집 PC, PowerShell):
@@ -67,8 +68,10 @@ function Get-Records($node, $acc) {
     $val = Get-Prop $node $Field
     if ($name -and $null -ne $val -and "$val" -match '^\d+$') {
       $at = Get-Prop $node "AetherReceivedAt"
-      if (-not $at) { $at = Get-Prop $node "CurrencyObservedAt" }
-      $acc.Add([pscustomobject]@{ Name = "$name"; Value = [int]$val; At = "$at" })
+      if (-not $at) { $at = Get-Prop $node "ObservedAt" }
+      $bonus = Get-Prop $node "Bonus"
+      if ("$bonus" -notmatch '^\d+$') { $bonus = 0 }
+      $acc.Add([pscustomobject]@{ Name = "$name"; Server = "$(Get-Prop $node 'ServerId')"; Value = [int]$val; Bonus = [int]$bonus; At = "$at" })
     }
     foreach ($p in $node.PSObject.Properties) { Get-Records $p.Value $acc }
   }
@@ -106,17 +109,20 @@ function Sync-Once($file, [switch]$Force) {
 
   $keys = Get-CharKeys
   $body = [ordered]@{}
-  # 같은 캐릭터 레코드가 여러 개면 가장 최근 것
   foreach ($g in ($recs | Group-Object Name)) {
-    $r = $g.Group | Sort-Object At -Descending | Select-Object -First 1
-    $k = $keys[$r.Name]
-    if (-not $k) { Log ("  건너뜀: {0} = {1} (사이트에 없는 캐릭터)" -f $r.Name, $r.Value); continue }
-    $body[$k] = $r.Value
-    Log ("  {0} ({1}) = {2}  @ {3}" -f $r.Name, $k, $r.Value, $r.At)
+    $k = $keys[$g.Name]
+    if (-not $k) { Log ("  건너뜀: {0} (사이트에 없는 캐릭터)" -f $g.Name); continue }
+    # 다른 서버의 동명 캐릭터는 제외 (캐릭터 키 = <서버ID>-...). 남은 것 중 가장 최근 레코드.
+    $server = $k.Split('-')[0]
+    $r = $g.Group | Where-Object { -not $_.Server -or $_.Server -eq $server } |
+         Sort-Object At -Descending | Select-Object -First 1
+    if (-not $r) { Log ("  건너뜀: {0} (서버 {1} 기록 없음)" -f $g.Name, $server); continue }
+    $body[$k] = [ordered]@{ base = $r.Value; bonus = $r.Bonus; at = $r.At }
+    Log ("  {0} ({1}) = {2}(+{3})  @ {4}" -f $r.Name, $k, $r.Value, $r.Bonus, $r.At)
   }
   if ($body.Count -eq 0) { return }
 
-  $payload = $body | ConvertTo-Json -Compress
+  $payload = $body | ConvertTo-Json -Compress -Depth 5
   if ($DryRun) { Log "DryRun: PATCH $DbUrl/ode.json $payload"; return }
   if (-not $Force -and $payload -eq $script:LastPayload) { Log "변경 없음 - 업로드 생략"; return }
   Invoke-RestMethod -Method Patch -Uri "$DbUrl/ode.json" -ContentType "application/json; charset=utf-8" `
@@ -124,7 +130,7 @@ function Sync-Once($file, [switch]$Force) {
   $script:LastPayload = $payload
   # 실제 반영 확인용으로 다시 읽어서 기록
   $now = Invoke-RestMethod -Uri "$DbUrl/ode.json"
-  Log ("업로드 완료: {0}명 / 현재 사이트 값: {1}" -f $body.Count, ($now | ConvertTo-Json -Compress))
+  Log ("업로드 완료: {0}명 / 현재 사이트 값: {1}" -f $body.Count, ($now | ConvertTo-Json -Compress -Depth 5))
 }
 
 function Try-Sync($file, [switch]$Force) {

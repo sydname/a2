@@ -226,22 +226,75 @@
     } catch (e) {}
   }
 
+  // 오드: 저장값 = { base(기본), bonus(충전), at(base 를 확인한 시각) }. 옛 형식(숫자)은 base 로 취급.
+  // 기본 오드는 KST 02시부터 3시간마다 +15 (최대 840) → at 이후 지난 충전 횟수만큼 더해서 보여준다.
+  var ODE_MAX = { base: 840, bonus: 2000 }, ODE_REGEN = 15, HOUR_MS = 3600000;
   function odeKey(charKey) { return "aion2.ode." + charKey; }
-  function setOde(charKey, raw) {
-    var v = String(raw == null ? "" : raw).trim();
-    if (fbActive()) { fbdb.ref("ode/" + charKey).set(v === "" ? null : Number(v)); return; }
-    lsSet(odeKey(charKey), v);
+  function odeTick(ms) { return Math.floor((ms + 7 * HOUR_MS) / (3 * HOUR_MS)); }   // UTC+9, 02시 기준
+  function odeTime(iso) {   // 미터기 시각은 소수점 6자리라 브라우저 호환을 위해 3자리로 자름
+    return iso ? new Date(String(iso).replace(/(\.\d{3})\d+/, "$1")).getTime() : NaN;
   }
-  function getOde(c) {
-    if (fbActive()) {
-      if (fbOde[c.key] != null && fbOde[c.key] !== "") return Number(fbOde[c.key]);
-    } else {
-      var ov = lsGet(odeKey(c.key));
-      if (ov != null && ov !== "") return Number(ov);
+  function odeNorm(v) {
+    if (v == null || v === "") return null;
+    if (typeof v === "object") return { base: v.base == null ? null : Number(v.base), bonus: v.bonus == null ? null : Number(v.bonus), at: v.at || null };
+    return isNaN(v) ? null : { base: Number(v), bonus: null, at: null };
+  }
+  function odeStored(c) {
+    var v = null;
+    if (fbActive()) v = fbOde[c.key];
+    else {
+      v = lsGet(odeKey(c.key));
+      try { v = v ? JSON.parse(v) : null; } catch (e) { v = null; }
     }
     var m = STATE.manual[c.label];
-    return m && m.ode != null ? m.ode : null;
+    return odeNorm(v) || odeNorm(m && m.ode) || { base: null, bonus: null, at: null };
   }
+  function getOde(c) {
+    var s = odeStored(c), t = odeTime(s.at), ticks = 0, base = s.base;
+    if (base != null && !isNaN(t)) {
+      ticks = Math.max(0, odeTick(Date.now()) - odeTick(t));
+      if (base < ODE_MAX.base) base = Math.min(ODE_MAX.base, base + ticks * ODE_REGEN);
+    }
+    return { base: base, bonus: s.bonus, at: s.at, stored: s.base, ticks: ticks };
+  }
+  // field = "base" | "bonus". 기본 오드를 직접 고치면 그 시점부터 다시 충전을 센다. 저장한 값을 돌려줌.
+  function setOde(c, field, raw) {
+    var txt = String(raw == null ? "" : raw).trim();
+    var v = txt === "" || isNaN(txt) ? null : Math.min(ODE_MAX[field], Math.max(0, Math.floor(Number(txt))));
+    var s = odeStored(c);
+    s[field] = v;
+    if (field === "base") s.at = v == null ? null : new Date().toISOString();
+    var val = s.base == null && s.bonus == null ? null : s;
+    if (fbActive()) fbdb.ref("ode/" + c.key).set(val);
+    else lsSet(odeKey(c.key), val ? JSON.stringify(val) : "");
+    return v;
+  }
+  function odeInput(c, field, value) {
+    var inp = el("input", "ode-inp ode-" + field);
+    inp.type = "number";
+    inp.min = 0; inp.max = ODE_MAX[field];
+    inp.value = value == null ? "" : value;
+    inp.placeholder = "–";
+    inp.setAttribute("aria-label", (field === "base" ? "기본 오드 (최대 " : "충전 오드 (최대 ") + ODE_MAX[field] + ")");
+    inp.addEventListener("change", function () {
+      var v = setOde(c, field, inp.value);
+      inp.value = v == null ? "" : v;
+    });
+    return inp;
+  }
+  function odeTitle(o) {
+    var t = odeTime(o.at);
+    if (isNaN(t)) return "기본 오드 최대 840 · 충전 오드 최대 2000";
+    var iso = new Date(t).toISOString();
+    return "확인 " + fmtDateTime(iso) + " (" + timeAgo(iso) + ")" +
+      (o.ticks ? " · 당시 기본 오드 " + o.stored + ", 자연 충전 " + o.ticks + "회 추정" : "");
+  }
+  // 페이지를 켜둔 채 충전 시각이 지나면 다시 그림
+  var odeShownTick = odeTick(Date.now());
+  setInterval(function () {
+    var cur = odeTick(Date.now());
+    if (cur !== odeShownTick && STATE.data && !skipRerender()) { odeShownTick = cur; render(); }
+  }, 60000);
   function potentialOf(c, slot) {
     var m = STATE.manual[c.label];
     if (!m || !m.potential) return "";
@@ -376,7 +429,8 @@
     var note = el("p", "tbl-note");
     if (tab === "basic")
       note.innerHTML = "체크박스 자동 초기화(KST): <b>회랑</b> 수 22시 · <b>일회</b> 토 22시 · <b>각성·루드라·침식·무스펠·비탄·시련</b> 수 05시. " +
-        "저장 위치는 상단 표시(Firebase 동기화 / 이 브라우저). 오드 값은 칸을 눌러 수정.";
+        "저장 위치는 상단 표시(Firebase 동기화 / 이 브라우저). " +
+        "오드는 <b>기본(+충전)</b> 표시, 칸을 눌러 수정. 기본 오드는 미터기 확인 후 02시부터 3시간마다 +15 로 추정(최대 840)하며, 확인 시각은 칸에 마우스를 올리면 보입니다.";
     else if (tab === "bt")
       note.innerHTML = "돌파 단계는 공식 API 에서 매일 자동 갱신됩니다. 색: 0 회색 · 1 초록 · 2 파랑 · 3 주황 · 4 빨강 · 5 진한 검정.";
     else if (tab === "pot")
@@ -474,13 +528,12 @@
       tr.appendChild(td(N(c.profile.itemLevel), "num"));
       tr.appendChild(td(N(c.profile.combatPower), "num"));
 
-      var odeTd = td("", "num ode");
-      var inp = el("input", "ode-inp");
-      inp.type = "number";
-      inp.value = (getOde(c) == null ? "" : getOde(c));
-      inp.placeholder = "–";
-      inp.addEventListener("change", function () { setOde(c.key, inp.value); });
-      odeTd.appendChild(inp);
+      var ode = getOde(c);
+      var odeTd = td("", "num ode", odeTitle(ode));
+      odeTd.appendChild(odeInput(c, "base", ode.base));
+      odeTd.appendChild(document.createTextNode("(+"));
+      odeTd.appendChild(odeInput(c, "bonus", ode.bonus));
+      odeTd.appendChild(document.createTextNode(")"));
       tr.appendChild(odeTd);
 
       CHECK_FIELDS.forEach(function (f) {

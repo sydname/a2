@@ -69,9 +69,9 @@ git 이 없으면 GitHub 에서 `scripts/notmeter/` 폴더만 받아도 된다.
 
 ```
 대상 파일: C:\Users\...\aether-energy.json
-  감자밍 (2010-d7b11559c850) = 712  @ 2026-10-29T...
+  감자밍 (2010-d7b11559c850) = 712(+705)  @ 2026-10-29T...
   ...
-DryRun: PATCH https://.../ode.json {"2010-d7b11559c850":712,...}
+DryRun: PATCH https://.../ode.json {"2010-d7b11559c850":{"base":712,"bonus":705,"at":"2026-10-29T..."},...}
 ```
 
 - 파일을 못 찾으면 → 2번에서 찾은 경로로 직접 지정:
@@ -147,4 +147,4 @@ git add samples ; git commit -m "NotMeter 샘플" ; git push
 | "스크립트를 실행할 수 없습니다" (실행 정책) | `.cmd` 로 실행하거나 `-ExecutionPolicy Bypass` 붙이기 |
 | 한글이 깨짐 | `.cmd` 로 실행 (UTF-8 로 맞춰줌) |
 | 업로드 완료인데 사이트에 안 바뀜 | 사이트 상단 저장 위치가 "Firebase 동기화"인지 확인, 새로고침 |
-| 값이 게임과 다름 | 스크립트는 기본 오드(`Base`)만 올림. NotMeter 의 마지막 감지 시점 값임 |
+| 값이 게임과 다름 | 스크립트는 기본 오드(`Base`) + 충전 오드(`Bonus`) 를 올림. NotMeter 의 마지막 감지 시점 값이고, 사이트는 그 이후 기본 오드에 3시간마다 +15(02시 시작, 최대 840)를 더해 추정함 |
