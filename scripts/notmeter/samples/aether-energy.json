@@ -1,0 +1,282 @@
+{
+  "Version": 4,
+  "Characters": [
+    {
+      "CharacterName": "\uAC10\uC790\uBBF8",
+      "ServerId": 2010,
+      "Job": 1,
+      "Base": 235,
+      "Bonus": 850,
+      "ObservedAt": "2026-10-29T10:01:19.441947+00:00",
+      "EngravedKina": 0,
+      "Kina": 179660337,
+      "CurrencyObservedAt": "2026-10-29T10:01:19.680678+00:00",
+      "HasAetherObservation": true,
+      "Nightmare": {
+        "Base": 10,
+        "Bonus": 0,
+        "ObservedAt": "2026-10-29T10:01:19.441947+00:00"
+      },
+      "Memo": "",
+      "Awakening": {
+        "Base": 0,
+        "Bonus": 2,
+        "ObservedAt": "2026-10-29T10:01:19.441947+00:00"
+      },
+      "AetherReceivedAt": "2026-10-29T10:01:19.441947+00:00",
+      "Region": "KR"
+    },
+    {
+      "CharacterName": "\uACE0\uAD6C\uACE0\uAD6C\uBBF8",
+      "ServerId": 2010,
+      "Job": 6,
+      "Base": 135,
+      "Bonus": 400,
+      "ObservedAt": "2026-10-28T14:32:35.26665+00:00",
+      "EngravedKina": 3860000,
+      "Kina": 15630638,
+      "CurrencyObservedAt": "2026-10-28T14:32:35.266917+00:00",
+      "HasAetherObservation": true,
+      "Nightmare": {
+        "Base": 8,
+        "Bonus": 4,
+        "ObservedAt": "2026-10-28T15:11:48.185623+00:00"
+      },
+      "Memo": "",
+      "Awakening": {
+        "Base": 3,
+        "Bonus": 4,
+        "ObservedAt": "2026-10-28T15:11:48.185623+00:00"
+      },
+      "AetherReceivedAt": "2026-10-28T14:32:35.26665+00:00",
+      "Region": "KR"
+    },
+    {
+      "CharacterName": "\uAD0C\uC790",
+      "ServerId": 2010,
+      "Job": 8,
+      "Base": 235,
+      "Bonus": 240,
+      "ObservedAt": "2026-10-28T14:46:07.742458+00:00",
+      "EngravedKina": 382900,
+      "Kina": 16453634,
+      "CurrencyObservedAt": "2026-10-28T14:46:40.286314+00:00",
+      "HasAetherObservation": true,
+      "Nightmare": {
+        "Base": 14,
+        "Bonus": 0,
+        "ObservedAt": "2026-10-28T14:46:07.742458+00:00"
+      },
+      "Memo": "",
+      "Awakening": {
+        "Base": 3,
+        "Bonus": 2,
+        "ObservedAt": "2026-10-28T14:46:07.742458+00:00"
+      },
+      "AetherReceivedAt": "2026-10-28T14:46:07.742458+00:00",
+      "Region": "KR"
+    },
+    {
+      "CharacterName": "\uC794\uC5F4",
+      "ServerId": 2010,
+      "Job": 0,
+      "Base": 190,
+      "Bonus": 105,
+      "ObservedAt": "2026-10-28T14:19:05.101762+00:00",
+      "EngravedKina": 0,
+      "Kina": 6389393,
+      "CurrencyObservedAt": "2026-10-28T14:20:49.293464+00:00",
+      "HasAetherObservation": true,
+      "Nightmare": {
+        "Base": 8,
+        "Bonus": 0,
+        "ObservedAt": "2026-10-28T14:19:05.101762+00:00"
+      },
+      "Memo": "",
+      "Awakening": {
+        "Base": 3,
+        "Bonus": 2,
+        "ObservedAt": "2026-10-28T14:20:10.542885+00:00"
+      },
+      "AetherReceivedAt": "2026-10-28T14:19:05.101762+00:00",
+      "Region": "KR"
+    },
+    {
+      "CharacterName": "\uAC10\uC790\uBC0D",
+      "ServerId": 2010,
+      "Job": 4,
+      "Base": 0,
+      "Bonus": 410,
+      "ObservedAt": "2026-10-28T13:29:45.310605+00:00",
+      "EngravedKina": 4863000,
+      "Kina": 185390794,
+      "CurrencyObservedAt": "2026-10-28T13:29:45.455601+00:00",
+      "HasAetherObservation": true,
+      "Nightmare": {
+        "Base": 8,
+        "Bonus": 4,
+        "ObservedAt": "2026-10-28T13:29:45.310605+00:00"
+      },
+      "Memo": "",
+      "Awakening": {
+        "Base": 3,
+        "Bonus": 4,
+        "ObservedAt": "2026-10-28T13:29:45.310605+00:00"
+      },
+      "AetherReceivedAt": "2026-10-28T13:29:45.310605+00:00",
+      "Region": "KR"
+    },
+    {
+      "CharacterName": "\uD06C\uB85C\uB9E4\uB370",
+      "ServerId": 2010,
+      "Job": 3,
+      "Base": 0,
+      "Bonus": 730,
+      "ObservedAt": "2026-10-28T13:06:21.375054+00:00",
+      "EngravedKina": 22823724,
+      "Kina": 26750327,
+      "CurrencyObservedAt": "2026-10-28T13:07:43.966842+00:00",
+      "HasAetherObservation": true,
+      "Nightmare": {
+        "Base": 14,
+        "Bonus": 0,
+        "ObservedAt": "2026-10-28T13:06:21.375054+00:00"
+      },
+      "Memo": "",
+      "Awakening": {
+        "Base": 3,
+        "Bonus": 0,
+        "ObservedAt": "2026-10-28T13:06:21.375054+00:00"
+      },
+      "AetherReceivedAt": "2026-10-28T13:06:21.375054+00:00",
+      "Region": "KR"
+    },
+    {
+      "CharacterName": "\uB10C\uAC15\uD574\uC84C\uB2E4",
+      "ServerId": 2010,
+      "Job": 7,
+      "Base": 160,
+      "Bonus": 170,
+      "ObservedAt": "2026-10-28T12:34:05.667913+00:00",
+      "EngravedKina": 10424000,
+      "Kina": 39112303,
+      "CurrencyObservedAt": "2026-10-28T12:34:05.712473+00:00",
+      "HasAetherObservation": true,
+      "Nightmare": {
+        "Base": 13,
+        "Bonus": 0,
+        "ObservedAt": "2026-10-28T12:34:05.667913+00:00"
+      },
+      "Memo": "",
+      "Awakening": {
+        "Base": 3,
+        "Bonus": 1,
+        "ObservedAt": "2026-10-28T12:34:05.667913+00:00"
+      },
+      "AetherReceivedAt": "2026-10-28T12:34:05.667913+00:00",
+      "Region": "KR"
+    },
+    {
+      "CharacterName": "\uACFC\uB158",
+      "ServerId": 2010,
+      "Job": 2,
+      "Base": 120,
+      "Bonus": 0,
+      "ObservedAt": "2026-10-25T15:35:39.959002+00:00",
+      "EngravedKina": 4300,
+      "Kina": 0,
+      "CurrencyObservedAt": "2026-10-25T15:40:23.901905+00:00",
+      "HasAetherObservation": true,
+      "Nightmare": {
+        "Base": 2,
+        "Bonus": 0,
+        "ObservedAt": "2026-10-25T15:35:39.959002+00:00"
+      },
+      "Memo": "",
+      "Awakening": {
+        "Base": 3,
+        "Bonus": 0,
+        "ObservedAt": "2026-10-25T15:35:39.959002+00:00"
+      },
+      "AetherReceivedAt": "2026-10-25T15:35:39.959002+00:00",
+      "Region": "KR"
+    },
+    {
+      "CharacterName": "\uC789\uC5B4\uB2E4",
+      "ServerId": 2010,
+      "Job": 2,
+      "Base": 0,
+      "Bonus": 65,
+      "ObservedAt": "2026-09-16T11:17:43.693187+00:00",
+      "EngravedKina": 0,
+      "Kina": 401844588,
+      "CurrencyObservedAt": "2026-09-16T11:17:43.842836+00:00",
+      "HasAetherObservation": true,
+      "Nightmare": null,
+      "Memo": "",
+      "Awakening": null,
+      "AetherReceivedAt": null,
+      "Region": ""
+    }
+  ],
+  "View": {
+    "SortMode": 3,
+    "PinnedCharacters": [],
+    "ManualOrder": [
+      {
+        "CharacterName": "\uAC10\uC790\uBC0D",
+        "ServerId": 2010,
+        "Region": "KR"
+      },
+      {
+        "CharacterName": "\uAC10\uC790\uBBF8",
+        "ServerId": 2010,
+        "Region": "KR"
+      },
+      {
+        "CharacterName": "\uC794\uC5F4",
+        "ServerId": 2010,
+        "Region": "KR"
+      },
+      {
+        "CharacterName": "\uAD0C\uC790",
+        "ServerId": 2010,
+        "Region": "KR"
+      },
+      {
+        "CharacterName": "\uB10C\uAC15\uD574\uC84C\uB2E4",
+        "ServerId": 2010,
+        "Region": "KR"
+      },
+      {
+        "CharacterName": "\uACE0\uAD6C\uACE0\uAD6C\uBBF8",
+        "ServerId": 2010,
+        "Region": "KR"
+      },
+      {
+        "CharacterName": "\uD06C\uB85C\uB9E4\uB370",
+        "ServerId": 2010,
+        "Region": "KR"
+      },
+      {
+        "CharacterName": "\uC789\uC5B4\uB2E4",
+        "ServerId": 2010,
+        "Region": ""
+      }
+    ],
+    "WindowWidth": 1392,
+    "WindowHeight": 789,
+    "WindowLayoutVersion": 1,
+    "UseSelectedFont": true,
+    "ColumnOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+}
