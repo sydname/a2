@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-04T20:58:17Z",
+ "generatedAt": "2026-11-05T21:15:52Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -1593,10 +1593,20 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-11-06",
+     "combatPower": 1048050,
+     "itemLevel": 6526,
+     "weaponExceed": 10,
+     "armorExceed": 14,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-04",
+    "sinceDate": "2026-11-05",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -1604,7 +1614,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-04T20:57:49Z",
+   "updatedAt": "2026-11-05T21:15:24Z",
    "ok": true
   },
   {
@@ -3199,10 +3209,20 @@
      "accessoryExceed": 36,
      "daevanionBasic": 472,
      "daevanionOpenNodes": 977
+    },
+    {
+     "date": "2026-11-06",
+     "combatPower": 762947,
+     "itemLevel": 5876,
+     "weaponExceed": 8,
+     "armorExceed": 0,
+     "accessoryExceed": 36,
+     "daevanionBasic": 472,
+     "daevanionOpenNodes": 977
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-04",
+    "sinceDate": "2026-11-05",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -3210,7 +3230,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-04T20:57:54Z",
+   "updatedAt": "2026-11-05T21:15:29Z",
    "ok": true
   },
   {
@@ -4805,10 +4825,20 @@
      "accessoryExceed": 27,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 946
+    },
+    {
+     "date": "2026-11-06",
+     "combatPower": 742290,
+     "itemLevel": 5811,
+     "weaponExceed": 8,
+     "armorExceed": 0,
+     "accessoryExceed": 27,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 946
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-04",
+    "sinceDate": "2026-11-05",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -4816,7 +4846,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-04T20:57:58Z",
+   "updatedAt": "2026-11-05T21:15:34Z",
    "ok": true
   },
   {
@@ -6389,10 +6419,20 @@
      "accessoryExceed": 14,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 893
+    },
+    {
+     "date": "2026-11-06",
+     "combatPower": 608363,
+     "itemLevel": 5162,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 14,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 893
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-04",
+    "sinceDate": "2026-11-05",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -6400,7 +6440,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-04T20:58:03Z",
+   "updatedAt": "2026-11-05T21:15:38Z",
    "ok": true
   },
   {
@@ -7973,10 +8013,20 @@
      "accessoryExceed": 22,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 843
+    },
+    {
+     "date": "2026-11-06",
+     "combatPower": 621527,
+     "itemLevel": 5034,
+     "weaponExceed": 6,
+     "armorExceed": 9,
+     "accessoryExceed": 22,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 843
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-04",
+    "sinceDate": "2026-11-05",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -7984,7 +8034,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-04T20:58:07Z",
+   "updatedAt": "2026-11-05T21:15:43Z",
    "ok": true
   },
   {
@@ -9557,10 +9607,20 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 850
+    },
+    {
+     "date": "2026-11-06",
+     "combatPower": 486376,
+     "itemLevel": 4810,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 850
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-04",
+    "sinceDate": "2026-11-05",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -9568,7 +9628,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-04T20:58:13Z",
+   "updatedAt": "2026-11-05T21:15:48Z",
    "ok": true
   },
   {
@@ -11013,10 +11073,20 @@
      "accessoryExceed": 0,
      "daevanionBasic": 389,
      "daevanionOpenNodes": 663
+    },
+    {
+     "date": "2026-11-06",
+     "combatPower": 333512,
+     "itemLevel": 3616,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 389,
+     "daevanionOpenNodes": 663
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-04",
+    "sinceDate": "2026-11-05",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -11024,7 +11094,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-04T20:58:17Z",
+   "updatedAt": "2026-11-05T21:15:52Z",
    "ok": true
   }
  ]
