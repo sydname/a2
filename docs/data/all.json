@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-06T20:38:21Z",
+ "generatedAt": "2026-11-07T19:06:09Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -1613,18 +1613,28 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-11-08",
+     "combatPower": 1048056,
+     "itemLevel": 6526,
+     "weaponExceed": 10,
+     "armorExceed": 14,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-06",
-    "combatPower": 6,
+    "sinceDate": "2026-11-07",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-06T20:37:55Z",
+   "updatedAt": "2026-11-07T19:05:41Z",
    "ok": true
   },
   {
@@ -1641,10 +1651,10 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 784861,
-    "itemLevel": 5920,
+    "combatPower": 792505,
+    "itemLevel": 6005,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188725968",
-    "titleName": "무스펠의 성배를 지배한"
+    "titleName": "비탄의 설원이 익숙한"
    },
    "exceed": {
     "weapon": {
@@ -1680,7 +1690,7 @@
        "slotKo": "신발",
        "name": "침식된 잔영의 장화",
        "grade": "Epic",
-       "enchant": 10,
+       "enchant": 13,
        "exceed": 0,
        "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Boots.png"
       },
@@ -1689,7 +1699,7 @@
        "slotKo": "망토",
        "name": "용암 심장의 망토",
        "grade": "Epic",
-       "enchant": 10,
+       "enchant": 13,
        "exceed": 0,
        "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Cape.png"
       },
@@ -1698,7 +1708,7 @@
        "slotKo": "장갑",
        "name": "용암 심장의 장갑",
        "grade": "Epic",
-       "enchant": 12,
+       "enchant": 13,
        "exceed": 0,
        "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Gloves.png"
       },
@@ -1741,7 +1751,7 @@
      ]
     },
     "accessory": {
-     "total": 36,
+     "total": 38,
      "count": 9,
      "slots": [
       {
@@ -1768,7 +1778,7 @@
        "name": "칼드릭스의 브로치",
        "grade": "Unique",
        "enchant": 15,
-       "exceed": 4,
+       "exceed": 5,
        "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png"
       },
       {
@@ -1777,7 +1787,7 @@
        "name": "칼드릭스의 브로치",
        "grade": "Unique",
        "enchant": 15,
-       "exceed": 4,
+       "exceed": 5,
        "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png"
       },
       {
@@ -1839,8 +1849,8 @@
      "Ring2": 4,
      "Bracelet1": 4,
      "Bracelet2": 4,
-     "Brooch1": 4,
-     "Brooch2": 4
+     "Brooch1": 5,
+     "Brooch2": 5
     },
     "pendantEnchant": 10,
     "amuletEnchant": 10
@@ -1900,7 +1910,7 @@
     "비호의 방패": 5,
     "단죄의 가호": 15,
     "철벽 방어": 17,
-    "수호의 인장": 6,
+    "수호의 인장": 7,
     "충격 적중": 23,
     "모욕의 포효": 29,
     "격앙": 33,
@@ -1910,9 +1920,9 @@
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
-    "openNodeTotal": 983,
+    "openNodeTotal": 1007,
     "nodeTotal": 1216,
-    "basic": 472,
+    "basic": 496,
     "arielle": 152,
     "markutan": 143,
     "yustiel": 149,
@@ -1922,7 +1932,7 @@
       "name": "네자칸",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Sword_1H.png",
       "open": 1,
-      "openNodeCount": 121,
+      "openNodeCount": 122,
       "totalNodeCount": 152,
       "openPercent": 80
      },
@@ -1940,18 +1950,18 @@
       "name": "바이젤",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Sword_1H.png",
       "open": 1,
-      "openNodeCount": 121,
+      "openNodeCount": 134,
       "totalNodeCount": 152,
-      "openPercent": 80
+      "openPercent": 88
      },
      {
       "id": 24,
       "name": "트리니엘",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Mace.png",
       "open": 1,
-      "openNodeCount": 115,
+      "openNodeCount": 125,
       "totalNodeCount": 152,
-      "openPercent": 76
+      "openPercent": 82
      },
      {
       "id": 25,
@@ -2176,7 +2186,7 @@
      "slotKo": "장갑",
      "name": "용암 심장의 장갑",
      "grade": "Epic",
-     "enchant": 12,
+     "enchant": 13,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Gloves.png",
      "isArcana": false
@@ -2187,7 +2197,7 @@
      "slotKo": "신발",
      "name": "침식된 잔영의 장화",
      "grade": "Epic",
-     "enchant": 10,
+     "enchant": 13,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Zikel_01_Boots.png",
      "isArcana": false
@@ -2298,7 +2308,7 @@
      "name": "칼드릭스의 브로치",
      "grade": "Unique",
      "enchant": 15,
-     "exceed": 4,
+     "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png",
      "isArcana": false
     },
@@ -2308,7 +2318,7 @@
      "slotKo": "망토",
      "name": "용암 심장의 망토",
      "grade": "Epic",
-     "enchant": 10,
+     "enchant": 13,
      "exceed": 0,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Cape.png",
      "isArcana": false
@@ -2320,7 +2330,7 @@
      "name": "칼드릭스의 브로치",
      "grade": "Unique",
      "enchant": 15,
-     "exceed": 4,
+     "exceed": 5,
      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_ACC_Brooch_A_u_001.png",
      "isArcana": false
     },
@@ -2513,14 +2523,14 @@
     }
    },
    "titles": {
-    "ownedCount": 366,
+    "ownedCount": 368,
     "totalCount": 431,
     "equipped": [
      {
       "category": "Defense",
       "name": "알트가르드의 성자",
       "grade": "Unique",
-      "ownedPercent": 84
+      "ownedPercent": 85
      },
      {
       "category": "Attack",
@@ -2532,7 +2542,7 @@
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 85
+      "ownedPercent": 86
      }
     ]
    },
@@ -3239,18 +3249,28 @@
      "accessoryExceed": 36,
      "daevanionBasic": 472,
      "daevanionOpenNodes": 983
+    },
+    {
+     "date": "2026-11-08",
+     "combatPower": 792505,
+     "itemLevel": 6005,
+     "weaponExceed": 9,
+     "armorExceed": 0,
+     "accessoryExceed": 38,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1007
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-06",
-    "combatPower": 21914,
-    "itemLevel": 44,
-    "weaponExceed": 1,
+    "sinceDate": "2026-11-07",
+    "combatPower": 7644,
+    "itemLevel": 85,
+    "weaponExceed": 0,
     "armorExceed": 0,
-    "accessoryExceed": 0,
-    "daevanionBasic": 0
+    "accessoryExceed": 2,
+    "daevanionBasic": 24
    },
-   "updatedAt": "2026-11-06T20:37:59Z",
+   "updatedAt": "2026-11-07T19:05:46Z",
    "ok": true
   },
   {
@@ -3267,7 +3287,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 742971,
+    "combatPower": 744978,
     "itemLevel": 5825,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188716923",
     "titleName": "무스펠의 성배를 지배한"
@@ -4865,18 +4885,28 @@
      "accessoryExceed": 27,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 946
+    },
+    {
+     "date": "2026-11-08",
+     "combatPower": 744978,
+     "itemLevel": 5825,
+     "weaponExceed": 8,
+     "armorExceed": 0,
+     "accessoryExceed": 27,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 946
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-06",
-    "combatPower": 681,
-    "itemLevel": 14,
+    "sinceDate": "2026-11-07",
+    "combatPower": 2007,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-06T20:38:04Z",
+   "updatedAt": "2026-11-07T19:05:51Z",
    "ok": true
   },
   {
@@ -4893,8 +4923,8 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 608363,
-    "itemLevel": 5162,
+    "combatPower": 615560,
+    "itemLevel": 5188,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188640042",
     "titleName": "무스펠의 성배를 지배한"
    },
@@ -4966,11 +4996,11 @@
       {
        "slot": "Pants",
        "slotKo": "하의",
-       "name": "바실루스의 각반",
-       "grade": "Unique",
+       "name": "용암 심장의 각반",
+       "grade": "Epic",
        "enchant": 10,
        "exceed": 0,
-       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0167_T03_Pants.png"
+       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Pants.png"
       },
       {
        "slot": "Shoulder",
@@ -5162,12 +5192,12 @@
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
-    "openNodeTotal": 893,
+    "openNodeTotal": 894,
     "nodeTotal": 1216,
     "basic": 449,
     "arielle": 152,
     "markutan": 152,
-    "yustiel": 96,
+    "yustiel": 97,
     "boards": [
      {
       "id": 81,
@@ -5237,9 +5267,9 @@
       "name": "유스티엘",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Mace.png",
       "open": 1,
-      "openNodeCount": 96,
+      "openNodeCount": 97,
       "totalNodeCount": 152,
-      "openPercent": 63
+      "openPercent": 64
      }
     ]
    },
@@ -5415,11 +5445,11 @@
      "slotPos": 6,
      "slot": "Pants",
      "slotKo": "하의",
-     "name": "바실루스의 각반",
-     "grade": "Unique",
+     "name": "용암 심장의 각반",
+     "grade": "Epic",
      "enchant": 10,
      "exceed": 0,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_GM_0167_T03_Pants.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_Equip_AR_L_Gerod_01_Pants.png",
      "isArcana": false
     },
     {
@@ -6469,18 +6499,28 @@
      "accessoryExceed": 14,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 893
+    },
+    {
+     "date": "2026-11-08",
+     "combatPower": 615560,
+     "itemLevel": 5188,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 14,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 894
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-06",
-    "combatPower": 0,
-    "itemLevel": 0,
+    "sinceDate": "2026-11-07",
+    "combatPower": 7197,
+    "itemLevel": 26,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-06T20:38:08Z",
+   "updatedAt": "2026-11-07T19:05:56Z",
    "ok": true
   },
   {
@@ -6497,7 +6537,7 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 622225,
+    "combatPower": 622228,
     "itemLevel": 5041,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188785270",
     "titleName": "무스펠의 성배를 지배한"
@@ -8073,18 +8113,28 @@
      "accessoryExceed": 22,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 847
+    },
+    {
+     "date": "2026-11-08",
+     "combatPower": 622228,
+     "itemLevel": 5041,
+     "weaponExceed": 6,
+     "armorExceed": 9,
+     "accessoryExceed": 22,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 847
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-06",
-    "combatPower": 698,
-    "itemLevel": 7,
+    "sinceDate": "2026-11-07",
+    "combatPower": 3,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-06T20:38:13Z",
+   "updatedAt": "2026-11-07T19:06:01Z",
    "ok": true
   },
   {
@@ -8101,7 +8151,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 491716,
+    "combatPower": 491722,
     "itemLevel": 4816,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188628440",
     "titleName": "무스펠의 성배를 지배한"
@@ -9677,18 +9727,28 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 850
+    },
+    {
+     "date": "2026-11-08",
+     "combatPower": 491722,
+     "itemLevel": 4816,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 850
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-06",
-    "combatPower": 5340,
-    "itemLevel": 6,
+    "sinceDate": "2026-11-07",
+    "combatPower": 6,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-06T20:38:18Z",
+   "updatedAt": "2026-11-07T19:06:06Z",
    "ok": true
   },
   {
@@ -11153,18 +11213,28 @@
      "accessoryExceed": 0,
      "daevanionBasic": 389,
      "daevanionOpenNodes": 665
+    },
+    {
+     "date": "2026-11-08",
+     "combatPower": 333728,
+     "itemLevel": 3622,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 389,
+     "daevanionOpenNodes": 665
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-06",
-    "combatPower": 216,
-    "itemLevel": 6,
+    "sinceDate": "2026-11-07",
+    "combatPower": 0,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-06T20:38:21Z",
+   "updatedAt": "2026-11-07T19:06:09Z",
    "ok": true
   }
  ]
