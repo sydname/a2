@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-07T19:06:09Z",
+ "generatedAt": "2026-11-08T19:12:53Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -1623,10 +1623,20 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-11-09",
+     "combatPower": 1048056,
+     "itemLevel": 6526,
+     "weaponExceed": 10,
+     "armorExceed": 14,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-07",
+    "sinceDate": "2026-11-08",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -1634,7 +1644,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-07T19:05:41Z",
+   "updatedAt": "2026-11-08T19:12:28Z",
    "ok": true
   },
   {
@@ -1651,7 +1661,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 792505,
+    "combatPower": 792758,
     "itemLevel": 6005,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188725968",
     "titleName": "비탄의 설원이 익숙한"
@@ -3259,18 +3269,28 @@
      "accessoryExceed": 38,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1007
+    },
+    {
+     "date": "2026-11-09",
+     "combatPower": 792758,
+     "itemLevel": 6005,
+     "weaponExceed": 9,
+     "armorExceed": 0,
+     "accessoryExceed": 38,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1007
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-07",
-    "combatPower": 7644,
-    "itemLevel": 85,
+    "sinceDate": "2026-11-08",
+    "combatPower": 253,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
-    "accessoryExceed": 2,
-    "daevanionBasic": 24
+    "accessoryExceed": 0,
+    "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-07T19:05:46Z",
+   "updatedAt": "2026-11-08T19:12:33Z",
    "ok": true
   },
   {
@@ -3290,7 +3310,7 @@
     "combatPower": 744978,
     "itemLevel": 5825,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188716923",
-    "titleName": "무스펠의 성배를 지배한"
+    "titleName": "비탄의 설원에 다녀온"
    },
    "exceed": {
     "weapon": {
@@ -4895,18 +4915,28 @@
      "accessoryExceed": 27,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 946
+    },
+    {
+     "date": "2026-11-09",
+     "combatPower": 744978,
+     "itemLevel": 5825,
+     "weaponExceed": 8,
+     "armorExceed": 0,
+     "accessoryExceed": 27,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 946
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-07",
-    "combatPower": 2007,
+    "sinceDate": "2026-11-08",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-07T19:05:51Z",
+   "updatedAt": "2026-11-08T19:12:37Z",
    "ok": true
   },
   {
@@ -6509,18 +6539,28 @@
      "accessoryExceed": 14,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 894
+    },
+    {
+     "date": "2026-11-09",
+     "combatPower": 615560,
+     "itemLevel": 5188,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 14,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 894
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-07",
-    "combatPower": 7197,
-    "itemLevel": 26,
+    "sinceDate": "2026-11-08",
+    "combatPower": 0,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-07T19:05:56Z",
+   "updatedAt": "2026-11-08T19:12:40Z",
    "ok": true
   },
   {
@@ -8123,18 +8163,28 @@
      "accessoryExceed": 22,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 847
+    },
+    {
+     "date": "2026-11-09",
+     "combatPower": 622228,
+     "itemLevel": 5041,
+     "weaponExceed": 6,
+     "armorExceed": 9,
+     "accessoryExceed": 22,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 847
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-07",
-    "combatPower": 3,
+    "sinceDate": "2026-11-08",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-07T19:06:01Z",
+   "updatedAt": "2026-11-08T19:12:44Z",
    "ok": true
   },
   {
@@ -9737,18 +9787,28 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 850
+    },
+    {
+     "date": "2026-11-09",
+     "combatPower": 491722,
+     "itemLevel": 4816,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 850
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-07",
-    "combatPower": 6,
+    "sinceDate": "2026-11-08",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-07T19:06:06Z",
+   "updatedAt": "2026-11-08T19:12:48Z",
    "ok": true
   },
   {
@@ -11223,10 +11283,20 @@
      "accessoryExceed": 0,
      "daevanionBasic": 389,
      "daevanionOpenNodes": 665
+    },
+    {
+     "date": "2026-11-09",
+     "combatPower": 333728,
+     "itemLevel": 3622,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 389,
+     "daevanionOpenNodes": 665
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-07",
+    "sinceDate": "2026-11-08",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -11234,7 +11304,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-07T19:06:09Z",
+   "updatedAt": "2026-11-08T19:12:53Z",
    "ok": true
   }
  ]
