@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-08T19:12:53Z",
+ "generatedAt": "2026-11-09T23:37:07Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -1633,10 +1633,20 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-11-10",
+     "combatPower": 1048056,
+     "itemLevel": 6526,
+     "weaponExceed": 10,
+     "armorExceed": 14,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-08",
+    "sinceDate": "2026-11-09",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -1644,7 +1654,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-08T19:12:28Z",
+   "updatedAt": "2026-11-09T23:36:40Z",
    "ok": true
   },
   {
@@ -1661,8 +1671,8 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 792758,
-    "itemLevel": 6005,
+    "combatPower": 792863,
+    "itemLevel": 6006,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188725968",
     "titleName": "비탄의 설원이 익숙한"
    },
@@ -1930,12 +1940,12 @@
    "daevanion": {
     "openedBoards": 8,
     "totalBoards": 8,
-    "openNodeTotal": 1007,
+    "openNodeTotal": 1008,
     "nodeTotal": 1216,
     "basic": 496,
     "arielle": 152,
     "markutan": 143,
-    "yustiel": 149,
+    "yustiel": 150,
     "boards": [
      {
       "id": 21,
@@ -2005,9 +2015,9 @@
       "name": "유스티엘",
       "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Mace.png",
       "open": 1,
-      "openNodeCount": 149,
+      "openNodeCount": 150,
       "totalNodeCount": 152,
-      "openPercent": 98
+      "openPercent": 99
      }
     ]
    },
@@ -2533,14 +2543,14 @@
     }
    },
    "titles": {
-    "ownedCount": 368,
+    "ownedCount": 371,
     "totalCount": 431,
     "equipped": [
      {
       "category": "Defense",
       "name": "알트가르드의 성자",
       "grade": "Unique",
-      "ownedPercent": 85
+      "ownedPercent": 86
      },
      {
       "category": "Attack",
@@ -3279,18 +3289,28 @@
      "accessoryExceed": 38,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1007
+    },
+    {
+     "date": "2026-11-10",
+     "combatPower": 792863,
+     "itemLevel": 6006,
+     "weaponExceed": 9,
+     "armorExceed": 0,
+     "accessoryExceed": 38,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1008
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-08",
-    "combatPower": 253,
-    "itemLevel": 0,
+    "sinceDate": "2026-11-09",
+    "combatPower": 105,
+    "itemLevel": 1,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-08T19:12:33Z",
+   "updatedAt": "2026-11-09T23:36:44Z",
    "ok": true
   },
   {
@@ -3307,7 +3327,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 744978,
+    "combatPower": 745215,
     "itemLevel": 5825,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188716923",
     "titleName": "비탄의 설원에 다녀온"
@@ -4925,18 +4945,28 @@
      "accessoryExceed": 27,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 946
+    },
+    {
+     "date": "2026-11-10",
+     "combatPower": 745215,
+     "itemLevel": 5825,
+     "weaponExceed": 8,
+     "armorExceed": 0,
+     "accessoryExceed": 27,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 946
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-08",
-    "combatPower": 0,
+    "sinceDate": "2026-11-09",
+    "combatPower": 237,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-08T19:12:37Z",
+   "updatedAt": "2026-11-09T23:36:48Z",
    "ok": true
   },
   {
@@ -4953,7 +4983,7 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 615560,
+    "combatPower": 615750,
     "itemLevel": 5188,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188640042",
     "titleName": "무스펠의 성배를 지배한"
@@ -6549,18 +6579,28 @@
      "accessoryExceed": 14,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 894
+    },
+    {
+     "date": "2026-11-10",
+     "combatPower": 615750,
+     "itemLevel": 5188,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 14,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 894
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-08",
-    "combatPower": 0,
+    "sinceDate": "2026-11-09",
+    "combatPower": 190,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-08T19:12:40Z",
+   "updatedAt": "2026-11-09T23:36:52Z",
    "ok": true
   },
   {
@@ -6577,7 +6617,7 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 622228,
+    "combatPower": 525281,
     "itemLevel": 5041,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188785270",
     "titleName": "무스펠의 성배를 지배한"
@@ -7427,7 +7467,7 @@
     }
    },
    "titles": {
-    "ownedCount": 287,
+    "ownedCount": 288,
     "totalCount": 431,
     "equipped": [
      {
@@ -7446,7 +7486,7 @@
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 68
+      "ownedPercent": 69
      }
     ]
    },
@@ -8173,18 +8213,28 @@
      "accessoryExceed": 22,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 847
+    },
+    {
+     "date": "2026-11-10",
+     "combatPower": 525281,
+     "itemLevel": 5041,
+     "weaponExceed": 6,
+     "armorExceed": 9,
+     "accessoryExceed": 22,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 847
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-08",
-    "combatPower": 0,
+    "sinceDate": "2026-11-09",
+    "combatPower": -96947,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-08T19:12:44Z",
+   "updatedAt": "2026-11-09T23:36:58Z",
    "ok": true
   },
   {
@@ -8201,7 +8251,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 491722,
+    "combatPower": 491834,
     "itemLevel": 4816,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188628440",
     "titleName": "무스펠의 성배를 지배한"
@@ -9797,18 +9847,28 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 850
+    },
+    {
+     "date": "2026-11-10",
+     "combatPower": 491834,
+     "itemLevel": 4816,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 850
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-08",
-    "combatPower": 0,
+    "sinceDate": "2026-11-09",
+    "combatPower": 112,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-08T19:12:48Z",
+   "updatedAt": "2026-11-09T23:37:02Z",
    "ok": true
   },
   {
@@ -11293,10 +11353,20 @@
      "accessoryExceed": 0,
      "daevanionBasic": 389,
      "daevanionOpenNodes": 665
+    },
+    {
+     "date": "2026-11-10",
+     "combatPower": 333728,
+     "itemLevel": 3622,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 389,
+     "daevanionOpenNodes": 665
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-08",
+    "sinceDate": "2026-11-09",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -11304,7 +11374,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-08T19:12:53Z",
+   "updatedAt": "2026-11-09T23:37:07Z",
    "ok": true
   }
  ]
