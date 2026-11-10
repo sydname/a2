@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-09T23:37:07Z",
+ "generatedAt": "2026-11-10T21:03:38Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -15,7 +15,7 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 1048056,
+    "combatPower": 1049056,
     "itemLevel": 6526,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188620645",
     "titleName": "불의 신전에 군림하는"
@@ -967,8 +967,8 @@
      "name": "정의[네자칸]",
      "value": 69,
      "effects": [
-      "방어력 증가 +13.8%",
-      "완벽 +13.8%"
+      "방어력 증가 +6.9%",
+      "완벽 +6.9%"
      ]
     },
     {
@@ -976,8 +976,8 @@
      "name": "자유[바이젤]",
      "value": 73,
      "effects": [
-      "명중 증가 +14.6%",
-      "회피 증가 +14.6%"
+      "명중 증가 +7.3%",
+      "회피 증가 +7.3%"
      ]
     },
     {
@@ -985,8 +985,8 @@
      "name": "환상[카이시넬]",
      "value": 146,
      "effects": [
-      "재시전 시간 -29.2%",
-      "철벽 관통 +29.2%"
+      "재시전 시간 -14.6%",
+      "철벽 관통 +14.6%"
      ]
     },
     {
@@ -994,8 +994,8 @@
      "name": "생명[유스티엘]",
      "value": 76,
      "effects": [
-      "생명력 증가 +15.2%",
-      "재생 +15.2%"
+      "생명력 증가 +7.6%",
+      "재생 +7.6%"
      ]
     },
     {
@@ -1003,8 +1003,8 @@
      "name": "시간[시엘]",
      "value": 164,
      "effects": [
-      "전투 속도 +32.8%",
-      "강타 저항 +32.8%"
+      "전투 속도 +16.4%",
+      "강타 저항 +16.4%"
      ]
     },
     {
@@ -1012,8 +1012,8 @@
      "name": "파괴[지켈]",
      "value": 169,
      "effects": [
-      "공격력 증가 +33.8%",
-      "완벽 저항 +33.8%"
+      "공격력 증가 +16.9%",
+      "완벽 저항 +16.9%"
      ]
     },
     {
@@ -1021,8 +1021,8 @@
      "name": "죽음[트리니엘]",
      "value": 103,
      "effects": [
-      "치명타 증가 +20.6%",
-      "재생 관통 +20.6%"
+      "치명타 증가 +10.3%",
+      "재생 관통 +10.3%"
      ]
     },
     {
@@ -1030,8 +1030,8 @@
      "name": "지혜[루미엘]",
      "value": 166,
      "effects": [
-      "정신력 소모량 -33.2%",
-      "강타 +33.2%"
+      "정신력 소모량 -16.6%",
+      "강타 +16.6%"
      ]
     },
     {
@@ -1039,8 +1039,8 @@
      "name": "운명[마르쿠탄]",
      "value": 76,
      "effects": [
-      "정신력 증가 +15.2%",
-      "철벽 +15.2%"
+      "정신력 증가 +7.6%",
+      "철벽 +7.6%"
      ]
     },
     {
@@ -1048,8 +1048,8 @@
      "name": "공간[이스라펠]",
      "value": 116,
      "effects": [
-      "이동 속도 +23.2%",
-      "막기 증가 +23.2%"
+      "이동 속도 +11.6%",
+      "막기 증가 +11.6%"
      ]
     }
    ],
@@ -1643,18 +1643,28 @@
      "accessoryExceed": 45,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1003
+    },
+    {
+     "date": "2026-11-11",
+     "combatPower": 1049056,
+     "itemLevel": 6526,
+     "weaponExceed": 10,
+     "armorExceed": 14,
+     "accessoryExceed": 45,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1003
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-09",
-    "combatPower": 0,
+    "sinceDate": "2026-11-10",
+    "combatPower": 1000,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-09T23:36:40Z",
+   "updatedAt": "2026-11-10T21:03:10Z",
    "ok": true
   },
   {
@@ -1671,7 +1681,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 792863,
+    "combatPower": 792867,
     "itemLevel": 6006,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188725968",
     "titleName": "비탄의 설원이 익숙한"
@@ -1939,9 +1949,9 @@
    },
    "daevanion": {
     "openedBoards": 8,
-    "totalBoards": 8,
+    "totalBoards": 9,
     "openNodeTotal": 1008,
-    "nodeTotal": 1216,
+    "nodeTotal": 1368,
     "basic": 496,
     "arielle": 152,
     "markutan": 143,
@@ -1982,6 +1992,15 @@
       "openNodeCount": 125,
       "totalNodeCount": 152,
       "openPercent": 82
+     },
+     {
+      "id": 29,
+      "name": "루미엘",
+      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Sword_1H.png",
+      "open": 0,
+      "openNodeCount": 0,
+      "totalNodeCount": 152,
+      "openPercent": 0
      },
      {
       "id": 25,
@@ -2543,14 +2562,14 @@
     }
    },
    "titles": {
-    "ownedCount": 371,
+    "ownedCount": 372,
     "totalCount": 431,
     "equipped": [
      {
       "category": "Defense",
       "name": "알트가르드의 성자",
       "grade": "Unique",
-      "ownedPercent": 86
+      "ownedPercent": 87
      },
      {
       "category": "Attack",
@@ -2623,8 +2642,8 @@
      "name": "정의[네자칸]",
      "value": 50,
      "effects": [
-      "방어력 증가 +10%",
-      "완벽 +10%"
+      "방어력 증가 +5%",
+      "완벽 +5%"
      ]
     },
     {
@@ -2632,8 +2651,8 @@
      "name": "자유[바이젤]",
      "value": 92,
      "effects": [
-      "명중 증가 +18.4%",
-      "회피 증가 +18.4%"
+      "명중 증가 +9.2%",
+      "회피 증가 +9.2%"
      ]
     },
     {
@@ -2641,8 +2660,8 @@
      "name": "환상[카이시넬]",
      "value": 111,
      "effects": [
-      "재시전 시간 -22.2%",
-      "철벽 관통 +22.2%"
+      "재시전 시간 -11.1%",
+      "철벽 관통 +11.1%"
      ]
     },
     {
@@ -2650,8 +2669,8 @@
      "name": "생명[유스티엘]",
      "value": 96,
      "effects": [
-      "생명력 증가 +19.2%",
-      "재생 +19.2%"
+      "생명력 증가 +9.6%",
+      "재생 +9.6%"
      ]
     },
     {
@@ -2659,8 +2678,8 @@
      "name": "시간[시엘]",
      "value": 162,
      "effects": [
-      "전투 속도 +32.4%",
-      "강타 저항 +32.4%"
+      "전투 속도 +16.2%",
+      "강타 저항 +16.2%"
      ]
     },
     {
@@ -2668,8 +2687,8 @@
      "name": "파괴[지켈]",
      "value": 167,
      "effects": [
-      "공격력 증가 +33.4%",
-      "완벽 저항 +33.4%"
+      "공격력 증가 +16.7%",
+      "완벽 저항 +16.7%"
      ]
     },
     {
@@ -2677,8 +2696,8 @@
      "name": "죽음[트리니엘]",
      "value": 103,
      "effects": [
-      "치명타 증가 +20.6%",
-      "재생 관통 +20.6%"
+      "치명타 증가 +10.3%",
+      "재생 관통 +10.3%"
      ]
     },
     {
@@ -2686,8 +2705,8 @@
      "name": "지혜[루미엘]",
      "value": 193,
      "effects": [
-      "정신력 소모량 -38.6%",
-      "강타 +38.6%"
+      "정신력 소모량 -19.3%",
+      "강타 +19.3%"
      ]
     },
     {
@@ -2695,8 +2714,8 @@
      "name": "운명[마르쿠탄]",
      "value": 59,
      "effects": [
-      "정신력 증가 +11.8%",
-      "철벽 +11.8%"
+      "정신력 증가 +5.9%",
+      "철벽 +5.9%"
      ]
     },
     {
@@ -2704,8 +2723,8 @@
      "name": "공간[이스라펠]",
      "value": 122,
      "effects": [
-      "이동 속도 +24.4%",
-      "막기 증가 +24.4%"
+      "이동 속도 +12.2%",
+      "막기 증가 +12.2%"
      ]
     }
    ],
@@ -3299,18 +3318,28 @@
      "accessoryExceed": 38,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1008
+    },
+    {
+     "date": "2026-11-11",
+     "combatPower": 792867,
+     "itemLevel": 6006,
+     "weaponExceed": 9,
+     "armorExceed": 0,
+     "accessoryExceed": 38,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1008
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-09",
-    "combatPower": 105,
-    "itemLevel": 1,
+    "sinceDate": "2026-11-10",
+    "combatPower": 4,
+    "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-09T23:36:44Z",
+   "updatedAt": "2026-11-10T21:03:15Z",
    "ok": true
   },
   {
@@ -3327,7 +3356,7 @@
     "raceName": "마족",
     "genderName": "여성",
     "guildName": "자유",
-    "combatPower": 745215,
+    "combatPower": 745265,
     "itemLevel": 5825,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188716923",
     "titleName": "비탄의 설원에 다녀온"
@@ -4199,14 +4228,14 @@
     }
    },
    "titles": {
-    "ownedCount": 326,
+    "ownedCount": 328,
     "totalCount": 431,
     "equipped": [
      {
       "category": "Defense",
       "name": "알트가르드의 성자",
       "grade": "Unique",
-      "ownedPercent": 74
+      "ownedPercent": 75
      },
      {
       "category": "Attack",
@@ -4218,7 +4247,7 @@
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 79
+      "ownedPercent": 80
      }
     ]
    },
@@ -4279,8 +4308,8 @@
      "name": "정의[네자칸]",
      "value": 69,
      "effects": [
-      "방어력 증가 +13.8%",
-      "완벽 +13.8%"
+      "방어력 증가 +6.9%",
+      "완벽 +6.9%"
      ]
     },
     {
@@ -4288,8 +4317,8 @@
      "name": "자유[바이젤]",
      "value": 73,
      "effects": [
-      "명중 증가 +14.6%",
-      "회피 증가 +14.6%"
+      "명중 증가 +7.3%",
+      "회피 증가 +7.3%"
      ]
     },
     {
@@ -4297,8 +4326,8 @@
      "name": "환상[카이시넬]",
      "value": 114,
      "effects": [
-      "재시전 시간 -22.8%",
-      "철벽 관통 +22.8%"
+      "재시전 시간 -11.4%",
+      "철벽 관통 +11.4%"
      ]
     },
     {
@@ -4306,8 +4335,8 @@
      "name": "생명[유스티엘]",
      "value": 42,
      "effects": [
-      "생명력 증가 +8.4%",
-      "재생 +8.4%"
+      "생명력 증가 +4.2%",
+      "재생 +4.2%"
      ]
     },
     {
@@ -4315,8 +4344,8 @@
      "name": "시간[시엘]",
      "value": 162,
      "effects": [
-      "전투 속도 +32.4%",
-      "강타 저항 +32.4%"
+      "전투 속도 +16.2%",
+      "강타 저항 +16.2%"
      ]
     },
     {
@@ -4324,8 +4353,8 @@
      "name": "파괴[지켈]",
      "value": 167,
      "effects": [
-      "공격력 증가 +33.4%",
-      "완벽 저항 +33.4%"
+      "공격력 증가 +16.7%",
+      "완벽 저항 +16.7%"
      ]
     },
     {
@@ -4333,8 +4362,8 @@
      "name": "죽음[트리니엘]",
      "value": 103,
      "effects": [
-      "치명타 증가 +20.6%",
-      "재생 관통 +20.6%"
+      "치명타 증가 +10.3%",
+      "재생 관통 +10.3%"
      ]
     },
     {
@@ -4342,8 +4371,8 @@
      "name": "지혜[루미엘]",
      "value": 192,
      "effects": [
-      "정신력 소모량 -38.4%",
-      "강타 +38.4%"
+      "정신력 소모량 -19.2%",
+      "강타 +19.2%"
      ]
     },
     {
@@ -4351,8 +4380,8 @@
      "name": "운명[마르쿠탄]",
      "value": 105,
      "effects": [
-      "정신력 증가 +21%",
-      "철벽 +21%"
+      "정신력 증가 +10.5%",
+      "철벽 +10.5%"
      ]
     },
     {
@@ -4360,8 +4389,8 @@
      "name": "공간[이스라펠]",
      "value": 105,
      "effects": [
-      "이동 속도 +21%",
-      "막기 증가 +21%"
+      "이동 속도 +10.5%",
+      "막기 증가 +10.5%"
      ]
     }
    ],
@@ -4955,18 +4984,28 @@
      "accessoryExceed": 27,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 946
+    },
+    {
+     "date": "2026-11-11",
+     "combatPower": 745265,
+     "itemLevel": 5825,
+     "weaponExceed": 8,
+     "armorExceed": 0,
+     "accessoryExceed": 27,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 946
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-09",
-    "combatPower": 237,
+    "sinceDate": "2026-11-10",
+    "combatPower": 50,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-09T23:36:48Z",
+   "updatedAt": "2026-11-10T21:03:19Z",
    "ok": true
   },
   {
@@ -4977,7 +5016,7 @@
    "characterId": "kQPtxLHatRRnx5LcYGTP6SWYKsKDCoY-F5_Md8dpDCo=",
    "officialUrl": "https://aion2.plaync.com/ko-kr/characters/2010/kQPtxLHatRRnx5LcYGTP6SWYKsKDCoY-F5_Md8dpDCo=",
    "profile": {
-    "name": "넌강해졌다",
+    "name": "감자망",
     "level": 50,
     "className": "호법성",
     "raceName": "마족",
@@ -5913,8 +5952,8 @@
      "name": "정의[네자칸]",
      "value": 70,
      "effects": [
-      "방어력 증가 +14%",
-      "완벽 +14%"
+      "방어력 증가 +7%",
+      "완벽 +7%"
      ]
     },
     {
@@ -5922,8 +5961,8 @@
      "name": "자유[바이젤]",
      "value": 71,
      "effects": [
-      "명중 증가 +14.2%",
-      "회피 증가 +14.2%"
+      "명중 증가 +7.1%",
+      "회피 증가 +7.1%"
      ]
     },
     {
@@ -5931,8 +5970,8 @@
      "name": "환상[카이시넬]",
      "value": 106,
      "effects": [
-      "재시전 시간 -21.2%",
-      "철벽 관통 +21.2%"
+      "재시전 시간 -10.6%",
+      "철벽 관통 +10.6%"
      ]
     },
     {
@@ -5940,8 +5979,8 @@
      "name": "생명[유스티엘]",
      "value": 94,
      "effects": [
-      "생명력 증가 +18.8%",
-      "재생 +18.8%"
+      "생명력 증가 +9.4%",
+      "재생 +9.4%"
      ]
     },
     {
@@ -5949,8 +5988,8 @@
      "name": "시간[시엘]",
      "value": 160,
      "effects": [
-      "전투 속도 +32%",
-      "강타 저항 +32%"
+      "전투 속도 +16%",
+      "강타 저항 +16%"
      ]
     },
     {
@@ -5958,8 +5997,8 @@
      "name": "파괴[지켈]",
      "value": 163,
      "effects": [
-      "공격력 증가 +32.6%",
-      "완벽 저항 +32.6%"
+      "공격력 증가 +16.3%",
+      "완벽 저항 +16.3%"
      ]
     },
     {
@@ -5967,8 +6006,8 @@
      "name": "죽음[트리니엘]",
      "value": 91,
      "effects": [
-      "치명타 증가 +18.2%",
-      "재생 관통 +18.2%"
+      "치명타 증가 +9.1%",
+      "재생 관통 +9.1%"
      ]
     },
     {
@@ -5976,8 +6015,8 @@
      "name": "지혜[루미엘]",
      "value": 189,
      "effects": [
-      "정신력 소모량 -37.8%",
-      "강타 +37.8%"
+      "정신력 소모량 -18.9%",
+      "강타 +18.9%"
      ]
     },
     {
@@ -5985,8 +6024,8 @@
      "name": "운명[마르쿠탄]",
      "value": 55,
      "effects": [
-      "정신력 증가 +11%",
-      "철벽 +11%"
+      "정신력 증가 +5.5%",
+      "철벽 +5.5%"
      ]
     },
     {
@@ -5994,8 +6033,8 @@
      "name": "공간[이스라펠]",
      "value": 127,
      "effects": [
-      "이동 속도 +25.4%",
-      "막기 증가 +25.4%"
+      "이동 속도 +12.7%",
+      "막기 증가 +12.7%"
      ]
     }
    ],
@@ -6589,18 +6628,28 @@
      "accessoryExceed": 14,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 894
+    },
+    {
+     "date": "2026-11-11",
+     "combatPower": 615750,
+     "itemLevel": 5188,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 14,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 894
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-09",
-    "combatPower": 190,
+    "sinceDate": "2026-11-10",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-09T23:36:52Z",
+   "updatedAt": "2026-11-10T21:03:23Z",
    "ok": true
   },
   {
@@ -6617,7 +6666,7 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 525281,
+    "combatPower": 622511,
     "itemLevel": 5041,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188785270",
     "titleName": "무스펠의 성배를 지배한"
@@ -7467,7 +7516,7 @@
     }
    },
    "titles": {
-    "ownedCount": 288,
+    "ownedCount": 289,
     "totalCount": 431,
     "equipped": [
      {
@@ -7547,8 +7596,8 @@
      "name": "정의[네자칸]",
      "value": 70,
      "effects": [
-      "방어력 증가 +14%",
-      "완벽 +14%"
+      "방어력 증가 +7%",
+      "완벽 +7%"
      ]
     },
     {
@@ -7556,8 +7605,8 @@
      "name": "자유[바이젤]",
      "value": 61,
      "effects": [
-      "명중 증가 +12.2%",
-      "회피 증가 +12.2%"
+      "명중 증가 +6.1%",
+      "회피 증가 +6.1%"
      ]
     },
     {
@@ -7565,8 +7614,8 @@
      "name": "환상[카이시넬]",
      "value": 143,
      "effects": [
-      "재시전 시간 -28.6%",
-      "철벽 관통 +28.6%"
+      "재시전 시간 -14.3%",
+      "철벽 관통 +14.3%"
      ]
     },
     {
@@ -7574,8 +7623,8 @@
      "name": "생명[유스티엘]",
      "value": 60,
      "effects": [
-      "생명력 증가 +12%",
-      "재생 +12%"
+      "생명력 증가 +6%",
+      "재생 +6%"
      ]
     },
     {
@@ -7583,8 +7632,8 @@
      "name": "시간[시엘]",
      "value": 160,
      "effects": [
-      "전투 속도 +32%",
-      "강타 저항 +32%"
+      "전투 속도 +16%",
+      "강타 저항 +16%"
      ]
     },
     {
@@ -7592,8 +7641,8 @@
      "name": "파괴[지켈]",
      "value": 161,
      "effects": [
-      "공격력 증가 +32.2%",
-      "완벽 저항 +32.2%"
+      "공격력 증가 +16.1%",
+      "완벽 저항 +16.1%"
      ]
     },
     {
@@ -7601,8 +7650,8 @@
      "name": "죽음[트리니엘]",
      "value": 101,
      "effects": [
-      "치명타 증가 +20.2%",
-      "재생 관통 +20.2%"
+      "치명타 증가 +10.1%",
+      "재생 관통 +10.1%"
      ]
     },
     {
@@ -7610,8 +7659,8 @@
      "name": "지혜[루미엘]",
      "value": 154,
      "effects": [
-      "정신력 소모량 -30.8%",
-      "강타 +30.8%"
+      "정신력 소모량 -15.4%",
+      "강타 +15.4%"
      ]
     },
     {
@@ -7619,8 +7668,8 @@
      "name": "운명[마르쿠탄]",
      "value": 81,
      "effects": [
-      "정신력 증가 +16.2%",
-      "철벽 +16.2%"
+      "정신력 증가 +8.1%",
+      "철벽 +8.1%"
      ]
     },
     {
@@ -7628,8 +7677,8 @@
      "name": "공간[이스라펠]",
      "value": 91,
      "effects": [
-      "이동 속도 +18.2%",
-      "막기 증가 +18.2%"
+      "이동 속도 +9.1%",
+      "막기 증가 +9.1%"
      ]
     }
    ],
@@ -8223,18 +8272,28 @@
      "accessoryExceed": 22,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 847
+    },
+    {
+     "date": "2026-11-11",
+     "combatPower": 622511,
+     "itemLevel": 5041,
+     "weaponExceed": 6,
+     "armorExceed": 9,
+     "accessoryExceed": 22,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 847
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-09",
-    "combatPower": -96947,
+    "sinceDate": "2026-11-10",
+    "combatPower": 97230,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-09T23:36:58Z",
+   "updatedAt": "2026-11-10T21:03:27Z",
    "ok": true
   },
   {
@@ -9181,8 +9240,8 @@
      "name": "정의[네자칸]",
      "value": 30,
      "effects": [
-      "방어력 증가 +6%",
-      "완벽 +6%"
+      "방어력 증가 +3%",
+      "완벽 +3%"
      ]
     },
     {
@@ -9190,8 +9249,8 @@
      "name": "자유[바이젤]",
      "value": 100,
      "effects": [
-      "명중 증가 +20%",
-      "회피 증가 +20%"
+      "명중 증가 +10%",
+      "회피 증가 +10%"
      ]
     },
     {
@@ -9199,8 +9258,8 @@
      "name": "환상[카이시넬]",
      "value": 102,
      "effects": [
-      "재시전 시간 -20.4%",
-      "철벽 관통 +20.4%"
+      "재시전 시간 -10.2%",
+      "철벽 관통 +10.2%"
      ]
     },
     {
@@ -9208,8 +9267,8 @@
      "name": "생명[유스티엘]",
      "value": 69,
      "effects": [
-      "생명력 증가 +13.8%",
-      "재생 +13.8%"
+      "생명력 증가 +6.9%",
+      "재생 +6.9%"
      ]
     },
     {
@@ -9217,8 +9276,8 @@
      "name": "시간[시엘]",
      "value": 158,
      "effects": [
-      "전투 속도 +31.6%",
-      "강타 저항 +31.6%"
+      "전투 속도 +15.8%",
+      "강타 저항 +15.8%"
      ]
     },
     {
@@ -9226,8 +9285,8 @@
      "name": "파괴[지켈]",
      "value": 149,
      "effects": [
-      "공격력 증가 +29.8%",
-      "완벽 저항 +29.8%"
+      "공격력 증가 +14.9%",
+      "완벽 저항 +14.9%"
      ]
     },
     {
@@ -9235,8 +9294,8 @@
      "name": "죽음[트리니엘]",
      "value": 129,
      "effects": [
-      "치명타 증가 +25.8%",
-      "재생 관통 +25.8%"
+      "치명타 증가 +12.9%",
+      "재생 관통 +12.9%"
      ]
     },
     {
@@ -9244,8 +9303,8 @@
      "name": "지혜[루미엘]",
      "value": 174,
      "effects": [
-      "정신력 소모량 -34.8%",
-      "강타 +34.8%"
+      "정신력 소모량 -17.4%",
+      "강타 +17.4%"
      ]
     },
     {
@@ -9253,8 +9312,8 @@
      "name": "운명[마르쿠탄]",
      "value": 61,
      "effects": [
-      "정신력 증가 +12.2%",
-      "철벽 +12.2%"
+      "정신력 증가 +6.1%",
+      "철벽 +6.1%"
      ]
     },
     {
@@ -9262,8 +9321,8 @@
      "name": "공간[이스라펠]",
      "value": 91,
      "effects": [
-      "이동 속도 +18.2%",
-      "막기 증가 +18.2%"
+      "이동 속도 +9.1%",
+      "막기 증가 +9.1%"
      ]
     }
    ],
@@ -9857,18 +9916,28 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 850
+    },
+    {
+     "date": "2026-11-11",
+     "combatPower": 491834,
+     "itemLevel": 4816,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 850
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-09",
-    "combatPower": 112,
+    "sinceDate": "2026-11-10",
+    "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-09T23:37:02Z",
+   "updatedAt": "2026-11-10T21:03:32Z",
    "ok": true
   },
   {
@@ -10135,9 +10204,9 @@
    },
    "daevanion": {
     "openedBoards": 8,
-    "totalBoards": 8,
+    "totalBoards": 9,
     "openNodeTotal": 665,
-    "nodeTotal": 1216,
+    "nodeTotal": 1368,
     "basic": 389,
     "arielle": 112,
     "markutan": 113,
@@ -10178,6 +10247,15 @@
       "openNodeCount": 50,
       "totalNodeCount": 152,
       "openPercent": 33
+     },
+     {
+      "id": 49,
+      "name": "루미엘",
+      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Sword_1H.png",
+      "open": 0,
+      "openNodeCount": 0,
+      "totalNodeCount": 152,
+      "openPercent": 0
      },
      {
       "id": 45,
@@ -10687,8 +10765,8 @@
      "name": "정의[네자칸]",
      "value": 94,
      "effects": [
-      "방어력 증가 +18.8%",
-      "완벽 +18.8%"
+      "방어력 증가 +9.4%",
+      "완벽 +9.4%"
      ]
     },
     {
@@ -10696,8 +10774,8 @@
      "name": "자유[바이젤]",
      "value": 71,
      "effects": [
-      "명중 증가 +14.2%",
-      "회피 증가 +14.2%"
+      "명중 증가 +7.1%",
+      "회피 증가 +7.1%"
      ]
     },
     {
@@ -10705,8 +10783,8 @@
      "name": "환상[카이시넬]",
      "value": 92,
      "effects": [
-      "재시전 시간 -18.4%",
-      "철벽 관통 +18.4%"
+      "재시전 시간 -9.2%",
+      "철벽 관통 +9.2%"
      ]
     },
     {
@@ -10714,8 +10792,8 @@
      "name": "생명[유스티엘]",
      "value": 68,
      "effects": [
-      "생명력 증가 +13.6%",
-      "재생 +13.6%"
+      "생명력 증가 +6.8%",
+      "재생 +6.8%"
      ]
     },
     {
@@ -10723,8 +10801,8 @@
      "name": "시간[시엘]",
      "value": 152,
      "effects": [
-      "전투 속도 +30.4%",
-      "강타 저항 +30.4%"
+      "전투 속도 +15.2%",
+      "강타 저항 +15.2%"
      ]
     },
     {
@@ -10732,8 +10810,8 @@
      "name": "파괴[지켈]",
      "value": 148,
      "effects": [
-      "공격력 증가 +29.6%",
-      "완벽 저항 +29.6%"
+      "공격력 증가 +14.8%",
+      "완벽 저항 +14.8%"
      ]
     },
     {
@@ -10741,8 +10819,8 @@
      "name": "죽음[트리니엘]",
      "value": 113,
      "effects": [
-      "치명타 증가 +22.6%",
-      "재생 관통 +22.6%"
+      "치명타 증가 +11.3%",
+      "재생 관통 +11.3%"
      ]
     },
     {
@@ -10750,8 +10828,8 @@
      "name": "지혜[루미엘]",
      "value": 126,
      "effects": [
-      "정신력 소모량 -25.2%",
-      "강타 +25.2%"
+      "정신력 소모량 -12.6%",
+      "강타 +12.6%"
      ]
     },
     {
@@ -10759,8 +10837,8 @@
      "name": "운명[마르쿠탄]",
      "value": 64,
      "effects": [
-      "정신력 증가 +12.8%",
-      "철벽 +12.8%"
+      "정신력 증가 +6.4%",
+      "철벽 +6.4%"
      ]
     },
     {
@@ -10768,8 +10846,8 @@
      "name": "공간[이스라펠]",
      "value": 81,
      "effects": [
-      "이동 속도 +16.2%",
-      "막기 증가 +16.2%"
+      "이동 속도 +8.1%",
+      "막기 증가 +8.1%"
      ]
     }
    ],
@@ -11363,10 +11441,20 @@
      "accessoryExceed": 0,
      "daevanionBasic": 389,
      "daevanionOpenNodes": 665
+    },
+    {
+     "date": "2026-11-11",
+     "combatPower": 333728,
+     "itemLevel": 3622,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 389,
+     "daevanionOpenNodes": 665
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-09",
+    "sinceDate": "2026-11-10",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -11374,7 +11462,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-09T23:37:07Z",
+   "updatedAt": "2026-11-10T21:03:38Z",
    "ok": true
   }
  ]
