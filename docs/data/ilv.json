@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-02T06:57:59Z",
+ "generatedAt": "2026-11-11T05:21:08Z",
  "characters": {
   "2010-d7b11559c850": {
    "items": {
@@ -452,16 +452,16 @@
   "2010-bebfe0bb0422": {
    "items": {
     "MainHand": {
-     "name": "침식된 지배자의 작열검",
-     "baseLevel": 108,
+     "name": "용암 심장의 화염검",
+     "baseLevel": 128,
      "maxEnchant": 20,
-     "maxExceed": 5,
+     "maxExceed": 7,
      "stones": [
-      "Unique",
-      "Unique",
+      "Legend",
       "Legend",
       "Rare",
-      "Rare"
+      "Unique",
+      "Legend"
      ],
      "stoneSlots": 5,
      "godStones": [
@@ -472,7 +472,7 @@
      "name": "루드라의 심장",
      "baseLevel": 98,
      "maxEnchant": 20,
-     "maxExceed": 5,
+     "maxExceed": 7,
      "stones": [
       "Legend",
       "Legend",
@@ -485,41 +485,11 @@
       "Legend"
      ]
     },
-    "Helmet": {
-     "name": "용암 심장의 투구",
-     "baseLevel": 128,
-     "maxEnchant": 20,
-     "maxExceed": 5,
-     "stones": [
-      "Legend",
-      "Unique",
-      "Rare",
-      "Legend",
-      "Rare"
-     ],
-     "stoneSlots": 5,
-     "godStones": []
-    },
-    "Shoulder": {
-     "name": "용암 심장의 견갑",
-     "baseLevel": 128,
-     "maxEnchant": 20,
-     "maxExceed": 5,
-     "stones": [
-      "Legend",
-      "Rare",
-      "Unique",
-      "Rare",
-      "Unique"
-     ],
-     "stoneSlots": 5,
-     "godStones": []
-    },
     "Torso": {
      "name": "용암 심장의 흉갑",
      "baseLevel": 128,
      "maxEnchant": 20,
-     "maxExceed": 5,
+     "maxExceed": 7,
      "stones": [
       "Rare",
       "Rare",
@@ -534,7 +504,7 @@
      "name": "용암 심장의 각반",
      "baseLevel": 128,
      "maxEnchant": 20,
-     "maxExceed": 5,
+     "maxExceed": 7,
      "stones": [
       "Legend",
       "Legend",
@@ -545,11 +515,41 @@
      "stoneSlots": 5,
      "godStones": []
     },
+    "Helmet": {
+     "name": "용암 심장의 투구",
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 7,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Rare",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
+    },
+    "Shoulder": {
+     "name": "용암 심장의 견갑",
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 7,
+     "stones": [
+      "Legend",
+      "Rare",
+      "Unique",
+      "Rare",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
+    },
     "Gloves": {
      "name": "용암 심장의 장갑",
      "baseLevel": 128,
      "maxEnchant": 20,
-     "maxExceed": 5,
+     "maxExceed": 7,
      "stones": [
       "Rare",
       "Unique",
@@ -564,7 +564,7 @@
      "name": "침식된 잔영의 장화",
      "baseLevel": 108,
      "maxEnchant": 20,
-     "maxExceed": 5,
+     "maxExceed": 7,
      "stones": [
       "Unique",
       "Legend",
@@ -575,11 +575,26 @@
      "stoneSlots": 5,
      "godStones": []
     },
-    "Pendant": {
-     "name": "드라코닉 펜던트",
-     "baseLevel": 65,
+    "Cape": {
+     "name": "용암 심장의 망토",
+     "baseLevel": 128,
      "maxEnchant": 20,
-     "maxExceed": null,
+     "maxExceed": 7,
+     "stones": [
+      "Unique",
+      "Rare",
+      "Rare",
+      "Unique",
+      "Unique"
+     ],
+     "stoneSlots": 5,
+     "godStones": []
+    },
+    "Belt": {
+     "name": "고결의 허리띠",
+     "baseLevel": 76,
+     "maxEnchant": 20,
+     "maxExceed": 5,
      "stones": [],
      "stoneSlots": null,
      "godStones": []
@@ -598,6 +613,20 @@
      "stoneSlots": 4,
      "godStones": []
     },
+    "Earring2": {
+     "name": "흩어진 광휘의 귀걸이",
+     "baseLevel": 100,
+     "maxEnchant": 15,
+     "maxExceed": 5,
+     "stones": [
+      "Rare",
+      "Legend",
+      "Unique",
+      "Legend"
+     ],
+     "stoneSlots": 4,
+     "godStones": []
+    },
     "Earring1": {
      "name": "흩어진 광휘의 귀걸이",
      "baseLevel": 100,
@@ -612,14 +641,14 @@
      "stoneSlots": 4,
      "godStones": []
     },
-    "Earring2": {
-     "name": "흩어진 광휘의 귀걸이",
-     "baseLevel": 100,
+    "Ring2": {
+     "name": "빛나는 건룡왕의 반지",
+     "baseLevel": 76,
      "maxEnchant": 15,
      "maxExceed": 5,
      "stones": [
       "Rare",
-      "Legend",
+      "Unique",
       "Unique",
       "Legend"
      ],
@@ -640,18 +669,19 @@
      "stoneSlots": 4,
      "godStones": []
     },
-    "Ring2": {
-     "name": "빛나는 건룡왕의 반지",
-     "baseLevel": 76,
-     "maxEnchant": 15,
+    "Bracelet2": {
+     "name": "루드라의 팔찌",
+     "baseLevel": 98,
+     "maxEnchant": 20,
      "maxExceed": 5,
      "stones": [
+      "Legend",
       "Rare",
-      "Unique",
-      "Unique",
-      "Legend"
+      "Legend",
+      "Rare",
+      "Unique"
      ],
-     "stoneSlots": 4,
+     "stoneSlots": 5,
      "godStones": []
     },
     "Bracelet1": {
@@ -669,30 +699,6 @@
      "stoneSlots": 5,
      "godStones": []
     },
-    "Bracelet2": {
-     "name": "루드라의 팔찌",
-     "baseLevel": 98,
-     "maxEnchant": 20,
-     "maxExceed": 5,
-     "stones": [
-      "Legend",
-      "Rare",
-      "Legend",
-      "Rare",
-      "Unique"
-     ],
-     "stoneSlots": 5,
-     "godStones": []
-    },
-    "Belt": {
-     "name": "고결의 허리띠",
-     "baseLevel": 76,
-     "maxEnchant": 10,
-     "maxExceed": null,
-     "stones": [],
-     "stoneSlots": null,
-     "godStones": []
-    },
     "Brooch1": {
      "name": "칼드릭스의 브로치",
      "baseLevel": 112,
@@ -705,21 +711,6 @@
       "Rare"
      ],
      "stoneSlots": 4,
-     "godStones": []
-    },
-    "Cape": {
-     "name": "용암 심장의 망토",
-     "baseLevel": 128,
-     "maxEnchant": 20,
-     "maxExceed": 5,
-     "stones": [
-      "Unique",
-      "Rare",
-      "Rare",
-      "Unique",
-      "Unique"
-     ],
-     "stoneSlots": 5,
      "godStones": []
     },
     "Brooch2": {
@@ -736,13 +727,30 @@
      "stoneSlots": 4,
      "godStones": []
     },
-    "Amulet": {
-     "name": "계시의 아뮬렛",
-     "baseLevel": 76,
-     "maxEnchant": 10,
+    "Seal2": {
+     "name": "해방자의 인장",
+     "baseLevel": 106,
+     "maxEnchant": 15,
      "maxExceed": null,
-     "stones": [],
-     "stoneSlots": null,
+     "stones": [
+      "Legend",
+      "Unique",
+      "Rare"
+     ],
+     "stoneSlots": 3,
+     "godStones": []
+    },
+    "Seal1": {
+     "name": "해방자의 인장",
+     "baseLevel": 106,
+     "maxEnchant": 15,
+     "maxExceed": null,
+     "stones": [
+      "Legend",
+      "Legend",
+      "Legend"
+     ],
+     "stoneSlots": 3,
      "godStones": []
     },
     "Rune1": {
@@ -763,30 +771,22 @@
      "stoneSlots": null,
      "godStones": []
     },
-    "Seal1": {
-     "name": "해방자의 인장",
-     "baseLevel": 106,
-     "maxEnchant": 15,
-     "maxExceed": null,
-     "stones": [
-      "Legend",
-      "Legend",
-      "Legend"
-     ],
-     "stoneSlots": 3,
+    "Amulet": {
+     "name": "계시의 아뮬렛",
+     "baseLevel": 76,
+     "maxEnchant": 20,
+     "maxExceed": 5,
+     "stones": [],
+     "stoneSlots": null,
      "godStones": []
     },
-    "Seal2": {
-     "name": "해방자의 인장",
-     "baseLevel": 106,
-     "maxEnchant": 15,
+    "Pendant": {
+     "name": "드라코닉 펜던트",
+     "baseLevel": 65,
+     "maxEnchant": 20,
      "maxExceed": null,
-     "stones": [
-      "Legend",
-      "Unique",
-      "Rare"
-     ],
-     "stoneSlots": 3,
+     "stones": [],
+     "stoneSlots": null,
      "godStones": []
     },
     "Arcana1": {
@@ -835,7 +835,7 @@
      "godStones": []
     },
     "Arcana6": {
-     "name": "징벌의 천칭",
+     "name": "불굴의 천칭",
      "baseLevel": 90,
      "maxEnchant": 5,
      "maxExceed": null,
@@ -881,14 +881,14 @@
     }
    },
    "nodeGrades": {
-    "Common": 677,
-    "Unique": 54,
-    "Rare": 119,
-    "Legend": 89
+    "Common": 737,
+    "Unique": 53,
+    "Rare": 122,
+    "Legend": 96
    },
-   "openNodeTotal": 939,
+   "openNodeTotal": 1008,
    "label": "감자미",
-   "updatedAt": "2026-10-27T02:41:08Z"
+   "updatedAt": "2026-11-11T05:21:08Z"
   },
   "2010-702b46e438dd": {
    "items": {
