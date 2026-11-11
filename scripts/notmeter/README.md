@@ -28,6 +28,7 @@ NotMeter(<https://github.com/Not4You-Dev>)가 게임 패킷에서 읽은 **캐�
 | `diagnose_ode_sync.cmd` | 더블클릭 → 진단 정보 모아서 GitHub 에 올림 (문제 생겼을 때) |
 | `test_ode_sync.cmd` | 더블클릭 → 업로드 없이 무엇을 올릴지만 출력 (확인용) |
 | `start_ode_sync.cmd` | 더블클릭 → 창 없이 백그라운드 감시 모드 실행 |
+| `install_startup.cmd` | 더블클릭 → 시작프로그램에 바로가기 등록 + 지금 실행 |
 | `notmeter_ode_sync.log` | 실행 기록 (자동 생성, git 제외) |
 
 ## 1. 준비 (집 PC, 처음 한 번)
@@ -92,9 +93,11 @@ powershell -ExecutionPolicy Bypass -File .\notmeter_ode_sync.ps1 -Once
 
 **자동 (추천)** — 로그인할 때마다 백그라운드 감시:
 
-1. `Win + R` → `shell:startup` → 시작프로그램 폴더 열림
-2. `start_ode_sync.cmd` 를 **오른쪽 버튼 드래그 → 여기에 바로 가기 만들기**
-3. 지금 바로 켜려면 `start_ode_sync.cmd` 더블클릭 (창 안 뜸)
+`install_startup.cmd` 더블클릭 → 끝. (시작프로그램에 `NotMeter 오드 동기화` 바로가기가 생기고 지금도 바로 실행됨)
+
+> ⚠️ `start_ode_sync.cmd` 를 시작프로그램 폴더에 **복사**하면 동작 안 한다 (옆에 `.ps1` 이 없어서 조용히 실패).
+> 예전에 복사해 둔 게 있으면 `install_startup.cmd` 가 알아서 지운다.
+> 이미 감시 중이면 두 번째 실행은 바로 종료되므로 중복 실행 걱정은 없다.
 
 잘 도는지는 `notmeter_ode_sync.log` 로 확인. 끄려면 작업 관리자에서 `Windows PowerShell` 종료.
 스크립트를 업데이트(`git pull`)했으면 PowerShell 을 종료하고 `start_ode_sync.cmd` 를 다시 실행해야 새 버전이 돈다.

@@ -30,7 +30,12 @@ Add ("NotMeter: {0}" -f $(if ($nm) { ($nm | ForEach-Object { "$($_.Name) PID $($
 
 Section "시작프로그램 등록"
 $startup = [Environment]::GetFolderPath("Startup")
-Get-ChildItem $startup -ErrorAction SilentlyContinue | ForEach-Object { Add ("  {0}" -f $_.Name) }
+$wsh = New-Object -ComObject WScript.Shell
+Get-ChildItem $startup -ErrorAction SilentlyContinue | ForEach-Object {
+  if ($_.Extension -eq ".lnk") { Add ("  {0} -> {1}" -f $_.Name, $wsh.CreateShortcut($_.FullName).TargetPath) }
+  elseif ($_.Name -like "start_ode_sync*") { Add ("  {0}  <-- 복사본이라 동작 안 함! 지우고 install_startup.cmd 실행" -f $_.Name) }
+  else { Add ("  {0}" -f $_.Name) }
+}
 
 Section "aether-energy.json / abyss-corridors.json 위치"
 $roots = @($env:APPDATA, $env:LOCALAPPDATA, (Join-Path $env:USERPROFILE "Documents"), "C:\NOT METER DB") | Where-Object { $_ -and (Test-Path $_) }

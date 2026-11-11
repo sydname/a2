@@ -12,12 +12,14 @@
     .\notmeter_ode_sync.ps1              # 감시 모드 (파일이 바뀔 때마다 업로드)
     .\notmeter_ode_sync.ps1 -Path "C:\...\aether-energy.json"   # 파일 위치 직접 지정
     .\notmeter_ode_sync.ps1 -Export      # aether-energy.json / abyss-corridors.json 을 samples\ 로 복사 (구조 확인용)
+    .\notmeter_ode_sync.ps1 -InstallStartup   # 시작프로그램에 바로가기 등록 (install_startup.cmd 가 호출)
 #>
 param(
   [string]$Path = $env:NOTMETER_AETHER,
   [switch]$Once,
   [switch]$DryRun,
   [switch]$Export,
+  [switch]$InstallStartup,
   [string]$Field = "Base",
   [int]$IntervalMinutes = 5,
   [string]$SiteData = "https://sydname.github.io/a2/data/all.json",
@@ -138,11 +140,30 @@ function Try-Sync($file, [switch]$Force) {
   catch { Log ("실패: {0}" -f $_.Exception.Message); return $false }
 }
 
+function Install-Startup {
+  # 시작프로그램 폴더에 start_ode_sync.cmd 를 "복사"하면 %~dp0 이 시작프로그램 폴더가 돼서
+  # notmeter_ode_sync.ps1 을 못 찾고 조용히 실패한다. 그래서 절대경로 바로가기(.lnk)로 등록.
+  $startup = [Environment]::GetFolderPath("Startup")
+  $target = Join-Path $PSScriptRoot "start_ode_sync.cmd"
+  foreach ($old in @("start_ode_sync.cmd", "start_ode_sync.cmd.lnk", "start_ode_sync.lnk")) {
+    $p = Join-Path $startup $old
+    if (Test-Path $p) { Remove-Item $p -Force; Log "기존 등록 제거: $p" }
+  }
+  $lnk = Join-Path $startup "NotMeter 오드 동기화.lnk"
+  $sc = (New-Object -ComObject WScript.Shell).CreateShortcut($lnk)
+  $sc.TargetPath = $target
+  $sc.WorkingDirectory = $PSScriptRoot
+  $sc.WindowStyle = 7  # 최소화
+  $sc.Save()
+  Log "시작프로그램 등록: $lnk -> $target"
+}
+
 # 창 없이 돌 때 에러가 묻히지 않도록 로그에 남기고 종료
 trap { Log ("오류로 종료: {0}" -f $_.Exception.Message); break }
 
 # PowerShell 5.1 기본값이 TLS1.0 일 수 있어 명시
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+if ($InstallStartup) { Install-Startup; return }
 Log ("시작 (PowerShell {0}, 모드: {1})" -f $PSVersionTable.PSVersion, $(if ($DryRun) {"DryRun"} elseif ($Once) {"Once"} elseif ($Export) {"Export"} else {"감시"}))
 $file = Find-AetherFile
 Log "대상 파일: $file"
@@ -157,6 +178,10 @@ if ($Export) {
   return
 }
 if ($Once -or $DryRun) { Sync-Once $file -Force; return }
+
+# 감시 모드는 하나만 (시작프로그램 + 수동 실행이 겹쳐도 중복으로 안 돌게)
+$script:Mutex = New-Object Threading.Mutex($false, "Local\notmeter_ode_sync")
+if (-not $script:Mutex.WaitOne(0)) { Log "이미 감시 중인 스크립트가 있음 - 종료"; return }
 
 # 로그인 직후엔 네트워크가 아직 없을 수 있어 성공할 때까지 재시도
 for ($i = 0; -not (Try-Sync $file -Force) -and $i -lt 20; $i++) { Start-Sleep -Seconds 30 }
