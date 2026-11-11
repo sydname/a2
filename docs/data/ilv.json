@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T05:21:08Z",
+ "generatedAt": "2026-11-11T05:22:51Z",
  "characters": {
   "2010-d7b11559c850": {
    "items": {
@@ -896,7 +896,7 @@
      "name": "용암 심장의 공포대검",
      "baseLevel": 128,
      "maxEnchant": 20,
-     "maxExceed": 5,
+     "maxExceed": 7,
      "stones": [
       "Unique",
       "Legend",
@@ -909,11 +909,28 @@
       "Legend"
      ]
     },
+    "SubHand": {
+     "name": "용암 심장의 결계",
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 7,
+     "stones": [
+      "Unique",
+      "Legend",
+      "Legend",
+      "Legend",
+      "Rare"
+     ],
+     "stoneSlots": 5,
+     "godStones": [
+      "Legend"
+     ]
+    },
     "Torso": {
      "name": "침식된 잔영의 흉갑",
      "baseLevel": 108,
      "maxEnchant": 20,
-     "maxExceed": 5,
+     "maxExceed": 7,
      "stones": [
       "Rare",
       "Rare",
@@ -928,7 +945,7 @@
      "name": "침식된 잔영의 각반",
      "baseLevel": 108,
      "maxEnchant": 20,
-     "maxExceed": 5,
+     "maxExceed": 7,
      "stones": [
       "Legend",
       "Unique",
@@ -940,24 +957,25 @@
      "godStones": []
     },
     "Helmet": {
-     "name": "두르바티의 투구",
-     "baseLevel": 92,
-     "maxEnchant": 15,
-     "maxExceed": 5,
+     "name": "용암 심장의 투구",
+     "baseLevel": 128,
+     "maxEnchant": 20,
+     "maxExceed": 7,
      "stones": [
+      "Unique",
+      "Rare",
       "Rare",
       "Unique",
-      "Unique",
-      "Rare"
+      "Legend"
      ],
-     "stoneSlots": 4,
+     "stoneSlots": 5,
      "godStones": []
     },
     "Shoulder": {
      "name": "용암 심장의 견갑",
      "baseLevel": 128,
      "maxEnchant": 20,
-     "maxExceed": 5,
+     "maxExceed": 7,
      "stones": [
       "Legend",
       "Unique",
@@ -972,7 +990,7 @@
      "name": "용암 심장의 장갑",
      "baseLevel": 128,
      "maxEnchant": 20,
-     "maxExceed": 5,
+     "maxExceed": 7,
      "stones": [
       "Legend",
       "Rare",
@@ -987,7 +1005,7 @@
      "name": "용암 심장의 장화",
      "baseLevel": 128,
      "maxEnchant": 20,
-     "maxExceed": 5,
+     "maxExceed": 7,
      "stones": [
       "Legend",
       "Rare",
@@ -1002,7 +1020,7 @@
      "name": "용암 심장의 망토",
      "baseLevel": 128,
      "maxEnchant": 20,
-     "maxExceed": 5,
+     "maxExceed": 7,
      "stones": [
       "Rare",
       "Rare",
@@ -1016,8 +1034,8 @@
     "Belt": {
      "name": "고결의 허리띠",
      "baseLevel": 76,
-     "maxEnchant": 10,
-     "maxExceed": null,
+     "maxEnchant": 20,
+     "maxExceed": 5,
      "stones": [],
      "stoneSlots": null,
      "godStones": []
@@ -1197,8 +1215,8 @@
     "Amulet": {
      "name": "계시의 아뮬렛",
      "baseLevel": 76,
-     "maxEnchant": 10,
-     "maxExceed": null,
+     "maxEnchant": 20,
+     "maxExceed": 5,
      "stones": [],
      "stoneSlots": null,
      "godStones": []
@@ -1304,14 +1322,14 @@
     }
    },
    "nodeGrades": {
-    "Common": 647,
-    "Rare": 116,
-    "Legend": 103,
-    "Unique": 51
+    "Common": 667,
+    "Rare": 120,
+    "Legend": 109,
+    "Unique": 50
    },
-   "openNodeTotal": 917,
+   "openNodeTotal": 946,
    "label": "잔열",
-   "updatedAt": "2026-11-02T06:57:59Z"
+   "updatedAt": "2026-11-11T05:22:51Z"
   },
   "2010-2b8ebedc7efb": {
    "items": {
