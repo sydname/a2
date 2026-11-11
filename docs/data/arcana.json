@@ -1,9 +1,9 @@
 {
- "generatedAt": "2026-11-11T00:41:22Z",
+ "generatedAt": "2026-11-11T02:24:28Z",
  "characters": {
   "2010-d7b11559c850": {
    "label": "감자밍",
-   "updatedAt": "2026-11-11T00:38:30Z",
+   "updatedAt": "2026-11-11T02:22:35Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -760,6 +760,69 @@
        "value": "9.6%"
       }
      ]
+    },
+    {
+     "slot": "Necklace",
+     "slotKo": "목걸이",
+     "name": "침식된 잔영의 목걸이",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "명중",
+       "value": "51"
+      },
+      {
+       "name": "공격력",
+       "value": "28"
+      },
+      {
+       "name": "치명타",
+       "value": "31"
+      }
+     ]
+    },
+    {
+     "slot": "Earring1",
+     "slotKo": "귀걸이1",
+     "name": "용암 심장의 귀걸이",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "치명타",
+       "value": "29"
+      },
+      {
+       "name": "공격력",
+       "value": "25"
+      },
+      {
+       "name": "명중",
+       "value": "43"
+      }
+     ]
+    },
+    {
+     "slot": "Earring2",
+     "slotKo": "귀걸이2",
+     "name": "침식된 잔영의 귀걸이",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "치명타",
+       "value": "27"
+      },
+      {
+       "name": "명중",
+       "value": "43"
+      },
+      {
+       "name": "공격력",
+       "value": "24"
+      }
+     ]
     }
    ],
    "equipSkills": {
@@ -777,7 +840,7 @@
   },
   "2010-bebfe0bb0422": {
    "label": "감자미",
-   "updatedAt": "2026-11-11T00:39:00Z",
+   "updatedAt": "2026-11-11T02:22:54Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -1510,6 +1573,61 @@
        "value": "16"
       }
      ]
+    },
+    {
+     "slot": "Necklace",
+     "slotKo": "목걸이",
+     "name": "흩어진 광휘의 목걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "치명타",
+       "value": "28"
+      },
+      {
+       "name": "공격력",
+       "value": "24"
+      }
+     ]
+    },
+    {
+     "slot": "Earring1",
+     "slotKo": "귀걸이1",
+     "name": "흩어진 광휘의 귀걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "21"
+      },
+      {
+       "name": "치명타",
+       "value": "24"
+      },
+      {
+       "name": "명중",
+       "value": "37"
+      }
+     ]
+    },
+    {
+     "slot": "Earring2",
+     "slotKo": "귀걸이2",
+     "name": "흩어진 광휘의 귀걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "치명타",
+       "value": "24"
+      },
+      {
+       "name": "공격력",
+       "value": "21"
+      }
+     ]
     }
    ],
    "equipSkills": {
@@ -1529,7 +1647,7 @@
   },
   "2010-702b46e438dd": {
    "label": "잔열",
-   "updatedAt": "2026-11-11T00:39:32Z",
+   "updatedAt": "2026-11-11T02:23:13Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -2254,6 +2372,61 @@
        "value": "2.4%"
       }
      ]
+    },
+    {
+     "slot": "Necklace",
+     "slotKo": "목걸이",
+     "name": "흩어진 광휘의 목걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "24"
+      },
+      {
+       "name": "막기",
+       "value": "28"
+      }
+     ]
+    },
+    {
+     "slot": "Earring1",
+     "slotKo": "귀걸이1",
+     "name": "암룡왕의 귀걸이",
+     "grade": "Unique",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "20"
+      },
+      {
+       "name": "막기",
+       "value": "19"
+      }
+     ]
+    },
+    {
+     "slot": "Earring2",
+     "slotKo": "귀걸이2",
+     "name": "암룡왕의 귀걸이",
+     "grade": "Unique",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "막기",
+       "value": "22"
+      },
+      {
+       "name": "공격력",
+       "value": "20"
+      },
+      {
+       "name": "회피",
+       "value": "19"
+      }
+     ]
     }
    ],
    "equipSkills": {
@@ -2269,7 +2442,7 @@
   },
   "2010-2b8ebedc7efb": {
    "label": "감자망",
-   "updatedAt": "2026-11-11T00:40:00Z",
+   "updatedAt": "2026-11-11T02:23:32Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -2986,6 +3159,53 @@
        "value": "2.4%"
       }
      ]
+    },
+    {
+     "slot": "Necklace",
+     "slotKo": "목걸이",
+     "name": "아티엘의 목걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "24"
+      }
+     ]
+    },
+    {
+     "slot": "Earring1",
+     "slotKo": "귀걸이1",
+     "name": "침식된 잔영의 귀걸이",
+     "grade": "Epic",
+     "subStatCount": 5,
+     "subStats": [
+      {
+       "name": "명중",
+       "value": "43"
+      },
+      {
+       "name": "공격력",
+       "value": "22"
+      },
+      {
+       "name": "치명타",
+       "value": "27"
+      }
+     ]
+    },
+    {
+     "slot": "Earring2",
+     "slotKo": "귀걸이2",
+     "name": "흩어진 광휘의 귀걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "21"
+      }
+     ]
     }
    ],
    "equipSkills": {
@@ -3000,7 +3220,7 @@
   },
   "2010-f6a7e26712d4": {
    "label": "괌자",
-   "updatedAt": "2026-11-11T00:40:29Z",
+   "updatedAt": "2026-11-11T02:23:51Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -3717,6 +3937,57 @@
        "value": "2.1%"
       }
      ]
+    },
+    {
+     "slot": "Necklace",
+     "slotKo": "목걸이",
+     "name": "비상하는 데바의 목걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "24"
+      },
+      {
+       "name": "치명타",
+       "value": "28"
+      }
+     ]
+    },
+    {
+     "slot": "Earring1",
+     "slotKo": "귀걸이1",
+     "name": "비상하는 데바의 귀걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "21"
+      },
+      {
+       "name": "치명타",
+       "value": "24"
+      }
+     ]
+    },
+    {
+     "slot": "Earring2",
+     "slotKo": "귀걸이2",
+     "name": "비상하는 데바의 귀걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "21"
+      },
+      {
+       "name": "치명타",
+       "value": "24"
+      }
+     ]
     }
    ],
    "equipSkills": {
@@ -3734,7 +4005,7 @@
   },
   "2010-e9271378bb8e": {
    "label": "고구미",
-   "updatedAt": "2026-11-11T00:40:58Z",
+   "updatedAt": "2026-11-11T02:24:11Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -4447,6 +4718,65 @@
        "value": "1.7%"
       }
      ]
+    },
+    {
+     "slot": "Necklace",
+     "slotKo": "목걸이",
+     "name": "아티엘의 목걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "24"
+      },
+      {
+       "name": "명중",
+       "value": "44"
+      }
+     ]
+    },
+    {
+     "slot": "Earring1",
+     "slotKo": "귀걸이1",
+     "name": "흩어진 광휘의 귀걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "21"
+      },
+      {
+       "name": "명중",
+       "value": "36"
+      },
+      {
+       "name": "치명타",
+       "value": "24"
+      }
+     ]
+    },
+    {
+     "slot": "Earring2",
+     "slotKo": "귀걸이2",
+     "name": "흩어진 광휘의 귀걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "명중",
+       "value": "37"
+      },
+      {
+       "name": "공격력",
+       "value": "21"
+      },
+      {
+       "name": "치명타",
+       "value": "23"
+      }
+     ]
     }
    ],
    "equipSkills": {
@@ -4462,7 +4792,7 @@
   },
   "2010-844b10c56dfe": {
    "label": "크로매데",
-   "updatedAt": "2026-11-11T00:41:22Z",
+   "updatedAt": "2026-11-11T02:24:28Z",
    "arcana": [
     {
      "slot": "Arcana1",
@@ -4953,6 +5283,57 @@
       {
        "name": "공격력",
        "value": "15"
+      }
+     ]
+    },
+    {
+     "slot": "Necklace",
+     "slotKo": "목걸이",
+     "name": "분노한 크로메데의 목걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "치명타",
+       "value": "25"
+      },
+      {
+       "name": "공격력",
+       "value": "22"
+      }
+     ]
+    },
+    {
+     "slot": "Earring1",
+     "slotKo": "귀걸이1",
+     "name": "고뇌하는 바카르마의 귀걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "공격력",
+       "value": "20"
+      },
+      {
+       "name": "치명타",
+       "value": "23"
+      }
+     ]
+    },
+    {
+     "slot": "Earring2",
+     "slotKo": "귀걸이2",
+     "name": "고뇌하는 바카르마의 귀걸이",
+     "grade": "Unique",
+     "subStatCount": 4,
+     "subStats": [
+      {
+       "name": "치명타",
+       "value": "23"
+      },
+      {
+       "name": "공격력",
+       "value": "20"
       }
      ]
     }
