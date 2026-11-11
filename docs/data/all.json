@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-11-10T21:03:38Z",
+ "generatedAt": "2026-11-11T02:22:50Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
    "label": "감자밍",
+   "nick": null,
    "serverId": 2010,
    "serverName": "하달",
    "characterId": "kQPtxLHatRRnx5LcYGTP6T7Jz5OLiPU61kSPtPvhq7I=",
@@ -283,9 +284,9 @@
    },
    "daevanion": {
     "openedBoards": 8,
-    "totalBoards": 8,
+    "totalBoards": 9,
     "openNodeTotal": 1003,
-    "nodeTotal": 1216,
+    "nodeTotal": 1368,
     "basic": 496,
     "arielle": 152,
     "markutan": 152,
@@ -326,6 +327,15 @@
       "openNodeCount": 122,
       "totalNodeCount": 152,
       "openPercent": 80
+     },
+     {
+      "id": 69,
+      "name": "루미엘",
+      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Sword_1H.png",
+      "open": 0,
+      "openNodeCount": 0,
+      "totalNodeCount": 152,
+      "openPercent": 0
      },
      {
       "id": 65,
@@ -888,25 +898,25 @@
    },
    "titles": {
     "ownedCount": 411,
-    "totalCount": 431,
+    "totalCount": 489,
     "equipped": [
      {
       "category": "Defense",
       "name": "만물을 다스리다",
       "grade": "Unique",
-      "ownedPercent": 96
+      "ownedPercent": 84
      },
      {
       "category": "Attack",
       "name": "천지창조",
       "grade": "Unique",
-      "ownedPercent": 97
+      "ownedPercent": 84
      },
      {
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 94
+      "ownedPercent": 84
      }
     ]
    },
@@ -1664,12 +1674,13 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-10T21:03:10Z",
+   "updatedAt": "2026-11-11T02:22:21Z",
    "ok": true
   },
   {
    "key": "2010-bebfe0bb0422",
    "label": "감자미",
+   "nick": null,
    "serverId": 2010,
    "serverName": "하달",
    "characterId": "kQPtxLHatRRnx5LcYGTP6Vw-D9KiXGm5XiqGBTvpsPU=",
@@ -2563,25 +2574,25 @@
    },
    "titles": {
     "ownedCount": 372,
-    "totalCount": 431,
+    "totalCount": 489,
     "equipped": [
      {
       "category": "Defense",
       "name": "알트가르드의 성자",
       "grade": "Unique",
-      "ownedPercent": 87
+      "ownedPercent": 76
      },
      {
       "category": "Attack",
       "name": "종족의 굴레를 벗다",
       "grade": "Unique",
-      "ownedPercent": 86
+      "ownedPercent": 75
      },
      {
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 86
+      "ownedPercent": 77
      }
     ]
    },
@@ -3339,12 +3350,13 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-10T21:03:15Z",
+   "updatedAt": "2026-11-11T02:22:26Z",
    "ok": true
   },
   {
    "key": "2010-702b46e438dd",
    "label": "잔열",
+   "nick": null,
    "serverId": 2010,
    "serverName": "하달",
    "characterId": "kQPtxLHatRRnx5LcYGTP6Vs0HqoWRhyRA5fiC-6pzjs=",
@@ -3624,9 +3636,9 @@
    },
    "daevanion": {
     "openedBoards": 8,
-    "totalBoards": 8,
+    "totalBoards": 9,
     "openNodeTotal": 946,
-    "nodeTotal": 1216,
+    "nodeTotal": 1368,
     "basic": 447,
     "arielle": 152,
     "markutan": 152,
@@ -3667,6 +3679,15 @@
       "openNodeCount": 100,
       "totalNodeCount": 152,
       "openPercent": 66
+     },
+     {
+      "id": 19,
+      "name": "루미엘",
+      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Sword_1H.png",
+      "open": 0,
+      "openNodeCount": 0,
+      "totalNodeCount": 152,
+      "openPercent": 0
      },
      {
       "id": 15,
@@ -4229,25 +4250,25 @@
    },
    "titles": {
     "ownedCount": 328,
-    "totalCount": 431,
+    "totalCount": 489,
     "equipped": [
      {
       "category": "Defense",
       "name": "알트가르드의 성자",
       "grade": "Unique",
-      "ownedPercent": 75
+      "ownedPercent": 66
      },
      {
       "category": "Attack",
       "name": "종족의 굴레를 벗다",
       "grade": "Unique",
-      "ownedPercent": 74
+      "ownedPercent": 65
      },
      {
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 80
+      "ownedPercent": 71
      }
     ]
    },
@@ -5005,13 +5026,13 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-10T21:03:19Z",
+   "updatedAt": "2026-11-11T02:22:31Z",
    "ok": true
   },
   {
    "key": "2010-2b8ebedc7efb",
    "label": "감자망",
-      "nick": "넌강",
+   "nick": "넌강",
    "serverId": 2010,
    "serverName": "하달",
    "characterId": "kQPtxLHatRRnx5LcYGTP6SWYKsKDCoY-F5_Md8dpDCo=",
@@ -5241,9 +5262,9 @@
      "id": 18250000
     },
     {
-     "name": "질주의 진언",
+     "name": "폭풍의 주문",
      "level": 22,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_CH_SKILL_016.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_CH_SKILL_Passive_004.png",
      "id": 18160000
     },
     {
@@ -5291,9 +5312,9 @@
    },
    "daevanion": {
     "openedBoards": 8,
-    "totalBoards": 8,
+    "totalBoards": 9,
     "openNodeTotal": 894,
-    "nodeTotal": 1216,
+    "nodeTotal": 1368,
     "basic": 449,
     "arielle": 152,
     "markutan": 152,
@@ -5334,6 +5355,15 @@
       "openNodeCount": 108,
       "totalNodeCount": 152,
       "openPercent": 71
+     },
+     {
+      "id": 89,
+      "name": "루미엘",
+      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Sword_1H.png",
+      "open": 0,
+      "openNodeCount": 0,
+      "totalNodeCount": 152,
+      "openPercent": 0
      },
      {
       "id": 85,
@@ -5874,25 +5904,25 @@
    },
    "titles": {
     "ownedCount": 312,
-    "totalCount": 431,
+    "totalCount": 489,
     "equipped": [
      {
       "category": "Attack",
       "name": "종족의 굴레를 벗다",
       "grade": "Unique",
-      "ownedPercent": 71
+      "ownedPercent": 62
      },
      {
       "category": "Defense",
       "name": "파편의 주인은 나야",
       "grade": "Unique",
-      "ownedPercent": 73
+      "ownedPercent": 64
      },
      {
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 73
+      "ownedPercent": 65
      }
     ]
    },
@@ -6650,12 +6680,13 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-10T21:03:23Z",
+   "updatedAt": "2026-11-11T02:22:36Z",
    "ok": true
   },
   {
    "key": "2010-f6a7e26712d4",
    "label": "괌자",
+   "nick": null,
    "serverId": 2010,
    "serverName": "하달",
    "characterId": "kQPtxLHatRRnx5LcYGTP6XlIPrk0zWGS12MHt0Ix0PY=",
@@ -6935,9 +6966,9 @@
    },
    "daevanion": {
     "openedBoards": 8,
-    "totalBoards": 8,
+    "totalBoards": 9,
     "openNodeTotal": 847,
-    "nodeTotal": 1216,
+    "nodeTotal": 1368,
     "basic": 449,
     "arielle": 152,
     "markutan": 143,
@@ -6978,6 +7009,15 @@
       "openNodeCount": 103,
       "totalNodeCount": 152,
       "openPercent": 68
+     },
+     {
+      "id": 99,
+      "name": "루미엘",
+      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Sword_1H.png",
+      "open": 0,
+      "openNodeCount": 0,
+      "totalNodeCount": 152,
+      "openPercent": 0
      },
      {
       "id": 95,
@@ -7518,25 +7558,25 @@
    },
    "titles": {
     "ownedCount": 289,
-    "totalCount": 431,
+    "totalCount": 489,
     "equipped": [
      {
       "category": "Attack",
       "name": "종족의 굴레를 벗다",
       "grade": "Unique",
-      "ownedPercent": 66
+      "ownedPercent": 57
      },
      {
       "category": "Defense",
       "name": "파편의 주인은 나야",
       "grade": "Unique",
-      "ownedPercent": 66
+      "ownedPercent": 58
      },
      {
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 69
+      "ownedPercent": 62
      }
     ]
    },
@@ -8294,12 +8334,13 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-10T21:03:27Z",
+   "updatedAt": "2026-11-11T02:22:41Z",
    "ok": true
   },
   {
    "key": "2010-e9271378bb8e",
    "label": "고구미",
+   "nick": null,
    "serverId": 2010,
    "serverName": "하달",
    "characterId": "kQPtxLHatRRnx5LcYGTP6bqBDUpFAVixBIMhQUpyejM=",
@@ -8579,9 +8620,9 @@
    },
    "daevanion": {
     "openedBoards": 8,
-    "totalBoards": 8,
+    "totalBoards": 9,
     "openNodeTotal": 850,
-    "nodeTotal": 1216,
+    "nodeTotal": 1368,
     "basic": 446,
     "arielle": 152,
     "markutan": 151,
@@ -8622,6 +8663,15 @@
       "openNodeCount": 98,
       "totalNodeCount": 152,
       "openPercent": 64
+     },
+     {
+      "id": 59,
+      "name": "루미엘",
+      "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/UT_Weapon_Sword_1H.png",
+      "open": 0,
+      "openNodeCount": 0,
+      "totalNodeCount": 152,
+      "openPercent": 0
      },
      {
       "id": 55,
@@ -9162,25 +9212,25 @@
    },
    "titles": {
     "ownedCount": 303,
-    "totalCount": 431,
+    "totalCount": 489,
     "equipped": [
      {
       "category": "Attack",
       "name": "종족의 굴레를 벗다",
       "grade": "Unique",
-      "ownedPercent": 69
+      "ownedPercent": 60
      },
      {
       "category": "Defense",
       "name": "만물을 다스리다",
       "grade": "Unique",
-      "ownedPercent": 71
+      "ownedPercent": 63
      },
      {
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 70
+      "ownedPercent": 63
      }
     ]
    },
@@ -9938,12 +9988,13 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-10T21:03:32Z",
+   "updatedAt": "2026-11-11T02:22:45Z",
    "ok": true
   },
   {
    "key": "2010-844b10c56dfe",
    "label": "크로매데",
+   "nick": null,
    "serverId": 2010,
    "serverName": "하달",
    "characterId": "kQPtxLHatRRnx5LcYGTP6eRu2if1JG2HwGKcKjMHZAg=",
@@ -10687,25 +10738,25 @@
    },
    "titles": {
     "ownedCount": 251,
-    "totalCount": 431,
+    "totalCount": 489,
     "equipped": [
      {
       "category": "Defense",
       "name": "알트가르드의 성자",
       "grade": "Unique",
-      "ownedPercent": 59
+      "ownedPercent": 52
      },
      {
       "category": "Attack",
       "name": "종족의 굴레를 벗다",
       "grade": "Unique",
-      "ownedPercent": 58
+      "ownedPercent": 50
      },
      {
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 58
+      "ownedPercent": 52
      }
     ]
    },
@@ -11463,7 +11514,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-10T21:03:38Z",
+   "updatedAt": "2026-11-11T02:22:50Z",
    "ok": true
   }
  ]
