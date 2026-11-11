@@ -228,6 +228,7 @@ def build_record(entry, info, equip):
     return {
         "key": char_key(server_id, character_id),
         "label": entry.get("label") or profile.get("characterName") or character_id,
+        "nick": entry.get("nick"),   # 이름 옆 회색 별명 (예전 닉네임 등)
         "serverId": int(server_id),
         "serverName": profile.get("serverName"),
         "characterId": character_id,

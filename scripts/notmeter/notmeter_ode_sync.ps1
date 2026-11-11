@@ -1,5 +1,5 @@
 ﻿<#
-  NotMeter 오드 현황 -> 사이트(Firebase ode/<캐릭터키>) 자동 업로드.
+  NotMeter 오드 현황 + 악몽 티켓 -> 사이트(Firebase ode/<캐릭터키>, 악몽은 .nm) 자동 업로드.
 
   NotMeter 는 캐릭터별 오드 기록을 aether-energy.json 에 저장한다.
   이 스크립트는 그 파일을 감시하다가 바뀌면 기본 오드(Base)·충전 오드(Bonus)·감지 시각을 Firebase 에 PATCH 한다.
@@ -73,7 +73,15 @@ function Get-Records($node, $acc) {
       if (-not $at) { $at = Get-Prop $node "ObservedAt" }
       $bonus = Get-Prop $node "Bonus"
       if ("$bonus" -notmatch '^\d+$') { $bonus = 0 }
-      $acc.Add([pscustomobject]@{ Name = "$name"; Server = "$(Get-Prop $node 'ServerId')"; Value = [int]$val; Bonus = [int]$bonus; At = "$at" })
+      # 악몽 티켓 (Nightmare.Base / Bonus / ObservedAt)
+      $nm = $null
+      $n = Get-Prop $node "Nightmare"
+      if ($n -and "$(Get-Prop $n 'Base')" -match '^\d+$') {
+        $nb = Get-Prop $n "Bonus"; if ("$nb" -notmatch '^\d+$') { $nb = 0 }
+        $nat = Get-Prop $n "ObservedAt"; if (-not $nat) { $nat = $at }
+        $nm = [ordered]@{ base = [int](Get-Prop $n "Base"); bonus = [int]$nb; at = "$nat" }
+      }
+      $acc.Add([pscustomobject]@{ Name = "$name"; Server = "$(Get-Prop $node 'ServerId')"; Value = [int]$val; Bonus = [int]$bonus; At = "$at"; Nm = $nm })
     }
     foreach ($p in $node.PSObject.Properties) { Get-Records $p.Value $acc }
   }
@@ -120,7 +128,9 @@ function Sync-Once($file, [switch]$Force) {
          Sort-Object At -Descending | Select-Object -First 1
     if (-not $r) { Log ("  건너뜀: {0} (서버 {1} 기록 없음)" -f $g.Name, $server); continue }
     $body[$k] = [ordered]@{ base = $r.Value; bonus = $r.Bonus; at = $r.At }
-    Log ("  {0} ({1}) = {2}(+{3})  @ {4}" -f $r.Name, $k, $r.Value, $r.Bonus, $r.At)
+    if ($r.Nm) { $body[$k].nm = $r.Nm }
+    Log ("  {0} ({1}) = {2}(+{3})  악몽 {4}  @ {5}" -f $r.Name, $k, $r.Value, $r.Bonus,
+      $(if ($r.Nm) { "{0}(+{1})" -f $r.Nm.base, $r.Nm.bonus } else { "-" }), $r.At)
   }
   if ($body.Count -eq 0) { return }
 

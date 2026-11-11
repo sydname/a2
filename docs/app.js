@@ -34,12 +34,16 @@
   var CHECK_FIELDS = [
     { key: "hallway", label: "회랑", dow: 3, hour: 22 },
     { key: "once", label: "일회", dow: 6, hour: 22 },
-    { key: "awaken", label: "각성", dow: 3, hour: 5 },
     { key: "rudra", label: "루드라", dow: 3, hour: 5 },
     { key: "erosion", label: "침식", dow: 3, hour: 5 },
     { key: "muspel", label: "무스펠", dow: 3, hour: 5 },
     { key: "grief", label: "비탄", dow: 3, hour: 5 },
     { key: "trial", label: "시련", dow: 3, hour: 5 },
+  ];
+  // 계정 단위 주간 숙제 (캐릭터별 아님). Firebase checks/<기간>/account/<key>
+  var ACCOUNT_FIELDS = [
+    { key: "awaken", label: "각성전", dow: 3, hour: 5 },
+    { key: "daily", label: "일일던전", dow: 3, hour: 5 },
   ];
   var BT_SLOTS = [
     ["MainHand", "무기"], ["SubHand", "가더"], ["Necklace", "목걸이"],
@@ -102,7 +106,7 @@
   }
   function fieldPk(f) { return periodKey(f.dow, f.hour); }
   var CUR_PKS = {};
-  CHECK_FIELDS.forEach(function (f) { CUR_PKS[fieldPk(f)] = 1; });
+  CHECK_FIELDS.concat(ACCOUNT_FIELDS).forEach(function (f) { CUR_PKS[fieldPk(f)] = 1; });
 
   // ---------- Firebase (선택) — 없으면 localStorage 로 폴백 ----------
   var FB_CFG = window.AION2_FIREBASE || null;
@@ -236,8 +240,8 @@
   }
   function odeNorm(v) {
     if (v == null || v === "") return null;
-    if (typeof v === "object") return { base: v.base == null ? null : Number(v.base), bonus: v.bonus == null ? null : Number(v.bonus), at: v.at || null };
-    return isNaN(v) ? null : { base: Number(v), bonus: null, at: null };
+    if (typeof v === "object") return { base: v.base == null ? null : Number(v.base), bonus: v.bonus == null ? null : Number(v.bonus), at: v.at || null, nm: v.nm || null };
+    return isNaN(v) ? null : { base: Number(v), bonus: null, at: null, nm: null };
   }
   function odeStored(c) {
     var v = null;
@@ -247,7 +251,7 @@
       try { v = v ? JSON.parse(v) : null; } catch (e) { v = null; }
     }
     var m = STATE.manual[c.label];
-    return odeNorm(v) || odeNorm(m && m.ode) || { base: null, bonus: null, at: null };
+    return odeNorm(v) || odeNorm(m && m.ode) || { base: null, bonus: null, at: null, nm: null };
   }
   function getOde(c) {
     var s = odeStored(c), t = odeTime(s.at), ticks = 0, base = s.base;
@@ -264,10 +268,57 @@
     var s = odeStored(c);
     s[field] = v;
     if (field === "base") s.at = v == null ? null : new Date().toISOString();
-    var val = s.base == null && s.bonus == null ? null : s;
+    saveOde(c, s);
+    return v;
+  }
+  function saveOde(c, s) {
+    var val = s.base == null && s.bonus == null && !s.nm ? null : s;
     if (fbActive()) fbdb.ref("ode/" + c.key).set(val);
     else lsSet(odeKey(c.key), val ? JSON.stringify(val) : "");
+  }
+
+  // 악몽 티켓: ode/<캐릭터>.nm = { base, bonus, at }. 기본은 매일 05시(KST) +2 (최대 14), 추가 티켓 최대 10.
+  var NM_MAX = { base: 14, bonus: 10 }, NM_REGEN = 2, DAY_MS = 24 * HOUR_MS;
+  function nmTick(ms) { return Math.floor((ms + 4 * HOUR_MS) / DAY_MS); }   // UTC+9, 05시 기준
+  function getNm(c) {
+    var n = odeStored(c).nm || {}, t = odeTime(n.at), ticks = 0;
+    var base = n.base == null ? null : Number(n.base);
+    if (base != null && !isNaN(t)) {
+      ticks = Math.max(0, nmTick(Date.now()) - nmTick(t));
+      if (base < NM_MAX.base) base = Math.min(NM_MAX.base, base + ticks * NM_REGEN);
+    }
+    return { base: base, bonus: n.bonus == null ? null : Number(n.bonus), at: n.at || null, stored: n.base, ticks: ticks };
+  }
+  function setNm(c, field, raw) {
+    var txt = String(raw == null ? "" : raw).trim();
+    var v = txt === "" || isNaN(txt) ? null : Math.min(NM_MAX[field], Math.max(0, Math.floor(Number(txt))));
+    var s = odeStored(c), n = s.nm || {};
+    n = { base: n.base == null ? null : n.base, bonus: n.bonus == null ? null : n.bonus, at: n.at || null };
+    n[field] = v;
+    if (field === "base") n.at = v == null ? null : new Date().toISOString();
+    s.nm = n.base == null && n.bonus == null ? null : n;
+    saveOde(c, s);
     return v;
+  }
+  function nmInput(c, field, value) {
+    var inp = el("input", "ode-inp nm-" + field);
+    inp.type = "number";
+    inp.min = 0; inp.max = NM_MAX[field];
+    inp.value = value == null ? "" : value;
+    inp.placeholder = "–";
+    inp.setAttribute("aria-label", (field === "base" ? "악몽 티켓 (최대 " : "추가 악몽 티켓 (최대 ") + NM_MAX[field] + ")");
+    inp.addEventListener("change", function () {
+      var v = setNm(c, field, inp.value);
+      inp.value = v == null ? "" : v;
+    });
+    return inp;
+  }
+  function nmTitle(n) {
+    var t = odeTime(n.at);
+    if (isNaN(t)) return "악몽 티켓 최대 14 (매일 05시 +2) · 추가 티켓 최대 10";
+    var iso = new Date(t).toISOString();
+    return "확인 " + fmtDateTime(iso) + " (" + timeAgo(iso) + ")" +
+      (n.ticks ? " · 당시 " + n.stored + "개, 05시 충전 " + n.ticks + "회 추정" : "");
   }
   function odeInput(c, field, value) {
     var inp = el("input", "ode-inp ode-" + field);
@@ -290,9 +341,9 @@
       (o.ticks ? " · 당시 기본 오드 " + o.stored + ", 자연 충전 " + o.ticks + "회 추정" : "");
   }
   // 페이지를 켜둔 채 충전 시각이 지나면 다시 그림
-  var odeShownTick = odeTick(Date.now());
+  var odeShownTick = odeTick(Date.now()) * 100000 + nmTick(Date.now());
   setInterval(function () {
-    var cur = odeTick(Date.now());
+    var cur = odeTick(Date.now()) * 100000 + nmTick(Date.now());
     if (cur !== odeShownTick && STATE.data && !skipRerender()) { odeShownTick = cur; render(); }
   }, 60000);
   function potentialOf(c, slot) {
@@ -376,9 +427,13 @@
       b.addEventListener("click", function () { STATE.tab = t[0]; lsSet("aion2.tab", t[0]); render(); });
       tabs.appendChild(b);
     });
-    box.appendChild(tabs);
-
     var tab = STATE.tab;
+    if (tab === "basic") {
+      var top = el("div", "tab-top");
+      top.appendChild(tabs);
+      top.appendChild(accountChecks());
+      box.appendChild(top);
+    } else box.appendChild(tabs);
 
     var scroll = el("div", "table-scroll");
     scroll.appendChild(
@@ -428,9 +483,10 @@
 
     var note = el("p", "tbl-note");
     if (tab === "basic")
-      note.innerHTML = "체크박스 자동 초기화(KST): <b>회랑</b> 수 22시 · <b>일회</b> 토 22시 · <b>각성·루드라·침식·무스펠·비탄·시련</b> 수 05시. " +
+      note.innerHTML = "체크박스 자동 초기화(KST): <b>회랑</b> 수 22시 · <b>일회</b> 토 22시 · <b>루드라·침식·무스펠·비탄·시련</b> 및 계정 <b>각성전·일일던전</b> 수 05시. " +
         "저장 위치는 상단 표시(Firebase 동기화 / 이 브라우저). " +
-        "오드는 <b>기본(+충전)</b> 표시, 칸을 눌러 수정. 기본 오드는 미터기 확인 후 02시부터 3시간마다 +15 로 추정(최대 840)하며, 확인 시각은 칸에 마우스를 올리면 보입니다.";
+        "오드는 <b>기본(+충전)</b> 표시, 칸을 눌러 수정. 기본 오드는 미터기 확인 후 02시부터 3시간마다 +15 로 추정(최대 840)하며, 확인 시각은 칸에 마우스를 올리면 보입니다. " +
+        "<b>악몽</b>은 티켓(+추가 티켓), 매일 05시 +2 로 추정(최대 14 / 추가 최대 10).";
     else if (tab === "bt")
       note.innerHTML = "돌파 단계는 공식 API 에서 매일 자동 갱신됩니다. 색: 0 회색 · 1 초록 · 2 파랑 · 3 주황 · 4 빨강 · 5 진한 검정.";
     else if (tab === "pot")
@@ -440,13 +496,36 @@
       note.innerHTML = "보유 날개의 <b>강화 수치 합</b>이 아이템 레벨에 그대로 더해집니다 (강화 1 = 템렙 1). " +
         "<b>·</b> 미보유 · <b>0</b> 보유(미강화) · <span style='color:var(--muted-2)'>10</span> 최대 강화(회색). 맨 윗줄 = 날개 템렙 합 (시뮬 탭에서 사용).";
     else if (tab === "soul")
-      note.innerHTML = "영혼각인(방어구 subStats)은 <b>수동 갱신</b>입니다. [상세 갱신] → GitHub Actions 에서 Run workflow. " +
+      note.innerHTML = "영혼각인(방어구·목걸이·귀걸이 subStats)은 <b>수동 갱신</b>입니다. [상세 갱신] → GitHub Actions 에서 Run workflow. " +
         "머리행 구분이 해당 부위에 각인돼 있으면 <b>O</b>. " +
         "<b>공증</b>=공격력 증가 · <b>피증</b>=피해 증폭 · <b>치피증</b>=치명타 피해 증폭 · <b>피내</b>=피해 내성 · <b>전속</b>=전투 속도 · <b>이속</b>=이동 속도 · 강타 · 완벽";
     else
       note.innerHTML = "데바니온 · 스티그마는 공식 API 에서 매일 자동 갱신됩니다. 표에서는 증감을 표시하지 않습니다.";
     box.appendChild(note);
     return box;
+  }
+
+  // 계정 주간 숙제 체크 (기본 탭 오른쪽 위)
+  function accountChecks() {
+    var DOW_KO = ["일", "월", "화", "수", "목", "금", "토"];
+    var wrap = el("div", "acct-chk");
+    wrap.appendChild(el("span", "acct-ttl", "계정 주간"));
+    ACCOUNT_FIELDS.forEach(function (f) {
+      var lab = el("label", "acct-item");
+      lab.title = f.label + " · " + DOW_KO[f.dow] + " " + f.hour + "시(KST) 초기화";
+      var cb = el("input");
+      cb.type = "checkbox";
+      cb.checked = getCheck("account", f);
+      lab.classList.toggle("on", cb.checked);
+      cb.addEventListener("change", function () {
+        setCheck("account", f, cb.checked);
+        lab.classList.toggle("on", cb.checked);
+      });
+      lab.appendChild(cb);
+      lab.appendChild(document.createTextNode(" " + f.label));
+      wrap.appendChild(lab);
+    });
+    return wrap;
   }
 
   // table-layout:fixed 용 colgroup — 열 너비의 단일 기준
@@ -480,9 +559,13 @@
     if (title) n.title = title;
     return n;
   }
+  // 이름 옆 회색 글씨: characters.json 의 nick(예전 닉네임 등), 없으면 실제 이름과 다른 label
+  function subLabel(c, name) {
+    var s = c.nick || (c.label && c.label !== name ? c.label : "");
+    return s ? ' <span class="lbl">' + esc(s) + "</span>" : "";
+  }
   function nameCell(c) {
-    return td('<span class="cn">' + esc(c.profile.name || c.label) +
-      (c.label && c.label !== c.profile.name ? ' <span class="lbl">' + esc(c.label) + "</span>" : "") +
+    return td('<span class="cn">' + esc(c.profile.name || c.label) + subLabel(c, c.profile.name) +
       (c.ok === false ? ' <span class="badge-fail">실패</span>' : "") + "</span>", "l name");
   }
   function classCell(c) { return td(esc(c.profile.className || "–"), "l cls"); }
@@ -511,6 +594,7 @@
     var cols = [
       { label: "이름", cls: "l name" }, { label: "직업", cls: "l cls" },
       { label: "아이템레벨", cls: "num" }, { label: "전투력", cls: "num" }, { label: "오드현황", cls: "num" },
+      { label: "악몽", cls: "num nm", title: "악몽 티켓 (+추가 티켓) · 매일 05시 +2, 최대 14 / 추가 최대 10" },
     ];
     var DOW_KO = ["일", "월", "화", "수", "목", "금", "토"];
     CHECK_FIELDS.forEach(function (f) {
@@ -535,6 +619,14 @@
       odeTd.appendChild(odeInput(c, "bonus", ode.bonus));
       odeTd.appendChild(document.createTextNode(")"));
       tr.appendChild(odeTd);
+
+      var nm = getNm(c);
+      var nmTd = td("", "num ode", nmTitle(nm));
+      nmTd.appendChild(nmInput(c, "base", nm.base));
+      nmTd.appendChild(document.createTextNode("(+"));
+      nmTd.appendChild(nmInput(c, "bonus", nm.bonus));
+      nmTd.appendChild(document.createTextNode(")"));
+      tr.appendChild(nmTd);
 
       CHECK_FIELDS.forEach(function (f) {
         var cell = td("", "chk");
@@ -714,12 +806,15 @@
   // 부위별 추적 각인 구분 (7명 실제 데이터 기준 고정 라인)
   var SOUL_GRID = [
     { slot: "Helmet", ko: "투구", stats: ["공증", "강타"] },
-    { slot: "Shoulder", ko: "견갑", stats: ["치피증"] },
-    { slot: "Torso", ko: "상의", stats: ["피증"] },
+    { slot: "Shoulder", ko: "견갑", stats: ["공증", "치피증"] },
+    { slot: "Torso", ko: "상의", stats: ["피증", "강타"] },
     { slot: "Pants", ko: "하의", stats: ["공증", "완벽", "피내"] },
     { slot: "Gloves", ko: "장갑", stats: ["전속", "완벽"] },
     { slot: "Boots", ko: "신발", stats: ["이속", "완벽"] },
     { slot: "Cape", ko: "망토", stats: ["공증", "강타", "완벽"] },
+    { slot: "Necklace", ko: "목걸이", stats: ["공증"] },
+    { slot: "Earring1", ko: "귀1", stats: ["완벽"] },
+    { slot: "Earring2", ko: "귀2", stats: ["완벽"] },
   ];
   var SOUL_FULL = {
     "공증": "공격력 증가", "강타": "강타", "피증": "피해 증폭",
@@ -808,10 +903,10 @@
     var max = el("tr", "wing-sum");
     max.appendChild(td("", "wno"));
     max.appendChild(td("", "chk"));
-    max.appendChild(td("10강 개수", "l"));
+    max.appendChild(td("유일 10강 개수", "l"));
     max.appendChild(td("", "l"));
     chars.forEach(function (c) {
-      var n = STATE.wings.filter(function (w) { return getWing(c, w.name) === 10; }).length;
+      var n = STATE.wings.filter(function (w) { return w.grade === "유일" && getWing(c, w.name) === 10; }).length;
       max.appendChild(td("<b>" + n + "</b>", "num sm"));
     });
     tb.appendChild(max);
@@ -884,8 +979,7 @@
   function cheadHtml(c) {
     var p = c.profile || {};
     return '<div class="chead">' +
-      '<div class="c-name">' + esc(p.name || c.label) +
-        (c.label && c.label !== p.name ? ' <span class="lbl">' + esc(c.label) + "</span>" : "") + "</div>" +
+      '<div class="c-name">' + esc(p.name || c.label) + subLabel(c, p.name) + "</div>" +
       '<div class="c-tags">' +
         tag(p.className) + tag(p.raceName) + (p.guildName ? tag(p.guildName) : "") +
         wingTag(c) +

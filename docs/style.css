@@ -93,6 +93,7 @@ table.grid col.wno  { width: 34px; }
 table.grid col.sname { width: 250px; }
 table.grid col.stier { width: 250px; }
 table.grid col.smat { width: 210px; }
+table.grid col.nm   { width: 88px; }
 table.grid th.sm,  table.grid td.sm,
 table.grid th.med, table.grid td.med { padding-left: 6px; padding-right: 6px; }
 table.grid th.chk, table.grid td.chk { padding-left: 4px; padding-right: 4px; text-align: center; }
@@ -129,6 +130,15 @@ td.ode { padding: 4px 8px; white-space: nowrap; color: var(--muted-2); }
 .ode-inp::-webkit-outer-spin-button, .ode-inp::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 .ode-inp.ode-base { width: 46px; }
 .ode-inp.ode-bonus { width: 54px; }
+.ode-inp.nm-base, .ode-inp.nm-bonus { width: 32px; padding: 5px 4px; }
+
+/* 기본 탭: 서브탭 + 계정 주간 숙제 체크 한 줄 */
+.tab-top { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 8px 16px; }
+.acct-chk { display: inline-flex; align-items: center; gap: 4px; margin-bottom: 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 3px 4px 3px 12px; box-shadow: var(--shadow); font-size: 13px; }
+.acct-ttl { color: var(--muted-2); font-weight: 600; margin-right: 4px; }
+.acct-item { display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 7px; cursor: pointer; font-weight: 600; color: var(--muted); }
+.acct-item input { width: 16px; height: 16px; margin: 0; accent-color: var(--pos); cursor: pointer; }
+.acct-item.on { background: color-mix(in srgb, var(--pos) 12%, var(--surface)); color: var(--text); }
 .ode-inp:focus { outline: 2px solid var(--accent); outline-offset: 0; background: #fff; }
 
 .tbl-note { font-size: 12px; color: var(--muted-2); margin: 12px 2px 0; line-height: 1.6; }

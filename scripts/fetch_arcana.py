@@ -140,10 +140,12 @@ def main():
                     } if st else None,
                 })
 
-            # 방어구 7부위 영혼각인(subStats) + 전체 장착장비의 영혼각인 스킬 합계
+            # 방어구 7부위 + 목걸이/귀걸이 영혼각인(subStats) + 전체 장착장비의 영혼각인 스킬 합계
             ARMOR_KO = {"Helmet": "투구", "Shoulder": "견갑", "Torso": "상의", "Pants": "하의",
-                        "Gloves": "장갑", "Boots": "신발", "Cape": "망토"}
-            ARMOR_ORDER = ["Helmet", "Shoulder", "Torso", "Pants", "Gloves", "Boots", "Cape"]
+                        "Gloves": "장갑", "Boots": "신발", "Cape": "망토",
+                        "Necklace": "목걸이", "Earring1": "귀걸이1", "Earring2": "귀걸이2"}
+            ARMOR_ORDER = ["Helmet", "Shoulder", "Torso", "Pants", "Gloves", "Boots", "Cape",
+                           "Necklace", "Earring1", "Earring2"]
             eq_by_slot = {it.get("slotPosName"): it for it in eq_list}
             gear_items = [it for it in eq_list
                           if not ARCANA_RE.match(it.get("slotPosName", "") or "")]
