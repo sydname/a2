@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-16T23:33:28Z",
+ "generatedAt": "2026-11-17T22:42:29Z",
  "characters": [
   {
    "key": "2010-d7b11559c850",
@@ -897,8 +897,8 @@
     }
    },
    "titles": {
-    "ownedCount": 458,
-    "totalCount": 489,
+    "ownedCount": 459,
+    "totalCount": 490,
     "equipped": [
      {
       "category": "Defense",
@@ -1723,10 +1723,20 @@
      "accessoryExceed": 45,
      "daevanionBasic": 493,
      "daevanionOpenNodes": 1092
+    },
+    {
+     "date": "2026-11-18",
+     "combatPower": 1082493,
+     "itemLevel": 6682,
+     "weaponExceed": 10,
+     "armorExceed": 14,
+     "accessoryExceed": 45,
+     "daevanionBasic": 493,
+     "daevanionOpenNodes": 1092
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-16",
+    "sinceDate": "2026-11-17",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -1734,7 +1744,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-16T23:32:59Z",
+   "updatedAt": "2026-11-17T22:42:01Z",
    "ok": true
   },
   {
@@ -2634,7 +2644,7 @@
    },
    "titles": {
     "ownedCount": 372,
-    "totalCount": 489,
+    "totalCount": 490,
     "equipped": [
      {
       "category": "Defense",
@@ -2652,7 +2662,7 @@
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 77
+      "ownedPercent": 76
      }
     ]
    },
@@ -3459,10 +3469,20 @@
      "accessoryExceed": 38,
      "daevanionBasic": 496,
      "daevanionOpenNodes": 1008
+    },
+    {
+     "date": "2026-11-18",
+     "combatPower": 780244,
+     "itemLevel": 6035,
+     "weaponExceed": 9,
+     "armorExceed": 0,
+     "accessoryExceed": 38,
+     "daevanionBasic": 496,
+     "daevanionOpenNodes": 1008
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-16",
+    "sinceDate": "2026-11-17",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -3470,7 +3490,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-16T23:33:04Z",
+   "updatedAt": "2026-11-17T22:42:06Z",
    "ok": true
   },
   {
@@ -4370,7 +4390,7 @@
    },
    "titles": {
     "ownedCount": 328,
-    "totalCount": 489,
+    "totalCount": 490,
     "equipped": [
      {
       "category": "Defense",
@@ -5195,10 +5215,20 @@
      "accessoryExceed": 27,
      "daevanionBasic": 447,
      "daevanionOpenNodes": 946
+    },
+    {
+     "date": "2026-11-18",
+     "combatPower": 737666,
+     "itemLevel": 5825,
+     "weaponExceed": 8,
+     "armorExceed": 0,
+     "accessoryExceed": 27,
+     "daevanionBasic": 447,
+     "daevanionOpenNodes": 946
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-16",
+    "sinceDate": "2026-11-17",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -5206,7 +5236,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-16T23:33:09Z",
+   "updatedAt": "2026-11-17T22:42:10Z",
    "ok": true
   },
   {
@@ -5444,7 +5474,7 @@
     {
      "name": "폭풍의 주문",
      "level": 22,
-     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_CH_SKILL_Passive_004.png",
+     "icon": "https://assets.playnccdn.com/static-aion2-gamedata/resources/ICON_CH_SKILL_026.png",
      "id": 18160000
     },
     {
@@ -6095,7 +6125,7 @@
    },
    "titles": {
     "ownedCount": 327,
-    "totalCount": 489,
+    "totalCount": 490,
     "equipped": [
      {
       "category": "Attack",
@@ -6920,10 +6950,20 @@
      "accessoryExceed": 23,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 894
+    },
+    {
+     "date": "2026-11-18",
+     "combatPower": 658924,
+     "itemLevel": 5329,
+     "weaponExceed": 6,
+     "armorExceed": 0,
+     "accessoryExceed": 23,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 894
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-16",
+    "sinceDate": "2026-11-17",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -6931,7 +6971,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-16T23:33:14Z",
+   "updatedAt": "2026-11-17T22:42:16Z",
    "ok": true
   },
   {
@@ -6949,7 +6989,7 @@
     "raceName": "마족",
     "genderName": "남성",
     "guildName": "자유",
-    "combatPower": 618246,
+    "combatPower": 618252,
     "itemLevel": 5041,
     "profileImage": "https://profileimg.plaync.com/game_profile_images/aion2/images?gameServerKey=2010&charKey=565764703188785270",
     "titleName": "무스펠의 성배를 지배한"
@@ -7809,7 +7849,7 @@
    },
    "titles": {
     "ownedCount": 289,
-    "totalCount": 489,
+    "totalCount": 490,
     "equipped": [
      {
       "category": "Attack",
@@ -7827,7 +7867,7 @@
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 62
+      "ownedPercent": 61
      }
     ]
    },
@@ -8634,18 +8674,28 @@
      "accessoryExceed": 22,
      "daevanionBasic": 449,
      "daevanionOpenNodes": 847
+    },
+    {
+     "date": "2026-11-18",
+     "combatPower": 618252,
+     "itemLevel": 5041,
+     "weaponExceed": 6,
+     "armorExceed": 9,
+     "accessoryExceed": 22,
+     "daevanionBasic": 449,
+     "daevanionOpenNodes": 847
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-16",
-    "combatPower": 0,
+    "sinceDate": "2026-11-17",
+    "combatPower": 6,
     "itemLevel": 0,
     "weaponExceed": 0,
     "armorExceed": 0,
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-16T23:33:19Z",
+   "updatedAt": "2026-11-17T22:42:20Z",
    "ok": true
   },
   {
@@ -9523,7 +9573,7 @@
    },
    "titles": {
     "ownedCount": 303,
-    "totalCount": 489,
+    "totalCount": 490,
     "equipped": [
      {
       "category": "Attack",
@@ -10348,10 +10398,20 @@
      "accessoryExceed": 4,
      "daevanionBasic": 446,
      "daevanionOpenNodes": 850
+    },
+    {
+     "date": "2026-11-18",
+     "combatPower": 494198,
+     "itemLevel": 4816,
+     "weaponExceed": 4,
+     "armorExceed": 0,
+     "accessoryExceed": 4,
+     "daevanionBasic": 446,
+     "daevanionOpenNodes": 850
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-16",
+    "sinceDate": "2026-11-17",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -10359,7 +10419,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-16T23:33:24Z",
+   "updatedAt": "2026-11-17T22:42:24Z",
    "ok": true
   },
   {
@@ -11109,7 +11169,7 @@
    },
    "titles": {
     "ownedCount": 251,
-    "totalCount": 489,
+    "totalCount": 490,
     "equipped": [
      {
       "category": "Defense",
@@ -11127,7 +11187,7 @@
       "category": "Etc",
       "name": "아이고, 입을 옷이 없네",
       "grade": "Unique",
-      "ownedPercent": 52
+      "ownedPercent": 51
      }
     ]
    },
@@ -11934,10 +11994,20 @@
      "accessoryExceed": 0,
      "daevanionBasic": 389,
      "daevanionOpenNodes": 667
+    },
+    {
+     "date": "2026-11-18",
+     "combatPower": 337279,
+     "itemLevel": 3636,
+     "weaponExceed": 0,
+     "armorExceed": 0,
+     "accessoryExceed": 0,
+     "daevanionBasic": 389,
+     "daevanionOpenNodes": 667
     }
    ],
    "delta": {
-    "sinceDate": "2026-11-16",
+    "sinceDate": "2026-11-17",
     "combatPower": 0,
     "itemLevel": 0,
     "weaponExceed": 0,
@@ -11945,7 +12015,7 @@
     "accessoryExceed": 0,
     "daevanionBasic": 0
    },
-   "updatedAt": "2026-11-16T23:33:28Z",
+   "updatedAt": "2026-11-17T22:42:29Z",
    "ok": true
   }
  ]
